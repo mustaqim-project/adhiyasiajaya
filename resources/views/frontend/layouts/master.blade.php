@@ -5,13 +5,29 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title>@hasSection('title') @yield('title') @else {{ $settings['site_seo_title'] }} @endif </title>
-    <meta name="description" content="@hasSection('meta_description') @yield('meta_description') @else {{ $settings['site_seo_description'] }} @endif " />
+    <title>
+        @hasSection('title')
+            @yield('title')
+        @else
+            {{ $settings['site_seo_title'] }}
+        @endif
+    </title>
+    <meta name="description"
+        content="@hasSection('meta_description')
+@yield('meta_description')
+@else
+{{ $settings['site_seo_description'] }}
+@endif " />
     <meta name="keywords" content="{{ $settings['site_seo_keywords'] }}" />
 
     <meta name="og:title" content="@yield('meta_og_title')" />
     <meta name="og:description" content="@yield('meta_og_description')" />
-    <meta name="og:image" content="@hasSection('meta_og_image') @yield('meta_og_image') @else {{ asset($settings['site_logo']) }} @endif" />
+    <meta name="og:image"
+        content="@hasSection('meta_og_image')
+@yield('meta_og_image')
+@else
+{{ asset($settings['site_logo']) }}
+@endif" />
     <meta name="twitter:title" content="@yield('meta_tw_title')" />
     <meta name="twitter:description" content="@yield('meta_tw_description')" />
     <meta name="twitter:image" content="@yield('meta_tw_image')" />
@@ -50,24 +66,33 @@
         $footerGridOne = \App\Models\FooterGridOne::where(['status' => 1, 'language' => getLangauge()])->get();
         $footerGridTwo = \App\Models\FooterGridTwo::where(['status' => 1, 'language' => getLangauge()])->get();
         $footerGridThree = \App\Models\FooterGridThree::where(['status' => 1, 'language' => getLangauge()])->get();
-        $footerGridOneTitle = \App\Models\FooterTitle::where(['key' => 'grid_one_title', 'language' => getLangauge()])->first();
-        $footerGridTwoTitle = \App\Models\FooterTitle::where(['key' => 'grid_two_title', 'language' => getLangauge()])->first();
-        $footerGridThreeTitle = \App\Models\FooterTitle::where(['key' => 'grid_three_title', 'language' => getLangauge()])->first();
+        $footerGridOneTitle = \App\Models\FooterTitle::where([
+            'key' => 'grid_one_title',
+            'language' => getLangauge(),
+        ])->first();
+        $footerGridTwoTitle = \App\Models\FooterTitle::where([
+            'key' => 'grid_two_title',
+            'language' => getLangauge(),
+        ])->first();
+        $footerGridThreeTitle = \App\Models\FooterTitle::where([
+            'key' => 'grid_three_title',
+            'language' => getLangauge(),
+        ])->first();
         $contact = \App\Models\Contact::where('language', getLangauge())->first();
 
     @endphp
 
 
 
- <!-- Header news -->
- @include('frontend.layouts.header')
- <!-- End Header news -->
+    <!-- Header news -->
+    @include('frontend.layouts.header')
+    <!-- End Header news -->
 
- @yield('content')
+    @yield('content')
 
- <!-- Footer Section -->
- @include('frontend.layouts.footer')
- <!-- End Footer Section -->
+    <!-- Footer Section -->
+    @include('frontend.layouts.footer')
+    <!-- End Footer Section -->
 
     <!-- Modal -->
     <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -163,41 +188,49 @@
             /** Subscribe Newsletter**/
             $('.newsletter-form').on('submit', function(e) {
                 e.preventDefault();
+
+                let $form = $(this);
+                let $button = $form.find('.newsletter-button');
+
                 $.ajax({
                     method: 'POST',
                     url: "{{ route('subscribe-newsletter') }}",
-                    data: $(this).serialize(),
+                    data: $form.serialize(),
                     beforeSend: function() {
-                        $('.newsletter-button').text('loading...');
-                        $('.newsletter-button').attr('disabled', true);
+                        $button.text('Loading...');
+                        $button.attr('disabled', true);
                     },
                     success: function(data) {
                         if (data.status === 'success') {
                             Toast.fire({
                                 icon: 'success',
                                 title: data.message
-                            })
-                            $('.newsletter-form')[0].reset();
-                            $('.newsletter-button').text('sign up');
-
-                            $('.newsletter-button').attr('disabled', false);
+                            });
+                            $form[0].reset();
                         }
+                        $button.text('Subscribe');
+                        $button.attr('disabled', false);
                     },
-                    error: function(data) {
-                        $('.newsletter-button').text('sign up');
-                        $('.newsletter-button').attr('disabled', false);
+                    error: function(xhr) {
+                        $button.text('Subscribe');
+                        $button.attr('disabled', false);
 
-                        if (data.status === 422) {
-                            let errors = data.responseJSON.errors;
+                        if (xhr.status === 422) {
+                            let errors = xhr.responseJSON.errors;
                             $.each(errors, function(index, value) {
                                 Toast.fire({
                                     icon: 'error',
                                     title: value[0]
-                                })
-                            })
+                                });
+                            });
+                        } else {
+                            Toast.fire({
+                                icon: 'error',
+                                title: 'An unexpected error occurred. Please try again later.'
+                            });
                         }
                     }
-                })
+                });
             })
         })
     </script>
