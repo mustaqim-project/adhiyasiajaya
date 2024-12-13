@@ -105,9 +105,61 @@
 
 
 
+<!-- market_sectors_area -->
+<div class="market_sectors_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title mb-50 text-center">
+                    <h3>Market Sectors</h3>
+                    <p>With over 20-years of combined experience our company has established a long and friendly relationship with the customers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6">
+                <div class="single_sector text-center">
+                    <div class="icon">
+                        <img src="img/market_sectors/textile.jpg" alt="Textile Industries">
+                    </div>
+                    <h3>Textile Industries</h3>
+                    <p>Offering high-quality materials and solutions for the textile industry.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6">
+                <div class="single_sector text-center">
+                    <div class="icon">
+                        <img src="img/market_sectors/pulp_paper.jpg" alt="Pulp & Paper Industries">
+                    </div>
+                    <h3>Pulp & Paper Industries</h3>
+                    <p>Providing chemicals and machinery to improve production in the pulp and paper industries.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6">
+                <div class="single_sector text-center">
+                    <div class="icon">
+                        <img src="img/market_sectors/oil_gas.jpg" alt="Oil & Gas">
+                    </div>
+                    <h3>Oil & Gas</h3>
+                    <p>Supplying essential equipment for the oil and gas industries to optimize operations.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6">
+                <div class="single_sector text-center">
+                    <div class="icon">
+                        <img src="img/market_sectors/chemical_industry.jpg" alt="Chemical Industry">
+                    </div>
+                    <h3>Chemical Industry</h3>
+                    <p>Offering advanced solutions and equipment for the chemical industry to enhance productivity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /market_sectors_area -->
 
 
-    <div class="transportaion_area">
+    {{-- <div class="transportaion_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -148,7 +200,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <!-- our_customers_area -->
