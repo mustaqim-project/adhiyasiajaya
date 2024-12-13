@@ -149,8 +149,8 @@
                 grid-template-columns: 1fr;
             }
         }
-
-
+      <!-- CSS for better layout -->
+    <style>
         .service_area {
             padding: 50px 0;
             background-color: #f0f4f8; /* light grayish background */
