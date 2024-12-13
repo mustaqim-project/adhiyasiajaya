@@ -7,7 +7,7 @@
                 <div class="col-xl-3 col-md-6 col-lg-3">
                     <div class="footer_widget">
                         <figure class="image-logo">
-                            <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo" class="logo-footer">
+                            <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo" class="logo-footer" width="175px">
                         </figure>
                         <p>{{ @$footerInfo->description }}</p>
                         <div class="social__media mt-4">
