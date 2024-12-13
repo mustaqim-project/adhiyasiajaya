@@ -50,42 +50,40 @@
 
 
 
-    <div class="transportaion_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_transport">
-                        <div class="icon">
-                            <img src="img/svg_icon/airplane.png" alt="">
-                        </div>
-                        <h3>Transportation</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
-                            placing drawing.</p>
+<div class="market_sector_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single_market_sector">
+                    <div class="icon">
+                        <img src="img/svg_icon/pulp_paper.png" alt="Pulp & Paper Industry">
                     </div>
+                    <h3>Pulp & Paper Industry</h3>
+                    <p>Providing chemicals, machinery, and laboratory instruments to enhance production efficiency.</p>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_transport">
-                        <div class="icon">
-                            <img src="img/svg_icon/live.png" alt="">
-                        </div>
-                        <h3>Live Monitoring</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
-                            placing drawing.</p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single_market_sector">
+                    <div class="icon">
+                        <img src="img/svg_icon/manufacturing.png" alt="Manufacturing">
                     </div>
+                    <h3>Manufacturing</h3>
+                    <p>Supplying high-quality equipment and parts for diverse industrial manufacturing needs.</p>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_transport">
-                        <div class="icon">
-                            <img src="img/svg_icon/world.png" alt="">
-                        </div>
-                        <h3>Worldwide Service</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
-                            placing drawing.</p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single_market_sector">
+                    <div class="icon">
+                        <img src="img/svg_icon/research.png" alt="Research & Development">
                     </div>
+                    <h3>Research & Development</h3>
+                    <p>Supporting laboratories with advanced testing instruments and solutions.</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 
     <div class="service_area">
         <div class="container">
