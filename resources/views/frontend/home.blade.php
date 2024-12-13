@@ -63,7 +63,7 @@
                     <div class="service_active owl-carousel">
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="img/product_category/chemicals.png" alt="Chemicals">
+                                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Chemicals">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Chemicals</a></h3>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="img/product_category/machinery.png" alt="Machinery & Parts">
+                                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Machinery & Parts">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Machinery & Parts</a></h3>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="img/product_category/laboratory.png" alt="Laboratory Instruments">
+                                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Laboratory Instruments">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Laboratory Instruments</a></h3>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="img/product_category/stockist.png" alt="Stockist Items">
+                                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Stockist Items">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Stockist Items</a></h3>
@@ -120,7 +120,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6">
                 <div class="single_sector">
                     <div class="image_wrapper">
-                        <img src="img/market_sectors/textile.jpg" alt="Textile Industries">
+                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Textile Industries">
                     </div>
                     <div class="text_overlay">
                         <h3>Textile Industries</h3>
@@ -131,7 +131,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6">
                 <div class="single_sector">
                     <div class="image_wrapper">
-                        <img src="img/market_sectors/pulp_paper.jpg" alt="Pulp & Paper Industries">
+                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Pulp & Paper Industries">
                     </div>
                     <div class="text_overlay">
                         <h3>Pulp & Paper Industries</h3>
@@ -142,7 +142,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6">
                 <div class="single_sector">
                     <div class="image_wrapper">
-                        <img src="img/market_sectors/oil_gas.jpg" alt="Oil & Gas">
+                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Oil & Gas">
                     </div>
                     <div class="text_overlay">
                         <h3>Oil & Gas</h3>
@@ -153,7 +153,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6">
                 <div class="single_sector">
                     <div class="image_wrapper">
-                        <img src="img/market_sectors/chemical_industry.jpg" alt="Chemical Industry">
+                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwuling.id%2Fid%2Fblog%2Fautotips%2Fmengenal-mesin-diesel-pada-mobil-untuk-pengendara-pemula&psig=AOvVaw0Z2YKJh7CwJnD_-EtdnIRE&ust=1734219003199000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnoa7zpYoDFQAAAAAdAAAAABAE" alt="Chemical Industry">
                     </div>
                     <div class="text_overlay">
                         <h3>Chemical Industry</h3>
