@@ -64,7 +64,7 @@
     <link rel="stylesheet" href="{{ asset('depan/css/style.css') }}">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
 </head>
@@ -136,18 +136,7 @@
     </div> --}}
 
 
-    <script>
-        var swiper = new Swiper('.slider_area', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
+
 
     <!-- JS here -->
     <script src="{{ asset('depan/js/vendor/modernizr-3.5.0.min.js') }}"></script>

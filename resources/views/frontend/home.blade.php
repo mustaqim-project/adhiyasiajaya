@@ -46,6 +46,7 @@
 
 
 
+
         <div class="transportaion_area">
             <div class="container">
                 <div class="row">
@@ -228,5 +229,17 @@
         <!-- /counter_area  -->
 
 
-
+        <script>
+            var swiper = new Swiper('.slider_area .swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        </script>
 @endsection
