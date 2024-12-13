@@ -48,17 +48,8 @@
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
                         <h3 class="footer_title">
-                            Get More Information!
+                            Subscribe
                         </h3>
-
-                        {{-- <form action="" class="newsletter-form">
-                            <div class="input-group ">
-                                <input type="text" class="form-control" name="email" placeholder="Your email address">
-                                <div class="input-group-append">
-                                    <button type="submit">{{ __('frontend.sign up') }}</button>
-                                </div>
-                            </div>
-                        </form> --}}
 
                         <form action="" class="newsletter-form">
                             <input type="text" class="form-control" name="email" placeholder="Your email address">
