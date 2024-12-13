@@ -87,54 +87,52 @@
         </div>
     </div>
 
-    <div class="service_area">
+    <div class="product_category_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-50 text-center">
-                        <h3>
-                            Services We Offer
-                        </h3>
+                        <h3>Market Sectors</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="service_active owl-carousel">
-                        <div class="single_service">
+                    <div class="category_active owl-carousel">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/1.png" alt="">
+                                <img src="img/category/chemicals.png" alt="Chemicals">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Ocean Freight</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="category_details.html">Chemicals</a></h3>
+                                <p>Supplying high-quality chemicals for the Pulp & Paper industry.</p>
                             </div>
                         </div>
-                        <div class="single_service">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/2.png" alt="">
+                                <img src="img/category/machinery.png" alt="Machinery & Parts">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Land Transport</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="category_details.html">Machinery & Parts</a></h3>
+                                <p>Reliable machinery and spare parts for industrial needs.</p>
                             </div>
                         </div>
-                        <div class="single_service">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/3.png" alt="">
+                                <img src="img/category/laboratory.png" alt="Laboratory Instruments">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Air Freight</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="category_details.html">Laboratory Instruments</a></h3>
+                                <p>Advanced instruments for precise laboratory testing.</p>
                             </div>
                         </div>
-                        <div class="single_service">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/1.png" alt="">
+                                <img src="img/category/stockist.png" alt="Stockist Services">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Ocean Freight</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="category_details.html">Stockist Services</a></h3>
+                                <p>Your trusted stockist for quick and efficient supply chain solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -142,6 +140,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- contact_action_area  -->
     <div class="contact_action_area">
@@ -163,6 +162,8 @@
         </div>
     </div>
     <!-- /contact_action_area  -->
+
+
     <!-- chose_area  -->
     <div class="chose_area ">
         <div class="container">
@@ -175,7 +176,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="features_info">
-                            <h3>Why Choose Us?</h3>
+                            <h3>About Us?</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.
                             </p>
                             <ul>
