@@ -29,7 +29,7 @@
                                 </ul>
                             </div>
                             <div class="book_btn d-none d-lg-block">
-                                <a class="boxed-btn3-line" href="{{ route('contact') }}">Claim Your Quote!</a>
+                                <a class="boxed-btn3-line" href="{{ route('contact') }}">Request Now</a>
                             </div>
                         </div>
                     </div>
