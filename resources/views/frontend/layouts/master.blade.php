@@ -186,7 +186,7 @@
             })
 
             /** Subscribe Newsletter**/
-            $('.newsletter-form').on('submit', function(e) {
+            $('.newsletter_form').on('submit', function(e) {
                 e.preventDefault();
 
                 let $form = $(this);
