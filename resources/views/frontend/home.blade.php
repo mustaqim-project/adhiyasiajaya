@@ -55,6 +55,15 @@
     <div class="transportaion_area">
         <div class="container">
             <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title mb-50 text-center">
+                        <h3>
+                            Market Sectors
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_transport">
                         <div class="icon">
@@ -93,48 +102,48 @@
                 <div class="col-xl-12">
                     <div class="section_title mb-50 text-center">
                         <h3>
-                            Services We Offer
+                            Our Product
                         </h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="service_active owl-carousel">
-                        <div class="single_service">
+                    <div class="product_category_active owl-carousel">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/1.png" alt="">
+                                <img src="img/product_category/chemicals.png" alt="Chemicals">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Ocean Freight</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="product_details.html">Chemicals</a></h3>
+                                <p>High-quality chemicals for the Pulp & Paper industry.</p>
                             </div>
                         </div>
-                        <div class="single_service">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/2.png" alt="">
+                                <img src="img/product_category/machinery.png" alt="Machinery & Parts">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Land Transport</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="product_details.html">Machinery & Parts</a></h3>
+                                <p>Reliable machinery and parts for optimized production.</p>
                             </div>
                         </div>
-                        <div class="single_service">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/3.png" alt="">
+                                <img src="img/product_category/laboratory.png" alt="Laboratory Instruments">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Air Freight</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="product_details.html">Laboratory Instruments</a></h3>
+                                <p>Advanced testing instruments for accurate analysis.</p>
                             </div>
                         </div>
-                        <div class="single_service">
+                        <div class="single_category">
                             <div class="thumb">
-                                <img src="img/service/1.png" alt="">
+                                <img src="img/product_category/stockist.png" alt="Stockist Items">
                             </div>
-                            <div class="service_info">
-                                <h3><a href="service_details.html">Ocean Freight</a></h3>
-                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            <div class="category_info">
+                                <h3><a href="product_details.html">Stockist Items</a></h3>
+                                <p>Readily available products from trusted suppliers.</p>
                             </div>
                         </div>
                     </div>
@@ -142,6 +151,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- contact_action_area  -->
     <div class="contact_action_area">
