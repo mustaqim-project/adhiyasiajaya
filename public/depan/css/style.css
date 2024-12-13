@@ -39,6 +39,85 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
+
+/* Styling untuk Market Sectors */
+.market_sectors_area .section_title h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.market_sectors_area .section_title p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Grid untuk sektor */
+.single_sector {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.single_sector .image_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.single_sector .text_overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.single_sector:hover .image_wrapper img {
+    transform: scale(1.1);
+}
+
+.single_sector:hover .text_overlay {
+    opacity: 1;
+}
+
+.single_sector h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.single_sector p {
+    font-size: 14px;
+}
+
+/* Responsivitas */
+@media (max-width: 991px) {
+    .market_sectors_area .section_title h3 {
+        font-size: 26px;
+    }
+
+    .market_sectors_area .section_title p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .single_sector h3 {
+        font-size: 18px;
+    }
+
+    .single_sector p {
+        font-size: 12px;
+    }
+}
+
 .flex-center-start {
   display: -webkit-box;
   display: -ms-flexbox;
