@@ -111,25 +111,10 @@
                             @endforeach
                         </ul>
                     </div>
-                    <div class="footer_widget">
-                        <h3 class="footer_title">{{ @$footerGridTwoTitle->value }}</h3>
-                        <ul>
-                            @foreach ($footerGridTwo as $gridTwo)
-                                <li><a href="{{ $gridTwo->url }}">{{ $gridTwo->name }}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
                 </div>
 
                 <!-- Column 3: Newsletter and Contact Info -->
                 <div class="col-xl-4 col-md-6 col-lg-4">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">Get More Information!</h3>
-                        <form action="#" class="newsletter_form">
-                            <input type="email" placeholder="Enter your email" name="email" required>
-                            <button type="submit" class="newsletter-button">Get Info!</button>
-                        </form>
-                    </div>
                     <div class="footer_widget">
                         <h3 class="footer_title">Contact Us</h3>
                         <p>PT. Daya Esa Mulya Mandiri</p>
