@@ -105,7 +105,7 @@
 
 
 
-  <div class="transportaion_area">
+  {{-- <div class="transportaion_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -146,7 +146,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <div class="service_area">
