@@ -60,8 +60,8 @@
                             </div>
                         </form>
 
-                        <form action="#" class="newsletter_form">
-                                <input type="text" class="form-control" name="email" placeholder="Your email address">
+                        <form action="" class="newsletter-form">
+                            <input type="text" class="form-control" name="email" placeholder="Your email address">
                             <button type="submit">Subscribe</button>
                         </form>
 
