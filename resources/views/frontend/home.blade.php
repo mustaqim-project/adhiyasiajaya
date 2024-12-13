@@ -105,69 +105,7 @@
 
 
 
-<!-- market_sectors_area -->
-<div class="market_sectors_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section_title mb-50 text-center">
-                    <h3>Market Sectors</h3>
-                    <p>With over 20-years of combined experience our company has established a long and friendly relationship with the customers.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <div class="single_sector">
-                    <div class="image_wrapper">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Textile Industries">
-                    </div>
-                    <div class="text_overlay">
-                        <h3>Textile Industries</h3>
-                        <p>Offering high-quality materials and solutions for the textile industry.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <div class="single_sector">
-                    <div class="image_wrapper">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Pulp & Paper Industries">
-                    </div>
-                    <div class="text_overlay">
-                        <h3>Pulp & Paper Industries</h3>
-                        <p>Providing chemicals and machinery to improve production in the pulp and paper industries.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <div class="single_sector">
-                    <div class="image_wrapper">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Oil & Gas">
-                    </div>
-                    <div class="text_overlay">
-                        <h3>Oil & Gas</h3>
-                        <p>Supplying essential equipment for the oil and gas industries to optimize operations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <div class="single_sector">
-                    <div class="image_wrapper">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Chemical Industry">
-                    </div>
-                    <div class="text_overlay">
-                        <h3>Chemical Industry</h3>
-                        <p>Offering advanced solutions and equipment for the chemical industry to enhance productivity.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /market_sectors_area -->
-
-
-    {{-- <div class="transportaion_area">
+  <div class="transportaion_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -182,7 +120,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_transport">
                         <div class="icon">
-                            <img src="img/svg_icon/pulp_paper.png" alt="Pulp & Paper Industry">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Pulp & Paper Industry">
                         </div>
                         <h3>Pulp & Paper Industry</h3>
                         <p>Providing chemicals, machinery, and laboratory instruments to enhance production efficiency.</p>
@@ -191,7 +129,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_transport">
                         <div class="icon">
-                            <img src="img/svg_icon/manufacturing.png" alt="Manufacturing">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Manufacturing">
                         </div>
                         <h3>Manufacturing</h3>
                         <p>Supplying high-quality equipment and parts for diverse industrial manufacturing needs.</p>
@@ -200,7 +138,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_transport">
                         <div class="icon">
-                            <img src="img/svg_icon/research.png" alt="Research & Development">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Research & Development">
                         </div>
                         <h3>Research & Development</h3>
                         <p>Supporting laboratories with advanced testing instruments and solutions.</p>
@@ -208,7 +146,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
 
     <!-- our_customers_area -->
@@ -221,19 +159,19 @@
                 <div class="col-xl-12">
                     <div class="customer_slider owl-carousel">
                         <div class="single_customer">
-                            <img src="img/customers/customer1.png" alt="Customer 1">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Customer 1">
                         </div>
                         <div class="single_customer">
-                            <img src="img/customers/customer2.png" alt="Customer 2">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Customer 2">
                         </div>
                         <div class="single_customer">
-                            <img src="img/customers/customer3.png" alt="Customer 3">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Customer 3">
                         </div>
                         <div class="single_customer">
-                            <img src="img/customers/customer4.png" alt="Customer 4">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Customer 4">
                         </div>
                         <div class="single_customer">
-                            <img src="img/customers/customer5.png" alt="Customer 5">
+                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Customer 5">
                         </div>
                     </div>
                 </div>
