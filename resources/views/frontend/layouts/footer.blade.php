@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <!-- Column 1: Logo and Description -->
-                <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <figure class="image-logo">
                             <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo" class="logo-footer">
@@ -14,8 +14,7 @@
                             <ul class="list-inline">
                                 @foreach ($socialLinks as $link)
                                     <li class="list-inline-item">
-                                        <a href="{{ $link->url }}"
-                                            class="btn btn-social rounded text-white facebook">
+                                        <a href="{{ $link->url }}" class="btn btn-social rounded text-white facebook">
                                             <i class="{{ $link->icon }}"></i>
                                         </a>
                                     </li>
@@ -26,7 +25,7 @@
                 </div>
 
                 <!-- Column 2: Grid One Links -->
-                <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">{{ @$footerGridOneTitle->value }}</h3>
                         <ul>
@@ -38,7 +37,7 @@
                 </div>
 
                 <!-- Column 3: Grid Two Links -->
-                <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">{{ @$footerGridTwoTitle->value }}</h3>
                         <ul>
@@ -50,22 +49,19 @@
                 </div>
 
                 <!-- Column 4: Grid Three Links -->
-                <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
-                        <h3 class="footer_title"> {{ @$footerGridThreeTitle->value }}
-                        </h3>
+                        <h3 class="footer_title">{{ @$footerGridThreeTitle->value }}</h3>
                         <ul>
                             @foreach ($footerGridThree as $gridThree)
-                                <li>
-                                    <a href="{{ $gridThree->url }}">{{ $gridThree->name }}</a>
-                                </li>
+                                <li><a href="{{ $gridThree->url }}">{{ $gridThree->name }}</a></li>
                             @endforeach
                         </ul>
                     </div>
                 </div>
 
                 <!-- Column 5: Newsletter -->
-                <div class="col-xl-3 col-md-6 col-lg-3">
+                <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
                         <h3 class="footer_title">Get More Information!</h3>
                         <form action="#" class="newsletter_form">
