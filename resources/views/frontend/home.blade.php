@@ -212,14 +212,12 @@
     </div> --}}
 
 
-    <div class="service_area" style="background-color: rgb(0, 0, 83)">
+    <div class="service_area" style="background-color: #f0f4f8;">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-50 text-center">
-                        <h3>
-                            Our Customer
-                        </h3>
+                        <h3>Our Customer</h3>
                     </div>
                 </div>
             </div>
@@ -255,6 +253,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 
