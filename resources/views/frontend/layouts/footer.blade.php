@@ -61,6 +61,7 @@
                             <button type="submit">{{ __('frontend.sign up') }}</button>
                         </form>
 
+
                     </div>
                 </div>
             </div>
