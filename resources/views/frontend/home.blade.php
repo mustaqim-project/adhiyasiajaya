@@ -4,6 +4,17 @@
 
 <!-- slider_area_start -->
 <div class="slider_area">
+
+
+    <div class="swiper-container slider_area">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_1">...</div>
+            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_2">...</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
     <!-- Slide 1 -->
     <div class="single_slider d-flex align-items-center slider_bg_1">
         <div class="container">

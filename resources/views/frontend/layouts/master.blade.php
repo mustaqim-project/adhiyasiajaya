@@ -62,6 +62,11 @@
     <link rel="stylesheet" href="{{ asset('depan/css/slicknav.css') }}">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="{{ asset('depan/css/style.css') }}">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
 </head>
 
 <body>
@@ -129,6 +134,20 @@
             </div>
         </div>
     </div> --}}
+
+
+    <script>
+        var swiper = new Swiper('.slider_area', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 
     <!-- JS here -->
     <script src="{{ asset('depan/js/vendor/modernizr-3.5.0.min.js') }}"></script>

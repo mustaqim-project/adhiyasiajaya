@@ -1634,12 +1634,56 @@ h3 {
 
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+    background-image: url('../img/banner/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/* line 4, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
 .slider_bg_2 {
-  background-image: url(../img/banner/banner_2.png);
+    background-image: url('../img/banner/banner_2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider_area .single_slider {
+    height: 700px;
+    position: relative;
+}
+
+.slider_text {
+    color: #fff;
+    margin-top: 30px;
+}
+
+.slider_text p {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.slider_text h3 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+.boxed-btn3 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #fd8e5e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.boxed-btn3:hover {
+    background-color: #fc7323;
+    color: #fff;
 }
 
 /* line 7, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
