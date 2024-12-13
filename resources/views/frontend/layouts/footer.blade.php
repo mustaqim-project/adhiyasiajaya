@@ -75,14 +75,13 @@
     </div>
 </footer>
 <!-- Footer End --> --}}
-
 <!-- Footer Start -->
-<footer class="footer">
+<footer class="footer bg-dark">
     <div class="footer_top">
         <div class="container">
             <div class="row">
                 <!-- Column 1: Logo and Description -->
-                <div class="col-xl-2 col-md-6 col-lg-2">
+                <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
                         <figure class="image-logo">
                             <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo" class="logo-footer" width="180px">
@@ -102,8 +101,8 @@
                     </div>
                 </div>
 
-                <!-- Column 2: Grid One Links -->
-                <div class="col-xl-2 col-md-6 col-lg-2">
+                <!-- Column 2: Grid One and Grid Two Links -->
+                <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
                         <h3 class="footer_title">{{ @$footerGridOneTitle->value }}</h3>
                         <ul>
@@ -112,10 +111,6 @@
                             @endforeach
                         </ul>
                     </div>
-                </div>
-
-                <!-- Column 3: Grid Two Links -->
-                <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">{{ @$footerGridTwoTitle->value }}</h3>
                         <ul>
@@ -126,19 +121,7 @@
                     </div>
                 </div>
 
-                <!-- Column 4: Grid Three Links -->
-                <div class="col-xl-2 col-md-6 col-lg-2">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">{{ @$footerGridThreeTitle->value }}</h3>
-                        <ul>
-                            @foreach ($footerGridThree as $gridThree)
-                                <li><a href="{{ $gridThree->url }}">{{ $gridThree->name }}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Column 5: Newsletter -->
+                <!-- Column 3: Newsletter and Contact Info -->
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
                         <h3 class="footer_title">Get More Information!</h3>
@@ -146,6 +129,14 @@
                             <input type="email" placeholder="Enter your email" name="email" required>
                             <button type="submit" class="newsletter-button">Get Info!</button>
                         </form>
+                    </div>
+                    <div class="footer_widget">
+                        <h3 class="footer_title">Contact Us</h3>
+                        <p>PT. Daya Esa Mulya Mandiri</p>
+                        <p>Jl. Ciputat Raya No. 3B, Kebayoran Lama Utara, Jakarta 12240</p>
+                        <p><a href="tel:+62217290467">+62 21-7290467</a></p>
+                        <p><a href="tel:+62217292930">+62 21-7292930</a></p>
+                        <p><a href="mailto:sales@dayaesa.com">sales@dayaesa.com</a></p>
                     </div>
                 </div>
             </div>
@@ -165,6 +156,7 @@
     </div>
 </footer>
 <!-- Footer End -->
+
 
 {{--
 <section class="wrapper__section p-0">
