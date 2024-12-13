@@ -8,7 +8,7 @@
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid">
+                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="180px">
                             </a>
                         </div>
                     </div>
