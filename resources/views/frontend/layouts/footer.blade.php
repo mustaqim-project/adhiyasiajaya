@@ -177,7 +177,7 @@
                         <div class="col-md-4">
                             <div class="widget__footer">
                                 <figure class="image-logo">
-                                    <img src="{{ asset(@$footerInfo->logo) }}" alt="" class="logo-footer">
+                                    <img src="{{ asset(@$footerInfo->logo) }}" alt="" class="logo-footer" width="175px">
                                 </figure>
 
                                 <p>{{ @$footerInfo->description }}</p>
