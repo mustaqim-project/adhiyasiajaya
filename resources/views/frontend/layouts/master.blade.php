@@ -38,10 +38,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/bootstrap-iconpicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/bootstrap-iconpicker.min.css') }}"> --}}
     <style>
         :root {
             --colorPrimary: {{ $settings['site_color'] }};
@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="{{ asset('depan/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/magnific-popup.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('depan/css/font-awesome.min.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('depan/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/flaticon.css') }}">
