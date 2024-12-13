@@ -2,30 +2,13 @@
 
 @section('content')
 <section class="blog_pages">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Breadcrumb -->
-                <ul class="breadcrumbs bg-light mb-4">
-                    <li class="breadcrumbs__item">
-                        <a href="{{ url('/') }}" class="breadcrumbs__url">
-                            <i class="fa fa-home"></i> {{ __('frontend.Home') }}</a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="javascirt:;" class="breadcrumbs__url">{{ __('frontend.News') }}</a>
-                    </li>
 
-                </ul>
-            </div>
-
-        </div>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
 
                 <div class="blog_page_search">
-                    <form action="{{ route('news') }}" method="GET">
+                    <form action="{{ route('product') }}" method="GET">
                         <div class="row">
                             <div class="col-lg-5">
                                 <input type="text" placeholder="Type here" value="{{ request()->search }}" name="search">
@@ -202,7 +185,7 @@
                             <ul class="list-inline">
                                 @foreach ($mostCommonTags as $tag)
                                 <li class="list-inline-item">
-                                    <a href="{{ route('news', ['tag' => $tag->name]) }}">
+                                    <a href="{{ route('product', ['tag' => $tag->name]) }}">
                                         #{{ $tag->name }} ({{ $tag->count }})
                                     </a>
                                 </li>

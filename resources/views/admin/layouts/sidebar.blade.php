@@ -28,19 +28,19 @@
             @if (canAccess(['category index', 'category create', 'category udpate', 'category delete']))
                 <li class="{{ setSidebarActive(['admin.category.*']) }}"><a class="nav-link"
                         href="{{ route('admin.category.index') }}"><i class="fas fa-list"></i>
-                        <span>{{ __('admin.Category') }}</span></a></li>
+                        <span>{{ __('admin.Category Product') }}</span></a></li>
             @endif
 
            @if (canAccess(['news index', 'image index']))
                 <li class="dropdown {{ setSidebarActive(['admin.news.*', 'admin.pending.news', 'admin.images.*']) }}">
                     <a href="#" class="nav-link has-dropdown"><i class="fas fa-newspaper"></i>
-                        <span>{{ __('admin.News') }}</span></a>
+                        <span>{{ __('admin.Product') }}</span></a>
                     <ul class="dropdown-menu">
                         <li class="{{ setSidebarActive(['admin.news.index']) }}">
-                            <a class="nav-link" href="{{ route('admin.news.index') }}">{{ __('admin.All News') }}</a>
+                            <a class="nav-link" href="{{ route('admin.news.index') }}">{{ __('admin.All Product') }}</a>
                         </li>
                         <li class="{{ setSidebarActive(['admin.news.create']) }}">
-                            <a class="nav-link" href="{{ route('admin.news.create') }}">{{ __('admin.Create News') }}</a>
+                            <a class="nav-link" href="{{ route('admin.news.create') }}">{{ __('admin.Create Product') }}</a>
                         </li>
                         <!--<li class="{{ setSidebarActive(['admin.pending.news']) }}">-->
                         <!--    <a class="nav-link" href="{{ route('admin.pending.news') }}">{{ __('admin.Pending News') }}</a>-->

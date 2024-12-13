@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('content')
-    <!-- breaking news  carousel-->
+    {{-- <!-- breaking news  carousel-->
     @include('frontend.home-components.breaking-news')
     <!-- End breaking news carousel -->
 
@@ -27,5 +27,5 @@
 
     <!-- Popular news category -->
     @include('frontend.home-components.main-news')
-    <!-- End Popular news category -->
+    <!-- End Popular news category --> --}}
 @endsection

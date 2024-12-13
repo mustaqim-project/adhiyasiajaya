@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
-    Route::get('admin', [AdminAuthenticationController::class, 'login'])->name('login');
+    Route::get('login', [AdminAuthenticationController::class, 'login'])->name('login');
     Route::post('admin', [AdminAuthenticationController::class, 'handleLogin'])->name('handle-login');
     Route::post('logout', [AdminAuthenticationController::class, 'logout'])->name('logout');
 

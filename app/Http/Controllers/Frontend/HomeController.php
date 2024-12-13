@@ -84,6 +84,7 @@ class HomeController extends Controller
         $mostCommonTags = $this->mostCommonTags();
 
         $ad = Ad::first();
+        $contact = Contact::where('language', getLangauge())->first();
 
         return view('frontend.home', compact(
             'breakingNews',
@@ -97,7 +98,8 @@ class HomeController extends Controller
             'mostViewedPosts',
             'socialCounts',
             'mostCommonTags',
-            'ad'
+            'ad',
+            'contact'
         ));
     }
 
@@ -307,23 +309,23 @@ class HomeController extends Controller
 
     //     return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad'));
     // }
-    
+
     public function news(Request $request)
     {
         $news = News::query();
-    
+
         $news->when($request->has('tag'), function ($query) use ($request) {
             $query->whereHas('tags', function ($query) use ($request) {
                 $query->where('name', $request->tag);
             });
         });
-    
+
         $news->when($request->has('category') && !empty($request->category), function ($query) use ($request) {
             $query->whereHas('category', function ($query) use ($request) {
                 $query->where('slug', $request->category);
             });
         });
-    
+
         $news->when($request->has('search'), function ($query) use ($request) {
             $query->where(function ($query) use ($request) {
                 $query->where('title', 'like', '%' . $request->search . '%')
@@ -332,23 +334,23 @@ class HomeController extends Controller
                 $query->where('name', 'like', '%' . $request->search . '%');
             });
         });
-    
+
         $news = $news->activeEntries()->withLocalize()->paginate(20);
-    
+
         $recentNews = News::with(['category', 'auther'])
             ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
         $mostCommonTags = $this->mostCommonTags();
-    
+
         $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
-    
+
         $ad = Ad::first();
-    
+
         // Fetch the category if the 'category' parameter exists in the request
         $category = null;
         if ($request->has('category') && !empty($request->category)) {
             $category = Category::where('slug', $request->category)->first();
         }
-    
+
         return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category'));
     }
 
