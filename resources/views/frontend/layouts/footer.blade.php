@@ -53,7 +53,7 @@
 
 
                         <form action="" class="newsletter-form">
-                            <input type="text" class="form-control" placeholder="Enter your mail">
+                            <input type="text" placeholder="Enter your mail">
                             <button type="submit">Subscribe</button>
                         </form>
                         {{-- <form action="" class="newsletter-form">
