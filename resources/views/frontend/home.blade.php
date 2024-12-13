@@ -46,62 +46,6 @@
     <!-- slider_area_end -->
 
 
-
-    {{-- <div class="service_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title mb-50 text-center">
-                        <h3>
-                            Our Product
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="service_active owl-carousel">
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Chemicals">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Chemicals</a></h3>
-                                <p>High-quality chemicals for the Pulp & Paper industry.</p>
-                            </div>
-                        </div>
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Machinery & Parts">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Machinery & Parts</a></h3>
-                                <p>Reliable machinery and parts for optimized production.</p>
-                            </div>
-                        </div>
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Laboratory Instruments">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Laboratory Instruments</a></h3>
-                                <p>Advanced testing instruments for accurate analysis.</p>
-                            </div>
-                        </div>
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Stockist Items">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Stockist Items</a></h3>
-                                <p>Readily available products from trusted suppliers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <div class="service_area">
         <div class="container">
             <div class="row">
@@ -117,7 +61,8 @@
                         <!-- Single Category -->
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Chemicals">
+                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
+                                    alt="Chemicals">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Chemicals</a></h3>
@@ -128,7 +73,8 @@
                         <!-- Single Category -->
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Machinery & Parts">
+                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
+                                    alt="Machinery & Parts">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Machinery & Parts</a></h3>
@@ -139,7 +85,8 @@
                         <!-- Single Category -->
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Laboratory Instruments">
+                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
+                                    alt="Laboratory Instruments">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Laboratory Instruments</a></h3>
@@ -150,7 +97,8 @@
                         <!-- Single Category -->
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Stockist Items">
+                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
+                                    alt="Stockist Items">
                             </div>
                             <div class="service_info">
                                 <h3><a href="product_details.html">Stockist Items</a></h3>
@@ -168,7 +116,7 @@
 
 
 
-  {{-- <div class="transportaion_area">
+    {{-- <div class="transportaion_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -228,7 +176,8 @@
                     <div class="service_active owl-carousel">
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVA18_ofxfkZJmXY0TMHQLkkIv3GXcv8rmyg&s" alt="APP Group" width="180px">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVA18_ofxfkZJmXY0TMHQLkkIv3GXcv8rmyg&s"
+                                    alt="APP Group" width="180px">
                             </div>
                             <div class="service_info">
                                 <h3><a href="#">APP Group</a></h3>
@@ -236,7 +185,8 @@
                         </div>
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9JOtXW_2BTkrNacxEKzqcC_vLQgNDDk-7iw&s" alt="APRIL Group" width="180px">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9JOtXW_2BTkrNacxEKzqcC_vLQgNDDk-7iw&s"
+                                    alt="APRIL Group" width="180px">
                             </div>
                             <div class="service_info">
                                 <h3><a href="#">APRIL Group</a></h3>
@@ -244,7 +194,8 @@
                         </div>
                         <div class="single_category">
                             <div class="thumb">
-                                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQF4cdabJF0DHQ/company-logo_200_200/company-logo_200_200/0/1686619480470/dayasa_aria_prima_logo?e=2147483647&v=beta&t=T8WjLPQdIc1ILMuZM6SomN0UF80O4RBdPSYH0wMrEGU" alt="DAYASA ARIA PRIMA" width="180px">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQF4cdabJF0DHQ/company-logo_200_200/company-logo_200_200/0/1686619480470/dayasa_aria_prima_logo?e=2147483647&v=beta&t=T8WjLPQdIc1ILMuZM6SomN0UF80O4RBdPSYH0wMrEGU"
+                                    alt="DAYASA ARIA PRIMA" width="180px">
                             </div>
                             <div class="service_info">
                                 <h3><a href="#">DAYASA ARIA PRIMA</a></h3>
@@ -256,29 +207,6 @@
         </div>
     </div>
 
-
-
-
-    <!-- contact_action_area  -->
-    <div class="contact_action_area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-7 col-md-6">
-                    <div class="action_heading">
-                        <h3>100% secure and safe</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
-                            placing drawing.</p>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-md-6">
-                    <div class="call_add_action">
-                        <a href="#" class="boxed-btn3">+10 672 457 356</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /contact_action_area  -->
 
 
 
@@ -320,6 +248,29 @@
     <!--/ chose_area  -->
 
 
+
+
+
+    <!-- contact_action_area  -->
+    <div class="contact_action_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-md-6">
+                    <div class="action_heading">
+                        <h3>100% secure and safe</h3>
+                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
+                            placing drawing.</p>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-md-6">
+                    <div class="call_add_action">
+                        <a href="#" class="boxed-btn3">+10 672 457 356</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /contact_action_area  -->
 
 
 
