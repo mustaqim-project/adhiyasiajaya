@@ -48,7 +48,7 @@
                     </div>
                 </div>
 
-                <!-- Column 4: Grid Three Links -->
+                {{-- <!-- Column 4: Grid Three Links -->
                 <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">{{ @$footerGridThreeTitle->value }}</h3>
@@ -58,7 +58,7 @@
                             @endforeach
                         </ul>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- Column 5: Newsletter -->
                 <div class="col-xl-4 col-md-6 col-lg-4">
