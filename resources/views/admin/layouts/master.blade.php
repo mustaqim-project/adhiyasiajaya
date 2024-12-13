@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
 
 
 
@@ -14,7 +14,7 @@
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/fontawesome/css/all.min.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         :root {
             --colorPrimary: {{ $settings['site_color'] }};
@@ -42,7 +42,7 @@
     <!--  window.dataLayer = window.dataLayer || [];-->
     <!--  function gtag(){dataLayer.push(arguments);}-->
     <!--  gtag('js', new Date());-->
-    
+
     <!--  gtag('config', 'G-FZQWWJHNHP');-->
     <!--</script>-->
 
@@ -75,7 +75,7 @@
         plugins: [
           'advlist', 'autolink', 'link', 'image', 'lineheight', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
           'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
-          'media', 'table', 'emoticons', 'help', 
+          'media', 'table', 'emoticons', 'help',
         ],
         toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
           'bullist numlist outdent indent lineheight| link image | print preview media fullscreen | ' +
