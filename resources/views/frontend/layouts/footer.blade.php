@@ -51,11 +51,15 @@
                             Subscribe
                         </h3>
 
+
                         <form action="" class="newsletter-form">
-                            <input type="text" class="form-control" name="email" placeholder="Your email address">
+                            <input type="text" class="form-control" placeholder="Enter your mail">
                             <button type="submit">Subscribe</button>
                         </form>
-
+                        {{-- <form action="" class="newsletter-form">
+                            <input type="text" class="form-control" name="email" placeholder="Your email address">
+                            <button type="submit">Subscribe</button>
+                        </form> --}}
                     </div>
                 </div>
             </div>
