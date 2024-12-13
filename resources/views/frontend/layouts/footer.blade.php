@@ -53,7 +53,7 @@
 
                         <form action="" class="newsletter_form">
                                 <input type="text" class="form-control" name="email" placeholder="Your email address">
-                                    <button type="submit">{{ __('frontend.sign up') }}</button>
+                                    <button type="submit">{{ __('frontend.Get Info') }}</button>
 
                         </form>
 {{--
