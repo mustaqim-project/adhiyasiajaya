@@ -1,4 +1,4 @@
-{{-- <!-- Footer Start -->
+<!-- Footer Start -->
 <footer class="footer">
     <div class="footer_top">
         <div class="container">
@@ -74,7 +74,7 @@
         </div>
     </div>
 </footer>
-<!-- Footer End --> --}}
+<!-- Footer End -->
 
 <!-- Footer Start -->
 {{-- <footer class="footer">
@@ -166,7 +166,7 @@
 </footer> --}}
 <!-- Footer End -->
 
-
+{{--
 <section class="wrapper__section p-0">
     <div class="wrapper__section__components">
         <!-- Footer -->
@@ -279,4 +279,4 @@
             </div>
         </footer>
     </div>
-</section>
+</section> --}}
