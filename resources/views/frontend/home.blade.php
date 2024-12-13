@@ -96,6 +96,7 @@
     </div>
 
 
+
     <div class="service_area">
         <div class="container">
             <div class="row">
@@ -109,12 +110,12 @@
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="product_category_active owl-carousel">
+                    <div class="service_active owl-carousel">
                         <div class="single_category">
                             <div class="thumb">
                                 <img src="img/product_category/chemicals.png" alt="Chemicals">
                             </div>
-                            <div class="category_info">
+                            <div class="service_info">
                                 <h3><a href="product_details.html">Chemicals</a></h3>
                                 <p>High-quality chemicals for the Pulp & Paper industry.</p>
                             </div>
@@ -123,7 +124,7 @@
                             <div class="thumb">
                                 <img src="img/product_category/machinery.png" alt="Machinery & Parts">
                             </div>
-                            <div class="category_info">
+                            <div class="service_info">
                                 <h3><a href="product_details.html">Machinery & Parts</a></h3>
                                 <p>Reliable machinery and parts for optimized production.</p>
                             </div>
@@ -132,7 +133,7 @@
                             <div class="thumb">
                                 <img src="img/product_category/laboratory.png" alt="Laboratory Instruments">
                             </div>
-                            <div class="category_info">
+                            <div class="service_info">
                                 <h3><a href="product_details.html">Laboratory Instruments</a></h3>
                                 <p>Advanced testing instruments for accurate analysis.</p>
                             </div>
@@ -141,7 +142,7 @@
                             <div class="thumb">
                                 <img src="img/product_category/stockist.png" alt="Stockist Items">
                             </div>
-                            <div class="category_info">
+                            <div class="service_info">
                                 <h3><a href="product_details.html">Stockist Items</a></h3>
                                 <p>Readily available products from trusted suppliers.</p>
                             </div>
