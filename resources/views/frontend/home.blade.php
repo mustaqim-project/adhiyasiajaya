@@ -2,46 +2,48 @@
 
 @section('content')
     <!-- slider_area_start -->
-    <div class="slider_area">
-        <!-- Swiper Container -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide single_slider d-flex align-items-center slider_bg_1">
-                    <div class="container">
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-xl-8">
-                                <div class="slider_text text-center">
-                                    <p>Indonesian Excellence</p>
-                                    <h3>Your Reliable Partner in Pulp & Paper Industry</h3>
-                                    <a class="boxed-btn3" href="products.html">Our Products</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Slide 2 -->
-                <div class="swiper-slide single_slider d-flex align-items-center slider_bg_3">
-                    <div class="container">
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-xl-8">
-                                <div class="slider_text text-center">
-                                    <p>Global Partnerships</p>
-                                    <h3>Connecting Indonesia to World-Class Solutions</h3>
-                                    <a class="boxed-btn3" href="contact.html">Contact Us</a>
-                                </div>
+<div class="slider_area">
+    <!-- Swiper Container -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_1">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="slider_text text-center">
+                                <p>Indonesian Excellence</p>
+                                <h3>Your Reliable Partner in Pulp & Paper Industry</h3>
+                                <a class="boxed-btn3" href="products.html">Our Products</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Swiper Pagination -->
-            <div class="swiper-pagination"></div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_2">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="slider_text text-center">
+                                <p>Global Partnerships</p>
+                                <h3>Connecting Indonesia to World-Class Solutions</h3>
+                                <a class="boxed-btn3" href="contact.html">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
-    <!-- slider_area_end -->
+</div>
+<!-- slider_area_end -->
 
 
 
