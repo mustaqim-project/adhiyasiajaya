@@ -52,14 +52,14 @@
                         </h3>
 
                         <form action="" class="newsletter-form">
-                                <input type="text" class="form-control" name="email" placeholder="Your email address">
-                                    <button type="submit">{{ __('frontend.sign up') }}</button>
+                            <input type="text" class="form-control" name="email" placeholder="Your email address">
+                            <button type="submit">{{ __('frontend.sign up') }}</button>
                         </form>
 
-                        <form action="#" class="newsletter_form">
+                        {{-- <form action="#" class="newsletter_form">
                                 <input type="text" class="form-control" name="email" placeholder="Your email address">
                             <button type="submit">Subscribe</button>
-                        </form>
+                        </form> --}}
 
                     </div>
                 </div>
