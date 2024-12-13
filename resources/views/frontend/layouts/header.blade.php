@@ -7,7 +7,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{ url('/') }}">
                                 <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid">
                             </a>
                         </div>
@@ -66,39 +66,43 @@
                             </div>
                         </div>
 
-<!-- Search Button -->
-<div class="col-xl-3 col-lg-3 d-none d-lg-block">
-    <div class="Appointment justify-content-end">
-        <div class="search_btn">
-            <a data-toggle="modal" data-target="#searchModal" href="#">
-                <i class="ti-search"></i>
-            </a>
-        </div>
-    </div>
-</div>
+                        <!-- Search Button -->
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="Appointment justify-content-end">
+                                <div class="search_btn">
+                                    <a data-toggle="modal" data-target="#searchModal" href="#">
+                                        <i class="ti-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-<!-- Search Modal -->
-<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <form action="{{ route('product') }}" method="GET">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="searchModalLabel">Search Product</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" name="search" class="form-control" placeholder="Search for products">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+                        <!-- Search Modal -->
+                        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog"
+                            aria-labelledby="searchModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <form action="{{ route('product') }}" method="GET">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="searchModalLabel">Search Product</h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="text" name="search" class="form-control"
+                                                placeholder="Search for products">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Search</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
 
 
                         <!-- Mobile Menu -->
