@@ -50,7 +50,7 @@
                         <h3 class="footer_title">
                             Subscribe
                         </h3>
-                        <form action="" class="newsletter-form">
+                        <form action="#" class="newsletter_form">
                             <input type="text" placeholder="Enter your mail">
                             <button type="submit">Subscribe</button>
                         </form>
