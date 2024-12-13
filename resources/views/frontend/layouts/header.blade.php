@@ -8,7 +8,7 @@
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="180px">
+                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" >
                             </a>
                         </div>
                     </div>
@@ -46,8 +46,8 @@
                         <!-- Mobile Logo -->
                         <div class="col-12 d-block d-lg-none">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid">
+                                <a href="{{ url('/') }}">
+                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="180px">
                                 </a>
                             </div>
                         </div>
