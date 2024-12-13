@@ -50,12 +50,14 @@
                         <h3 class="footer_title">
                             Subscribe
                         </h3>
-                        <form action="#" class="newsletter-form">
-                            <input type="email" placeholder="Enter your email" name="email" required>
-                            <button type="submit" class="newsletter-button">Subscribe</button>
+                        <form action="#" class="newsletter_form">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit">Subscribe</button>
                         </form>
-
-
+                        <form action="" class="newsletter-form">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit">Subscribe</button>
+                        </form>
                         <p class="newsletter_text">Esteem spirit temper too say adieus who direct esteem esteems
                             luckily.</p>
                     </div>

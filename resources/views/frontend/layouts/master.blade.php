@@ -161,57 +161,44 @@
             })
 
             /** Subscribe Newsletter**/
-            $(document).ready(function () {
-    $('.newsletter-form').on('submit', function (e) {
-        e.preventDefault();
+            $('.newsletter-form').on('submit', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    method: 'POST',
+                    url: "{{ route('subscribe-newsletter') }}",
+                    data: $(this).serialize(),
+                    beforeSend: function() {
+                        $('.newsletter-button').text('loading...');
+                        $('.newsletter-button').attr('disabled', true);
+                    },
+                    success: function(data) {
+                        if (data.status === 'success') {
+                            Toast.fire({
+                                icon: 'success',
+                                title: data.message
+                            })
+                            $('.newsletter-form')[0].reset();
+                            $('.newsletter-button').text('sign up');
 
-        let $form = $(this);
-        let $button = $form.find('.newsletter-button');
+                            $('.newsletter-button').attr('disabled', false);
+                        }
+                    },
+                    error: function(data) {
+                        $('.newsletter-button').text('sign up');
+                        $('.newsletter-button').attr('disabled', false);
 
-        $.ajax({
-            method: 'POST',
-            url: "{{ route('subscribe-newsletter') }}",
-            data: $form.serialize(),
-            beforeSend: function () {
-                $button.text('Loading...');
-                $button.attr('disabled', true);
-            },
-            success: function (data) {
-                if (data.status === 'success') {
-                    Toast.fire({
-                        icon: 'success',
-                        title: data.message
-                    });
-                    $form[0].reset();
-                }
-                $button.text('Subscribe');
-                $button.attr('disabled', false);
-            },
-            error: function (xhr) {
-                $button.text('Subscribe');
-                $button.attr('disabled', false);
-
-                if (xhr.status === 422) {
-                    let errors = xhr.responseJSON.errors;
-                    $.each(errors, function (index, value) {
-                        Toast.fire({
-                            icon: 'error',
-                            title: value[0]
-                        });
-                    });
-                } else {
-                    Toast.fire({
-                        icon: 'error',
-                        title: 'An unexpected error occurred. Please try again later.'
-                    });
-                }
-            }
-        });
-    });
-});
-
-});
-
+                        if (data.status === 422) {
+                            let errors = data.responseJSON.errors;
+                            $.each(errors, function(index, value) {
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: value[0]
+                                })
+                            })
+                        }
+                    }
+                })
+            })
         })
     </script>
 
