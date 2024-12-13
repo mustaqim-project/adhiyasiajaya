@@ -4,48 +4,45 @@
 
 <!-- slider_area_start -->
 <div class="slider_area">
-
-
-    <div class="swiper-container slider_area">
+    <!-- Swiper Container -->
+    <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_1">...</div>
-            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_2">...</div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_1">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="slider_text text-center">
+                                <p>For Personal & Business</p>
+                                <h3>Global Logistic Service For Business</h3>
+                                <a class="boxed-btn3" href="service.html">Our Product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide single_slider d-flex align-items-center slider_bg_2">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="slider_text text-center">
+                                <p>Your Trusted Partner</p>
+                                <h3>Efficient Delivery Solutions</h3>
+                                <a class="boxed-btn3" href="contact.html">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Swiper Pagination -->
         <div class="swiper-pagination"></div>
-    </div>
-
-
-    <!-- Slide 1 -->
-    <div class="single_slider d-flex align-items-center slider_bg_1">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-xl-8">
-                    <div class="slider_text text-center justify-content-center">
-                        <p>For Personal & Business</p>
-                        <h3>Global Logistic Service For Business</h3>
-                        <a class="boxed-btn3" href="service.html">Our Product</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="single_slider d-flex align-items-center slider_bg_2">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-xl-8">
-                    <div class="slider_text text-center justify-content-center">
-                        <p>Your Trusted Partner</p>
-                        <h3>Efficient Delivery Solutions</h3>
-                        <a class="boxed-btn3" href="contact.html">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <!-- slider_area_end -->
+
 
 
 
