@@ -51,14 +51,14 @@
                             Get More Information!
                         </h3>
 
-                        {{-- <form action="" class="newsletter-form">
+                        <form action="" class="newsletter-form">
                             <input type="text" class="form-control" name="email" placeholder="Your email address">
                             <button type="submit">{{ __('frontend.sign up') }}</button>
-                        </form> --}}
+                        </form>
 
                         <form action="" class="newsletter_form">
                                 <input type="text" class="form-control" name="email" placeholder="Your email address">
-                            <button type="submit">Subscribe</button>
+                            <button type="submit">{{ __('frontend.sign up') }}</button>
                         </form>
 
                     </div>
