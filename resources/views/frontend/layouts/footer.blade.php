@@ -76,7 +76,7 @@
 </footer>
 <!-- Footer End --> --}}
 <!-- Footer Start -->
-<footer class="footer bg-dark">
+<footer class="footer" style="background-color: var(--colorPrimary);">
     <div class="footer_top">
         <div class="container">
             <div class="row">
