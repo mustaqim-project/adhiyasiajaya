@@ -1,250 +1,436 @@
 @extends('frontend.layouts.master')
 
 @section('content')
-<section class="blog_pages">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-
-                <div class="blog_page_search">
-                    <form action="{{ route('product') }}" method="GET">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <input type="text" placeholder="Type here" value="{{ request()->search }}" name="search">
-                            </div>
-                            <div class="col-lg-4">
-                                <select name="category">
-                                    <option value="">{{ __('frontend.All') }}</option>
-                                    @foreach ($categories as $category)
-                                    <option {{ $category->slug === request()->category ? 'selected' : '' }} value="{{ $category->slug }}">{{ $category->name }}</option>
-                                    @endforeach
-
-                                </select>
-                            </div>
-                            <div class="col-lg-3">
-                                <button type="submit">{{ __('frontend.search') }}</button>
-                            </div>
+        <!-- bradcam_area  -->
+        <div class="bradcam_area bradcam_bg_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="bradcam_text text-center">
+                            <h3>Our Services</h3>
                         </div>
-                    </form>
-                </div>
-
-                <aside class="wrapper__list__article ">
-                    @if (request()->has('category'))
-
-                    <h4 class="border_section">{{ __('frontend.Category') }}: {{ request()->category }}</h4>
-                    @endif
-
-                    <div class="row">
-                        @foreach ($news as $post)
-                        <div class="col-lg-6">
-                            <!-- Post Article -->
-                            <div class="article__entry">
-                                <div class="article__image">
-                                    <a href="{{ route('news-details', $post->slug) }}">
-                                        <img src="{{ asset($post->image) }}" alt="" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="article__content">
-                                    <div class="article__category">
-                                        {{ $post->category->name }}
-                                    </div>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <span class="text-primary">
-                                                {{ __('frontend.by') }} {{ $post->auther->name }}
-                                            </span>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <span class="text-dark text-capitalize">
-                                                {{ date('M d, Y', strtotime($post->created_at)) }}
-                                            </span>
-                                        </li>
-
-                                    </ul>
-                                    <h5>
-                                        <a href="{{ route('news-details', $post->slug) }}">
-                                            {!! truncate($post->title) !!}
-                                        </a>
-                                    </h5>
-                                    <p>
-                                        {!! truncate($post->content, 100) !!}
-                                    </p>
-                                    <a href="{{ route('news-details', $post->slug) }}" class="btn btn-outline-primary mb-4 text-capitalize"> {{ __('frontend.read more') }}</a>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                        @if (count($news) === 0)
-                            <div class="text-center w-100" >
-                                <h4 >{{ __('frontend.No News Found') }} :(</h4>
-                            </div>
-                        @endif
                     </div>
-
-                </aside>
-                <div class="text-center" style="display: flex;
-                justify-content: center;">
-                    <!-- Pagination -->
-                    {{ $news->appends(request()->query())->links() }}
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="sidebar-sticky">
-                    <aside class="wrapper__list__article ">
-                        <h4 class="border_section">{{ __('frontend.Sidebar') }}</h4>
-                        <div class="wrapper__list__article-small">
-                            @foreach ($recentNews as $news)
-                            @if ($loop->index <= 2)
-                            <div class="mb-3">
-                                <!-- Post Article -->
-                                <div class="card__post card__post-list">
-                                    <div class="image-sm">
-                                        <a href="{{ route('news-details', $news->slug) }}">
-                                            <img src="{{ asset($news->image) }}" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
+        </div>
+        <!--/ bradcam_area  -->
 
+        <!-- service_area  -->
+        <div class="service_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single_service">
+                            <div class="thumb">
+                                <img src="img/service/1.png" alt="" />
+                            </div>
+                            <div class="service_info">
+                                <h3>
+                                    <a href="service_details.html"
+                                        >Ocean Freight</a
+                                    >
+                                </h3>
+                                <p>
+                                    Esteem spirit temper too say adieus who
+                                    direct esteem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single_service">
+                            <div class="thumb">
+                                <img src="img/service/2.png" alt="" />
+                            </div>
+                            <div class="service_info">
+                                <h3>
+                                    <a href="service_details.html"
+                                        >Land Transport</a
+                                    >
+                                </h3>
+                                <p>
+                                    Esteem spirit temper too say adieus who
+                                    direct esteem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single_service">
+                            <div class="thumb">
+                                <img src="img/service/3.png" alt="" />
+                            </div>
+                            <div class="service_info">
+                                <h3>
+                                    <a href="service_details.html"
+                                        >Air Freight</a
+                                    >
+                                </h3>
+                                <p>
+                                    Esteem spirit temper too say adieus who
+                                    direct esteem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single_service">
+                            <div class="thumb">
+                                <img src="img/service/4.png" alt="" />
+                            </div>
+                            <div class="service_info">
+                                <h3>
+                                    <a href="service_details.html"
+                                        >Ocean Freight</a
+                                    >
+                                </h3>
+                                <p>
+                                    Esteem spirit temper too say adieus who
+                                    direct esteem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single_service">
+                            <div class="thumb">
+                                <img src="img/service/5.png" alt="" />
+                            </div>
+                            <div class="service_info">
+                                <h3>
+                                    <a href="service_details.html"
+                                        >Land Transport</a
+                                    >
+                                </h3>
+                                <p>
+                                    Esteem spirit temper too say adieus who
+                                    direct esteem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="single_service">
+                            <div class="thumb">
+                                <img src="img/service/6.png" alt="" />
+                            </div>
+                            <div class="service_info">
+                                <h3>
+                                    <a href="service_details.html"
+                                        >Air Freight</a
+                                    >
+                                </h3>
+                                <p>
+                                    Esteem spirit temper too say adieus who
+                                    direct esteem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ service_area  -->
 
-                                    <div class="card__post__body ">
-                                        <div class="card__post__content">
+        <!-- contact_action_area  -->
+        <div class="contact_action_area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-md-6">
+                        <div class="action_heading">
+                            <h3>100% secure and safe</h3>
+                            <p>
+                                Esteem spirit temper too say adieus who direct
+                                esteem. It look estee luckily or picture placing
+                                drawing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-md-6">
+                        <div class="call_add_action">
+                            <a href="#" class="boxed-btn3">+10 672 457 356</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /contact_action_area  -->
 
-                                            <div class="card__post__author-info mb-2">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item">
-                                                        <span class="text-primary">
-                                                            {{ __('frontend.by') }} {{ $news->auther->name }}
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <span class="text-dark text-capitalize">
-                                                            {{ date('M d, Y', strtotime($news->created_at)) }}
-                                                        </span>
-                                                    </li>
+        <!-- chose_area  -->
+        <div class="chose_area">
+            <div class="container">
+                <div class="features_main_wrap">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-lg-5 col-md-6">
+                            <div class="about_image">
+                                <img src="img/about/about.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="features_info">
+                                <h3>Why Choose Us?</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit sed do eiusmod tempor
+                                    incididunt.
+                                </p>
+                                <ul>
+                                    <li>
+                                        Apartments frequently or motionless.
+                                    </li>
+                                    <li>
+                                        Duis aute irure dolor in reprehenderit
+                                        in voluptate.
+                                    </li>
+                                    <li>
+                                        Voluptatem quia voluptas sit aspernatur.
+                                    </li>
+                                </ul>
 
-                                                </ul>
-                                            </div>
-                                            <div class="card__post__title">
-                                                <h6>
-                                                    <a href="{{ route('news-details', $news->slug) }}">
-                                                        {!! truncate($news->title) !!}
-                                                    </a>
-                                                </h6>
-                                            </div>
+                                <div class="about_btn">
+                                    <a class="boxed-btn3-line" href="about.html"
+                                        >About Us</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ chose_area  -->
+
+        <!-- counter_area  -->
+        <div class="counter_area">
+            <div class="container">
+                <div class="offcan_bg">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-3">
+                            <div class="single_counter text-center">
+                                <h3>
+                                    <span class="counter">42</span>
+                                    <span>+</span>
+                                </h3>
+                                <p>Countries Covered</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="single_counter text-center">
+                                <h3>
+                                    <span class="counter">97</span>
+                                    <span>+</span>
+                                </h3>
+                                <p>Business Success</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="single_counter text-center">
+                                <h3><span class="counter">2342</span></h3>
+                                <p>Happy Client</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="single_counter text-center">
+                                <h3><span class="counter">3245</span></h3>
+                                <p>Business Done</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /counter_area  -->
+
+        <!-- Estimate_area start  -->
+        <div class="Estimate_area overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-5">
+                        <div class="Estimate_info">
+                            <h3>Get free Estimate</h3>
+                            <p>
+                                Esteem spirit temper too say adieus who direct
+                                esteem. It look estee luckily or picture
+                                placing.
+                            </p>
+                            <a href="#" class="boxed-btn3">+10 672 457 356</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-7">
+                        <div class="form">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="input_field">
+                                            <input
+                                                type="text"
+                                                placeholder="Your name"
+                                            />
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            @endif
-                            @endforeach
-                            @foreach ($recentNews as $news)
-                            @if ($loop->index > 2)
-                            <!-- Post Article -->
-                            <div class="article__entry">
-                                <div class="article__image">
-                                    <a href="{{ route('news-details', $news->slug) }}">
-                                        <img src="{{ asset($news->image) }}" alt="" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="article__content">
-                                    <div class="article__category">
-                                        {{ $news->category->name }}
+                                    <div class="col-xl-6">
+                                        <div class="input_field">
+                                            <input
+                                                type="email"
+                                                placeholder="Email"
+                                            />
+                                        </div>
                                     </div>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <span class="text-primary">
-                                                {{ __('frontend.by') }} {{ $news->auther->name }}
-                                            </span>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <span class="text-dark text-capitalize">
-                                                {{ date('M d, Y', strtotime($news->created_at)) }}
-                                            </span>
-                                        </li>
-
-                                    </ul>
-                                    <h5>
-                                        <a href="{{ route('news-details', $news->slug) }}">
-                                            {!! truncate($news->title) !!}
-                                        </a>
-                                    </h5>
-                                    <p>
-                                        {!! truncate($news->content, 100) !!}
-                                    </p>
-                                    <a href="{{ route('news-details', $news->slug) }}" class="btn btn-outline-primary mb-4 text-capitalize"> {{ __('frontend.read more') }}</a>
-                                </div>
-                            </div>
-                            @endif
-                            @endforeach
-                        </div>
-                    </aside>
-
-                    <aside class="wrapper__list__article">
-                        <h4 class="border_section">{{ __('frontend.tags') }}</h4>
-                        <div class="blog-tags p-0">
-                            <ul class="list-inline">
-                                @foreach ($mostCommonTags as $tag)
-                                <li class="list-inline-item">
-                                    <a href="{{ route('product', ['tag' => $tag->name]) }}">
-                                        #{{ $tag->name }} ({{ $tag->count }})
-                                    </a>
-                                </li>
-                                @endforeach
-
-
-                            </ul>
-                        </div>
-                    </aside>
-
-                    <aside class="wrapper__list__article">
-                        <h4 class="border_section">{{ __('frontend.newsletter') }}</h4>
-                        <!-- Form Subscribe -->
-                        <div class="widget__form-subscribe bg__card-shadow">
-                            <h6>
-                                {{ __('frontend.The most important world news and events of the day') }}.
-                            </h6>
-                            <p><small>{{ __('frontend.Get magzrenvi daily newsletter on your inbox') }}.</small></p>
-                            <form action="" class="newsletter-form">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control" name="email" placeholder="Your email address">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary newsletter-button" type="submit">{{ __('frontend.sign up') }}</button>
+                                    <div class="col-xl-6">
+                                        <div class="input_field">
+                                            <select class="wide">
+                                                <option
+                                                    data-display="Product type"
+                                                >
+                                                    Product type
+                                                </option>
+                                                <option value="1">small</option>
+                                                <option value="2">
+                                                    standard
+                                                </option>
+                                                <option value="3">high</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input_field">
+                                            <select class="wide">
+                                                <option
+                                                    data-display="Product size"
+                                                >
+                                                    Product size
+                                                </option>
+                                                <option value="1">M</option>
+                                                <option value="2">L</option>
+                                                <option value="3">Xl</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input_field">
+                                            <select class="wide">
+                                                <option
+                                                    data-display="City of departure"
+                                                >
+                                                    City of departure
+                                                </option>
+                                                <option value="1">
+                                                    departure
+                                                </option>
+                                                <option value="2">
+                                                    departure
+                                                </option>
+                                                <option value="3">
+                                                    departure
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input_field">
+                                            <select class="wide">
+                                                <option
+                                                    data-display="Delivery city"
+                                                >
+                                                    City of departure
+                                                </option>
+                                                <option value="1">
+                                                    Delivery
+                                                </option>
+                                                <option value="2">
+                                                    Delivery
+                                                </option>
+                                                <option value="3">
+                                                    Delivery
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="input_field">
+                                            <textarea
+                                                placeholder="Message"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="input_field">
+                                            <button
+                                                class="boxed-btn3-line"
+                                                type="submit"
+                                            >
+                                                Send Estimate
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                    </aside>
-
-                    @if ($ad->side_bar_ad_status == 1)
-                    <aside class="wrapper__list__article">
-                        <h4 class="border_section">{{ __('frontend.Advertise') }}</h4>
-                        <a href="{{ $ad->side_bar_ad_url }}">
-                            <figure>
-                                <img src="{{ asset($ad->side_bar_ad) }}" alt="" class="img-fluid">
-                            </figure>
-                        </a>
-                    </aside>
-                    @endif
-                </div>
-            </div>
-
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    @if ($ad->news_page_ad_status == 1)
-    <div class="large_add_banner my-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="large_add_banner_img">
-                        <a href="{{ $ad->news_page_ad_url }}">
-                            <img src="{{ asset($ad->news_page_ad) }}" alt="adds">
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    @endif
-</section>
+        <!-- Estimate_area end  -->
+
+        <!-- contact_location  -->
+        <div class="contact_location">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="location_left">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="" />
+                                </a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3">
+                        <div class="single_location">
+                            <h3>
+                                <img src="img/icon/address.svg" alt="" />
+                                Location
+                            </h3>
+                            <p>600/D, Kings road, Green lane NewYork-2563</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3">
+                        <div class="single_location">
+                            <h3>
+                                <img src="img/icon/support.svg" alt="" />
+                                Location
+                            </h3>
+                            <p>
+                                +10 267 3563 4562 <br />
+                                support@logistico.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ contact_location  -->
+
 @endsection
