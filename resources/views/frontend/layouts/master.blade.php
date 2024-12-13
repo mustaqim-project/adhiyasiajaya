@@ -52,7 +52,8 @@
     <link rel="stylesheet" href="{{ asset('depan/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/magnific-popup.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ asset('depan/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/flaticon.css') }}">
