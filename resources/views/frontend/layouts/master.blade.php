@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="{{ asset('depan/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/font-awesome.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('depan/css/font-awesome.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('depan/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('depan/css/flaticon.css') }}">
