@@ -75,6 +75,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+
+    <style>
+        .service_grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .single_category {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .single_category:hover {
+            transform: translateY(-10px);
+        }
+
+        .thumb img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .service_info h3 a {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .service_info p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .btn_learn_more {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn_learn_more:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .service_grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service_grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service_grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
