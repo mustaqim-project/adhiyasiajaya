@@ -28,9 +28,10 @@ use App\Http\Controllers\Admin\SubscriberController;
 use App\Models\FooterGridOne;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
+use App\Http\Admin\Controllers\SettingLandingPageController;
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
     Route::get('login', [AdminAuthenticationController::class, 'login'])->name('login');
     Route::post('admin', [AdminAuthenticationController::class, 'handleLogin'])->name('handle-login');
@@ -42,15 +43,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
     Route::get('reset-password/{token}', [AdminAuthenticationController::class, 'resetPassword'])->name('reset-password');
     Route::post('reset-password', [AdminAuthenticationController::class, 'handleResetPassword'])->name('reset-password.send');
-
-
 });
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin']], function(){
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin']], function () {
 
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     /**Profile Routes */
-    Route::put('profile-password-update/{id}', [ ProfileController::class, 'passwordUpdate'])->name('profile-password.update');
+    Route::put('profile-password-update/{id}', [ProfileController::class, 'passwordUpdate'])->name('profile-password.update');
     Route::resource('profile', ProfileController::class);
 
     /** Language Route */
@@ -147,6 +146,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin']],
 
     Route::post('translate-string', [LocalizationController::class, 'translateString'])->name('translate-string');
 
+
+
+    Route::get('settings/landing-page', [SettingLandingPageController::class, 'index'])->name('setting_landing_page.index');
+    Route::put('settings/landing-page/{id}', [SettingLandingPageController::class, 'update'])->name('setting_landing_page.update');
 });
-
-
