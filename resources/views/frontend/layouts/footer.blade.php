@@ -4,7 +4,7 @@
     .footer {
         background-color: #F5FBFF;
         padding: 40px 0;
-        color: var(--textColor);
+        color: black;
     }
 
     .footer .footer_top .footer_widget .footer_title {
