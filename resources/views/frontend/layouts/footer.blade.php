@@ -168,22 +168,22 @@
     }
 </style>
 
-<footer class="footer">
+<footer class="footer bg-dark text-light py-4">
     <div class="footer_top">
         <div class="container">
             <div class="row">
                 <!-- Column 1: Logo and Description -->
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
-                        <figure class="image-logo mb-3">
-                            <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo" class="logo-footer" width="180px">
+                        <figure class="mb-3">
+                            <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo" class="img-fluid logo-footer" width="180">
                         </figure>
-                        <p class="mb-3">{{ @$footerInfo->description }}</p>
-                        <div class="social__media mt-4">
-                            <ul>
+                        <p>{{ @$footerInfo->description }}</p>
+                        <div class="social_media mt-4">
+                            <ul class="list-inline">
                                 @foreach ($socialLinks as $link)
-                                    <li>
-                                        <a href="{{ $link->url }}" class="btn btn-social">
+                                    <li class="list-inline-item">
+                                        <a href="{{ $link->url }}" class="btn btn-social rounded-circle text-white">
                                             <i class="{{ $link->icon }}"></i>
                                         </a>
                                     </li>
@@ -197,10 +197,12 @@
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
                         <h3 class="footer_title">{{ @$footerGridOneTitle->value }}</h3>
-                        <ul>
+                        <ul class="list-unstyled">
                             @foreach ($footerGridOne as $gridOne)
                                 <li>
-                                    <a href="{{ $gridOne->url }}">{{ $gridOne->name }}</a>
+                                    <a href="{{ $gridOne->url }}" class="text-light text-decoration-none">
+                                        {{ $gridOne->name }}
+                                    </a>
                                 </li>
                             @endforeach
                         </ul>
@@ -211,11 +213,24 @@
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget">
                         <h3 class="footer_title">Contact Us</h3>
-                        <p>PT. Daya Esa Mulya Mandiri</p>
-                        <p>Jl. Ciputat Raya No. 3B, Kebayoran Lama Utara, Jakarta 12240</p>
-                        <p><a href="tel:+62217290467">+62 21-7290467</a></p>
-                        <p><a href="tel:+62217292930">+62 21-7292930</a></p>
-                        <p><a href="mailto:sales@dayaesa.com">sales@dayaesa.com</a></p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <span class="me-2"><i class="fa fa-home"></i></span>
+                                {{ @$contact->address }}
+                            </li>
+                            <li class="mb-2">
+                                <span class="me-2"><i class="fa fa-phone"></i></span>
+                                <a href="tel:{{ @$contact->phone }}" class="text-light text-decoration-none">
+                                    {{ @$contact->phone }}
+                                </a>
+                            </li>
+                            <li>
+                                <span class="me-2"><i class="fa fa-envelope"></i></span>
+                                <a href="mailto:{{ @$contact->email }}" class="text-light text-decoration-none">
+                                    {{ @$contact->email }}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -223,13 +238,14 @@
     </div>
 
     <!-- Copyright Section -->
-    <div class="copy-right_text">
+    <div class="copy-right_text bg-darker text-center py-3 mt-4">
         <div class="container">
-            <div class="footer_border"></div>
-            <p>{{ @$footerInfo->copyright }}</p>
+            <div class="footer_border mb-3"></div>
+            <p class="mb-0 small">{{ @$footerInfo->copyright }}</p>
         </div>
     </div>
 </footer>
+
 
 <!-- Footer End -->
 
