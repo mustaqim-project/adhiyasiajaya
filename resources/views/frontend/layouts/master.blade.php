@@ -48,19 +48,6 @@
         }
 
         /* line 130, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
-        .bg-img-1 {
-            background-image: url('https://shasolo.com/wp-content/uploads/2024/04/refinary.jpeg');
-        }
-
-        /* line 133, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
-        .bg-img-2 {
-            background-image: url('https://www.electrosonic.com/hubfs/iStock-655162742.jpg');
-        }
-
-        /* line 136, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
-        .cta-bg-1 {
-            background-image: url(../img/background-img/bg-img-3.jpg);
-        }
 
         /* Styling untuk ikon WhatsApp yang mengambang */
         .whatsapp-float {
@@ -172,6 +159,8 @@
             'language' => getLangauge(),
         ])->first();
         $contact = \App\Models\Contact::where('language', getLangauge())->first();
+        $settingpage = App\Models\SettingLandingPage::first(); // Mengambil entri pertama
+
     @endphp
 
     <!-- Header -->
@@ -207,16 +196,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="serch_form">
-                    <input type="text" placeholder="search">
-                    <button type="submit">search</button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
+
 
     <!-- WhatsApp Floating Icon -->
     @if (!empty($contact->phone))
