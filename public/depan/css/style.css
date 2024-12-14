@@ -365,7 +365,7 @@ h3 {
   line-height: 40px;
   background: #FFFFFF;
   left: -20px;
-  color: #FF3414 !important;
+  color: var(--primaryColor);
 }
 
 /* line 247, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
@@ -499,7 +499,7 @@ h3 {
   border: 1px solid #FF3414;
   letter-spacing: 3px;
   text-align: center;
-  color: #FF3414 !important;
+  color: var(--primaryColor);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -546,7 +546,7 @@ h3 {
 /* line 47, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
 .boxed-btn3:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
-  color: #FF3414 !important;
+  color: var(--primaryColor);
   border: 1px solid #FF3414;
   background: transparent;
 }
@@ -609,7 +609,7 @@ h3 {
 
 /* line 95, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
 .boxed-btn3-line {
-  color: #FF3414 !important;
+  color: var(--primaryColor);
   display: inline-block;
   padding: 10px 20px;
   font-family: "Poppins", sans-serif;
@@ -3577,7 +3577,7 @@ h3 {
   text-decoration: none;
   border-color: transparent;
   box-shadow: none;
-  color: #FF3414 !important;
+  color: var(--primaryColor);
 }
 
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_prise_slider.scss */

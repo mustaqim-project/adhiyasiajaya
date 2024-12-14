@@ -1,11 +1,5 @@
 <style>
-    :root {
-        --primaryColor: #007bff; /* Warna utama */
-        --secondaryColor: #4c4f56; /* Warna sekunder */
-        --bgFooter: #020e28; /* Warna latar belakang footer */
-        --bgFooterBottom: #010a20; /* Warna bagian bawah footer */
-        --textColor: #fff; /* Warna teks */
-    }
+
 
     .footer {
         background-color: var(--bgFooter);
