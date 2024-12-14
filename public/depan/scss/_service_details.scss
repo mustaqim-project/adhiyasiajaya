@@ -38,7 +38,7 @@
                 &.active, .nav-pills > a {
                     color: #fff;
                     background-color: transparent;
-                    color:#FF3414;
+                    color:var(--primaryColor);
                     font-size: 16px;
                 }
             }

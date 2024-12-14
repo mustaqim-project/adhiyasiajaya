@@ -47,10 +47,10 @@
                 a{
                     color: #596672;
                     &:hover{
-                        color: #FF3414;
+                        color: var(--primaryColor);
                     }
                 }
-            
+
             }
             p.footer_text{
                 font-size: 16px;
@@ -62,18 +62,18 @@
                     color: #B2B2B2;
                     font-weight: 400;
                     &:hover{
-                        color: #FF3414;
-                        border-bottom: 1px solid #FF3414
+                        color: var(--primaryColor);
+                        border-bottom: 1px solid var(--primaryColor)
                     }
                 }
                 &.doanar{
                     a{
                     font-weight: 500;
                     color: #B2B2B2;
-                    
+
                     &:hover{
-                        color: #FF3414;
-                        border-bottom: 1px solid #FF3414
+                        color: var(--primaryColor);
+                        border-bottom: 1px solid var(--primaryColor)
                     }
                     &.first{
                         margin-bottom: 10px;
@@ -91,7 +91,7 @@
                         color: #596672;
                         font-weight: 400;
                         &:hover{
-                            color: #FF3414;
+                            color: var(--primaryColor);
                         }
                     }
                 }
@@ -126,7 +126,7 @@
                     border: none;
                     font-size: 14px;
                     color: #fff;
-                    background: #FF3414;
+                    background: var(--primaryColor);
                     padding: 10px;
                     padding: 0 22px;
                     cursor: pointer;
@@ -159,7 +159,7 @@
                 font-size: 13px;
             }
             a{
-                color: #FF3414;
+                color: var(--primaryColor);
             }
         }
     }
@@ -189,7 +189,7 @@
                     color: #E8E8E8;
                  &:hover{
                      color: #fff !important;
-                     background: #FF3414;
+                     background: var(--primaryColor);
                      border-color: transparent;
                  }
                 }

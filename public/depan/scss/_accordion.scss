@@ -69,7 +69,7 @@
                 right: 12px;
                 height: auto;
                 font-family: 'themify';
-                color: #FF3414;
+                color: var(--primaryColor);
                 font-size: 14px;
                 left: -24px;
                 @media #{$mobile_device} {
@@ -112,7 +112,7 @@
         }
 
     }
-    
+
     .btn-link:hover {
         color: #182028;
         text-decoration: none;

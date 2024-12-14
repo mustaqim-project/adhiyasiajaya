@@ -336,7 +336,7 @@ h3 {
 /* line 272, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
 .owl-carousel:hover .owl-nav div:hover {
   color: #fff !important;
-  background: #FF3414;
+  background: var(--primaryColor);
 }
 
 /* line 281, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
@@ -418,7 +418,7 @@ h3 {
   height: 100%;
   padding: 20px;
   color: #fff;
-  background: #FF3414;
+  background: var(--primaryColor);
   display: inline-block;
   border: none;
   line-height: 50px;

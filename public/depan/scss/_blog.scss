@@ -12,7 +12,7 @@
         text-decoration: none;
         @include transform_time(.5s);
         &:hover, :hover{
-            background: -webkit-linear-gradient( 131deg, #FF3414 0%, #FF3414 99%);
+            background: -webkit-linear-gradient( 131deg, var(--primaryColor) 0%, var(--primaryColor) 99%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
@@ -24,7 +24,7 @@
 .single-blog {
     overflow: hidden;
     margin-bottom: 30px;
-   
+
     &:hover {
         box-shadow: 0px 10px 20px 0px rgba(42, 34, 123, 0.1);
     }
@@ -309,7 +309,7 @@
                     position: absolute;
                     right: -10px;
                     bottom: 0px;
-                    // background: $title-color; 
+                    // background: $title-color;
                     color: #fff;
                     padding: 0px 5px;
                 }
@@ -602,7 +602,7 @@
         left: 10px;
         display: block;
         color: $white_color;
-        background-color: #FF3414;
+        background-color: var(--primaryColor);
         padding: 8px 15px;
         border-radius: 5px;
 
@@ -827,7 +827,7 @@
         ul {
             li {
                 display: inline-block;
-                
+
                 a {
                     display: inline-block;
                     border: 1px solid #eeeeee;

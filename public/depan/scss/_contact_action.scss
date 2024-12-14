@@ -31,7 +31,7 @@
             margin-bottom: 13px;
             @media #{$mobile_device} {
                 font-size: 25px;
-                
+
             }
             @media #{$tablet_device} {
                 font-size: 30px;
@@ -97,7 +97,7 @@
 
 
 
-// features 
+// features
 .chose_area{
     padding: 120px 0 72px 0;
     @media #{$mobile_device}{
@@ -111,7 +111,7 @@
         z-index: 0;
         &:before{
             position: absolute;
-            background:#FF3414;
+            background:var(--primaryColor);
             right: -25px;
             bottom: -25px;
             content: '';
@@ -235,12 +235,12 @@
 
 
 
-// contact_location 
+// contact_location
 .contact_location{
     background: #F5FBFF;
     padding: 100px 0;
     @media #{$mobile_device} {
-        padding: 50px 0; 
+        padding: 50px 0;
     }
     .location_left{
         @media #{$mobile_device}{

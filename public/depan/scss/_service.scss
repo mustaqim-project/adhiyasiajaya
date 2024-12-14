@@ -14,7 +14,7 @@
                 height: 100%;
                 left: 0;
                 top: 0;
-                background: #FF3414;
+                background: var(--primaryColor);
                 opacity: 0;
                 position: absolute;
                 z-index: 2;
@@ -40,7 +40,7 @@
             p{
                 font-size: 16px;
                 font-weight: 400;
-                color: #919191;  
+                color: #919191;
                 margin-bottom: 0;
             }
         }
@@ -48,7 +48,7 @@
             .service_info{
                 h3{
                     a{
-                        color:#FF3414 ;
+                        color:var(--primaryColor) ;
                         text-decoration: underline;
                     }
                 }

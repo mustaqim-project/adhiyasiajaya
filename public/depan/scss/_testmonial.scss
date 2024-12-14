@@ -51,7 +51,7 @@
                 font-size: 13px;
                 font-weight: 400;
                 color: #596672;
-            }   
+            }
         }
     }
     .owl-carousel .owl-item img {
@@ -79,13 +79,13 @@
             border-radius: 50%;
             text-align: center;
             &.active{
-                background: #FF3414;
+                background: var(--primaryColor);
             }
         }
     }
 }
 
-// Information_area 
+// Information_area
 .Information_area{
     background-image: url(../img/banner/info_banner.png);
     background-repeat: no-repeat;
@@ -118,7 +118,7 @@
 }
 
 
-// newsletter 
+// newsletter
 .newsletter_form{
     position: relative;
     margin-bottom: 20px;

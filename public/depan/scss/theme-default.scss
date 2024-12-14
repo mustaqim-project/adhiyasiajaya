@@ -271,7 +271,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 				visibility: visible;
 				&:hover{
 					color: #fff !important;
-					background: #FF3414;
+					background: var(--primaryColor);
 				}
 			}
 		}
@@ -339,7 +339,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 				height: 100%;
 				padding: 20px;
 				color:#fff;
-				background:#FF3414;
+				background:var(--primaryColor);
 				display: inline-block;
 				border: none;
 				line-height: 50px;
