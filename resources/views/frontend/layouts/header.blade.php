@@ -2,23 +2,24 @@
 <header>
     <div class="header-area">
         <!-- Header Top Area -->
-        <div class="header-top_area d-none d-lg-block" style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
+        <div class="header-top_area d-none d-lg-block"
+            style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
             <div class="container">
                 <div class="row align-items-center">
-                    <!-- Social Media Links, Phone & Email Section -->
-                    <div class="col-xl-4 col-lg-4 d-flex justify-content-start align-items-center">
+                    <!-- Logo and Contact Info Section -->
+                    <div class="col-xl-4 col-lg-4">
                         <div class="short_contact_list">
                             @foreach ($socialLinks as $link)
-                                <a href="{{ $link->url }}" style="margin-right: 15px;">
-                                    <i class="{{ $link->icon }}" style="font-size: 20px; color: #fff;"></i>
+                                <a href="{{ $link->url }}" style="margin-right: 10px;">
+                                    <i class="{{ $link->icon }}" style="font-size: 18px; color: #fff;"></i>
                                 </a>
                             @endforeach
 
-                            <i class="fa fa-phone mr-2"></i>
+                            <i class="fa fa-phone mr-1"></i>
                             <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none; margin-right: 15px;">
                                 {{ @$contact->phone }}
                             </a>
-                            <i class="fa fa-envelope mr-2"></i>
+                            <i class="fa fa-envelope mr-1"></i>
                             <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">
                                 {{ @$contact->email }}
                             </a>
@@ -26,10 +27,11 @@
                     </div>
 
                     <!-- Request Button Section -->
-                    <div class="col-xl-4 col-lg-4 d-flex justify-content-end">
-                        <div class="header_right d-flex align-items-center">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="header_right d-flex align-items-center justify-content-end">
                             <div class="book_btn">
-                                <a class="boxed-btn3-line" href="{{ route('contact') }}" style="text-decoration: none; color: #ffffff; padding: 10px 25px; border-radius: 5px; border: 2px solid #ffffff;">
+                                <a class="boxed-btn3-line" href="{{ route('contact') }}"
+                                    style="text-decoration: none; color: #ffffff;">
                                     GET A QUOTE <i class="fa fa-paper-plane"></i>
                                 </a>
                             </div>
@@ -38,8 +40,6 @@
                 </div>
             </div>
         </div>
-
-
 
         <!-- Sticky Header -->
         <div id="sticky-header" class="main-header-area">
