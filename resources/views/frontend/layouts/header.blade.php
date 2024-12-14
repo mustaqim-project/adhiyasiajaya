@@ -25,12 +25,7 @@
                         </div>
                     </div>
 
-                    <!-- Date Section -->
-                    <div class="col-xl-4 col-lg-4 d-flex justify-content-center align-items-center">
-                        <span style="margin-left: 10px; font-size: 14px;">
-                            {{ date('l, F j, Y H:i:s') }}
-                        </span>
-                    </div>
+
 
                     <!-- Request Button Section -->
                     <div class="col-xl-4 col-lg-4 d-flex justify-content-end">
