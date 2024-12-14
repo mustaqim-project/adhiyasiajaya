@@ -112,8 +112,8 @@
                         <h3 class="footer_title">{{ @$footerGridOneTitle->value ?? 'Useful Links' }}</h3>
                         <ul>
                             @foreach ($footerGridOne as $gridOne)
-                                <li>
-                                    <a href="{{ $gridOne->url }}" class="text-light text-decoration-none">
+                                <li style="color: black;">
+                                    <a href="{{ $gridOne->url }}" class="text-light text-decoration-none" style="color: black;">
                                         {{ $gridOne->name }}
                                     </a>
                                 </li>
