@@ -41,7 +41,7 @@
     </div>
     <!-- slider_area_end -->
 
-
+    {{-- Our Product --}}
     <div class="service_area">
         <div class="container">
             <div class="row">
@@ -107,7 +107,10 @@
             </div>
         </div>
     </div>
+    {{-- End Our Product --}}
 
+
+    {{-- Our Customer --}}
     <div class="service_area" style="background-color: rgb(255, 255, 255)">
         <div class="container">
             <div class="row">
@@ -154,6 +157,7 @@
             </div>
         </div>
     </div>
+    {{-- End Our Customer --}}
 
 
 
@@ -166,7 +170,8 @@
                 <div class="row  align-items-center">
                     <div class="col-xl-5 col-lg-5 col-md-6">
                         <div class="about_image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoxX5Y_tFFAdfN84VkJ9iyB4Ux3nBdjLQmbQ&s" alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoxX5Y_tFFAdfN84VkJ9iyB4Ux3nBdjLQmbQ&s"
+                                alt="">
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6">
@@ -274,6 +279,39 @@
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+            },
+        });
+
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Owl Carousel for "Our Customer"
+        $('.service_active').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            nav: false,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                1024: {
+                    items: 3,
+                },
             },
         });
     </script>
