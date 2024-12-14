@@ -324,7 +324,7 @@
 
     <!-- WhatsApp Floating Icon -->
     <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-        <img src="path_to_your_whatsapp_icon.png" alt="WhatsApp Icon" />
+        <img src="https://www.dayaesa.com/whatsapp.svg">
     </a>
 
 
