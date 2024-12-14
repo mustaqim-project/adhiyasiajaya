@@ -2,35 +2,37 @@
 <header>
     <div class="header-area">
         <!-- Header Top Area -->
-        <div class="header-top_area d-none d-lg-block">
+        <div class="header-top_area d-none d-lg-block" style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Logo and Contact Info Section -->
                     <div class="col-xl-4 col-lg-4">
-                        <ul class="short_contact_list d-flex align-items-center">
-                            @foreach ($socialLinks as $link)
-                                <li class="social-item">
-                                    <a href="{{ $link->url }}" class="social__link">
-                                        <i class="{{ $link->icon }}"></i>
-                                    </a>
+                        <div class="short_contact_list">
+                            <ul class="topbar-sosmed p-0">
+                                @foreach ($socialLinks as $link)
+                                <li>
+                                    <a href="{{ $link->url }}"><i class="{{ $link->icon }}"></i></a>
                                 </li>
-                            @endforeach
-                            <li class="contact-item">
-                                <i class="fa fa-phone"></i>
-                                <a href="tel:{{ @$contact->phone }}" class="contact-link">{{ @$contact->phone }}</a>
-                            </li>
-                            <li class="contact-item">
-                                <i class="fa fa-envelope"></i>
-                                <a href="mailto:{{ @$contact->email }}" class="contact-link">{{ @$contact->email }}</a>
-                            </li>
-                        </ul>
+                                @endforeach
+
+                            </ul>
+                            <i class="fa fa-phone mr-1"></i>
+                            <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
+                            <i class="fa fa-envelope ml-4 mr-1"></i>
+                            <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
+
+                            <div class="topbar-text">
+
+                                {{ date('l, F j, Y') }}
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Request Button Section -->
                     <div class="col-xl-8 col-lg-8">
                         <div class="header_right d-flex align-items-center justify-content-end">
                             <div class="book_btn">
-                                <a class="boxed-btn3-line" href="{{ route('contact') }}">
+                                <a class="boxed-btn3-line" href="{{ route('contact') }}" style="text-decoration: none; color: #ffffff;">
                                     GET A QUOTE <i class="fa fa-paper-plane"></i>
                                 </a>
                             </div>
@@ -39,44 +41,6 @@
                 </div>
             </div>
         </div>
-
-        <style>
-        .header-top_area {
-            background-color: #001133;
-            padding: 10px 0;
-            color: #fff;
-            font-size: 14px;
-        }
-        .short_contact_list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .short_contact_list .social-item {
-            margin-right: 10px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-right: 15px;
-        }
-        .contact-item i {
-            margin-right: 5px;
-        }
-        .contact-link {
-            color: #fff;
-            text-decoration: none;
-        }
-        .book_btn .boxed-btn3-line {
-            text-decoration: none;
-            color: #ffffff;
-        }
-        .book_btn .boxed-btn3-line:hover {
-            color: #ccc;
-        }
-        </style>
-
-
 
         <!-- Sticky Header -->
         <div id="sticky-header" class="main-header-area">
@@ -88,8 +52,7 @@
                         <div class="col-12 d-block d-lg-none">
                             <div class="logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
-                                        width="180px">
+                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="180px">
                                 </a>
                             </div>
                         </div>
@@ -98,8 +61,7 @@
                         <div class="col-xl-3 col-lg-3 col-6 d-none d-lg-block">
                             <div class="logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
-                                        width="400px">
+                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="400px">
                                 </a>
                             </div>
                         </div>
@@ -108,8 +70,7 @@
                         <div class="col-xl-6 col-lg-6">
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation" class="d-flex align-items-center"
-                                        style="text-transform: uppercase; font-weight: bold; justify-content: flex-end; margin: 0; padding: 0;">
+                                    <ul id="navigation" class="d-flex align-items-center" style="text-transform: uppercase; font-weight: bold; justify-content: flex-end; margin: 0; padding: 0;">
 
                                         <li><a href="{{ url('/') }}" class="menu-link">HOME</a></li>
                                         <li><a href="{{ route('about') }}" class="menu-link">ABOUT US</a></li>
