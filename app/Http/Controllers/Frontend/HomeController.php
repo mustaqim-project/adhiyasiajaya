@@ -16,6 +16,7 @@ use App\Models\RecivedMail;
 use App\Models\SocialCount;
 use App\Models\SocialLink;
 use App\Models\Subscriber;
+use App\Models\SettingLandingPage;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -82,6 +83,7 @@ class HomeController extends Controller
         $socialCounts = SocialCount::where(['status' => 1, 'language' => getLangauge()])->get();
 
         $mostCommonTags = $this->mostCommonTags();
+        $settingpage = SettingLandingPage::first();
 
         $ad = Ad::first();
         $contact = Contact::where('language', getLangauge())->first();
@@ -99,7 +101,8 @@ class HomeController extends Controller
             'socialCounts',
             'mostCommonTags',
             'ad',
-            'contact'
+            'contact',
+            'settingpage'
         ));
     }
 

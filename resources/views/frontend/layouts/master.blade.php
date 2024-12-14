@@ -159,7 +159,6 @@
             'language' => getLangauge(),
         ])->first();
         $contact = \App\Models\Contact::where('language', getLangauge())->first();
-        $settingpage = App\Models\SettingLandingPage::first(); // Mengambil entri pertama
 
     @endphp
 
