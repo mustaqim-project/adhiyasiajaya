@@ -256,9 +256,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="contact-title">Get in Touch</h2>
                 </div>
                 <div class="col-lg-8">
+                    <h2 class="contact-title">Get a Quote</h2>
                     <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
                         novalidate="novalidate">
                         <div class="row">
