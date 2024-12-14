@@ -86,7 +86,7 @@
         <div class="container">
             <div class="row">
                 <!-- Column 1: Logo and Description -->
-                <div class="col-xl-4 col-md-6 col-lg-4">
+                <div class="col-xl-6 col-md-12 col-lg-6">
                     <div class="footer_widget">
                         <figure class="mb-3">
                             <img src="{{ asset(@$footerInfo->logo ?? 'default-logo.png') }}" alt="Logo Footer" class="img-fluid logo-footer" width="180">

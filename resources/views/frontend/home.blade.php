@@ -43,72 +43,7 @@
     <!-- slider_area_end -->
 
     {{-- Our Product --}}
-    {{-- <div class="service_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title mb-50 text-center">
-                        <h3>Our Product</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="service_grid">
-                        <!-- Single Category -->
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
-                                    alt="Chemicals">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Chemicals</a></h3>
-                                <p>High-quality chemicals for the Pulp & Paper industry.</p>
-                                <a href="product_details.html" class="btn_learn_more">View More</a>
-                            </div>
-                        </div>
-                        <!-- Single Category -->
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
-                                    alt="Machinery & Parts">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Machinery & Parts</a></h3>
-                                <p>Reliable machinery and parts for optimized production.</p>
-                                <a href="product_details.html" class="btn_learn_more">View More</a>
-                            </div>
-                        </div>
-                        <!-- Single Category -->
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
-                                    alt="Laboratory Instruments">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Laboratory Instruments</a></h3>
-                                <p>Advanced testing instruments for accurate analysis.</p>
-                                <a href="product_details.html" class="btn_learn_more">View More</a>
-                            </div>
-                        </div>
-                        <!-- Single Category -->
-                        <div class="single_category">
-                            <div class="thumb">
-                                <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg"
-                                    alt="Stockist Items">
-                            </div>
-                            <div class="service_info">
-                                <h3><a href="product_details.html">Stockist Items</a></h3>
-                                <p>Readily available products from trusted suppliers.</p>
-                                <a href="product_details.html" class="btn_learn_more">View More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- service_area  -->
+
     <div class="service_area">
         <div class="container">
             <div class="row">
@@ -211,7 +146,6 @@
             </div>
         </div>
     </div>
-    <!--/ service_area  -->
     {{-- End Our Product --}}
 
     <div class="service_area">
