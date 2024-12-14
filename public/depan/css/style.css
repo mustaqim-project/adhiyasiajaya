@@ -40,83 +40,6 @@
 }
 
 
-/* Styling untuk Market Sectors */
-.market_sectors_area .section_title h3 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.market_sectors_area .section_title p {
-    font-size: 16px;
-    color: #7f8c8d;
-}
-
-/* Grid untuk sektor */
-.single_sector {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.single_sector .image_wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.single_sector .text_overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.single_sector:hover .image_wrapper img {
-    transform: scale(1.1);
-}
-
-.single_sector:hover .text_overlay {
-    opacity: 1;
-}
-
-.single_sector h3 {
-    font-size: 22px;
-    margin: 10px 0;
-}
-
-.single_sector p {
-    font-size: 14px;
-}
-
-/* Responsivitas */
-@media (max-width: 991px) {
-    .market_sectors_area .section_title h3 {
-        font-size: 26px;
-    }
-
-    .market_sectors_area .section_title p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 767px) {
-    .single_sector h3 {
-        font-size: 18px;
-    }
-
-    .single_sector p {
-        font-size: 12px;
-    }
-}
 
 .flex-center-start {
   display: -webkit-box;
@@ -442,241 +365,10 @@ h3 {
   line-height: 40px;
   background: #FFFFFF;
   left: -20px;
-  color: var(--colorPrimary);
+  color: #FF3414 !important;
 }
 
 /* line 247, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
-.wrapper__footer {
-    padding: 60px 0;
-    position: relative
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer {
-        padding: 40px 0
-    }
-}
-
-.wrapper__footer .widget__footer {
-    display: block
-}
-
-.wrapper__footer .widget__footer .dropdown-footer {
-    display: block;
-    cursor: pointer
-}
-
-.wrapper__footer .widget__footer .footer-title {
-    color: #fff;
-    font-size: 18px;
-    text-transform: capitalize;
-    margin-bottom: 15px;
-    font-family: "Poppins", sans-serif
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer .widget__footer .footer-title {
-        font-size: 16px
-    }
-}
-
-.wrapper__footer .widget__footer span {
-    float: right
-}
-
-.wrapper__footer .widget__footer p {
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 0
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer .widget__footer p {
-        margin-bottom: 30px
-    }
-}
-
-.wrapper__footer .widget__footer .blog-tags ul li a {
-    border: 1px solid #848f9a;
-    color: #848f9a
-}
-
-.wrapper__footer .widget__footer .blog-tags ul li a:hover {
-    border: 1px solid var(--colorPrimary);
-    color: #fff;
-    background-color: transparent
-}
-
-.wrapper__footer .widget__footer .link__category {
-    position: relative;
-    padding: 15px 0
-}
-
-.wrapper__footer .widget__footer .link__category ul {
-    -webkit-columns: 3;
-    -moz-columns: 3;
-    columns: 3;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
-    margin-bottom: 0
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .wrapper__footer .widget__footer .link__category ul {
-        -webkit-columns: 2;
-        -moz-columns: 2;
-        columns: 2;
-        -webkit-column-gap: 30px;
-        -moz-column-gap: 30px;
-        column-gap: 30px
-    }
-}
-
-.wrapper__footer .widget__footer .link__category ul li {
-    margin: 0;
-    padding: 0;
-    line-height: normal;
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-    break-inside: avoid;
-    display: block
-}
-
-.wrapper__footer .widget__footer .link__category ul li a {
-    text-transform: capitalize;
-    font-weight: 700;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    color: #fff
-}
-
-.wrapper__footer .widget__footer .link__category ul li a:hover {
-    color: var(--colorPrimary)
-}
-
-.wrapper__footer .widget__footer .is-hidden {
-    display: block
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer .widget__footer .is-hidden {
-        display: none
-    }
-}
-
-.wrapper__footer .dropdown-footer span:before {
-    content: " "
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer .dropdown-footer span:before {
-        content: "\f055 "
-    }
-
-    .wrapper__footer .dropdown-footer.is-active span:before {
-        content: "\f056   "
-    }
-}
-
-.wrapper__footer .list-unstyled a {
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-    text-transform: capitalize;
-    font-size: 14px;
-    line-height: 35px;
-    font-weight: 400;
-}
-
-.wrapper__footer figure.image-logo {
-    width: 175px
-}
-
-.wrapper__footer figure.image-logo img {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-    object-fit: cover
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer .social__media {
-        text-align: left
-    }
-}
-
-.wrapper__footer .social__media .list-inline {
-    margin-bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.wrapper__footer .social__media .list-inline li {
-    width: auto !important;
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer .social__media .list-inline {
-        margin-bottom: 15px
-    }
-}
-
-.wrapper__footer .social__media .list-inline span {
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-    text-transform: capitalize;
-    font-size: 11px;
-    font-weight: 700;
-    margin-right: 10px
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .wrapper__footer .social__media .list-inline span {
-        display: block;
-        margin-bottom: 10px
-    }
-}
-
-.wrapper__footer .social__media .list-inline .list-inline-item .btn-social.whatsapp {
-    background-color: #25d366
-}
-
-.wrapper__footer .social__media .list-inline .list-inline-item .btn-social.telegram {
-    background-color: #179cde
-}
-
-.bg__footer-bottom {
-    background-color: #24252f;
-    padding: 15px 0
-}
-
-.bg__footer-bottom span {
-    font-size: 12px;
-    color: #fff;
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-    .bg__footer-bottom span {
-        text-align: center;
-        display: block
-    }
-}
-
-.bg__footer-bottom span a {
-    color: #fff;
-    text-transform: uppercase
-}
-
-.bg__footer-bottom .list-inline {
-    margin-bottom: 0;
-    text-align: right
-}
-
 .owl-carousel .owl-nav div.owl-next {
   left: auto;
   right: -20px;
@@ -703,7 +395,7 @@ h3 {
 /* line 272, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
 .owl-carousel:hover .owl-nav div:hover {
   color: #fff !important;
-  background: var(--colorPrimary);
+  background: #FF3414;
 }
 
 /* line 281, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
@@ -785,7 +477,7 @@ h3 {
   height: 100%;
   padding: 20px;
   color: #fff;
-  background: var(--colorPrimary);
+  background: #FF3414;
   display: inline-block;
   border: none;
   line-height: 50px;
@@ -804,19 +496,19 @@ h3 {
   font-size: 14px;
   font-weight: 400;
   border: 0;
-  border: 1px solid var(--colorPrimary);
+  border: 1px solid #FF3414;
   letter-spacing: 3px;
   text-align: center;
-  color: var(--colorPrimary);
+  color: #FF3414 !important;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 /* line 17, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: var(--colorPrimary);
+  background: #FF3414;
   color: #fff !important;
-  border: 1px solid var(--colorPrimary);
+  border: 1px solid #FF3414;
 }
 
 /* line 22, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
@@ -832,7 +524,7 @@ h3 {
 /* line 29, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
 .boxed-btn3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
-  background: var(--colorPrimary);
+  background: #FF3414;
   color: #fff;
   display: inline-block;
   padding: 18px 42px;
@@ -854,8 +546,8 @@ h3 {
 /* line 47, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
 .boxed-btn3:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
-  color: var(--colorPrimary);
-  border: 1px solid var(--colorPrimary);
+  color: #FF3414 !important;
+  border: 1px solid #FF3414;
   background: transparent;
 }
 
@@ -917,14 +609,14 @@ h3 {
 
 /* line 95, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
 .boxed-btn3-line {
-  color: var(--colorPrimary);
+  color: #FF3414 !important;
   display: inline-block;
   padding: 14px 31px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
   border: 0;
-  border: 1px solid var(--colorPrimary);
+  border: 1px solid #FF3414;
   text-align: center;
   text-transform: capitalize;
   -webkit-transition: 0.5s;
@@ -939,7 +631,7 @@ h3 {
 .boxed-btn3-line:hover {
   color: #fff !important;
   border: 1px solid transparent;
-  background: var(--colorPrimary);
+  background: #FF3414;
 }
 
 /* line 115, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_btn.scss */
@@ -1125,12 +817,12 @@ h3 {
 /* line 28, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 32, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a.active {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 @media (max-width: 767px) {
@@ -1260,7 +952,7 @@ h3 {
 /* line 17, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area {
   padding: 7px 0;
-  background: #fff;
+  background: var(--colorPrimary);
 }
 
 @media (max-width: 767px) {
@@ -1285,7 +977,7 @@ h3 {
 
 /* line 30, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area.details_nav {
-  background: #001D38;
+  background: var(--colorPrimary);
 }
 
 /* line 47, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
@@ -1406,13 +1098,13 @@ h3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
   background: #fdae5c;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
+  background: -moz-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
+  background: -webkit-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fdae5c 0%, var(--colorPrimary) 100%);
+  background: linear-gradient(to bottom, #fdae5c 0%, #fd8e5e 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='var(--colorPrimary)',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='#fd8e5e',GradientType=0 );
   /* IE6-9 */
   padding: 13px 26px;
   font-size: 14px;
@@ -1436,13 +1128,13 @@ h3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
   background: #fdae5c;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
+  background: -moz-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
+  background: -webkit-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fdae5c 0%, var(--colorPrimary) 100%);
+  background: linear-gradient(to bottom, #fdae5c 0%, #fd8e5e 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='var(--colorPrimary)',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='#fd8e5e',GradientType=0 );
   /* IE6-9 */
 }
 
@@ -1506,7 +1198,7 @@ h3 {
 
 /* line 214, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 218, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
@@ -1641,7 +1333,7 @@ h3 {
 
 /* line 332, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .header-top_area .social_media_links a:hover {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 338, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
@@ -1686,7 +1378,7 @@ h3 {
 
 /* line 362, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .header-top_area .short_contact_list ul li a i {
-  color: var(--colorPrimary);
+  color: #FF3414;
   margin-right: 7px;
 }
 
@@ -1700,7 +1392,7 @@ h3 {
 .header-area .search_btn a {
   width: 35px;
   height: 35px;
-  background: var(--colorPrimary);
+  background: #FF3414;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1713,56 +1405,12 @@ h3 {
 
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
 .slider_bg_1 {
-    background-image: url('../img/banner/banner.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url(../img/banner/banner.png);
 }
 
+/* line 4, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
 .slider_bg_2 {
-    background-image: url('../img/banner/banner_2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.slider_area .single_slider {
-    height: 700px;
-    position: relative;
-}
-
-.slider_text {
-    color: #fff;
-    margin-top: 30px;
-}
-
-.slider_text p {
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.slider_text h3 {
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 70px;
-}
-
-.boxed-btn3 {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 30px;
-    background-color: var(--colorPrimary);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.boxed-btn3:hover {
-    background-color: var(--colorPrimary);
-    color: #fff;
+  background-image: url(../img/banner/banner_2.png);
 }
 
 /* line 7, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
@@ -1957,7 +1605,7 @@ h3 {
 .slider_area .serach_icon a {
   width: 45px;
   height: 45px;
-  background: var(--colorPrimary);
+  background: #FD8E5E;
   text-align: center;
   line-height: 45px;
   color: #fff;
@@ -2306,7 +1954,7 @@ h3 {
 
 /* line 15, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_counter.scss */
 .counter_area .single_counter h3 {
-  color: var(--colorPrimary);
+  color: #FF3414;
   font-weight: 500;
   font-size: 46px;
   margin-bottom: 5px;
@@ -2629,7 +2277,7 @@ h3 {
 
 /* line 81, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_testmonial.scss */
 .testimonial_area .owl-dots .owl-dot.active {
-  background: var(--colorPrimary);
+  background: #FF3414;
 }
 
 /* line 89, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_testmonial.scss */
@@ -2778,7 +2426,7 @@ h3 {
 .service_details_area .service_details_left .nav a.active, .service_details_area .service_details_left .nav a .nav-pills > a {
   color: #fff;
   background-color: transparent;
-  color: var(--colorPrimary);
+  color: #FF3414;
   font-size: 16px;
 }
 
@@ -3028,7 +2676,7 @@ h3 {
 /* line 112, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
 .chose_area .about_image:before {
   position: absolute;
-  background: var(--colorPrimary);
+  background: #FF3414;
   right: -25px;
   bottom: -25px;
   content: '';
@@ -3742,7 +3390,7 @@ h3 {
   right: 12px;
   height: auto;
   font-family: 'themify';
-  color: var(--colorPrimary);
+  color: #FF3414;
   font-size: 14px;
   left: -24px;
 }
@@ -3929,7 +3577,7 @@ h3 {
   text-decoration: none;
   border-color: transparent;
   box-shadow: none;
-  color: var(--colorPrimary);
+  color: #FF3414 !important;
 }
 
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_prise_slider.scss */
@@ -4305,7 +3953,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 30, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_transport.scss */
 .transportaion_area .single_transport:hover h3 {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_gallery.scss */
@@ -5202,7 +4850,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 49, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p a:hover {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 55, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
@@ -5222,8 +4870,8 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 64, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text a.domain:hover {
-  color: var(--colorPrimary);
-  border-bottom: 1px solid var(--colorPrimary);
+  color: #FF3414;
+  border-bottom: 1px solid #FF3414;
 }
 
 /* line 70, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
@@ -5234,8 +4882,8 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 74, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text.doanar a:hover {
-  color: var(--colorPrimary);
-  border-bottom: 1px solid var(--colorPrimary);
+  color: #FF3414;
+  border-bottom: 1px solid #FF3414;
 }
 
 /* line 78, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
@@ -5258,7 +4906,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 93, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget ul li a:hover {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 99, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
@@ -5301,7 +4949,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   border: none;
   font-size: 14px;
   color: #fff;
-  background: var(--colorPrimary);
+  background: #FF3414;
   padding: 10px;
   padding: 0 22px;
   cursor: pointer;
@@ -5347,7 +4995,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 161, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right a {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 166, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
@@ -5390,7 +5038,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 /* line 190, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .socail_links ul li a:hover {
   color: #fff !important;
-  background: var(--colorPrimary);
+  background: #FF3414;
   border-color: transparent;
 }
 
@@ -5828,7 +5476,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   height: 100%;
   left: 0;
   top: 0;
-  background: var(--colorPrimary);
+  background: #FF3414;
   opacity: 0;
   position: absolute;
   z-index: 2;
@@ -5879,7 +5527,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 50, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_service.scss */
 .service_area .single_service:hover .service_info h3 a {
-  color: var(--colorPrimary);
+  color: #FF3414;
   text-decoration: underline;
 }
 
@@ -8111,7 +7759,7 @@ h6 {
 
 /* line 544, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_blog.scss */
 .blog_details a:hover {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 549, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_blog.scss */
@@ -8179,7 +7827,7 @@ h6 {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: var(--colorPrimary);
+  background-color: #FF3414;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -8407,7 +8055,7 @@ h6 {
 
 /* line 842, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_blog.scss */
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: var(--colorPrimary);
+  background: #FF3414;
   color: #fff !important;
   -webkit-text-fill-color: #fff;
   text-decoration: none;
@@ -8655,7 +8303,7 @@ h6 {
 
 /* line 1208, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_blog.scss */
 .single-post-area .blog-author a:hover {
-  color: var(--colorPrimary);
+  color: #FF3414;
 }
 
 /* line 1213, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_blog.scss */
@@ -9084,7 +8732,7 @@ h6 {
 
 /* line 72, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .card-body a {
-  color: var(--colorPrimary);
+  color: #FF3414;
   text-transform: uppercase;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -9111,7 +8759,7 @@ h6 {
   height: 10px;
   top: 5px;
   left: 0;
-  background-color: var(--colorPrimary);
+  background-color: #FF3414;
   border-radius: 50%;
 }
 

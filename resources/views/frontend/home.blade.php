@@ -20,7 +20,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Slide 2 -->
                 <div class="swiper-slide single_slider d-flex align-items-center slider_bg_2">
                     <div class="container">
@@ -35,9 +34,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
             <!-- Swiper Pagination -->
             <div class="swiper-pagination"></div>
@@ -111,54 +107,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-    {{-- <div class="transportaion_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title mb-50 text-center">
-                        <h3>
-                            Market Sectors
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_transport">
-                        <div class="icon">
-                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Pulp & Paper Industry">
-                        </div>
-                        <h3>Pulp & Paper Industry</h3>
-                        <p>Providing chemicals, machinery, and laboratory instruments to enhance production efficiency.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_transport">
-                        <div class="icon">
-                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Manufacturing">
-                        </div>
-                        <h3>Manufacturing</h3>
-                        <p>Supplying high-quality equipment and parts for diverse industrial manufacturing needs.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_transport">
-                        <div class="icon">
-                            <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Research & Development">
-                        </div>
-                        <h3>Research & Development</h3>
-                        <p>Supporting laboratories with advanced testing instruments and solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
 
     <div class="service_area" style="background-color: rgb(255, 255, 255)">
         <div class="container">
