@@ -25,22 +25,8 @@
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
                             <div class="short_contact_list">
-                                <ul class="d-flex">
-                                    <!-- Email Link -->
-                                    <li class="mr-4">
-                                        <i class="fa fa-envelope"></i>
-                                        <a href="mailto:{{ @$contact->email }}">
-                                           {{ @$contact->email }}
-                                        </a>
-                                    </li>
-                                    <!-- Phone Link -->
-                                    <li>
-                                        <i class="fa fa-phone"></i>
-                                        <a href="tel:{{ @$contact->phone }}">
-                                          {{ @$contact->phone }}
-                                        </a>
-                                    </li>
-                                </ul>
+                                <i class="fa fa-phone mr-1"></i>  <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
+                                <i class="fa fa-envelope ml-4 mr-1"></i> <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
                             </div>
                         </div>
                     </div>
