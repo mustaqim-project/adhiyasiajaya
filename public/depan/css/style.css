@@ -1406,13 +1406,13 @@ h3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
   background: #fdae5c;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
+  background: -moz-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
+  background: -webkit-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fdae5c 0%, #fd8e5e 100%);
+  background: linear-gradient(to bottom, #fdae5c 0%, var(--colorPrimary) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='#fd8e5e',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='var(--colorPrimary)',GradientType=0 );
   /* IE6-9 */
   padding: 13px 26px;
   font-size: 14px;
@@ -1436,13 +1436,13 @@ h3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
   background: #fdae5c;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
+  background: -moz-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #fdae5c 0%, #fd8e5e 100%);
+  background: -webkit-linear-gradient(top, #fdae5c 0%, var(--colorPrimary) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fdae5c 0%, #fd8e5e 100%);
+  background: linear-gradient(to bottom, #fdae5c 0%, var(--colorPrimary) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='#fd8e5e',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3414', endColorstr='var(--colorPrimary)',GradientType=0 );
   /* IE6-9 */
 }
 
@@ -1752,7 +1752,7 @@ h3 {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 30px;
-    background-color: #fd8e5e;
+    background-color: var(--colorPrimary);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -1957,7 +1957,7 @@ h3 {
 .slider_area .serach_icon a {
   width: 45px;
   height: 45px;
-  background: #FD8E5E;
+  background: var(--colorPrimary);
   text-align: center;
   line-height: 45px;
   color: #fff;
