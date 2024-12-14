@@ -48,6 +48,17 @@
         }
 
         /* line 130, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
+        .bg-img-1 {
+            background-image: url('{{ asset(optional($settingpage)->image_slide1) }}');
+        }
+
+        .bg-img-2 {
+            background-image: url('{{ asset(optional($settingpage)->image_slide2) }}');
+        }
+
+        .cta-bg-1 {
+            background-image: url('{{ asset(optional($settingpage)->image_slide2) }}');
+        }
 
         /* Styling untuk ikon WhatsApp yang mengambang */
         .whatsapp-float {

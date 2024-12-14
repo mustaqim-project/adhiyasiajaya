@@ -3,20 +3,6 @@
 @section('content')
 
 
-<style>
-    .bg-img-1 {
-      background-image: url('{{ asset(optional($settingpage)->image_slide1) }}');
-    }
-
-    .bg-img-2 {
-      background-image: url('{{ asset(optional($settingpage)->image_slide2) }}');
-    }
-
-    .cta-bg-1 {
-      background-image: url('{{ asset(optional($settingpage)->image_slide2) }}');
-    }
-  </style>
-
 
     <!-- slider_area_start -->
     <div class="slider_area">
