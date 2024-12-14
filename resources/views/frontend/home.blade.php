@@ -212,7 +212,7 @@
 
 
     <!-- chose_area  -->
-    <div class="chose_area ">
+    <div class="chose_area" style="background-color: #f0e5e5">
         <div class="container">
             <div class="features_main_wrap">
                 <div class="row  align-items-center">
