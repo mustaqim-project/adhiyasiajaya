@@ -1761,7 +1761,7 @@ h3 {
 }
 
 .boxed-btn3:hover {
-    background-color: #fc7323;
+    background-color: var(--colorPrimary);
     color: #fff;
 }
 
