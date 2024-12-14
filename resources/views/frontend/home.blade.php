@@ -196,7 +196,7 @@
     </div>
     <!--/ chose_area  -->
 
-    <div class="service_area" style="background-color: #2596be">
+    <div class="service_area" style="background-color: #F5FBFF">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
