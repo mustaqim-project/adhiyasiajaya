@@ -392,9 +392,11 @@
     </div> --}}
 
     <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-        <img src="https://www.dayaesa.com/whatsapp.svg">
-    </a>
+    @if (!empty($contact->phone))
+        <a href="https://wa.me/{{ $contact->phone }}" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+            <img src="https://www.dayaesa.com/whatsapp.svg" alt="WhatsApp Icon">
+        </a>
+    @endif
 
 
 
