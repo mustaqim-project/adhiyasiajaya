@@ -107,7 +107,7 @@
                 </div>
 
                 <!-- Column 2: Grid One Links -->
-                <div class="col-xl-4 col-md-6 col-lg-4">
+                <div class="col-xl-2 col-md-5 col-lg-2">
                     <div class="footer_widget">
                         <h3 class="footer_title">{{ @$footerGridOneTitle->value ?? 'Useful Links' }}</h3>
                         <ul>
