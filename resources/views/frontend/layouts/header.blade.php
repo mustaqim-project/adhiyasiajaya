@@ -8,14 +8,12 @@
                     <!-- Logo and Contact Info Section -->
                     <div class="col-xl-4 col-lg-4">
                         <div class="short_contact_list">
-                            <ul class="topbar-sosmed p-0">
                                 @foreach ($socialLinks as $link)
                                 <li>
                                     <a href="{{ $link->url }}"><i class="{{ $link->icon }}"></i></a>
                                 </li>
                                 @endforeach
 
-                            </ul>
                             <i class="fa fa-phone mr-1"></i>
                             <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
                             <i class="fa fa-envelope ml-4 mr-1"></i>
