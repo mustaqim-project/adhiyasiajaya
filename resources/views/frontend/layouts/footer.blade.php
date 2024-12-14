@@ -75,8 +75,93 @@
     </div>
 </footer>
 <!-- Footer End --> --}}
-<!-- Footer Start -->
 
+
+<!-- Footer Start -->
+<footer class="footer" style="background-color: #020e28; padding: 20px 0; color: #fff;">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Logo and Description -->
+                <div class="col-xl-4 col-md-6 col-lg-4 mb-4">
+                    <div class="footer_widget">
+                        <figure class="image-logo mb-3">
+                            <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo" class="logo-footer" width="180px">
+                        </figure>
+                        <p class="mb-3">{{ @$footerInfo->description }}</p>
+                        <div class="social__media mt-4">
+                            <ul class="list-inline mb-0">
+                                @foreach ($socialLinks as $link)
+                                    <li class="list-inline-item">
+                                        <a href="{{ $link->url }}" class="btn btn-social rounded-circle text-white" style="background-color: #4c4f56; padding: 10px;">
+                                            <i class="{{ $link->icon }}"></i>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Grid One Links -->
+                <div class="col-xl-4 col-md-6 col-lg-4 mb-4">
+                    <div class="footer_widget">
+                        <h3 class="footer_title mb-3" style="font-size: 18px; font-weight: bold;">{{ @$footerGridOneTitle->value }}</h3>
+                        <ul class="list-unstyled mb-0">
+                            @foreach ($footerGridOne as $gridOne)
+                                <li class="mb-2">
+                                    <a href="{{ $gridOne->url }}" style="color: #fff; text-decoration: none;">
+                                        {{ $gridOne->name }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="col-xl-4 col-md-6 col-lg-4 mb-4">
+                    <div class="footer_widget">
+                        <h3 class="footer_title mb-3" style="font-size: 18px; font-weight: bold;">Contact Us</h3>
+                        <p class="mb-2">PT. Daya Esa Mulya Mandiri</p>
+                        <p class="mb-2">Jl. Ciputat Raya No. 3B, Kebayoran Lama Utara, Jakarta 12240</p>
+                        <p class="mb-2">
+                            <a href="tel:+62217290467" style="color: #fff; text-decoration: none;">
+                                +62 21-7290467
+                            </a>
+                        </p>
+                        <p class="mb-2">
+                            <a href="tel:+62217292930" style="color: #fff; text-decoration: none;">
+                                +62 21-7292930
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:sales@dayaesa.com" style="color: #fff; text-decoration: none;">
+                                sales@dayaesa.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="copy-right_text" style="background-color: #010a20; padding: 10px 0; margin-top: 20px;">
+        <div class="container">
+            <div class="footer_border" style="border-top: 1px solid #4c4f56; margin-bottom: 10px;"></div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <p class="copy_right text-center mb-0" style="font-size: 14px;">
+                        {{ @$footerInfo->copyright }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{--
 <footer class="footer"  style="background-color: #020e28; padding: 10px 0; color: #fff;" >
     <div class="footer_top">
         <div class="container">
@@ -140,7 +225,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> --}}
 <!-- Footer End -->
 
 
