@@ -218,7 +218,7 @@
                 <div class="row  align-items-center">
                     <div class="col-xl-5 col-lg-5 col-md-6">
                         <div class="about_image">
-                            <img src="img/about/about.png" alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoxX5Y_tFFAdfN84VkJ9iyB4Ux3nBdjLQmbQ&s" alt="">
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6">
