@@ -10,13 +10,10 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="short_contact_list d-flex align-items-center justify-content-start">
                             @foreach ($socialLinks as $link)
-                                <a href="{{ $link->url }}"
-                                    style="margin-right: 10px; display: inline-block; text-decoration: none;">
-                                    <i class="{{ $link->icon }}"
-                                        style="font-size: 18px; color: #fff; background-color: #007bff; padding: 8px;"></i>
+                                <a href="{{ $link->url }}" style="margin-right: 10px;">
+                                    <i class="{{ $link->icon }}" style="font-size: 18px; color: #fff;"></i>
                                 </a>
                             @endforeach
-
 
                             <span style="color: #fff; margin: 0 10px;">|</span>
 
