@@ -77,6 +77,77 @@
 
 
     <style>
+
+        /* Styling untuk area Get in Touch */
+.contact_action_area {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact_form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact_form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact_form input, .contact_form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.contact_form input:focus, .contact_form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact_form textarea {
+    resize: vertical;
+}
+
+.button-contactForm {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-contactForm:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 767px) {
+    .contact_form {
+        padding: 20px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+}
+
+
         .service_grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
