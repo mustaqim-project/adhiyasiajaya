@@ -108,58 +108,119 @@
             </div>
         </div>
     </div> --}}
-    <div class="product_area">
+    <!-- service_area  -->
+    <div class="service_area">
         <div class="container">
-            <div class="section_title text-center">
-                <h3>Market Sectors</h3>
-                <p>With over 20 years of combined experience, our company has established a long and friendly relationship with the customers.</p>
-            </div>
-            <div class="service_grid">
-                <div class="single_category">
-                    <div class="thumb">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Textile Industries">
-                    </div>
-                    <div class="service_info">
-                        <h3>Textile Industries</h3>
-                    </div>
-                </div>
-                <div class="single_category">
-                    <div class="thumb">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Pulp & Paper Industries">
-                    </div>
-                    <div class="service_info">
-                        <h3>Pulp & Paper Industries</h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="single_service">
+                        <div class="thumb">
+                            <img src="img/service/1.png" alt="" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="service_details.html">Ocean Freight</a>
+                            </h3>
+                            <p>
+                                Esteem spirit temper too say adieus who
+                                direct esteem.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="single_category">
-                    <div class="thumb">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Oil & Gas">
-                    </div>
-                    <div class="service_info">
-                        <h3>Oil & Gas</h3>
+                <div class="col-md-6 col-lg-4">
+                    <div class="single_service">
+                        <div class="thumb">
+                            <img src="img/service/2.png" alt="" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="service_details.html">Land Transport</a>
+                            </h3>
+                            <p>
+                                Esteem spirit temper too say adieus who
+                                direct esteem.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="single_category">
-                    <div class="thumb">
-                        <img src="https://asset.kompas.com/crops/dD9uTk_-ef4kegb1_TYy3Wpiz40=/24x0:824x533/750x500/data/photo/2022/02/20/6211f3d476f3e.jpg" alt="Chemical Industry">
+                <div class="col-md-6 col-lg-4">
+                    <div class="single_service">
+                        <div class="thumb">
+                            <img src="img/service/3.png" alt="" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="service_details.html">Air Freight</a>
+                            </h3>
+                            <p>
+                                Esteem spirit temper too say adieus who
+                                direct esteem.
+                            </p>
+                        </div>
                     </div>
-                    <div class="service_info">
-                        <h3>Chemical Industry</h3>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="single_service">
+                        <div class="thumb">
+                            <img src="img/service/4.png" alt="" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="service_details.html">Ocean Freight</a>
+                            </h3>
+                            <p>
+                                Esteem spirit temper too say adieus who
+                                direct esteem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="single_service">
+                        <div class="thumb">
+                            <img src="img/service/5.png" alt="" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="service_details.html">Land Transport</a>
+                            </h3>
+                            <p>
+                                Esteem spirit temper too say adieus who
+                                direct esteem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="single_service">
+                        <div class="thumb">
+                            <img src="img/service/6.png" alt="" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="service_details.html">Air Freight</a>
+                            </h3>
+                            <p>
+                                Esteem spirit temper too say adieus who
+                                direct esteem.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--/ service_area  -->
     {{-- End Our Product --}}
 
-    {{-- Our Customer --}}
-    <div class="service_area" style="background-color: rgb(255, 255, 255)">
+    <div class="service_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-50 text-center">
                         <h3>
-                            Our Customer
+                            Services We Offer
                         </h3>
                     </div>
                 </div>
@@ -167,31 +228,40 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="service_active owl-carousel">
-                        <div class="single_category">
+                        <div class="single_service">
                             <div class="thumb">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVA18_ofxfkZJmXY0TMHQLkkIv3GXcv8rmyg&s"
-                                    alt="APP Group" width="180px">
+                                <img src="img/service/1.png" alt="">
                             </div>
                             <div class="service_info">
-                                <h3><a href="#">APP Group</a></h3>
+                                <h3><a href="service_details.html">Ocean Freight</a></h3>
+                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
                             </div>
                         </div>
-                        <div class="single_category">
+                        <div class="single_service">
                             <div class="thumb">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9JOtXW_2BTkrNacxEKzqcC_vLQgNDDk-7iw&s"
-                                    alt="APRIL Group" width="180px">
+                                <img src="img/service/2.png" alt="">
                             </div>
                             <div class="service_info">
-                                <h3><a href="#">APRIL Group</a></h3>
+                                <h3><a href="service_details.html">Land Transport</a></h3>
+                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
                             </div>
                         </div>
-                        <div class="single_category">
+                        <div class="single_service">
                             <div class="thumb">
-                                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQF4cdabJF0DHQ/company-logo_200_200/company-logo_200_200/0/1686619480470/dayasa_aria_prima_logo?e=2147483647&v=beta&t=T8WjLPQdIc1ILMuZM6SomN0UF80O4RBdPSYH0wMrEGU"
-                                    alt="DAYASA ARIA PRIMA" width="180px">
+                                <img src="img/service/3.png" alt="">
                             </div>
                             <div class="service_info">
-                                <h3><a href="#">DAYASA ARIA PRIMA</a></h3>
+                                <h3><a href="service_details.html">Air Freight</a></h3>
+                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
+                            </div>
+                        </div>
+                        <div class="single_service">
+                            <div class="thumb">
+                                <img src="img/service/1.png" alt="">
+                            </div>
+                            <div class="service_info">
+                                <h3><a href="service_details.html">Ocean Freight</a></h3>
+                                <p>Esteem spirit temper too say adieus who direct esteem.</p>
                             </div>
                         </div>
                     </div>
@@ -199,7 +269,6 @@
             </div>
         </div>
     </div>
-    {{-- End Our Customer --}}
 
     <!-- chose_area  -->
     <div class="chose_area" style="background-color: #98c1f8">
@@ -286,7 +355,8 @@
                                         @enderror
                                     </div>
                                     <div class="form-group mb-4">
-                                        <button type="submit" class="btn btn-primary">{{ __('frontend.Submit') }}</button>
+                                        <button type="submit"
+                                            class="btn btn-primary">{{ __('frontend.Submit') }}</button>
                                     </div>
                                 </div>
                             </div>
