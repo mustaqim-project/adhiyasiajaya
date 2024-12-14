@@ -13,7 +13,7 @@
                                 <a href="{{ $link->url }}"
                                     style="margin-right: 10px; display: inline-block; text-decoration: none;">
                                     <i class="{{ $link->icon }}"
-                                        style="font-size: 18px; color: #fff; background-color: #007bff; padding: 8px; border-radius: 50%;"></i>
+                                        style="font-size: 18px; color: #fff; background-color: #007bff; padding: 8px;"></i>
                                 </a>
                             @endforeach
 
