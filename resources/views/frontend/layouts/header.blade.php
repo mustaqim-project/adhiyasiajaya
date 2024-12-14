@@ -2,47 +2,47 @@
 <header>
     <div class="header-area">
         <!-- Header Top Area -->
-        <div class="header-top_area d-none d-lg-block"
-            style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
+        <div class="header-top_area d-none d-lg-block" style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
             <div class="container">
                 <div class="row align-items-center">
-                    <!-- Logo and Contact Info Section -->
+                    <!-- Social Links and Contact Info -->
                     <div class="col-xl-4 col-lg-4">
-                        <div class="short_contact_list">
-                            @foreach ($socialLinks as $link)
-                                <a href="{{ $link->url }}" style="margin-right: 12em;">
-                                    <i class="{{ $link->icon }}"></i>
-                                </a>
-                            @endforeach
-
-                            <span>
+                        <div class="short_contact_list d-flex align-items-center">
+                            <!-- Social Links -->
+                            <div class="social_links d-flex">
+                                @foreach ($socialLinks as $link)
+                                    <a href="{{ $link->url }}" class="social-icon mr-3" title="{{ $link->icon }}">
+                                        <i class="{{ $link->icon }}"></i>
+                                    </a>
+                                @endforeach
+                            </div>
+                            <!-- Phone -->
+                            <div class="contact-info d-flex align-items-center mr-4">
                                 <i class="fa fa-phone mr-1"></i>
-                                <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">
+                                <a href="tel:{{ @$contact->phone }}" class="contact-text">
                                     {{ @$contact->phone }}
                                 </a>
-                            </span>
-
-                            <span class="ml-4">
+                            </div>
+                            <!-- Email -->
+                            <div class="contact-info d-flex align-items-center">
                                 <i class="fa fa-envelope mr-1"></i>
-                                <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">
+                                <a href="mailto:{{ @$contact->email }}" class="contact-text">
                                     {{ @$contact->email }}
                                 </a>
-                            </span>
-
-                            <div>{{ date('l, F j, Y') }}</div>
+                            </div>
+                        </div>
+                        <!-- Date -->
+                        <div class="text-white mt-2">
+                            {{ date('l, F j, Y') }}
                         </div>
                     </div>
 
-
-                    <!-- Request Button Section -->
-                    <div class="col-xl-8 col-lg-8">
-                        <div class="header_right d-flex align-items-center justify-content-end">
-                            <div class="book_btn">
-                                <a class="boxed-btn3-line" href="{{ route('contact') }}"
-                                    style="text-decoration: none; color: #ffffff;">
-                                    GET A QUOTE <i class="fa fa-paper-plane"></i>
-                                </a>
-                            </div>
+                    <!-- Quote Button -->
+                    <div class="col-xl-8 col-lg-8 d-flex justify-content-end">
+                        <div class="book_btn">
+                            <a href="{{ route('contact') }}" class="boxed-btn3-line">
+                                GET A QUOTE <i class="fa fa-paper-plane"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
