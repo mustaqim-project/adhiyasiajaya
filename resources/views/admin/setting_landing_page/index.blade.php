@@ -12,9 +12,7 @@
             </div>
 
             <div class="card-body">
-                <ul class="nav nav-tabs" id="myTab2" role="tablist">
-                    <!-- Add dynamic tabs if needed for different languages -->
-                </ul>
+
                 <div class="tab-content tab-bordered" id="myTab3Content">
                     @php
                         $setting = App\Models\SettingLandingPage::first(); // Mengambil entri pertama
