@@ -58,7 +58,7 @@
                             </div>
                         </div>
 
-                        <!-- Main Navigation -->
+                        {{-- <!-- Main Navigation -->
                         <div class="col-xl-9 col-lg-9">
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
@@ -76,14 +76,6 @@
                                         <a href="{{ route('product') }}"
                                             style="text-transform: uppercase; font-weight: bold;">PRODUCTS</a>
                                     </li>
-                                    {{-- <li style="margin: 0 15px;">
-                                        <a href="{{ route('catalog') }}"
-                                            style="text-transform: uppercase; font-weight: bold;">CATALOG</a>
-                                    </li>
-                                    <li style="margin: 0 15px;">
-                                        <a href="{{ route('quote') }}"
-                                            style="text-transform: uppercase; font-weight: bold;">GET A QUOTE</a>
-                                    </li> --}}
                                     <li style="margin: 0 15px;">
                                         <a href="{{ route('contact') }}"
                                             style="text-transform: uppercase; font-weight: bold;">CONTACT</a>
@@ -92,7 +84,40 @@
                                 </ul>
                                 </nav>
                             </div>
-                        </div>
+                        </div> --}}
+ <!-- Main Navigation -->
+ <div class="col-xl-9 col-lg-9">
+    <div class="main-menu d-none d-lg-block">
+        <nav>
+            <ul id="navigation">
+
+                <li>
+                    <figure class="image-logo">
+                        <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo"
+                            class="logo-footer" width="180px">
+                    </figure>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="{{ url('/') }}"
+                        style="text-transform: uppercase; font-weight: bold;">HOME</a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="{{ route('about') }}"
+                        style="text-transform: uppercase; font-weight: bold;">ABOUT US</a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="{{ route('product') }}"
+                        style="text-transform: uppercase; font-weight: bold;">PRODUCTS</a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="{{ route('contact') }}"
+                        style="text-transform: uppercase; font-weight: bold;">CONTACT</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
 
                         <!-- Search Button -->
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
