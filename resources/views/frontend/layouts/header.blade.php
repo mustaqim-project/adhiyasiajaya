@@ -58,12 +58,7 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li>
-                                            <figure class="image-logo">
-                                                <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo"
-                                                    class="logo-footer" width="180px">
-                                            </figure>
-                                        </li>
+
 
                                         <li><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
                                         <li><a href="{{ route('about') }}">{{ __('frontend.About Us') }}</a></li>
