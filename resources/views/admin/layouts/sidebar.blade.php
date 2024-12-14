@@ -166,6 +166,12 @@
                         <span>{{ __('admin.Settings') }}</span></a></li>
             @endif
 
+            @if (canAccess(['setting index']))
+                <li class="{{ setSidebarActive(['admin.setting_landing_page.*']) }}"><a class="nav-link"
+                        href="{{ route('admin.setting_landing_page.index') }}"><i class="fas fa-cog"></i>
+                        <span>{{ __('admin.Settings Landing Page') }}</span></a></li>
+            @endif
+
             @if (canAccess(['languages index']))
 
             <li class="dropdown
