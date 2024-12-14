@@ -119,7 +119,6 @@
                 transform: scale(1);
             }
         }
-
     </style>
 
     <!-- CSS here -->

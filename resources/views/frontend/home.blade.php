@@ -314,8 +314,6 @@
     <!-- Estimate_area end  -->
 
     <script>
-
-
         const swiper = new Swiper('.swiper-container', {
             loop: true,
             autoplay: {
