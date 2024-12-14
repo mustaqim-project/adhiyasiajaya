@@ -8,7 +8,7 @@
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" >
+                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid">
                             </a>
                         </div>
                     </div>
@@ -47,7 +47,8 @@
                         <div class="col-12 d-block d-lg-none">
                             <div class="logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="180px">
+                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
+                                        width="180px">
                                 </a>
                             </div>
                         </div>
@@ -57,6 +58,12 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
+                                        <li><a href="{{ url('/') }}">
+                                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo"
+                                                    class="img-fluid" width="180px">
+                                            </a>
+                                        </li>
+
                                         <li><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
                                         <li><a href="{{ route('about') }}">{{ __('frontend.About Us') }}</a></li>
                                         <li><a href="{{ route('product') }}">{{ __('frontend.Our Product') }}</a></li>
@@ -88,4 +95,3 @@
     </div>
 </header>
 <!-- Header End -->
-
