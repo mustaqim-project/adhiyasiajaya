@@ -92,7 +92,7 @@
                                             <a href="{{ route('contact') }}"
                                                 style="text-transform: uppercase; font-weight: bold;">CONTACT</a>
                                         </li>
-                                        <li>
+                                        <li style="margin: 0 15px;">
                                             <!-- Search Button -->
                                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                                 <div class="Appointment justify-content-end">
