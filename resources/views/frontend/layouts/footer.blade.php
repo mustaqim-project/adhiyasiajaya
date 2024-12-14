@@ -113,7 +113,7 @@
                         <ul>
                             @foreach ($footerGridOne as $gridOne)
                                 <li style="color: black;">
-                                    <a href="{{ $gridOne->url }}" class="text-light text-decoration-none" style="color: black;">
+                                    <a href="{{ $gridOne->url }}" class="text-decoration-none">
                                         {{ $gridOne->name }}
                                     </a>
                                 </li>
