@@ -17,7 +17,7 @@
                 </ul>
                 <div class="tab-content tab-bordered" id="myTab3Content">
                     @php
-                        $setting = SettingLandingPage::first(); // Get the first setting
+                        $setting = App\Models\SettingLandingPage::first(); // Get the first setting
                     @endphp
                     <div class="tab-pane fade show {{ $loop->index === 0 ? 'active' : '' }}" id="home-{{ $language->lang }}"
                         role="tabpanel" aria-labelledby="home-tab2">
