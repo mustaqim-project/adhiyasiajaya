@@ -25,7 +25,7 @@
                     <!-- Image Slide 1 -->
                     <div class="form-group">
                         @if ($setting->image_slide1)
-                            <img src="{{ asset('uploads/' . $setting->image_slide1) }}" alt="Image Slide 1" width="150px">
+                            <img src="{{ asset( $setting->image_slide1) }}" alt="Image Slide 1" width="150px">
                         @endif
                         <br>
                         <label for="image_slide1">{{ __('admin.Image Slide 1') }}</label>
@@ -39,7 +39,7 @@
                     <!-- Image Slide 2 -->
                     <div class="form-group">
                         @if ($setting->image_slide2)
-                            <img src="{{ asset('uploads/' . $setting->image_slide2) }}" alt="Image Slide 2" width="150px">
+                            <img src="{{ asset( $setting->image_slide2) }}" alt="Image Slide 2" width="150px">
                         @endif
                         <br>
                         <label for="image_slide2">{{ __('admin.Image Slide 2') }}</label>
@@ -53,7 +53,7 @@
                     <!-- Image About -->
                     <div class="form-group">
                         @if ($setting->image_about)
-                            <img src="{{ asset('uploads/' . $setting->image_about) }}" alt="Image About" width="150px">
+                            <img src="{{ asset( $setting->image_about) }}" alt="Image About" width="150px">
                         @endif
                         <br>
                         <label for="image_about">{{ __('admin.Image About') }}</label>
@@ -63,7 +63,7 @@
                     <!-- Background Contact -->
                     <div class="form-group">
                         @if ($setting->bg_contact)
-                            <img src="{{ asset('uploads/' . $setting->bg_contact) }}" alt="Background Contact"
+                            <img src="{{ asset( $setting->bg_contact) }}" alt="Background Contact"
                                 width="150px">
                         @endif
                         <br>
@@ -74,7 +74,7 @@
                     <!-- Image Header About -->
                     <div class="form-group">
                         @if ($setting->image_header_about)
-                            <img src="{{ asset('uploads/' . $setting->image_header_about) }}" alt="Image Header About"
+                            <img src="{{ asset( $setting->image_header_about) }}" alt="Image Header About"
                                 width="150px">
                         @endif
                         <br>
@@ -85,7 +85,7 @@
                     <!-- Image Header Product -->
                     <div class="form-group">
                         @if ($setting->image_header_product)
-                            <img src="{{ asset('uploads/' . $setting->image_header_product) }}" alt="Image Header Product"
+                            <img src="{{ asset( $setting->image_header_product) }}" alt="Image Header Product"
                                 width="150px">
                         @endif
                         <br>
@@ -96,7 +96,7 @@
                     <!-- Image Header Contact -->
                     <div class="form-group">
                         @if ($setting->image_header_contact)
-                            <img src="{{ asset('uploads/' . $setting->image_header_contact) }}" alt="Image Header Contact"
+                            <img src="{{ asset( $setting->image_header_contact) }}" alt="Image Header Contact"
                                 width="150px">
                         @endif
                         <br>
