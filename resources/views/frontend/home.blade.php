@@ -267,9 +267,7 @@
                 dots: false
             });
         });
-    </script>
 
-    <script>
         var swiper = new Swiper('.slider_area .swiper-container', {
             loop: true,
             autoplay: {
@@ -282,17 +280,7 @@
             },
         });
 
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+
 
         // Owl Carousel for "Our Customer"
         $('.service_active').owlCarousel({
