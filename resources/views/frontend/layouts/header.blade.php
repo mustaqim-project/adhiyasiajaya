@@ -1,8 +1,24 @@
-{{-- <!-- Header Start -->
+<!-- Header Start -->
 <header>
     <div class="header-area">
         <!-- Header Top Area -->
-        <div class="header-top_area d-none d-lg-block">
+
+
+        {{-- <div style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fa fa-phone mr-1"></i>  <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
+                    <i class="fa fa-envelope ml-4 mr-1"></i> <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
+                    <li style="font-weight: bold;">
+                        <a href="#" style="text-decoration: none; color: #ffffff;">GET A QUOTE <i class="fa fa-paper-plane"></i></a>
+                    </li>
+                </div>
+            </div>
+        </div> --}}
+
+
+
+        <div class="header-top_area d-none d-lg-block" style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Logo and Contact Info Section -->
@@ -33,7 +49,7 @@
                     <div class="col-xl-8 col-lg-8">
                         <div class="header_right d-flex align-items-center">
                             <div class="book_btn d-none d-lg-block">
-                                <a class="boxed-btn3-line" href="{{ route('contact') }}">Request Now</a>
+                                <a href="{{ route('contact') }}" style="text-decoration: none; color: #ffffff;">GET A QUOTE <i class="fa fa-paper-plane"></i></a>
                             </div>
                         </div>
                     </div>
@@ -61,19 +77,18 @@
                         <!-- Main Navigation -->
                         <div class="col-xl-9 col-lg-9">
                             <div class="main-menu d-none d-lg-block">
+                                <div>
+                                    <a href="#">
+                                        <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
+                                        width="200px">
+                                    </a>
+                                </div>
                                 <nav>
                                     <ul id="navigation">
-
-                                        <li>
-                                            <figure class="image-logo">
-                                                <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo"
-                                                    class="logo-footer" width="180px">
-                                            </figure>
-                                        </li>
-                                        <li><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
-                                        <li><a href="{{ route('about') }}">{{ __('frontend.About Us') }}</a></li>
-                                        <li><a href="{{ route('product') }}">{{ __('frontend.Our Product') }}</a></li>
-                                        <li><a href="{{ route('contact') }}">{{ __('frontend.Contact') }}</a></li>
+                                        <li style="margin-right: 20px;"><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
+                                        <li style="margin-right: 20px;"><a href="{{ route('about') }}">{{ __('frontend.About Us') }}</a></li>
+                                        <li style="margin-right: 20px;"><a href="{{ route('product') }}">{{ __('frontend.Our Product') }}</a></li>
+                                        <li style="margin-right: 20px;"><a href="{{ route('contact') }}">{{ __('frontend.Contact') }}</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -96,59 +111,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- Header End --> --}}
-<!-- Header Start -->
-<header>
-    <!-- Top Contact Info -->
-    <div style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <i class="fa fa-phone mr-1"></i>  <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
-                <i class="fa fa-envelope ml-4 mr-1"></i> <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
-                <li style="font-weight: bold;">
-                    <a href="#" style="text-decoration: none; color: #ffffff;">GET A QUOTE <i class="fa fa-paper-plane"></i></a>
-                </li>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation Area -->
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center py-3">
-            <!-- Logo -->
-            <div>
-                <a href="#">
-                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
-                    width="200px">
-                </a>
-            </div>
-
-            <!-- Navigation Menu -->
-            <nav>
-                <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
-                    {{-- <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">HOME</a></li>
-                    <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">ABOUT US</a></li>
-                    <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">PRODUCTS</a></li>
-                    <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">CATALOG</a></li>
-                    <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">CONTACT</a></li>
- --}}
-
-                    <li style="margin-right: 20px;"><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
-                    <li style="margin-right: 20px;"><a href="{{ route('about') }}">{{ __('frontend.About Us') }}</a></li>
-                    <li style="margin-right: 20px;"><a href="{{ route('product') }}">{{ __('frontend.Our Product') }}</a></li>
-                    <li style="margin-right: 20px;"><a href="{{ route('contact') }}">{{ __('frontend.Contact') }}</a></li>
-                </ul>
-            </nav>
-
-            <!-- Social Media Links -->
-            <div>
-                <a href="#" style="color: #000; margin-right: 10px;"><i class="fa fa-facebook"></i></a>
-                <a href="#" style="color: #000; margin-right: 10px;"><i class="fa fa-instagram"></i></a>
-                <a href="#" style="color: #000;"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>
