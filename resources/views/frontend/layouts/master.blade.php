@@ -44,31 +44,24 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/css/bootstrap-iconpicker.min.css') }}"> --}}
     <style>
         :root {
-            --colorPrimary: {{ $settings['site_color'] }}; /* Dynamic color from backend */
+            --colorPrimary: {{ $settings['site_color'] }};
         }
 
-        /* Background image 1 */
+        /* line 130, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
         .bg-img-1 {
             background-image: url('https://shasolo.com/wp-content/uploads/2024/04/refinary.jpeg');
-            background-size: cover;
-            background-position: center;
         }
 
-        /* Background image 2 */
+        /* line 133, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
         .bg-img-2 {
             background-image: url('https://www.electrosonic.com/hubfs/iStock-655162742.jpg');
-            background-size: cover;
-            background-position: center;
         }
 
-        /* CTA background image 1 */
+        /* line 136, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
         .cta-bg-1 {
-            background-image: url('../img/background-img/bg-img-3.jpg');
-            background-size: cover;
-            background-position: center;
+            background-image: url(../img/background-img/bg-img-3.jpg);
         }
     </style>
-
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('depan/css/bootstrap.min.css') }}">
