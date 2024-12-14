@@ -5,49 +5,47 @@
         <div class="header-top_area d-none d-lg-block" style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
             <div class="container">
                 <div class="row align-items-center">
-                    <!-- Social Links and Contact Info -->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="short_contact_list d-flex align-items-center">
-                            <!-- Social Links -->
-                            <div class="social_links d-flex">
-                                @foreach ($socialLinks as $link)
-                                    <a href="{{ $link->url }}" class="social-icon mr-3" title="{{ $link->icon }}">
-                                        <i class="{{ $link->icon }}"></i>
-                                    </a>
-                                @endforeach
-                            </div>
-                            <!-- Phone -->
-                            <div class="contact-info d-flex align-items-center mr-4">
-                                <i class="fa fa-phone mr-1"></i>
-                                <a href="tel:{{ @$contact->phone }}" class="contact-text">
-                                    {{ @$contact->phone }}
+                    <!-- Social Media Links, Phone & Email, and Date Section -->
+                    <div class="col-xl-4 col-lg-4 d-flex justify-content-start align-items-center">
+                        <div class="short_contact_list">
+                            @foreach ($socialLinks as $link)
+                                <a href="{{ $link->url }}" style="margin-right: 10px;">
+                                    <i class="{{ $link->icon }}" style="font-size: 18px; color: #fff;"></i>
                                 </a>
-                            </div>
-                            <!-- Email -->
-                            <div class="contact-info d-flex align-items-center">
-                                <i class="fa fa-envelope mr-1"></i>
-                                <a href="mailto:{{ @$contact->email }}" class="contact-text">
-                                    {{ @$contact->email }}
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Date -->
-                        <div class="text-white mt-2">
-                            {{ date('l, F j, Y') }}
+                            @endforeach
+
+                            <i class="fa fa-phone mr-1"></i>
+                            <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none; margin-right: 15px;">
+                                {{ @$contact->phone }}
+                            </a>
+                            <i class="fa fa-envelope mr-1"></i>
+                            <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">
+                                {{ @$contact->email }}
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Quote Button -->
-                    <div class="col-xl-8 col-lg-8 d-flex justify-content-end">
-                        <div class="book_btn">
-                            <a href="{{ route('contact') }}" class="boxed-btn3-line">
-                                GET A QUOTE <i class="fa fa-paper-plane"></i>
-                            </a>
+                    <!-- Date Section -->
+                    <div class="col-xl-4 col-lg-4 d-flex justify-content-center align-items-center">
+                        <span style="margin-left: 10px; font-size: 14px;">
+                            {{ date('l, F j, Y H:i:s') }}
+                        </span>
+                    </div>
+
+                    <!-- Request Button Section -->
+                    <div class="col-xl-4 col-lg-4 d-flex justify-content-end">
+                        <div class="header_right d-flex align-items-center">
+                            <div class="book_btn">
+                                <a class="boxed-btn3-line" href="{{ route('contact') }}" style="text-decoration: none; color: #ffffff;">
+                                    GET A QUOTE <i class="fa fa-paper-plane"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Sticky Header -->
         <div id="sticky-header" class="main-header-area">
