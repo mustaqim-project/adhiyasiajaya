@@ -148,6 +148,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin']],
 
 
 
-    Route::get('settings/landing-page', [SettingLandingPageController::class, 'index'])->name('setting_landing_page.index');
-    Route::put('settings/landing-page/{id}', [SettingLandingPageController::class, 'update'])->name('setting_landing_page.update');
+    Route::get('landing-page', [SettingLandingPageController::class, 'index'])->name('setting_landing_page.index');
+    Route::put('landing-page/{id}', [SettingLandingPageController::class, 'update'])->name('setting_landing_page.update');
 });
