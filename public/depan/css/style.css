@@ -4,7 +4,7 @@
 
 
 :root {
-    --colorPrimary: #0073ff;
+    --colorPrimary: #08384e;
     --paraColor: #808080;
     --colorBlack: #000;
     --colorWhite: #fff;
@@ -952,7 +952,7 @@ h3 {
 /* line 17, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area {
   padding: 7px 0;
-  background: var(--colorPrimary);
+  background: #fff;
 }
 
 @media (max-width: 767px) {
@@ -977,7 +977,7 @@ h3 {
 
 /* line 30, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area.details_nav {
-  background: var(--colorPrimary);
+  background: #001D38;
 }
 
 /* line 47, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
@@ -1313,7 +1313,7 @@ h3 {
 /* line 320, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .header-top_area {
   padding: 17px 0;
-  background: #fff;
+  background: var(--colorPrimary);
   border-bottom: 1px solid #EAEAEA;
 }
 
