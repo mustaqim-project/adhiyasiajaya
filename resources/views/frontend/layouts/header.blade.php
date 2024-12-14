@@ -48,7 +48,7 @@
                         <div class="col-xl-3 col-lg-3 col-6 d-none d-lg-block">
                             <div class="logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="220px">
+                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid" width="400px">
                                 </a>
                             </div>
                         </div>
