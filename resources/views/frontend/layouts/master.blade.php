@@ -253,6 +253,75 @@
                 height: 50px;
             }
         }
+
+
+        /* Animasi dengan keyframes */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Styling untuk slider animasi */
+        .slider_area .swiper-slide .slider_text {
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .single_category {
+            animation: fadeIn 1.5s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .single_category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Tombol animasi hover */
+        .boxed-btn3,
+        .btn_learn_more {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .boxed-btn3:hover,
+        .btn_learn_more:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Animasi fade-in untuk About Us */
+        .chose_area .features_info,
+        .chose_area .about_image img {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animasi pada carousel customer */
+        .service_active .single_category {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Animasi Get a Quote form */
+        .contact_action_area form {
+            animation: fadeIn 1.5s ease;
+        }
     </style>
 </head>
 

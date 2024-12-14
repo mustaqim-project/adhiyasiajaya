@@ -11,11 +11,12 @@
                     <div class="container">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-xl-8">
-                                <div class="slider_text text-center">
+                                <div class="slider_text text-center animate__animated animate__fadeInLeft">
                                     <p>Indonesian Excellence</p>
                                     <h3>Your Reliable Partner in Pulp & Paper Industry</h3>
                                     <a class="boxed-btn3" href="products.html">Our Products</a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -109,7 +110,6 @@
     </div>
     {{-- End Our Product --}}
 
-
     {{-- Our Customer --}}
     <div class="service_area" style="background-color: rgb(255, 255, 255)">
         <div class="container">
@@ -159,10 +159,6 @@
     </div>
     {{-- End Our Customer --}}
 
-
-
-
-
     <!-- chose_area  -->
     <div class="chose_area" style="background-color: #98c1f8">
         <div class="container">
@@ -199,9 +195,6 @@
         </div>
     </div>
     <!--/ chose_area  -->
-
-
-
 
 
     <!-- contact_action_area  -->
@@ -254,8 +247,6 @@
     </div>
     <!-- /contact_action_area  -->
 
-
-
     <script>
         $(document).ready(function() {
             $(".customer_slider").owlCarousel({
@@ -268,38 +259,17 @@
             });
         });
 
+
         var swiper = new Swiper('.slider_area .swiper-container', {
+            effect: 'fade',
             loop: true,
             autoplay: {
-                delay: 5000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-            },
-        });
-
-
-
-        // Owl Carousel for "Our Customer"
-        $('.service_active').owlCarousel({
-            loop: true,
-            margin: 30,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            nav: false,
-            dots: true,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                768: {
-                    items: 2,
-                },
-                1024: {
-                    items: 3,
-                },
             },
         });
     </script>
