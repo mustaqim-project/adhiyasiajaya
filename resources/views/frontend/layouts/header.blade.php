@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Logo and Contact Info Section -->
-                    <div class="col-xl-4 col-lg-4">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="short_contact_list">
                             @foreach ($socialLinks as $link)
                                 <a href="{{ $link->url }}" style="margin-right: 10px;">
@@ -27,7 +27,7 @@
                     </div>
 
                     <!-- Request Button Section -->
-                    <div class="col-xl-8 col-lg-8">
+                    <div class="col-xl-6 col-lg-8">
                         <div class="header_right d-flex align-items-center justify-content-end">
                             <div class="book_btn">
                                 <a class="boxed-btn3-line" href="{{ route('contact') }}"
