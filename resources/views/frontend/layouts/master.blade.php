@@ -322,6 +322,84 @@
         .contact_action_area form {
             animation: fadeIn 1.5s ease;
         }
+
+        .product_area {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .product_area .section_title {
+            margin-bottom: 50px;
+        }
+
+        .section_title h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        .product_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .single_category {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .single_category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .thumb {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product_info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product_info h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product_info p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn_learn_more {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn_learn_more:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 

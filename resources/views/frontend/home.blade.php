@@ -43,7 +43,7 @@
     <!-- slider_area_end -->
 
     {{-- Our Product --}}
-    <div class="service_area">
+    {{-- <div class="service_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -103,6 +103,48 @@
                                 <a href="product_details.html" class="btn_learn_more">View More</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    <div class="product_area">
+        <div class="container">
+            <div class="section_title text-center">
+                <h3>Market Sectors</h3>
+                <p>With over 20 years of combined experience, our company has established a long and friendly relationship with the customers.</p>
+            </div>
+            <div class="service_grid">
+                <div class="single_category">
+                    <div class="thumb">
+                        <img src="https://via.placeholder.com/400x300" alt="Textile Industries">
+                    </div>
+                    <div class="service_info">
+                        <h3>Textile Industries</h3>
+                    </div>
+                </div>
+                <div class="single_category">
+                    <div class="thumb">
+                        <img src="https://via.placeholder.com/400x300" alt="Pulp & Paper Industries">
+                    </div>
+                    <div class="service_info">
+                        <h3>Pulp & Paper Industries</h3>
+                    </div>
+                </div>
+                <div class="single_category">
+                    <div class="thumb">
+                        <img src="https://via.placeholder.com/400x300" alt="Oil & Gas">
+                    </div>
+                    <div class="service_info">
+                        <h3>Oil & Gas</h3>
+                    </div>
+                </div>
+                <div class="single_category">
+                    <div class="thumb">
+                        <img src="https://via.placeholder.com/400x300" alt="Chemical Industry">
+                    </div>
+                    <div class="service_info">
+                        <h3>Chemical Industry</h3>
                     </div>
                 </div>
             </div>
