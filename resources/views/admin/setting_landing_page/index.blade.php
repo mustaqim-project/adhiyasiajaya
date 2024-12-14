@@ -32,7 +32,7 @@
                                 <!-- Image Slide 1 -->
                                 <div class="form-group">
                                     @if($setting->image_slide1)
-                                        <img src="{{ asset($settings['image_slide1']) }}" alt="Image Slide 1" width="150px">
+                                        <img src="{{ asset('uploads/' . $setting->image_slide1) }}" alt="Image Slide 1" width="150px">
                                     @endif
                                     <br>
                                     <label for="image_slide1">{{ __('admin.Image Slide 1') }}</label>
@@ -47,7 +47,7 @@
                                 <!-- Image Slide 2 -->
                                 <div class="form-group">
                                     @if($setting->image_slide2)
-                                        <img src="{{ asset($settings['image_slide2']) }}" alt="Image Slide 2" width="150px">
+                                        <img src="{{ asset('uploads/' . $setting->image_slide2) }}" alt="Image Slide 2" width="150px">
                                     @endif
                                     <br>
                                     <label for="image_slide2">{{ __('admin.Image Slide 2') }}</label>
@@ -62,7 +62,7 @@
                                 <!-- Image About -->
                                 <div class="form-group">
                                     @if($setting->image_about)
-                                        <img src="{{ asset($settings['image_about']) }}" alt="Image About" width="150px">
+                                        <img src="{{ asset('uploads/' . $setting->image_about) }}" alt="Image About" width="150px">
                                     @endif
                                     <br>
                                     <label for="image_about">{{ __('admin.Image About') }}</label>
@@ -72,7 +72,7 @@
                                 <!-- Background Contact -->
                                 <div class="form-group">
                                     @if($setting->bg_contact)
-                                        <img src="{{ asset($settings['bg_contact']) }}" alt="Background Contact" width="150px">
+                                        <img src="{{ asset('uploads/' . $setting->bg_contact) }}" alt="Background Contact" width="150px">
                                     @endif
                                     <br>
                                     <label for="bg_contact">{{ __('admin.Background Contact') }}</label>
@@ -82,7 +82,7 @@
                                 <!-- Image Header About -->
                                 <div class="form-group">
                                     @if($setting->image_header_about)
-                                        <img src="{{ asset($settings['image_header_about']) }}" alt="Image Header About" width="150px">
+                                        <img src="{{ asset('uploads/' . $setting->image_header_about) }}" alt="Image Header About" width="150px">
                                     @endif
                                     <br>
                                     <label for="image_header_about">{{ __('admin.Image Header About') }}</label>
@@ -92,7 +92,7 @@
                                 <!-- Image Header Product -->
                                 <div class="form-group">
                                     @if($setting->image_header_product)
-                                        <img src="{{ asset($settings['image_header_product']) }}" alt="Image Header Product" width="150px">
+                                        <img src="{{ asset('uploads/' . $setting->image_header_product) }}" alt="Image Header Product" width="150px">
                                     @endif
                                     <br>
                                     <label for="image_header_product">{{ __('admin.Image Header Product') }}</label>
@@ -102,12 +102,13 @@
                                 <!-- Image Header Contact -->
                                 <div class="form-group">
                                     @if($setting->image_header_contact)
-                                        <img src="{{ asset($settings['image_header_contact']) }}" alt="Image Header Contact" width="150px">
+                                        <img src="{{ asset('uploads/' . $setting->image_header_contact) }}" alt="Image Header Contact" width="150px">
                                     @endif
                                     <br>
                                     <label for="image_header_contact">{{ __('admin.Image Header Contact') }}</label>
                                     <input type="file" name="image_header_contact" class="form-control">
                                 </div>
+
 
 
                                 <button type="submit" class="btn btn-primary">{{ __('admin.Save') }}</button>
