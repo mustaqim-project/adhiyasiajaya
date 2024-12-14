@@ -15,14 +15,12 @@
                                     </a>
                                 </li>
                             @endforeach
-                            <li style="margin-right: 10px;">
                                 <i class="fa fa-phone mr-1"></i>
                                 <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
-                            </li>
-                            <li>
+
                                 <i class="fa fa-envelope mr-1"></i>
                                 <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
-                            </li>
+
                         </ul>
                     </div>
 
