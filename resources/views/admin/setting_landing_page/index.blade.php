@@ -17,28 +17,33 @@
                 </ul>
                 <div class="tab-content tab-bordered" id="myTab3Content">
                     @php
-                        // Get the first setting or default to an empty object if not found
-                        $setting = App\Models\SettingLandingPage::first() ?? (object)[];
+                        $setting = App\Models\SettingLandingPage::first(); // Mengambil entri pertama
                     @endphp
-                    <div class="tab-pane fade show"
-                        role="tabpanel" aria-labelledby="home-tab2">
+                    <div class="tab-pane fade show" role="tabpanel" aria-labelledby="home-tab2">
                         <div class="card-body">
-                            <form action="{{ route('admin.setting_landing_page.update') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.setting_landing_page.update', ['id' => $setting->id]) }}"
+                                method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <!-- Image Slide 1 -->
                                 <div class="form-group">
                                     <label for="image_slide1">{{ __('admin.Image Slide 1') }}</label>
                                     <input type="file" name="image_slide1" class="form-control">
-                                    <input type="text" name="link_slide1" class="form-control" value="{{ $setting->link_slide1 ?? '' }}" placeholder="{{ __('admin.Link Slide 1') }}">
-                                    <textarea name="desc_slide1" class="form-control" placeholder="{{ __('admin.Description Slide 1') }}" cols="30" rows="3">{{ $setting->desc_slide1 ?? '' }}</textarea>
+                                    <input type="text" name="link_slide1" class="form-control"
+                                        value="{{ $setting->link_slide1 ?? '' }}"
+                                        placeholder="{{ __('admin.Link Slide 1') }}">
+                                    <textarea name="desc_slide1" class="form-control" placeholder="{{ __('admin.Description Slide 1') }}" cols="30"
+                                        rows="3">{{ $setting->desc_slide1 ?? '' }}</textarea>
                                 </div>
 
                                 <!-- Image Slide 2 -->
                                 <div class="form-group">
                                     <label for="image_slide2">{{ __('admin.Image Slide 2') }}</label>
                                     <input type="file" name="image_slide2" class="form-control">
-                                    <input type="text" name="link_slide2" class="form-control" value="{{ $setting->link_slide2 ?? '' }}" placeholder="{{ __('admin.Link Slide 2') }}">
-                                    <textarea name="desc_slide2" class="form-control" placeholder="{{ __('admin.Description Slide 2') }}" cols="30" rows="3">{{ $setting->desc_slide2 ?? '' }}</textarea>
+                                    <input type="text" name="link_slide2" class="form-control"
+                                        value="{{ $setting->link_slide2 ?? '' }}"
+                                        placeholder="{{ __('admin.Link Slide 2') }}">
+                                    <textarea name="desc_slide2" class="form-control" placeholder="{{ __('admin.Description Slide 2') }}" cols="30"
+                                        rows="3">{{ $setting->desc_slide2 ?? '' }}</textarea>
                                 </div>
 
                                 <!-- Image About -->
