@@ -81,7 +81,7 @@
     }
 </style>
 
-<footer class="footer">
+<footer class="footer" style="color: black;">
     <div class="footer_top">
         <div class="container">
             <div class="row">
@@ -112,7 +112,7 @@
                         <h3 class="footer_title">{{ @$footerGridOneTitle->value ?? 'Useful Links' }}</h3>
                         <ul>
                             @foreach ($footerGridOne as $gridOne)
-                                <li style="color: black;">
+                                <li >
                                     <a href="{{ $gridOne->url }}" class="text-decoration-none">
                                         {{ $gridOne->name }}
                                     </a>
@@ -132,13 +132,13 @@
                             </li>
                             <li class="mb-2">
                                 <span class="me-2"><i class="fa fa-phone"></i></span>
-                                <a href="tel:{{ @$contact->phone }}" class=" text-decoration-none">
+                                <a href="tel:{{ @$contact->phone }}" class="text-decoration-none">
                                     {{ @$contact->phone ?? 'Default phone number' }}
                                 </a>
                             </li>
                             <li>
                                 <span class="me-2"><i class="fa fa-envelope"></i></span>
-                                <a href="mailto:{{ @$contact->email }}" class=" text-decoration-none">
+                                <a href="mailto:{{ @$contact->email }}" class="text-decoration-none">
                                     {{ @$contact->email ?? 'default@email.com' }}
                                 </a>
                             </li>
