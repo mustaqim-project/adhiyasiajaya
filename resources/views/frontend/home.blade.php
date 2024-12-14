@@ -197,55 +197,64 @@
     <!--/ chose_area  -->
 
 
-    <!-- contact_action_area  -->
-    <div class="contact_action_area">
+
+    <!-- Estimate_area start  -->
+    <div class="Estimate_area overlay">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-xl-4 col-lg-4 col-md-5">
+                    <div class="Estimate_info">
+                        <h3>Get Request</h3>
+                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
+                            placing.</p>
+                        <a href="#" class="boxed-btn3">{{ @$contact->phone }}</a>
+                    </div>
                 </div>
-                <div class="col-lg-8">
-                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
-                        novalidate="novalidate">
-                        <div class="row">
-                            <h2 class="contact-title">Get a Quote</h2>
+                <div class="col-xl-8 col-lg-8 col-md-7">
+                    <div class="form">
+                        <form action="{{ route('contact.submit') }}" method="POST">
+                            @csrf
+                            <div class="row">
 
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9"
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" message"></textarea>
+                                <div class="col-md-6">
+                                    <div class="form-group form-group-name">
+                                        <label>{{ __('frontend.Your email') }} <span class="required"></span></label>
+                                        <input type="email" class="form-control" name="email" required="">
+                                        @error('email')
+                                            <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group form-group-name">
+                                        <label>{{ __('frontend.Subject') }} <span class="required"></span></label>
+                                        <input type="text" class="form-control" name="subject" required="">
+                                        @error('subject')
+                                            <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>{{ __('frontend.Your message') }} </label>
+                                        <textarea class="form-control" rows="8" name="message"></textarea>
+                                        @error('message')
+                                            <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <button type="submit" class="btn btn-primary">{{ __('frontend.Submit') }}</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control valid" name="name" id="name" type="text"
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
-                                        placeholder="Enter your name">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control valid" name="email" id="email" type="email"
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
-                                        placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input class="form-control" name="subject" id="subject" type="text"
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
-                                        placeholder="Enter Subject">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <button type="submit" class="button button-contactForm boxed-btn">Send</button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /contact_action_area  -->
+    <!-- Estimate_area end  -->
 
     <script>
         $(document).ready(function() {
