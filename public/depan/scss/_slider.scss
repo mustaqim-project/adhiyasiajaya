@@ -41,7 +41,7 @@
                     }
                 }
                 .property_form{
-                    background: #001D38;   
+                    background: #001D38;
                 }
             }
 
@@ -116,11 +116,11 @@
                 }
             }
         }
-    } 
+    }
     .serach_icon a {
         width: 45px;
         height: 45px;
-        background: #FD8E5E;
+        background: var(--colorPrimary);
         text-align: center;
         line-height: 45px;
         color: #fff;
@@ -154,7 +154,7 @@
             width: 100%;
             #slider{
                 margin: 0;
-                
+
             }
         }
 
@@ -171,7 +171,7 @@
                 display: block;
                 font-size: 15px;
                 color: #FDAE5C;
-                
+
             }
             .nice-select.wide {
                 width: 166px;
@@ -215,7 +215,7 @@
                 display: block;
                 font-size: 15px;
                 color: #FDAE5C;
-                
+
             }
             .nice-select.wide {
                 width: 110px;
