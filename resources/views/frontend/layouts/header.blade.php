@@ -38,7 +38,7 @@
         <div id="sticky-header" class="main-header-area">
             <div class="container">
                 <div class="header_bottom_border">
-                    <div class="row align-items-center">
+                    <div class="row align-items-center justify-content-between">
 
                         <!-- Logo -->
                         <div class="col-xl-3 col-lg-3 col-6">
@@ -50,20 +50,15 @@
                             </div>
                         </div>
 
-
-                        <!-- Mobile Logo -->
-                        <div class="col-12 d-block d-lg-none">
-                            <div class="logo">
-                                <a href="{{ url('/') }}">
-                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
-                                        width="180px">
-                                </a>
-                            </div>
+                        <!-- Mobile Menu Toggle -->
+                        <div class="col-6 d-lg-none text-end">
+                            <button class="mobile-menu-toggle">
+                                <i class="ti-menu"></i>
+                            </button>
                         </div>
 
-
                         <!-- Main Navigation -->
-                        <div class="col-xl-9 col-lg-9 col-6">
+                        <div class="col-xl-9 col-lg-9 d-none d-lg-block">
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation"
@@ -80,40 +75,110 @@
                                             <a href="{{ route('product') }}"
                                                 style="text-transform: uppercase; font-weight: bold;">PRODUCTS</a>
                                         </li>
-                                        {{-- <li style="margin: 0 15px;">
+                                        <li style="margin: 0 15px;">
                                             <a href="{{ route('catalog') }}"
                                                 style="text-transform: uppercase; font-weight: bold;">CATALOG</a>
                                         </li>
                                         <li style="margin: 0 15px;">
                                             <a href="{{ route('quote') }}"
                                                 style="text-transform: uppercase; font-weight: bold;">GET A QUOTE</a>
-                                        </li> --}}
+                                        </li>
                                         <li style="margin: 0 15px;">
                                             <a href="{{ route('contact') }}"
                                                 style="text-transform: uppercase; font-weight: bold;">CONTACT</a>
-                                        </li>
-                                        <li style="margin: 0 15px;">
-                                            <!-- Search Button -->
-                                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                                <div class="Appointment justify-content-end">
-                                                    <div class="search_btn">
-                                                        <a data-toggle="modal" data-target="#searchModal"
-                                                            href="#">
-                                                            <i class="ti-search"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
 
+                        <!-- Mobile Navigation -->
+                        <div class="mobile-menu d-lg-none" style="display: none;">
+                            <nav>
+                                <ul id="mobile-navigation" style="list-style: none; padding: 0; margin: 0;">
+                                    <li>
+                                        <a href="{{ url('/') }}">HOME</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('about') }}">ABOUT US</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('product') }}">PRODUCTS</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('catalog') }}">CATALOG</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('quote') }}">GET A QUOTE</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('contact') }}">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu Toggle Script -->
+        <script>
+            document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+                const mobileMenu = document.querySelector('.mobile-menu');
+                mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        </script>
+
+        <!-- Responsive CSS -->
+        <style>
+            #sticky-header {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .main-header-area {
+                padding: 10px 0;
+            }
+
+            .mobile-menu {
+                background-color: #fff;
+                padding: 10px;
+            }
+
+            .mobile-menu ul li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu ul li a {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #333;
+                text-decoration: none;
+            }
+
+            .mobile-menu ul li a:hover {
+                color: #007bff;
+            }
+
+            .mobile-menu-toggle {
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #333;
+            }
+
+            @media (max-width: 991px) {
+                .main-menu {
+                    display: none;
+                }
+            }
+        </style>
 
     </div>
 </header>
