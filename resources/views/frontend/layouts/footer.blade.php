@@ -132,13 +132,13 @@
                             </li>
                             <li class="mb-2">
                                 <span class="me-2"><i class="fa fa-phone"></i></span>
-                                <a href="tel:{{ @$contact->phone }}" class="text-light text-decoration-none">
+                                <a href="tel:{{ @$contact->phone }}" class=" text-decoration-none">
                                     {{ @$contact->phone ?? 'Default phone number' }}
                                 </a>
                             </li>
                             <li>
                                 <span class="me-2"><i class="fa fa-envelope"></i></span>
-                                <a href="mailto:{{ @$contact->email }}" class="text-light text-decoration-none">
+                                <a href="mailto:{{ @$contact->email }}" class=" text-decoration-none">
                                     {{ @$contact->email ?? 'default@email.com' }}
                                 </a>
                             </li>
