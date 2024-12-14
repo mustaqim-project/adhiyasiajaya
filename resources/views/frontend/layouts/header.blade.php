@@ -9,10 +9,10 @@
                     <!-- Logo and Contact Info Section -->
                     <div class="col-xl-4 col-lg-4">
                         <div class="short_contact_list">
-                            @foreach ($socialLinks as $link)
+                            {{-- @foreach ($socialLinks as $link)
                                 <a href="{{ $link->url }}"><i class="{{ $link->icon }}"
                                         style="margin-right: 12em;"></i></a>
-                            @endforeach
+                            @endforeach --}}
 
                             <i class="fa fa-phone mr-1"></i>
                             <a href="tel:{{ @$contact->phone }}"
@@ -21,10 +21,10 @@
                             <a href="mailto:{{ @$contact->email }}"
                                 style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
 
-                            <div class="topbar-text">
+                            {{-- <div class="topbar-text">
 
                                 {{ date('l, F j, Y') }}
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
 
