@@ -58,10 +58,11 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="{{ url('/') }}">
-                                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo"
-                                                    class="img-fluid" width="180px">
-                                            </a>
+                                        <li>
+                                            <figure class="image-logo">
+                                                <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo"
+                                                    class="logo-footer" width="180px">
+                                            </figure>
                                         </li>
 
                                         <li><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
