@@ -107,10 +107,10 @@
     <div style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
-                <i class="fa fa-phone mr-1"></i>  <a href="tel:{{ @$contact->phone }}">{{ @$contact->phone }}</a>
+                <i class="fa fa-phone mr-1"></i>  <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
                 <i class="fa fa-envelope ml-4 mr-1"></i> <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
                 <li style="font-weight: bold;">
-                    <a href="#" style="text-decoration: none; color: #000;">GET A QUOTE <i class="fa fa-paper-plane"></i></a>
+                    <a href="#" style="text-decoration: none; color: #ffffff;">GET A QUOTE <i class="fa fa-paper-plane"></i></a>
                 </li>
             </div>
         </div>
