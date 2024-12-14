@@ -2,40 +2,35 @@
 <header>
     <div class="header-area">
         <!-- Header Top Area -->
-        <div class="header-top_area d-none d-lg-block">
+        <div class="header-top_area d-none d-lg-block"
+            style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
             <div class="container">
                 <div class="row align-items-center">
+                    <!-- Logo and Contact Info Section -->
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
-                            <a href="{{ url('/') }}">
-                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid">
-                            </a>
+                            <div class="short_contact_list">
+                                <i class="fa fa-phone mr-1"></i> <a href="tel:{{ @$contact->phone }}"
+                                    style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
+                                <i class="fa fa-envelope ml-4 mr-1"></i> <a href="mailto:{{ @$contact->email }}"
+                                    style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Request Button Section -->
                     <div class="col-xl-8 col-lg-8">
                         <div class="header_right d-flex align-items-center">
-                            <div class="short_contact_list">
-                                <ul>
-                                    <li>
-                                        <a href="mailto:{{ @$contact->email }}">
-                                            <i class="fa fa-envelope"></i> {{ @$contact->email }}
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:{{ @$contact->phone }}">
-                                            <i class="fa fa-phone"></i> {{ @$contact->phone }}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                             <div class="book_btn d-none d-lg-block">
-                                <a class="boxed-btn3-line" href="{{ route('contact') }}">Request Now</a>
+                                <a href="{{ route('contact') }}" style="text-decoration: none; color: #ffffff;">GET A
+                                    QUOTE <i class="fa fa-paper-plane"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Sticky Header -->
         <div id="sticky-header" class="main-header-area">
