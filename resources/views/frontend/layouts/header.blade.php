@@ -48,6 +48,16 @@
                             </div>
                         </div>
 
+                        <!-- Logo -->
+                        <div class="col-xl-3 col-lg-3 col-6">
+                            <div class="logo">
+                                <a href="{{ url('/') }}">
+                                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
+                                        width="180px">
+                                </a>
+                            </div>
+                        </div>
+
                         <!-- Main Navigation -->
                         <div class="col-xl-9 col-lg-9">
                             <div class="main-menu d-none d-lg-block">
@@ -78,19 +88,7 @@
                                         <a href="{{ route('contact') }}"
                                             style="text-transform: uppercase; font-weight: bold;">CONTACT</a>
                                     </li>
-                                    <li style="margin: 0 15px;">
-                                        <!-- Search Button -->
-                                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                            <div class="Appointment justify-content-end">
-                                                <div class="search_btn">
-                                                    <a data-toggle="modal" data-target="#searchModal"
-                                                        href="#">
-                                                        <i class="ti-search"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
+
                                 </ul>
                                 </nav>
                             </div>
