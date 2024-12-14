@@ -49,15 +49,17 @@
 
         /* line 130, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
         .bg-img-1 {
-            background-image: url('{{ asset(optional($settingpage)->image_slide1) }}');
+            background-image: url('https://shasolo.com/wp-content/uploads/2024/04/refinary.jpeg');
         }
 
+        /* line 133, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
         .bg-img-2 {
-            background-image: url('{{ asset(optional($settingpage)->image_slide2) }}');
+            background-image: url('https://www.electrosonic.com/hubfs/iStock-655162742.jpg');
         }
 
+        /* line 136, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
         .cta-bg-1 {
-            background-image: url('{{ asset(optional($settingpage)->image_slide2) }}');
+            background-image: url(../img/background-img/bg-img-3.jpg);
         }
 
         /* Styling untuk ikon WhatsApp yang mengambang */
