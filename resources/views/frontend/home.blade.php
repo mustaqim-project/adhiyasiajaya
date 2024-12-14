@@ -258,10 +258,11 @@
                 <div class="col-12">
                 </div>
                 <div class="col-lg-8">
-                    <h2 class="contact-title">Get a Quote</h2>
                     <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
                         novalidate="novalidate">
                         <div class="row">
+                            <h2 class="contact-title">Get a Quote</h2>
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9"
