@@ -57,7 +57,7 @@
                         <div class="col-xl-6 col-lg-6">
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation" class="d-flex align-items-center">
+                                    <ul id="navigation" class="d-flex align-items-center" style="text-transform: uppercase; font-weight: bold;">
 
                                         <li><a href="{{ url('/') }}" class="menu-link">HOME</a></li>
                                         <li><a href="{{ route('about') }}" class="menu-link">ABOUT US</a></li>
