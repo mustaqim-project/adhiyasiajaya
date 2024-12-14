@@ -314,23 +314,12 @@
     <!-- Estimate_area end  -->
 
     <script>
-        $(document).ready(function() {
-            $(".customer_slider").owlCarousel({
-                items: 1,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                nav: true,
-                dots: false
-            });
-        });
 
 
-        var swiper = new Swiper('.slider_area .swiper-container', {
-            effect: 'fade',
+        const swiper = new Swiper('.swiper-container', {
             loop: true,
             autoplay: {
-                delay: 4000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             pagination: {
