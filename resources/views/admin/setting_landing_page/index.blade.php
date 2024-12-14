@@ -18,7 +18,9 @@
                 <div class="tab-content tab-bordered" id="myTab3Content">
                     @php
                         $setting = App\Models\SettingLandingPage::first(); // Mengambil entri pertama
-                    @endphp
+                   dd($setting);
+                   @endphp
+
                     <div class="tab-pane fade show" role="tabpanel" aria-labelledby="home-tab2">
                         <div class="card-body">
                             <form action="{{ route('admin.setting_landing_page.update', ['id' => $setting->id]) }}"
