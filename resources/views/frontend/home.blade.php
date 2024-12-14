@@ -252,7 +252,7 @@
                         <h3>Get Request</h3>
                         <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
                             placing.</p>
-                        <a href="tel:{{ @$contact->phone }}" class="boxed">
+                        <a href="tel:{{ @$contact->phone }}" class="boxed-btn3">
                             {{ @$contact->phone ?? '00-0000-0000-0000' }}
                         </a>
                     </div>
