@@ -2,29 +2,27 @@
 <header>
     <div class="header-area">
         <!-- Header Top Area -->
-        <div class="header-top_area d-none d-lg-block"
-            style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
+        <div class="header-top_area d-none d-lg-block">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Logo and Contact Info Section -->
                     <div class="col-xl-4 col-lg-4">
-                        <ul class="short_contact_list d-flex align-items-center"
-                            style="list-style: none; padding: 0; margin: 0;">
+                        <ul class="short_contact_list d-flex align-items-center">
                             @foreach ($socialLinks as $link)
-                                <li style="margin-right: 10px;">
-                                    <i class="{{ $link->icon }}"></i>
-                                    <a href="{{ $link->url }}" class="social__link" style="color: #fff;">
+                                <li class="social-item">
+                                    <a href="{{ $link->url }}" class="social__link">
+                                        <i class="{{ $link->icon }}"></i>
                                     </a>
                                 </li>
                             @endforeach
-                            <i class="fa fa-phone mr-1" style="margin-right: 10px;"></i>
-                            <a href="tel:{{ @$contact->phone }}"
-                                style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
-
-                            <i class="fa fa-envelope mr-1" style="margin-right: 10px;"></i>
-                            <a href="mailto:{{ @$contact->email }}"
-                                style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
-
+                            <li class="contact-item">
+                                <i class="fa fa-phone"></i>
+                                <a href="tel:{{ @$contact->phone }}" class="contact-link">{{ @$contact->phone }}</a>
+                            </li>
+                            <li class="contact-item">
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:{{ @$contact->email }}" class="contact-link">{{ @$contact->email }}</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -32,8 +30,7 @@
                     <div class="col-xl-8 col-lg-8">
                         <div class="header_right d-flex align-items-center justify-content-end">
                             <div class="book_btn">
-                                <a class="boxed-btn3-line" href="{{ route('contact') }}"
-                                    style="text-decoration: none; color: #ffffff;">
+                                <a class="boxed-btn3-line" href="{{ route('contact') }}">
                                     GET A QUOTE <i class="fa fa-paper-plane"></i>
                                 </a>
                             </div>
@@ -42,6 +39,43 @@
                 </div>
             </div>
         </div>
+
+        <style>
+        .header-top_area {
+            background-color: #001133;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 14px;
+        }
+        .short_contact_list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .short_contact_list .social-item {
+            margin-right: 10px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .contact-item i {
+            margin-right: 5px;
+        }
+        .contact-link {
+            color: #fff;
+            text-decoration: none;
+        }
+        .book_btn .boxed-btn3-line {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .book_btn .boxed-btn3-line:hover {
+            color: #ccc;
+        }
+        </style>
+
 
 
         <!-- Sticky Header -->
