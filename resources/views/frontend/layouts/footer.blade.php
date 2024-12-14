@@ -2,7 +2,7 @@
 
 
     .footer {
-        background-color: var(--bgFooter);
+        background-color: #F5FBFF;
         padding: 40px 0;
         color: var(--textColor);
     }
