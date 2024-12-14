@@ -149,68 +149,7 @@
                 grid-template-columns: 1fr;
             }
         }
-      <!-- CSS for better layout -->
-    <style>
-        .service_area {
-            padding: 50px 0;
-            background-color: #f0f4f8; /* light grayish background */
-        }
-
-        .single_category {
-            margin: 0 15px;
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .thumb img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .service_info h3 {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .service_info a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .service_info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Make the carousel responsive */
-        @media (max-width: 768px) {
-            .single_category {
-                margin: 10px 0;
-            }
-
-            .service_active {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .single_category {
-                flex: 0 0 45%; /* Two columns on mobile */
-                margin: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .single_category {
-                flex: 0 0 90%; /* One column on smaller screens */
-            }
-        }
     </style>
-
 </head>
 
 <body>
