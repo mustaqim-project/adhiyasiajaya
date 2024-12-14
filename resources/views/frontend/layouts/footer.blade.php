@@ -76,7 +76,8 @@
 </footer>
 <!-- Footer End --> --}}
 <!-- Footer Start -->
-<footer class="footer" style="color: white; background-color: #020e28;">
+
+<footer class="footer"  style="background-color: #020e28; padding: 10px 0; color: #fff;" >
     <div class="footer_top">
         <div class="container">
             <div class="row">
