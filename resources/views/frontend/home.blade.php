@@ -148,7 +148,7 @@
     </div>
     {{-- End Our Product --}}
 
-    <div class="service_area" style="background-color: #98c1f8">
+    <div class="service_area" style="background-color: #2596be">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
