@@ -19,7 +19,7 @@
                     <div class="col-xl-8 col-lg-8">
                         <div class="header_right d-flex align-items-center justify-content-end">
                             <div class="book_btn">
-                                <a href="{{ route('contact') }}" style="text-decoration: none; color: #ffffff;">
+                                <a class="boxed-btn3-line" href="{{ route('contact') }}" style="text-decoration: none; color: #ffffff;">
                                     GET A QUOTE <i class="fa fa-paper-plane"></i>
                                 </a>
                             </div>
@@ -57,7 +57,7 @@
                         <div class="col-xl-6 col-lg-6">
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation" class="d-flex align-items-center" style="text-transform: uppercase; font-weight: bold;">
+                                    <ul id="navigation" class="d-flex align-items-center" style="text-transform: uppercase; font-weight: bold; justify-content: flex-end; margin: 0; padding: 0;">
 
                                         <li><a href="{{ url('/') }}" class="menu-link">HOME</a></li>
                                         <li><a href="{{ route('about') }}" class="menu-link">ABOUT US</a></li>
