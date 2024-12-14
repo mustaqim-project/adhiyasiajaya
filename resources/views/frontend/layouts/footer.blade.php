@@ -89,7 +89,7 @@
                 <div class="col-xl-6 col-md-12 col-lg-6">
                     <div class="footer_widget">
                         <figure class="mb-3">
-                            <img src="{{ asset(@$footerInfo->logo ?? 'default-logo.png') }}" alt="Logo Footer" class="img-fluid logo-footer" width="180">
+                            <img src="{{ asset(@$footerInfo->logo ?? 'default-logo.png') }}" alt="Logo Footer" class="img-fluid logo-footer" width="300px">
                         </figure>
                         <p>{{ @$footerInfo->description ?? 'Default footer description.' }}</p>
                         <div class="social__media mt-4">
