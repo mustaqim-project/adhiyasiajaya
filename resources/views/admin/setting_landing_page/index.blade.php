@@ -24,6 +24,11 @@
                             <form action="{{ route('admin.setting_landing_page.update', ['id' => $setting->id]) }}"
                                 method="POST" enctype="multipart/form-data">
                                 @csrf
+                                @method('PUT') <!-- Gunakan metode PUT untuk update -->
+
+                                <!-- ID (Hidden field) -->
+                                <input type="hidden" name="id" value="{{ $setting->id }}">
+
                                 <!-- Image Slide 1 -->
                                 <div class="form-group">
                                     <label for="image_slide1">{{ __('admin.Image Slide 1') }}</label>
@@ -75,6 +80,8 @@
                                     <label for="image_header_contact">{{ __('admin.Image Header Contact') }}</label>
                                     <input type="file" name="image_header_contact" class="form-control">
                                 </div>
+
+
 
                                 <button type="submit" class="btn btn-primary">{{ __('admin.Save') }}</button>
                             </form>
