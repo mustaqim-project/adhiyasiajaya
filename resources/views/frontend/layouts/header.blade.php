@@ -7,13 +7,6 @@
                 <div class="row align-items-center">
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
-                            <a href="{{ url('/') }}">
-                                <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-lg-8">
-                        <div class="header_right d-flex align-items-center">
                             <div class="short_contact_list">
                                 <ul>
                                     <li>
@@ -28,6 +21,24 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="header_right d-flex align-items-center">
+                            {{-- <div class="short_contact_list">
+                                <ul>
+                                    <li>
+                                        <a href="mailto:{{ @$contact->email }}">
+                                            <i class="fa fa-envelope"></i> {{ @$contact->email }}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:{{ @$contact->phone }}">
+                                            <i class="fa fa-phone"></i> {{ @$contact->phone }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> --}}
                             <div class="book_btn d-none d-lg-block">
                                 <a class="boxed-btn3-line" href="{{ route('contact') }}">Request Now</a>
                             </div>
@@ -59,7 +70,12 @@
                                 <nav>
                                     <ul id="navigation">
 
-
+                                        <li>
+                                            <figure class="image-logo">
+                                                <img src="{{ asset(@$footerInfo->logo) }}" alt="Logo"
+                                                    class="logo-footer" width="180px">
+                                            </figure>
+                                        </li>
                                         <li><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
                                         <li><a href="{{ route('about') }}">{{ __('frontend.About Us') }}</a></li>
                                         <li><a href="{{ route('product') }}">{{ __('frontend.Our Product') }}</a></li>
