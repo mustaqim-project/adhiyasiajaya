@@ -9,24 +9,30 @@
                     <!-- Logo and Contact Info Section -->
                     <div class="col-xl-4 col-lg-4">
                         <div class="short_contact_list">
-                            {{-- @foreach ($socialLinks as $link)
-                                <a href="{{ $link->url }}"><i class="{{ $link->icon }}"
-                                        style="margin-right: 12em;"></i></a>
-                            @endforeach --}}
+                            @foreach ($socialLinks as $link)
+                                <a href="{{ $link->url }}" style="margin-right: 12em;">
+                                    <i class="{{ $link->icon }}"></i>
+                                </a>
+                            @endforeach
 
-                            <i class="fa fa-phone mr-1"></i>
-                            <a href="tel:{{ @$contact->phone }}"
-                                style="color: #fff; text-decoration: none;">{{ @$contact->phone }}</a>
-                            <i class="fa fa-envelope ml-4 mr-1"></i>
-                            <a href="mailto:{{ @$contact->email }}"
-                                style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
+                            <span>
+                                <i class="fa fa-phone mr-1"></i>
+                                <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none;">
+                                    {{ @$contact->phone }}
+                                </a>
+                            </span>
 
-                            {{-- <div class="topbar-text">
+                            <span class="ml-4">
+                                <i class="fa fa-envelope mr-1"></i>
+                                <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">
+                                    {{ @$contact->email }}
+                                </a>
+                            </span>
 
-                                {{ date('l, F j, Y') }}
-                            </div> --}}
+                            <div>{{ date('l, F j, Y') }}</div>
                         </div>
                     </div>
+
 
                     <!-- Request Button Section -->
                     <div class="col-xl-8 col-lg-8">
