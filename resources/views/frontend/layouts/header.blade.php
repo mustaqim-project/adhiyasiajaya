@@ -11,17 +11,17 @@
                             <div class="short_contact_list">
                                 <ul class="d-flex">
                                     <!-- Email Link -->
-                                    <li class="mr-4">
-                                        <a href="mailto:{{ @$contact->email }}">
-                                            <i class="fa fa-envelope"></i> {{ @$contact->email }}
-                                        </a>
-                                    </li>
+
+                                    <a href="mailto:{{ @$contact->email }}">
+                                        <i class="fa fa-envelope"></i> {{ @$contact->email }}
+                                    </a>
+
                                     <!-- Phone Link -->
-                                    <li>
-                                        <a href="tel:{{ @$contact->phone }}">
-                                            <i class="fa fa-phone"></i> {{ @$contact->phone }}
-                                        </a>
-                                    </li>
+
+                                    <a href="tel:{{ @$contact->phone }}">
+                                        <i class="fa fa-phone"></i> {{ @$contact->phone }}
+                                    </a>
+
                                 </ul>
                             </div>
                         </div>
