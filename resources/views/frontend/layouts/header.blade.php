@@ -5,15 +5,18 @@
         <div class="header-top_area d-none d-lg-block">
             <div class="container">
                 <div class="row align-items-center">
+                    <!-- Logo and Contact Info Section -->
                     <div class="col-xl-4 col-lg-4">
                         <div class="logo">
                             <div class="short_contact_list">
-                                <ul>
-                                    <li>
+                                <ul class="d-flex">
+                                    <!-- Email Link -->
+                                    <li class="mr-4">
                                         <a href="mailto:{{ @$contact->email }}">
                                             <i class="fa fa-envelope"></i> {{ @$contact->email }}
                                         </a>
                                     </li>
+                                    <!-- Phone Link -->
                                     <li>
                                         <a href="tel:{{ @$contact->phone }}">
                                             <i class="fa fa-phone"></i> {{ @$contact->phone }}
@@ -23,22 +26,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Request Button Section -->
                     <div class="col-xl-8 col-lg-8">
                         <div class="header_right d-flex align-items-center">
-                            {{-- <div class="short_contact_list">
-                                <ul>
-                                    <li>
-                                        <a href="mailto:{{ @$contact->email }}">
-                                            <i class="fa fa-envelope"></i> {{ @$contact->email }}
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:{{ @$contact->phone }}">
-                                            <i class="fa fa-phone"></i> {{ @$contact->phone }}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div> --}}
                             <div class="book_btn d-none d-lg-block">
                                 <a class="boxed-btn3-line" href="{{ route('contact') }}">Request Now</a>
                             </div>
@@ -47,6 +38,7 @@
                 </div>
             </div>
         </div>
+
 
         <!-- Sticky Header -->
         <div id="sticky-header" class="main-header-area">
