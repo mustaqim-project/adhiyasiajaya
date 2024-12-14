@@ -319,7 +319,7 @@
     }
     .header-top_area{
         padding: 17px 0;
-        background: #fff;
+        background:var(--colorPrimary);
         border-bottom: 1px solid #EAEAEA;
       .social_media_links{
           @media #{$mobile_device} {
