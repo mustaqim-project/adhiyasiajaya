@@ -25,10 +25,10 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SocialCountController;
 use App\Http\Controllers\Admin\SocialLinkController;
 use App\Http\Controllers\Admin\SubscriberController;
+use App\Http\Controllers\Admin\SettingLandingPageController;
 use App\Models\FooterGridOne;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
-use App\Http\Admin\Controllers\SettingLandingPageController;
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
