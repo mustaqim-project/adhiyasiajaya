@@ -14,9 +14,13 @@ class SettingLandingPage extends Model
     protected $fillable = [
         'image_slide1',
         'link_slide1',
+        'name_slide1',
+        'head_slide1',
         'desc_slide1',
         'image_slide2',
         'link_slide2',
+        'name_slide2',
+        'head_slide2',
         'desc_slide2',
         'image_about',
         'bg_contact',

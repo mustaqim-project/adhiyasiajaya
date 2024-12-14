@@ -24,19 +24,22 @@ class SettingLandingPageController extends Controller
         return view('admin.setting_landing_page.index', compact('settings'));
     }
 
-    // Mengupdate data
     public function update(Request $request, $id)
     {
-        // Cari data berdasarkan ID
-        $setting = SettingLandingPage::first();
+        // Cari data berdasarkan ID (Pastikan menggunakan 'find' untuk mengambil berdasarkan ID)
+        $setting = SettingLandingPage::findOrFail($id);
 
         // Validasi request
         $validated = $request->validate([
             'image_slide1' => ['nullable', 'image', 'max:3000'],
             'link_slide1' => 'nullable|string',
+            'name_slide1' => 'nullable|string|max:255',
+            'head_slide1' => 'nullable|string|max:255',
             'desc_slide1' => 'nullable|string',
             'image_slide2' => ['nullable', 'image', 'max:3000'],
             'link_slide2' => 'nullable|string',
+            'name_slide2' => 'nullable|string|max:255',
+            'head_slide2' => 'nullable|string|max:255',
             'desc_slide2' => 'nullable|string',
             'image_about' => ['nullable', 'image', 'max:3000'],
             'bg_contact' => ['nullable', 'image', 'max:3000'],
@@ -45,35 +48,11 @@ class SettingLandingPageController extends Controller
             'image_header_contact' => ['nullable', 'image', 'max:3000'],
         ]);
 
-        // Mengupdate data jika ada file yang diupload
-
-        if ($request->hasFile('image_slide1')) {
-            $setting->image_slide1 = $this->handleFileUpload($request, 'image_slide1');
-        }
-        if ($request->hasFile('image_slide2')) {
-            $setting->image_slide2 = $this->handleFileUpload($request, 'image_slide2');
-        }
-        if ($request->hasFile('image_about')) {
-            $setting->image_about = $this->handleFileUpload($request, 'image_about');
-        }
-        if ($request->hasFile('bg_contact')) {
-            $setting->bg_contact = $this->handleFileUpload($request, 'bg_contact');
-        }
-        if ($request->hasFile('image_header_about')) {
-            $setting->image_header_about = $this->handleFileUpload($request, 'image_header_about');
-        }
-        if ($request->hasFile('image_header_product')) {
-            $setting->image_header_product = $this->handleFileUpload($request, 'image_header_product');
-        }
-        if ($request->hasFile('image_header_contact')) {
-            $setting->image_header_contact = $this->handleFileUpload($request, 'image_header_contact');
-        }
+        // Handle file uploads
+        $this->handleFileUploads($request, $setting);
 
         // Memperbarui informasi lain yang tidak berhubungan dengan file
-        $setting->link_slide1 = $request->input('link_slide1');
-        $setting->desc_slide1 = $request->input('desc_slide1');
-        $setting->link_slide2 = $request->input('link_slide2');
-        $setting->desc_slide2 = $request->input('desc_slide2');
+        $this->updateNonFileFields($request, $setting);
 
         // Simpan perubahan
         $setting->save();
@@ -84,4 +63,49 @@ class SettingLandingPageController extends Controller
         // Kembali ke halaman sebelumnya
         return redirect()->back();
     }
+
+    // Method untuk menangani upload file
+    private function handleFileUploads(Request $request, SettingLandingPage $setting)
+    {
+        $fields = [
+            'image_slide1',
+            'image_slide2',
+            'image_about',
+            'bg_contact',
+            'image_header_about',
+            'image_header_product',
+            'image_header_contact'
+        ];
+
+        foreach ($fields as $field) {
+            if ($request->hasFile($field)) {
+                // Hanya mengupdate field jika file baru diupload
+                $setting->$field = $this->handleFileUpload($request, $field);
+            }
+        }
+    }
+
+    // Method untuk memperbarui field non-file
+    private function updateNonFileFields(Request $request, SettingLandingPage $setting)
+    {
+        // Fields non-file yang perlu diupdate
+        $fields = [
+            'link_slide1',
+            'name_slide1',
+            'head_slide1',
+            'desc_slide1',
+            'link_slide2',
+            'name_slide2',
+            'head_slide2',
+            'desc_slide2'
+        ];
+
+        foreach ($fields as $field) {
+            if ($request->has($field)) {
+                // Memperbarui hanya jika field ada dalam request
+                $setting->$field = $request->input($field);
+            }
+        }
+    }
+
 }
