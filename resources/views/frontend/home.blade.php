@@ -148,7 +148,7 @@
     </div>
     {{-- End Our Product --}}
 
-    <div class="service_area">
+    <div class="service_area" style="background-color: #98c1f8">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -205,7 +205,7 @@
     </div>
 
     <!-- chose_area  -->
-    <div class="chose_area" style="background-color: #98c1f8">
+    <div class="chose_area">
         <div class="container">
             <div class="features_main_wrap">
                 <div class="row  align-items-center">
