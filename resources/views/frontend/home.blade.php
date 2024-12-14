@@ -160,7 +160,7 @@
     </div> --}}
 
 
-    <div class="service_area" style="background-color: rgb(52, 102, 158)">
+    <div class="service_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
