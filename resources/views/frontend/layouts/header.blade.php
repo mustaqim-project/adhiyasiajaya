@@ -6,19 +6,25 @@
             style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
             <div class="container">
                 <div class="row align-items-center">
-                    <!-- Logo and Contact Info Section -->
+                    <!-- Section Rata Kiri -->
                     <div class="col-xl-6 col-lg-6">
-                        <div class="short_contact_list">
+                        <div class="short_contact_list d-flex align-items-center justify-content-start">
                             @foreach ($socialLinks as $link)
                                 <a href="{{ $link->url }}" style="margin-right: 10px;">
                                     <i class="{{ $link->icon }}" style="font-size: 18px; color: #fff;"></i>
                                 </a>
                             @endforeach
 
+                            <span style="color: #fff; margin: 0 10px;">|</span>
+
                             <i class="fa fa-phone mr-1"></i>
-                            <a href="tel:{{ @$contact->phone }}" style="color: #fff; text-decoration: none; margin-right: 15px;">
+                            <a href="tel:{{ @$contact->phone }}"
+                                style="color: #fff; text-decoration: none; margin-right: 15px;">
                                 {{ @$contact->phone }}
                             </a>
+
+                            <span style="color: #fff; margin: 0 10px;">|</span>
+
                             <i class="fa fa-envelope mr-1"></i>
                             <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">
                                 {{ @$contact->email }}
@@ -26,8 +32,8 @@
                         </div>
                     </div>
 
-                    <!-- Request Button Section -->
-                    <div class="col-xl-6 col-lg-8">
+                    <!-- Section Rata Kanan -->
+                    <div class="col-xl-6 col-lg-6">
                         <div class="header_right d-flex align-items-center justify-content-end">
                             <div class="book_btn">
                                 <a class="boxed-btn3-line" href="{{ route('contact') }}"
@@ -40,6 +46,7 @@
                 </div>
             </div>
         </div>
+
 
         <!-- Sticky Header -->
         <div id="sticky-header" class="main-header-area">
