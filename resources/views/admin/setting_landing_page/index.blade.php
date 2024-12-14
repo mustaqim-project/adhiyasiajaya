@@ -19,10 +19,10 @@
                     @php
                         $setting = App\Models\SettingLandingPage::first(); // Get the first setting
                     @endphp
-                    <div class="tab-pane fade show {{ $loop->index === 0 ? 'active' : '' }}" id="home-{{ $language->lang }}"
+                    <div class="tab-pane fade show"
                         role="tabpanel" aria-labelledby="home-tab2">
                         <div class="card-body">
-                            <form action="{{ route('admin.footer-info.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.setting_landing_page.update') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
                                 <!-- Logo Field -->
