@@ -190,20 +190,7 @@ h3 {
   background: #f5f5f5;
 }
 
-/* line 130, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
-.bg-img-1 {
-  background-image: url(../img/slider/slider-img-1.jpg);
-}
 
-/* line 133, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
-.bg-img-2 {
-  background-image: url(../img/background-img/bg-img-2.jpg);
-}
-
-/* line 136, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
-.cta-bg-1 {
-  background-image: url(../img/background-img/bg-img-3.jpg);
-}
 
 /* line 141, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
 .overlay {
@@ -1364,14 +1351,14 @@ h3 {
 }
 
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
-.slider_bg_1 {
+/* .slider_bg_1 {
   background-image: url(../img/banner/banner.png);
-}
+} */
 
 /* line 4, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
-.slider_bg_2 {
+/* .slider_bg_2 {
   background-image: url(../img/banner/banner_2.png);
-}
+} */
 
 /* line 7, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
 .slider_area {

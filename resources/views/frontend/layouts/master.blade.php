@@ -46,6 +46,21 @@
         :root {
             --colorPrimary: {{ $settings['site_color'] }};
         }
+
+        /* line 130, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
+        .bg-img-1 {
+            background-image: url(../img/slider/slider-img-1.jpg);
+        }
+
+        /* line 133, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
+        .bg-img-2 {
+            background-image: url(../img/background-img/bg-img-2.jpg);
+        }
+
+        /* line 136, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */
+        .cta-bg-1 {
+            background-image: url(../img/background-img/bg-img-3.jpg);
+        }
     </style>
 
     <!-- CSS here -->
@@ -322,8 +337,6 @@
         .contact_action_area form {
             animation: fadeIn 1.5s ease;
         }
-
-
     </style>
 </head>
 
