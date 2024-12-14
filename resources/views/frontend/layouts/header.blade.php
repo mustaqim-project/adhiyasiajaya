@@ -107,9 +107,11 @@
     <div style="background-color: #001133; padding: 10px 0; color: #fff; font-size: 14px;">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
-                <i class="fa fa-phone mr-1"></i> (62) 21-7290467 | (62) 21-7292930
-                <i class="fa fa-envelope ml-4 mr-1"></i>
-                <a href="mailto:sales@dayaesa.com" style="color: #fff; text-decoration: none;">sales@dayaesa.com</a>
+                <i class="fa fa-phone mr-1"></i>  <a href="tel:{{ @$contact->phone }}">{{ @$contact->phone }}</a>
+                <i class="fa fa-envelope ml-4 mr-1"></i> <a href="mailto:{{ @$contact->email }}" style="color: #fff; text-decoration: none;">{{ @$contact->email }}</a>
+                <li style="font-weight: bold;">
+                    <a href="#" style="text-decoration: none; color: #000;">GET A QUOTE <i class="fa fa-paper-plane"></i></a>
+                </li>
             </div>
         </div>
     </div>
@@ -120,21 +122,25 @@
             <!-- Logo -->
             <div>
                 <a href="#">
-                    <img src="logo.png" alt="Logo" style="width: 200px;">
+                    <img src="{{ asset($settings['site_logo']) }}" alt="Logo" class="img-fluid"
+                    width="200px">
                 </a>
             </div>
 
             <!-- Navigation Menu -->
             <nav>
                 <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
-                    <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">HOME</a></li>
+                    {{-- <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">HOME</a></li>
                     <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">ABOUT US</a></li>
                     <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">PRODUCTS</a></li>
                     <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">CATALOG</a></li>
                     <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #000;">CONTACT</a></li>
-                    <li style="font-weight: bold;">
-                        <a href="#" style="text-decoration: none; color: #000;">GET A QUOTE <i class="fa fa-paper-plane"></i></a>
-                    </li>
+ --}}
+
+                    <li style="margin-right: 20px;"><a href="{{ url('/') }}">{{ __('frontend.Home') }}</a></li>
+                    <li style="margin-right: 20px;"><a href="{{ route('about') }}">{{ __('frontend.About Us') }}</a></li>
+                    <li style="margin-right: 20px;"><a href="{{ route('product') }}">{{ __('frontend.Our Product') }}</a></li>
+                    <li style="margin-right: 20px;"><a href="{{ route('contact') }}">{{ __('frontend.Contact') }}</a></li>
                 </ul>
             </nav>
 
