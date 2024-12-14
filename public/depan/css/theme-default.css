@@ -306,7 +306,7 @@ h3 {
   line-height: 40px;
   background: #FFFFFF;
   left: -20px;
-  color: #FF3414 !important;
+  color: var(--primaryColor);
 }
 
 /* line 247, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/theme-default.scss */

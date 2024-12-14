@@ -65,7 +65,7 @@
             .card .card-header {
                 background-color: transparent;
                 padding: 4px 30px;
-                
+
             }
             // h5 button.btn.btn-link::after {
             //     position: absolute;
@@ -85,15 +85,15 @@
                 padding: 10px 30px 32px;
                 font-weight: 400;
                 line-height: 28px;
-            
+
             }
             .btn-link.focus, .btn-link:focus {
                 text-decoration: none;
                 border-color: transparent;
                 box-shadow: none;
-                color: #FF3414 !important;
+                color: var(--primaryColor);
             }
-            
+
         }
     }
 

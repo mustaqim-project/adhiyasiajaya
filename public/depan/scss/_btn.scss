@@ -11,7 +11,7 @@
     letter-spacing: 3px;
     // width: 180px;
     text-align: center;
-    color: #FF3414 !important;
+    color: var(--primaryColor);
     text-transform: uppercase;
     cursor: pointer;
     &:hover{
@@ -47,7 +47,7 @@
     &:hover{
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#FF3414+0,fd8e5e+100 */
     //    background: #fff;
-       color: #FF3414 !important;
+       color: var(--primaryColor);
        border: 1px solid #FF3414;
        background: transparent;
     }
@@ -93,7 +93,7 @@
 }
 
 .boxed-btn3-line {
-	color: #FF3414 !important;
+	color: var(--primaryColor);
 	display: inline-block;
     padding: 14px 31px;
 	font-family: $font1;

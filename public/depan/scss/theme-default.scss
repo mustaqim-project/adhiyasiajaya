@@ -6,7 +6,7 @@ body {
 	font-family: $font1;
 	font-weight: normal;
     font-style: normal;
-    
+
 }
 
 .img {
@@ -240,7 +240,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 		line-height: 40px;
 		background: #FFFFFF;
 		left: -20px;
-		color: #FF3414 !important;
+		color: var(--primaryColor);
 	}
 	.owl-nav{
 		div{
