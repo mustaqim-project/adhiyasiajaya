@@ -613,7 +613,7 @@ h3 {
   display: inline-block;
   padding: 10px 20px;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   border: 0;
   border: 1px solid #FF3414;
@@ -2860,7 +2860,7 @@ h3 {
 
 /* line 228, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
 .chose_area .features_info .boxed-btn3-line {
-  padding: 14px 53px;
+  padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
 }
