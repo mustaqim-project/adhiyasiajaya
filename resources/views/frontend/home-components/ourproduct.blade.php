@@ -20,7 +20,7 @@
                                 src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
                                 alt="{{ $category->name }}"
                                 class="img-fluid"
-                                style="max-width: 100%; height: auto; object-fit: cover;" />
+                                style="max-width: 50%; height: auto; object-fit: cover;" />
                         </div>
                         <div class="service_info">
                             <h3><a href="#">{{ $category->name }}</a></h3>
@@ -37,7 +37,7 @@
             @endif
 
 
-                        <a href="{{ route('product') }}" class="boxed-btn3">
+                        <a href="{{ route('product') }}" class="boxed-btn3" width="100%" >
                             Our Product
                         </a>
 
