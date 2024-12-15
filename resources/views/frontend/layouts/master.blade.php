@@ -119,62 +119,6 @@
                 transform: scale(1);
             }
         }
-
-        .preloader {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .gear {
-            width: 60px;
-            height: 60px;
-            border: 6px solid transparent;
-            border-top: 6px solid #00bcd4;
-            /* Biru teknik */
-            border-right: 6px solid #ff5722;
-            /* Oranye teknik */
-            border-radius: 50%;
-            margin: 15px;
-            animation: rotate 1.5s linear infinite;
-        }
-
-        .gear1 {
-            width: 80px;
-            height: 80px;
-            border-width: 8px;
-            animation-duration: 2s;
-        }
-
-        .gear2 {
-            animation-direction: reverse;
-        }
-
-        .gear3 {
-            animation-duration: 1s;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes blink {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.5;
-            }
-        }
     </style>
 
     <!-- CSS here -->
@@ -205,10 +149,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
+    <style>
+        /* Preloader background */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Loader container */
+        .loader {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Gear animation */
+        .gear {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--colorPrimary);
+            border-radius: 50%;
+            border-top: 5px solid rgba(0, 0, 0, 0.1);
+            animation: spin 1.2s linear infinite;
+        }
+
+        .gear:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .gear:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Spin animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
 </head>
 
 <body>
+    <div id="preloader">
+        <div class="loader">
+            <div class="gear"></div>
+            <div class="gear"></div>
+            <div class="gear"></div>
+        </div>
+    </div>
+
     @php
         $socialLinks = \App\Models\SocialLink::where('status', 1)->get();
         $footerInfo = \App\Models\FooterInfo::where('language', getLangauge())->first();
@@ -230,13 +232,6 @@
         $contact = \App\Models\Contact::where('language', getLangauge())->first();
 
     @endphp
-
-    <div class="preloader">
-        <div class="gear gear1"></div>
-        <div class="gear gear2"></div>
-        <div class="gear gear3"></div>
-        <div class="text">Loading...</div>
-    </div>
 
     <!-- Header -->
     @include('frontend.layouts.header')
@@ -316,14 +311,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // Simulasi preloader (hilangkan setelah 5 detik)
-        document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(() => {
-                document.querySelector(".preloader").style.display = "none";
-            }, 5000);
-        });
-
-
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -413,6 +400,16 @@
                 });
             })
         })
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hide the preloader once content is loaded
+            const preloader = document.getElementById("preloader");
+            preloader.style.opacity = "0";
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        });
     </script>
 
 
