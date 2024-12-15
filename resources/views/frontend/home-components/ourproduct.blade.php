@@ -16,11 +16,9 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
-                            <img
-                                src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
-                                alt="{{ $category->name }}"
-                                class="img-fluid"
-                                style="max-width: 50%; height: auto; object-fit: cover;" />
+                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
+                                alt="{{ $category->name }}" class="img-fluid"
+                                style="max-width: 100%; height: auto; object-fit: cover;" width="150px"/>
                         </div>
                         <div class="service_info">
                             <h3><a href="#">{{ $category->name }}</a></h3>
@@ -37,11 +35,12 @@
             @endif
 
 
-                        <a href="{{ route('product') }}" class="boxed-btn3" width="100%" style="display: block;">
-                            Our Product
-                        </a>
+
 
         </div>
+        <a href="{{ route('product') }}" class="boxed-btn3" width="100%" style="display: block;">
+            Our Product
+        </a>
     </div>
 </div>
 {{-- End Our Product --}}
