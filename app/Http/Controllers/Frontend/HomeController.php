@@ -157,10 +157,10 @@ class HomeController extends Controller
             $news = $this->insertInternalLinks($news, $relatedNewsByTag);
         }
         $categories = Category::where('status', 1)->get();
-        return view('frontend.news-details', compact('news', 'recentNews', 'mostCommonTags', 'nextPost', 'previousPost', 'relatedPosts', 'socialCounts', 'ad','categories'));
+        return view('frontend.news-details', compact('news', 'recentNews', 'mostCommonTags', 'nextPost', 'previousPost', 'relatedPosts', 'socialCounts', 'ad', 'categories'));
     }
 
-      private function getCategorySection($categoryId, $limit)
+    private function getCategorySection($categoryId, $limit)
     {
         return News::where('category_id', $categoryId)
             ->activeEntries()
@@ -455,7 +455,7 @@ class HomeController extends Controller
         $settingpage = SettingLandingPage::first();
 
         $about = About::where('language', getLangauge())->first();
-        return view('frontend.about', compact('about','settingpage'));
+        return view('frontend.about', compact('about', 'settingpage'));
     }
 
     public function kebijakan()
