@@ -361,7 +361,7 @@ class HomeController extends Controller
 
         $categories = Category::where('status', 1)->get();
 
-        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category','categories'));
+        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category'));
     }
 
 
