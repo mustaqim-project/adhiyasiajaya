@@ -33,19 +33,19 @@ require __DIR__.'/auth.php';
 Route::get('language', LanguageController::class)->name('language');
 
 /** News Details Routes */
-Route::get('news-details/{slug}', [HomeController::class, 'ShowNews'])->name('news-details');
+Route::get('product-details/{slug}', [HomeController::class, 'ShowNews'])->name('product-details');
 
 /** News Details Routes */
-Route::get('news', [HomeController::class, 'news'])->name('product');
+Route::get('product', [HomeController::class, 'product'])->name('product');
 
 /** News Comment Routes */
-Route::post('news-comment', [HomeController::class, 'handleComment'])->name('news-comment');
-Route::post('news-comment-replay', [HomeController::class, 'handleReplay'])->name('news-comment-replay');
+Route::post('product-comment', [HomeController::class, 'handleComment'])->name('product-comment');
+Route::post('product-comment-replay', [HomeController::class, 'handleReplay'])->name('product-comment-replay');
 
-Route::delete('news-comment-destroy', [HomeController::class, 'commentDestory'])->name('news-comment-destroy');
+Route::delete('product-comment-destroy', [HomeController::class, 'commentDestory'])->name('product-comment-destroy');
 
 /** Newsletter Routes */
-Route::post('subscribe-newsletter', [HomeController::class, 'SubscribeNewsLetter'])->name('subscribe-newsletter');
+Route::post('subscribe-productletter', [HomeController::class, 'SubscribeNewsLetter'])->name('subscribe-productletter');
 
 /** About Page Route */
 Route::get('about', [HomeController::class, 'about'])->name('about');
@@ -66,7 +66,7 @@ use App\Http\Controllers\SitemapController;
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 Route::get('/sitemap/sitemap-category-{language}.xml', [SitemapController::class, 'categories']);
 Route::get('/sitemap/sitemap-tag.xml', [SitemapController::class, 'tags']);
-Route::get('/sitemap/sitemap-news-{language}.xml', [SitemapController::class, 'newsIndex']);
-Route::get('/sitemap/sitemap-news-en-{category}', [SitemapController::class, 'newsByCategoryEn']);
-Route::get('/sitemap/sitemap-news-id-{category}', [SitemapController::class, 'newsByCategoryId']);
+Route::get('/sitemap/sitemap-product-{language}.xml', [SitemapController::class, 'productIndex']);
+Route::get('/sitemap/sitemap-product-en-{category}', [SitemapController::class, 'productByCategoryEn']);
+Route::get('/sitemap/sitemap-product-id-{category}', [SitemapController::class, 'productByCategoryId']);
 
