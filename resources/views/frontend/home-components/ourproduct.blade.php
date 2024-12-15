@@ -1,114 +1,56 @@
-  {{-- Our Product --}}
+{{-- Our Product --}}
 
-  <div class="service_area">
-      <div class="container">
-          <div class="row">
-              <div class="col-xl-12">
-                  <div class="section_title mb-50 text-center">
-                      <h3>
-                          Our Product
-                      </h3>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-6 col-lg-4">
-                  <div class="single_service">
-                      <div class="thumb">
-                          <img src="img/service/1.png" alt="" />
-                      </div>
-                      <div class="service_info">
-                          <h3>
-                              <a href="service_details.html">Ocean Freight</a>
-                          </h3>
-                          <p>
-                              Esteem spirit temper too say adieus who
-                              direct esteem.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                  <div class="single_service">
-                      <div class="thumb">
-                          <img src="img/service/2.png" alt="" />
-                      </div>
-                      <div class="service_info">
-                          <h3>
-                              <a href="service_details.html">Land Transport</a>
-                          </h3>
-                          <p>
-                              Esteem spirit temper too say adieus who
-                              direct esteem.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                  <div class="single_service">
-                      <div class="thumb">
-                          <img src="img/service/3.png" alt="" />
-                      </div>
-                      <div class="service_info">
-                          <h3>
-                              <a href="service_details.html">Air Freight</a>
-                          </h3>
-                          <p>
-                              Esteem spirit temper too say adieus who
-                              direct esteem.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                  <div class="single_service">
-                      <div class="thumb">
-                          <img src="img/service/4.png" alt="" />
-                      </div>
-                      <div class="service_info">
-                          <h3>
-                              <a href="service_details.html">Ocean Freight</a>
-                          </h3>
-                          <p>
-                              Esteem spirit temper too say adieus who
-                              direct esteem.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                  <div class="single_service">
-                      <div class="thumb">
-                          <img src="img/service/5.png" alt="" />
-                      </div>
-                      <div class="service_info">
-                          <h3>
-                              <a href="service_details.html">Land Transport</a>
-                          </h3>
-                          <p>
-                              Esteem spirit temper too say adieus who
-                              direct esteem.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                  <div class="single_service">
-                      <div class="thumb">
-                          <img src="img/service/6.png" alt="" />
-                      </div>
-                      <div class="service_info">
-                          <h3>
-                              <a href="service_details.html">Air Freight</a>
-                          </h3>
-                          <p>
-                              Esteem spirit temper too say adieus who
-                              direct esteem.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  {{-- End Our Product --}}
+<div class="service_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title mb-50 text-center">
+                    <h3>
+                        Market Sector
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{-- Ambil hanya 5 kategori --}}
+            @foreach ($categories->take(5) as $category)
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="single_service">
+                        <div class="thumb">
+                            <!-- Pastikan gambar ada, jika tidak tampilkan gambar default -->
+                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
+                                alt="{{ $category->name }}" class="img-fluid" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="#">
+                                    {{ $category->name }}
+                                </a>
+                            </h3>
+                            <p>{{ $category->deskripsi }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+            @if ($categories->isEmpty())
+                <div class="col-12">
+                    <p class="text-center">No categories found.</p>
+                </div>
+            @endif
+
+            <div class="col-md-6 col-lg-4">
+                <div class="single_service">
+                    <div class="service_info">
+                        <button class="btn-our-product">
+                            Our Product
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{{-- End Our Product --}}

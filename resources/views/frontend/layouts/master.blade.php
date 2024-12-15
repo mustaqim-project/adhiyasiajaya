@@ -73,6 +73,40 @@
         .bradcam_bg_3 {
             background-image: url('{{ asset(optional($settingpage)->image_header_contact) }}');
         }
+
+        .btn-our-product {
+            display: inline-block;
+            background-color: var(--color-primary);
+            /* Menggunakan variabel warna */
+            color: #fff;
+            /* Warna teks */
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            /* Membuat teks huruf besar */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* Tambahkan efek bayangan */
+        }
+
+        .btn-our-product:hover {
+            background-color: var(--color-primary-hover);
+            /* Warna saat hover */
+            transform: translateY(-5px);
+            /* Efek hover naik */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            /* Tambahkan bayangan lebih besar */
+        }
+
+        .btn-our-product:active {
+            transform: translateY(0);
+            /* Efek saat tombol ditekan */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
     <!-- CSS here -->
