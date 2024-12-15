@@ -350,7 +350,6 @@ class HomeController extends Controller
             ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
         $mostCommonTags = $this->mostCommonTags();
 
-        $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
 
         $ad = Ad::first();
 
