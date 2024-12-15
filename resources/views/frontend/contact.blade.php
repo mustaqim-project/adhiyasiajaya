@@ -57,12 +57,9 @@
                                     @enderror
                                 </div>
                                 <div class="form-group mb-4">
-                                    <button type="submit" class="btn btn-primary">{{ __('frontend.Submit') }}</button>
+                                    <button type="submit" class="btn btn-primary">{{ __('frontend.Send') }}</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <button type="submit" class="button button-contactForm boxed-btn">Send</button>
                         </div>
                     </form>
                 </div>
@@ -70,23 +67,36 @@
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-home"></i></span>
                         <div class="media-body">
-                            <h3>Buttonwood, California.</h3>
-                            <p>Rosemead, CA 91770</p>
+                            {{ @$contact->address }}
+
                         </div>
                     </div>
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                         <div class="media-body">
-                            <h3>+1 253 565 2365</h3>
-                            <p>Mon to Fri 9am to 6pm</p>
+                            <a href="tel:{{ @$contact->phone }}">{{ @$contact->phone }}</a>
+
                         </div>
                     </div>
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-email"></i></span>
                         <div class="media-body">
-                            <h3>support@colorlib.com</h3>
-                            <p>Send us your query anytime!</p>
+                            <a href="mailto:{{ @$contact->email }}">{{ @$contact->email }}</a>
+
                         </div>
+                    </div>
+                    <div class="media contact-info">
+                        <h5>{{ __('frontend.find us') }}</h5>
+                        <ul class="list-inline">
+                            @foreach ($socials as $social)
+                                <li class="list-inline-item-contact mx-1">
+                                    <a href="https://www.linkedin.com/"
+                                        class="btn btn-social rounded text-white facebook">
+                                        <i class="{{ $social->icon }}"></i>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
