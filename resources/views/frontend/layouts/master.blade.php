@@ -119,6 +119,62 @@
                 transform: scale(1);
             }
         }
+
+        .preloader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gear {
+            width: 60px;
+            height: 60px;
+            border: 6px solid transparent;
+            border-top: 6px solid #00bcd4;
+            /* Biru teknik */
+            border-right: 6px solid #ff5722;
+            /* Oranye teknik */
+            border-radius: 50%;
+            margin: 15px;
+            animation: rotate 1.5s linear infinite;
+        }
+
+        .gear1 {
+            width: 80px;
+            height: 80px;
+            border-width: 8px;
+            animation-duration: 2s;
+        }
+
+        .gear2 {
+            animation-direction: reverse;
+        }
+
+        .gear3 {
+            animation-duration: 1s;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
     </style>
 
     <!-- CSS here -->
@@ -174,6 +230,13 @@
         $contact = \App\Models\Contact::where('language', getLangauge())->first();
 
     @endphp
+
+    <div class="preloader">
+        <div class="gear gear1"></div>
+        <div class="gear gear2"></div>
+        <div class="gear gear3"></div>
+        <div class="text">Loading...</div>
+    </div>
 
     <!-- Header -->
     @include('frontend.layouts.header')
@@ -253,6 +316,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+        // Simulasi preloader (hilangkan setelah 5 detik)
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.querySelector(".preloader").style.display = "none";
+            }, 5000);
+        });
+
+
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
