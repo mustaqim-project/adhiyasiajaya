@@ -59,7 +59,6 @@
                 <div class="service_details_left">
                     <h3>Market Sector</h3>
                     <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <!-- Menampilkan kategori -->
                         @foreach ($categories as $category)
                             <a class="nav-link {{ $loop->first ? 'active' : '' }}" id="v-pills-{{ $category->slug }}-tab"
                                data-toggle="pill" href="#v-pills-{{ $category->slug }}" role="tab"
@@ -72,14 +71,12 @@
             </div>
             <div class="col-lg-8 col-md-8">
                 <div class="tab-content" id="v-pills-tabContent">
-                    <!-- Menampilkan berita berdasarkan kategori -->
                     @foreach ($categories as $category)
                         <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}"
                              id="v-pills-{{ $category->slug }}" role="tabpanel"
                              aria-labelledby="v-pills-{{ $category->slug }}-tab">
                             <div class="service_details_info">
                                 <h3>{{ $category->name }}</h3>
-                                {{-- Menampilkan berita dalam kategori ini --}}
                                 @foreach ($category->news as $news)
                                     <div class="col-md-6 col-lg-4 mb-4">
                                         <div class="single_service">
