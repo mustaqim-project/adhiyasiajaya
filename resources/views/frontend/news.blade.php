@@ -51,9 +51,9 @@
                                                         alt="{{ $news->title }}" class="img-fluid" />
                                                 </div>
                                                 <div class="service_info">
-                                                    <h3><a
+                                                    <h5><a
                                                             href="{{ route('product-details', $news->slug) }}">{{ $news->title }}</a>
-                                                    </h3>
+                                                    </h5>
                                                     <p>{!! Str::limit($news->content, 200, '...') !!}</p>
                                                 </div>
                                             </div>
