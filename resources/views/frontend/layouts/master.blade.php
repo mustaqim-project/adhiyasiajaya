@@ -291,7 +291,7 @@
 
                 $.ajax({
                     method: 'POST',
-                    url: "{{ route('subscribe-newsletter') }}",
+                    url: "{{ route('subscribe-productletter') }}",
                     data: $form.serialize(),
                     beforeSend: function() {
                         $button.text('Loading...');
