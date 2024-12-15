@@ -11,8 +11,8 @@
             </div>
         </div>
         <div class="row">
-            {{-- Fetch only 5 categories --}}
-            @foreach ($categories->take(5) as $category)
+            {{-- Ambil hanya 5 kategori --}}
+            @foreach ($categories as $category)
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
@@ -24,25 +24,23 @@
                         </div>
                         <div class="service_info">
                             <h3><a href="#">{{ $category->name }}</a></h3>
-                            <p>{{ $category->deskripsi ?? 'No description available.' }}</p>
+                            <p>{{ $category->deskripsi }}</p>
                         </div>
                     </div>
                 </div>
             @endforeach
 
-            {{-- No categories fallback --}}
             @if ($categories->isEmpty())
                 <div class="col-12">
-                    <p class="text-center mt-4 mb-4">No categories found.</p>
+                    <p class="text-center">No categories found.</p>
                 </div>
             @endif
 
-            {{-- Our Product Button --}}
-            <div class="col-12 text-center mt-4">
-                <a href="{{ route('product') }}" class="btn btn-primary btn-our-product">
-                    Our Product
-                </a>
-            </div>
+
+                        <a href="{{ route('product') }}" class="boxed-btn3">
+                            Our Product
+                        </a>
+
         </div>
     </div>
 </div>
