@@ -35,7 +35,7 @@
                 </div>
             @endif
 
-            <div class="col-md-6 col-lg-4">
+            {{-- <div class="col-md-6 col-lg-4">
                 <div class="single_service">
                     <div class="service_info">
                         <button class="btn-our-product">
@@ -43,7 +43,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
 
         </div>
