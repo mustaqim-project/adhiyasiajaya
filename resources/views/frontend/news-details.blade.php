@@ -521,7 +521,7 @@
                                 @foreach ($mostCommonTags as $tag)
 
                                 <li class="list-inline-item">
-                                    <a href="{{ route('news', ['tag' => $tag->name]) }}">
+                                    <a href="{{ route('product', ['tag' => $tag->name]) }}">
                                         #{{ $tag->name }} ({{ $tag->count }})
                                     </a>
                                 </li>
