@@ -81,6 +81,7 @@ class HomeController extends Controller
             ->get();
 
         $socialCounts = SocialCount::where(['status' => 1, 'language' => getLangauge()])->get();
+        $about = About::where('language', getLangauge())->first();
 
         $mostCommonTags = $this->mostCommonTags();
         $settingpage = SettingLandingPage::first();
@@ -102,6 +103,7 @@ class HomeController extends Controller
             'mostCommonTags',
             'ad',
             'contact',
+            'about',
             'settingpage'
 
         ));

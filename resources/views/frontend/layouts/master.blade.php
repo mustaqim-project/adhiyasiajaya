@@ -114,6 +114,7 @@
             'language' => getLangauge(),
         ])->first();
         $contact = \App\Models\Contact::where('language', getLangauge())->first();
+        $about = \App\Models\About::where('language', getLangauge())->first();
 
     @endphp
 
