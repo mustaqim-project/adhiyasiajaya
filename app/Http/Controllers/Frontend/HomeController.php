@@ -319,6 +319,8 @@ class HomeController extends Controller
 
     public function news(Request $request)
     {
+
+
         $news = News::query();
 
         $news->when($request->has('tag'), function ($query) use ($request) {
@@ -358,7 +360,9 @@ class HomeController extends Controller
             $category = Category::where('slug', $request->category)->first();
         }
 
-        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category'));
+        $categories = Category::where('status', 1)->get();
+
+        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category','categories'));
     }
 
 
