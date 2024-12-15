@@ -36,15 +36,11 @@
                 </div>
             @endif
 
-            <div class="col-md-6 col-lg-4">
-                <div class="single_service">
-                    <div class="service_info">
+
                         <a href="{{ route('product') }}" class="btn-our-product">
                             Our Product
                         </a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
