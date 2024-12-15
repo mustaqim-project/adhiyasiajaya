@@ -33,8 +33,6 @@
 @endif" />
     @php
         $settingpage = \App\Models\SettingLandingPage::first();
-        $categories = \App\Models\Category::where('status', 1)->take(5)->get();
-
     @endphp
     <meta name="twitter:title" content="@yield('meta_tw_title')" />
     <meta name="twitter:description" content="@yield('meta_tw_description')" />
