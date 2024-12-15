@@ -149,68 +149,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
-    <style>
-        /* Preloader background */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Loader container */
-        .loader {
-            display: flex;
-            gap: 15px;
-        }
-
-        /* Gear animation */
-        .gear {
-            width: 50px;
-            height: 50px;
-            border: 5px solid var(--colorPrimary);
-            border-radius: 50%;
-            border-top: 5px solid rgba(0, 0, 0, 0.1);
-            animation: spin 1.2s linear infinite;
-        }
-
-        .gear:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .gear:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        /* Spin animation */
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
 
 </head>
 
 <body>
-    <div id="preloader">
-        <div class="loader">
-            <div class="gear"></div>
-            <div class="gear"></div>
-            <div class="gear"></div>
-        </div>
-    </div>
-
     @php
         $socialLinks = \App\Models\SocialLink::where('status', 1)->get();
         $footerInfo = \App\Models\FooterInfo::where('language', getLangauge())->first();
@@ -400,16 +342,6 @@
                 });
             })
         })
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Hide the preloader once content is loaded
-            const preloader = document.getElementById("preloader");
-            preloader.style.opacity = "0";
-            setTimeout(() => {
-                preloader.style.display = "none";
-            }, 500);
-        });
     </script>
 
 
