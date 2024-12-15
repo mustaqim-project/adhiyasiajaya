@@ -59,6 +59,10 @@
             background-image: url('{{ asset(optional($settingpage)->image_slide2) }}');
         }
 
+        .Estimate_area {
+            background-image: url('{{ asset(optional($settingpage)->bg_contact) }}');
+        }
+
 
     </style>
 
