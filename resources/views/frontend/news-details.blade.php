@@ -75,7 +75,7 @@
 
                         <div class="wrap__article-detail-image mt-4">
                             <figure>
-                                <img src="{{ asset($news->image) }}" alt="" class="img-fluid">
+                                <img src="{{ asset($news->image) }}" alt="" class="img-fluid" width="200px">
                             </figure>
                         </div>
                         <div class="wrap__article-detail-content">
