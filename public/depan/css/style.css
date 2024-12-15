@@ -2,6 +2,78 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700&display=swap");
 
 
+
+
+.service_area {
+    padding: 50px 0;
+}
+
+.single_service .thumb img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.single_service .service_info {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.single_service h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.single_service p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.btn-our-product {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-our-product:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .single_service {
+        text-align: center;
+    }
+
+    .single_service .thumb {
+        margin-bottom: 20px;
+    }
+
+    .service_info h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .single_service .thumb img {
+        max-width: 100%;
+    }
+
+    .service_info p {
+        font-size: 12px;
+    }
+}
+
+
+/*  */
+
+
 /* Styling untuk ikon WhatsApp yang mengambang */
 .whatsapp-float {
     position: fixed;
