@@ -36,7 +36,7 @@ Route::get('language', LanguageController::class)->name('language');
 Route::get('product-details/{slug}', [HomeController::class, 'ShowNews'])->name('product-details');
 
 /** News Details Routes */
-Route::get('product', [HomeController::class, 'product'])->name('product');
+Route::get('product', [HomeController::class, 'news'])->name('product');
 
 /** News Comment Routes */
 Route::post('product-comment', [HomeController::class, 'handleComment'])->name('product-comment');
