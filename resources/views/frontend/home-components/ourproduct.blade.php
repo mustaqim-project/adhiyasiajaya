@@ -20,7 +20,7 @@
                     <div class="single_service">
                         <div class="thumb">
                             <img width="200px" src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
-                                alt="{{ $category->name }}" class="img-fluid" />
+                                alt="{{ $category->name }}" />
                         </div>
                         <div class="service_info">
                             <h3><a href="#">{{ $category->name }}</a></h3>
