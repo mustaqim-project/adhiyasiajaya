@@ -85,6 +85,7 @@ class HomeController extends Controller
 
         $mostCommonTags = $this->mostCommonTags();
         $settingpage = SettingLandingPage::first();
+        $categories = Category::all();
 
         $ad = Ad::first();
         $contact = Contact::where('language', getLangauge())->first();
