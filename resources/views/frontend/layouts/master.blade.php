@@ -33,7 +33,6 @@
 @endif" />
     @php
         $settingpage = \App\Models\SettingLandingPage::first();
-
     @endphp
     <meta name="twitter:title" content="@yield('meta_tw_title')" />
     <meta name="twitter:description" content="@yield('meta_tw_description')" />
@@ -62,8 +61,6 @@
         .Estimate_area {
             background-image: url('{{ asset(optional($settingpage)->bg_contact) }}');
         }
-
-
     </style>
 
     <!-- CSS here -->
