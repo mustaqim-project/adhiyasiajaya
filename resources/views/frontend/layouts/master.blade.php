@@ -61,6 +61,18 @@
         .Estimate_area {
             background-image: url('{{ asset(optional($settingpage)->bg_contact) }}');
         }
+
+        .bradcam_bg_1 {
+            background-image: url('{{ asset(optional($settingpage)->image_header_about) }}');
+        }
+
+        .bradcam_bg_2 {
+            background-image: url('{{ asset(optional($settingpage)->image_header_product) }}');
+        }
+
+        .bradcam_bg_3 {
+            background-image: url('{{ asset(optional($settingpage)->image_header_contact) }}');
+        }
     </style>
 
     <!-- CSS here -->
