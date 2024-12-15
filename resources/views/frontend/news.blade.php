@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('content')
-    <!-- bradcam_area  -->
+    <!-- bradcam_area -->
     <div class="bradcam_area bradcam_bg_2">
         <div class="container">
             <div class="row">
@@ -13,36 +13,40 @@
             </div>
         </div>
     </div>
-    <!--/ bradcam_area  -->
+    <!--/ bradcam_area -->
 
-    <!-- service_area  -->
+    <!-- service_area -->
     <div class="service_area">
         <div class="container">
             <div class="row">
-
                 @foreach ($categories as $category)
-                <option {{ $category->slug === request()->category ? 'selected' : '' }} value="{{ $category->slug }}">{{ $category->name }}</option>
-                @endforeach
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="single_service">
-                        <div class="thumb">
-                            <img src="img/service/1.png" alt="" />
-                        </div>
-                        <div class="service_info">
-                            <h3>
-                                <a href="service_details.html">Ocean Freight</a>
-                            </h3>
-                            <p>
-                                Esteem spirit temper too say adieus who
-                                direct esteem.
-                            </p>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="single_service">
+                            <div class="thumb">
+                                <!-- Pastikan gambar ada, jika tidak tampilkan gambar default -->
+                                <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
+                                     alt="{{ $category->name }}"
+                                     class="img-fluid" />
+                            </div>
+                            <div class="service_info">
+                                <h3>
+                                    <a href="{{ route('products.byCategory', $category->slug) }}">
+                                        {{ $category->name }}
+                                    </a>
+                                </h3>
+                                <p>{{ $category->deskripsi }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
+                @if ($categories->isEmpty())
+                    <div class="col-12">
+                        <p class="text-center">No categories found.</p>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
-    <!--/ service_area  -->
+    <!--/ service_area -->
 @endsection
