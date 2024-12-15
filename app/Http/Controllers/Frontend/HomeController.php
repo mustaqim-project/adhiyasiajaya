@@ -105,7 +105,7 @@ class HomeController extends Controller
             'ad',
             'contact',
             'about',
-            'categories',
+
             'settingpage'
 
         ));
