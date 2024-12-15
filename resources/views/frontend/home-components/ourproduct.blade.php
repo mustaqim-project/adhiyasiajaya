@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             {{-- Ambil hanya 5 kategori --}}
-            @foreach ($categories->take(5) as $category)
+            @foreach ($categories as $category)
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
