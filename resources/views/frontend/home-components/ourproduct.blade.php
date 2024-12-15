@@ -19,7 +19,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
-                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
+                            <img width="200px" src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
                                 alt="{{ $category->name }}" class="img-fluid" />
                         </div>
                         <div class="service_info">
