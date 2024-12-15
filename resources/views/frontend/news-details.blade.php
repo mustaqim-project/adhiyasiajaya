@@ -318,7 +318,7 @@
                     <div class="col-md-6">
                         <div class="single_navigation-prev">
                             @if ($previousPost)
-                            <a href="{{ route('news-details', $previousPost->slug) }}">
+                            <a href="{{ route('product-details', $previousPost->slug) }}">
                                 <span>{{ __('frontend.previous post') }}</span>
                                 {!! truncate($previousPost->title) !!}
                             </a>
@@ -328,7 +328,7 @@
                     <div class="col-md-6">
                         <div class="single_navigation-next text-left text-md-right">
                             @if ($nextPost)
-                            <a href="{{ route('news-details', $nextPost->slug) }}">
+                            <a href="{{ route('product-details', $nextPost->slug) }}">
                                 <span>{{ __('frontend.next post') }}</span>
                                 {!! truncate($nextPost->title) !!}
                             </a>
@@ -361,7 +361,7 @@
                             <!-- Post Article -->
                             <div class="article__entry">
                                 <div class="article__image">
-                                    <a href="{{ route('news-details', $post->slug) }}">
+                                    <a href="{{ route('product-details', $post->slug) }}">
                                         <img src="{{ asset($post->image) }}" alt="" class="img-fluid">
                                     </a>
                                 </div>
@@ -380,7 +380,7 @@
 
                                     </ul>
                                     <h5>
-                                        <a href="{{ route('news-details', $post->slug) }}">
+                                        <a href="{{ route('product-details', $post->slug) }}">
                                             {!! truncate($post->title) !!}
                                         </a>
                                     </h5>
@@ -406,7 +406,7 @@
                                 <!-- Post Article -->
                                 <div class="card__post card__post-list">
                                     <div class="image-sm">
-                                        <a href="{{ route('news-details', $news->slug) }}">
+                                        <a href="{{ route('product-details', $news->slug) }}">
                                             <img src="{{ asset($news->image) }}" class="img-fluid" alt="">
                                         </a>
                                     </div>
@@ -433,7 +433,7 @@
                                             </div>
                                             <div class="card__post__title">
                                                 <h6>
-                                                    <a href="{{ route('news-details', $news->slug) }}">
+                                                    <a href="{{ route('product-details', $news->slug) }}">
                                                         {!! truncate($news->title) !!}
                                                     </a>
                                                 </h6>
@@ -449,7 +449,7 @@
                             <!-- Post Article -->
                             <div class="article__entry">
                                 <div class="article__image">
-                                    <a href="{{ route('news-details', $news->slug) }}">
+                                    <a href="{{ route('product-details', $news->slug) }}">
                                         <img  src="{{ asset($news->image) }}" alt="" class="img-fluid">
                                     </a>
                                 </div>
@@ -471,14 +471,14 @@
 
                                     </ul>
                                     <h5>
-                                        <a href="{{ route('news-details', $news->slug) }}">
+                                        <a href="{{ route('product-details', $news->slug) }}">
                                             {!! truncate($news->title) !!}
                                         </a>
                                     </h5>
                                     <p>
                                        {!! truncate($news->content, 160) !!}
                                     </p>
-                                    <a href="{{ route('news-details', $news->slug) }}" class="btn btn-outline-primary mb-4 text-capitalize"> {{ __('frontend.read more') }}</a>
+                                    <a href="{{ route('product-details', $news->slug) }}" class="btn btn-outline-primary mb-4 text-capitalize"> {{ __('frontend.read more') }}</a>
                                 </div>
                             </div>
                             @endif
