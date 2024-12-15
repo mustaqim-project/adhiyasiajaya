@@ -30,7 +30,7 @@
                             </div>
                             <div class="service_info">
                                 <h3>
-                                    <a href="{{ route('products.byCategory', $category->slug) }}">
+                                    <a href="#">
                                         {{ $category->name }}
                                     </a>
                                 </h3>
