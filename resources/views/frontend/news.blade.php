@@ -85,11 +85,11 @@
                                         <div class="single_service">
                                             <div class="thumb">
                                                 <img src="{{ $news->image ? asset($news->image) : asset('default-image.jpg') }}"
-                                                     alt="{{ $news->name }}" class="img-fluid" />
+                                                     alt="{{ $news->title }}" class="img-fluid" />
                                             </div>
                                             <div class="service_info">
-                                                <h3><a href="#">{{ $news->name }}</a></h3>
-                                                <p>{{ $news->deskripsi }}</p>
+                                                <h3><a href="{{ route('news-details', $news->slug) }}">{{ $news->title }}</a></h3>
+                                                <p>{!! Str::limit($news->content, 200, '...') !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@
 
                                 @if ($category->news->isEmpty())
                                     <div class="col-12">
-                                        <p class="text-center">No news found.</p>
+                                        <p class="text-center">Product Not Found.</p>
                                     </div>
                                 @endif
                             </div>
