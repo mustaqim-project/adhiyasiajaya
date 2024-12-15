@@ -37,7 +37,7 @@
             @endif
 
 
-                        <a href="{{ route('product') }}" class="boxed-btn3" width="100%" >
+                        <a href="{{ route('product') }}" class="boxed-btn3" width="100%" style="display: block;">
                             Our Product
                         </a>
 
