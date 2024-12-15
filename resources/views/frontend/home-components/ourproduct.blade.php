@@ -13,25 +13,20 @@
         </div>
         <div class="row">
             {{-- Ambil hanya 5 kategori --}}
-            @foreach ($categories as $category)
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="single_service">
-                        <div class="thumb">
-                            <!-- Pastikan gambar ada, jika tidak tampilkan gambar default -->
-                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
-                                alt="{{ $category->name }}" class="img-fluid" />
-                        </div>
-                        <div class="service_info">
-                            <h3>
-                                <a href="#">
-                                    {{ $category->name }}
-                                </a>
-                            </h3>
-                            <p>{{ $category->deskripsi }}</p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+          @foreach ($categories as $category)
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="single_service">
+            <div class="thumb">
+                <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}" alt="{{ $category->name }}" class="img-fluid" />
+            </div>
+            <div class="service_info">
+                <h3><a href="#">{{ $category->name }}</a></h3>
+                <p>{{ $category->deskripsi }}</p>
+            </div>
+        </div>
+    </div>
+@endforeach
+
 
             @if ($categories->isEmpty())
                 <div class="col-12">
