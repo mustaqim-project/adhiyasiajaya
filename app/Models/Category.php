@@ -9,14 +9,29 @@ class Category extends Model
 {
     use HasFactory;
 
+    // Nama tabel
     protected $table = 'categories';
 
+    // Kolom yang dapat diisi secara mass assignment
     protected $fillable = [
-        'language', 'name', 'slug', 'show_at_nav', 'status', 'meta_keyword', 'meta_description'
+        'language',
+        'name',
+        'deskripsi',
+        'image',
+        'blog',
+        'file',
+        'slug',
+        'show_at_nav',
+        'status',
+        'meta_keyword',
+        'meta_description',
     ];
 
+    // Relasi ke model News
     public function news()
     {
         return $this->hasMany(News::class);
     }
+
+
 }

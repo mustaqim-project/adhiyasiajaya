@@ -10,6 +10,7 @@ use App\Models\Language;
 use App\Models\News;
 use Faker\Provider\ar_EG\Company;
 use Illuminate\Http\Request;
+use App\Traits\FileUploadTrait;
 
 class CategoryController extends Controller
 {
@@ -43,20 +44,23 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(AdminCategoryCreateRequest $request)
-    {
-        $category = new Category();
-        $category->name = $request->name;
-        $category->slug = \Str::slug($request->name);
-        $category->language = $request->language;
-        $category->show_at_nav = $request->show_at_nav;
-        $category->status = $request->status;
-        $category->save();
 
-        toast(__('admin.Created Successfully'),'success')->width('350');
+     use FileUploadTrait;
 
-        return redirect()->route('admin.category.index');
-    }
+     public function store(AdminCategoryCreateRequest $request)
+     {
+         $imagePath = $this->handleFileUpload($request, 'image');
+
+         $category = new Category($request->only(['name', 'language', 'show_at_nav', 'status']));
+         $category->slug = \Str::slug($request->name);
+         $category->image = $imagePath; // Simpan path gambar
+         $category->save();
+
+         toast(__('admin.Created Successfully'), 'success')->width('350');
+
+         return redirect()->route('admin.category.index');
+     }
+
 
     /**
      * Display the specified resource.
@@ -82,14 +86,18 @@ class CategoryController extends Controller
     public function update(AdminCategoryUpdateRequest $request, string $id)
     {
         $category = Category::findOrFail($id);
-        $category->name = $request->name;
+
+        // Jika ada file baru, hapus file lama
+        if ($request->hasFile('image')) {
+            $this->deleteOldFile($category->image);
+            $category->image = $this->handleFileUpload($request, 'image');
+        }
+
+        $category->fill($request->only(['name', 'language', 'show_at_nav', 'status']));
         $category->slug = \Str::slug($request->name);
-        $category->language = $request->language;
-        $category->show_at_nav = $request->show_at_nav;
-        $category->status = $request->status;
         $category->save();
 
-        toast(__('admin.Update Successfully'),'success')->width('350');
+        toast(__('admin.Update Successfully'), 'success')->width('350');
 
         return redirect()->route('admin.category.index');
     }
