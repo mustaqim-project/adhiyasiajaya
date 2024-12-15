@@ -448,8 +448,10 @@ class HomeController extends Controller
 
     public function about()
     {
+        $settingpage = SettingLandingPage::first();
+
         $about = About::where('language', getLangauge())->first();
-        return view('frontend.about', compact('about'));
+        return view('frontend.about', compact('about','settingpage'));
     }
 
     public function kebijakan()

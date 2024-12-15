@@ -18,9 +18,8 @@ class AboutController extends Controller
     public function index()
     {
             $languages = Language::where('status', 1)->get();
-            $settingpage = SettingLandingPage::first();
 
-        return view('admin.about-page.index', compact('languages','settingpage'));
+        return view('admin.about-page.index', compact('languages'));
     }
 
     public function update(Request $request)
