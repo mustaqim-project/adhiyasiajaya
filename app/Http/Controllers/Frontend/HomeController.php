@@ -156,8 +156,8 @@ class HomeController extends Controller
         if ($relatedNewsByTag->isNotEmpty()) {
             $news = $this->insertInternalLinks($news, $relatedNewsByTag);
         }
-
-        return view('frontend.news-details', compact('news', 'recentNews', 'mostCommonTags', 'nextPost', 'previousPost', 'relatedPosts', 'socialCounts', 'ad'));
+        $categories = Category::where('status', 1)->get();
+        return view('frontend.news-details', compact('news', 'recentNews', 'mostCommonTags', 'nextPost', 'previousPost', 'relatedPosts', 'socialCounts', 'ad','categories'));
     }
 
       private function getCategorySection($categoryId, $limit)
@@ -319,8 +319,6 @@ class HomeController extends Controller
 
     public function news(Request $request)
     {
-
-
         $news = News::query();
 
         $news->when($request->has('tag'), function ($query) use ($request) {
@@ -350,6 +348,7 @@ class HomeController extends Controller
             ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
         $mostCommonTags = $this->mostCommonTags();
 
+        $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
 
         $ad = Ad::first();
 
@@ -358,8 +357,6 @@ class HomeController extends Controller
         if ($request->has('category') && !empty($request->category)) {
             $category = Category::where('slug', $request->category)->first();
         }
-
-        $categories = Category::where('status', 1)->get();
 
         return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category'));
     }
