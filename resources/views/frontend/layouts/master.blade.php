@@ -31,7 +31,10 @@
 @else
 {{ asset($settings['site_logo']) }}
 @endif" />
+    @php
+        $settingpage = \App\Models\SettingLandingPage::first();
 
+    @endphp
     <meta name="twitter:title" content="@yield('meta_tw_title')" />
     <meta name="twitter:description" content="@yield('meta_tw_description')" />
     <meta name="twitter:image" content="@yield('meta_tw_image')" />
@@ -169,7 +172,6 @@
             'language' => getLangauge(),
         ])->first();
         $contact = \App\Models\Contact::where('language', getLangauge())->first();
-        $settingpage = \App\Models\SettingLandingPage::first();
 
     @endphp
 
