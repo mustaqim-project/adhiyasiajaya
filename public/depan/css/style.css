@@ -10,7 +10,7 @@
 
 .single_service .thumb img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Set a fixed height for the images */
     object-fit: cover;
     border-radius: 8px;
 }
@@ -35,11 +35,13 @@
     display: inline-block;
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    width: 100%; /* Make button width 100% of the container */
+    text-align: center;
 }
 
 .btn-our-product:hover {
@@ -58,15 +60,27 @@
     .service_info h3 {
         font-size: 16px;
     }
+
+    .btn-our-product {
+        padding: 10px 20px;
+    }
 }
 
 @media (max-width: 576px) {
     .single_service .thumb img {
         max-width: 100%;
+        height: auto;
     }
 
     .service_info p {
         font-size: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* On large screens, make the button the same size as the image */
+    .btn-our-product {
+        height: 200px; /* Same height as the image */
     }
 }
 
