@@ -1,6 +1,4 @@
 <style>
-
-
     .footer {
         background-color: #F5FBFF;
         padding: 40px 0;
@@ -79,6 +77,18 @@
             margin-bottom: 30px;
         }
     }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #1e1e2f;
+        /* Gelap dengan nuansa teknologi */
+        font-family: Arial, sans-serif;
+    }
 </style>
 
 <footer class="footer" style="color: black;">
@@ -89,7 +99,8 @@
                 <div class="col-xl-6 col-md-12 col-lg-6">
                     <div class="footer_widget">
                         <figure class="mb-3">
-                            <img src="{{ asset(@$footerInfo->logo ?? 'default-logo.png') }}" alt="Logo Footer" class="img-fluid logo-footer" width="500px">
+                            <img src="{{ asset(@$footerInfo->logo ?? 'default-logo.png') }}" alt="Logo Footer"
+                                class="img-fluid logo-footer" width="500px">
                         </figure>
                         <p style="font-size:1em;">{{ @$footerInfo->description ?? 'Default footer description.' }}</p>
                         <div class="social__media mt-4">
@@ -112,7 +123,7 @@
                         <h3 class="footer_title">{{ @$footerGridOneTitle->value ?? 'Useful Links' }}</h3>
                         <ul>
                             @foreach ($footerGridOne as $gridOne)
-                                <li >
+                                <li>
                                     <a href="{{ $gridOne->url }}" class="text-decoration-none">
                                         {{ $gridOne->name }}
                                     </a>
