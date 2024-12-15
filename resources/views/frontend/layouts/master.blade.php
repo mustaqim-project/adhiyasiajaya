@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -41,10 +41,88 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
-    {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css') }}">
+    <style>
+        .footer {
+            background-color: #F5FBFF;
+            padding: 40px 0;
+            color: black;
+        }
 
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/bootstrap-iconpicker.min.css') }}"> --}}
+        .footer .footer_top .footer_widget .footer_title {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primaryColor);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer .footer_top .footer_widget ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .footer_top .footer_widget ul li a {
+            color: var(--textColor);
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer .footer_top .footer_widget ul li a:hover {
+            color: var(--primaryColor);
+            text-decoration: underline;
+        }
+
+        .footer .footer_top .social__media ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer .footer_top .social__media ul li a {
+            background-color: var(--secondaryColor);
+            color: var(--textColor);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .footer .footer_top .social__media ul li a:hover {
+            background-color: var(--primaryColor);
+            transform: scale(1.1);
+        }
+
+        .footer .copy-right_text {
+            background-color: var(--bgFooterBottom);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer .copy-right_text .footer_border {
+            border-top: 1px solid var(--secondaryColor);
+            margin-bottom: 10px;
+        }
+
+        .footer .copy-right_text p {
+            font-size: 14px;
+            color: var(--textColor);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .footer .footer_top .footer_widget {
+                margin-bottom: 30px;
+            }
+        }
+
+
+    </style>
     <style>
         :root {
             --colorPrimary: {{ $settings['site_color'] }};
