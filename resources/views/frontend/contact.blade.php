@@ -88,14 +88,13 @@
                     <div class="media contact-info">
                         <h5>{{ __('frontend.find us') }}</h5>
                         <ul class="list-inline">
-                            @foreach ($socials as $social)
-                                <li class="list-inline-item-contact mx-1">
-                                    <a href="https://www.linkedin.com/"
-                                        class="btn btn-social rounded text-white facebook">
-                                        <i class="{{ $social->icon }}"></i>
-                                    </a>
-                                </li>
-                            @endforeach
+                            @foreach ($socialLinks as $link)
+                            <li>
+                                <a href="{{ $link->url }}" class="social__link">
+                                    <i class="{{ $link->icon }}"></i>
+                                </a>
+                            </li>
+                        @endforeach
                         </ul>
                     </div>
                 </div>
