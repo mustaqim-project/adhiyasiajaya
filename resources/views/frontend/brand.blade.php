@@ -23,7 +23,7 @@
                 <!-- Category Navigation -->
                 <div class="col-lg-4 col-md-4">
                     <div class="service_details_left">
-                        <h3>Market Sector</h3>
+                        <h3>Product Brand</h3>
                         <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             @foreach ($brands as $brand)
                                 <a class="nav-link {{ request('brand') === $brand->slug ? 'active' : '' }}"
