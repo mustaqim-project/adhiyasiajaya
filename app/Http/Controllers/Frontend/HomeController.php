@@ -21,6 +21,7 @@ use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
@@ -489,26 +490,26 @@ class HomeController extends Controller
         }
 
         try {
-            $toMail = Contact::where('language', 'en')->first();
-
-
-
-
             Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
 
+            // Mencatat status pengiriman email di log
+            Log::info('Email sent successfully to: ' . $toMail->email);
+
+            // Menyimpan data ke database
             $mail = new RecivedMail();
             $mail->email = $request->email;
             $mail->subject = $request->subject;
             $mail->message = $request->message;
+            $mail->save();
 
-            // Cetak data $mail menggunakan dd()
-
+            // Mencatat bahwa data telah disimpan dengan sukses
+            Log::info('Received mail saved successfully for email: ' . $request->email);
 
             $mail->save();
         } catch (\Exception $e) {
             toast(__($e->getMessage()));
         }
-        dd($mail);
+
         toast(__('frontend.Message sent successfully!'), 'success');
 
         return redirect()->back();
