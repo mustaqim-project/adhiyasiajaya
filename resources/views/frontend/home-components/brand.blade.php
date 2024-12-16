@@ -12,20 +12,19 @@
         </div>
         <div class="row">
             @foreach ($brands->take(30) as $brand)
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="single_service">
-                    <div class="thumb">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="single_service">
                         <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
                             class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
-                             <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
-                                  alt="{{ $brand->name }}"
-                                  class="img-fluid"
-                                  style="max-width: 100%; height: auto; object-fit: cover;"
-                                  width="150" />
-                         </a>
+                            <div class="thumb">
+
+                                <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
+                                    alt="{{ $brand->name }}" class="img-fluid"
+                                    style="max-width: 100%; height: auto; object-fit: cover;" width="150" />
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
             @endforeach
             @if ($categories->isEmpty())
                 <div class="col-12">
