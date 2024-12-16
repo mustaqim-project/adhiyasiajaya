@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             {{-- Loop hanya untuk 5 kategori --}}
-            @foreach ($categories->take(6) as $category)
+            @foreach ($categories->take(3) as $category)
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
@@ -36,7 +36,7 @@
 
             @if ($categories->isEmpty())
                 <div class="col-12">
-                    <p class="text-center">No categories found.</p>
+                    <p class="text-center">No Market Sectors found.</p>
                 </div>
             @endif
 
