@@ -3,6 +3,7 @@
 @section('content')
     @include('frontend.home-components.sliderarea')
     @include('frontend.home-components.ourproduct')
+    @include('frontend.home-components.brand')
     @include('frontend.home-components.aboutarea')
     @include('frontend.home-components.customerarea')
     @include('frontend.home-components.contactarea')

@@ -3,31 +3,31 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="section_title mb-50 text-center">
+                <div class="section_title mb-50 text-left">
                     <a href="{{ route('product') }}">
-                        <h3>Market Sector</h3>
+                        <h3>Brands</h3>
                     </a>
                 </div>
             </div>
         </div>
         <div class="row">
             {{-- Loop hanya untuk 5 kategori --}}
-            @foreach ($categories->take(6) as $category)
+            @foreach ($brands->take(30) as $brand)
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
-                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
-                                alt="{{ $category->name }}" class="img-fluid"
-                                style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
+                            <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
+                                alt="{{ $brand->name }}" class="img-fluid"
+                                style="height: auto; object-fit: cover;" width="150px" />
                         </div>
                         <div class="service_info">
                             <p style="font-size: 1em; font-weight:600;">
-                                <a href="{{ route('brand', ['category' => $category->slug]) }}"
-                                    class="{{ request('category') === $category->slug ? 'active' : '' }}">{{ $category->name }}
+                                <a href="{{ route('product', ['brand' => $brand->slug]) }}"
+                                    class="{{ request('brand') === $brand->slug ? 'active' : '' }}">{{ $brand->name }}
                                  </a>
 
                             </p>
-                            <p>{{ $category->deskripsi }}</p>
+                            <p>{{ $brand->deskripsi }}</p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
 
 
         </div>
-        <a href="{{ route('product') }}" class="boxed-btn3" width="100%" style="display: block;">
+        <a href="{{ route('brand') }}" class="boxed-btn3" width="100%" style="display: block;">
             View More </a>
     </div>
 </div>
