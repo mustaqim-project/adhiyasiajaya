@@ -254,7 +254,6 @@
                                     href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"
                                     target="_blank">
                                     <i class="fab fa-facebook-f"></i>
-                                    <span>{{ __('frontend.facebook') }}</span>
                                 </a>
                             </li>
                             <li class="list-inline-item">
@@ -262,7 +261,6 @@
                                     href="https://twitter.com/intent/tweet?text={{ $news->title }}&url={{ url()->current() }}"
                                     target="_blank">
                                     <i class="fab fa-twitter"></i>
-                                    <span>{{ __('frontend.twitter') }}</span>
                                 </a>
                             </li>
                             <li class="list-inline-item">
@@ -270,7 +268,6 @@
                                     href="https://wa.me/?text={{ $news->title }}%20{{ url()->current() }}"
                                     target="_blank">
                                     <i class="fab fa-whatsapp"></i>
-                                    <span>{{ __('frontend.whatsapp') }}</span>
                                 </a>
                             </li>
 
@@ -279,7 +276,6 @@
                                     href="https://t.me/share/url?url={{ url()->current() }}&text={{ $news->title }}"
                                     target="_blank">
                                     <i class="fab fa-telegram"></i>
-                                    <span>{{ __('frontend.telegram') }}</span>
                                 </a>
                             </li>
                             <li class="list-inline-item">
@@ -287,7 +283,6 @@
                                     href="https://www.linkedin.com/shareArticle?mini=true&url={{ url()->current() }}&title={{ $news->title }}"
                                     target="_blank">
                                     <i class="fab fa-linkedin"></i>
-                                    <span>{{ __('frontend.linkedin') }}</span>
                                 </a>
                             </li>
                         </ul>
