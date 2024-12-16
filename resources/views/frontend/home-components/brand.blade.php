@@ -16,10 +16,10 @@
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="single_service">
                     <div class="thumb">
-                        <a href="{{ route('brand', ['category' => $category->slug]) }}"
-                            class="{{ request('category') === $category->slug ? 'active' : '' }}">
-                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
-                                alt="{{ $category->name }}" class="img-fluid"
+                        <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
+                            class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
+                            <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
+                                alt="{{ $brand->name }}" class="img-fluid"
                                 style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
                         </a>
                     </div>
