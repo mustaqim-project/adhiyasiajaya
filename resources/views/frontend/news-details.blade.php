@@ -195,6 +195,22 @@
 
 @section('content')
 
+
+
+    <!-- bradcam_area -->
+    <div class="bradcam_area bradcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Our Product</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area -->
+
    <!--================Blog Area =================-->
    <section class="blog_area single-post-area section-padding">
     <div class="container">
@@ -224,35 +240,62 @@
                         <a href="#">{{ $news->category->name }}</a>
                     </li>
                    </ul>
+                   <div class="wrap__article-detail-content">
+                    <div class="total-views">
+                        <div class="total-views-read">
+                            {{ convertToKFormat($news->views) }}
+                            <span>{{ __('frontend.views') }}</span>
+                        </div>
+
+                        <ul class="list-inline">
+                            <span class="share">{{ __('frontend.share on:') }}</span>
+                            <li class="list-inline-item">
+                                <a class="btn btn-social-o facebook"
+                                    href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"
+                                    target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>{{ __('frontend.facebook') }}</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-social-o twitter"
+                                    href="https://twitter.com/intent/tweet?text={{ $news->title }}&url={{ url()->current() }}"
+                                    target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>{{ __('frontend.twitter') }}</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-social-o whatsapp"
+                                    href="https://wa.me/?text={{ $news->title }}%20{{ url()->current() }}"
+                                    target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>{{ __('frontend.whatsapp') }}</span>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a class="btn btn-social-o telegram"
+                                    href="https://t.me/share/url?url={{ url()->current() }}&text={{ $news->title }}"
+                                    target="_blank">
+                                    <i class="fab fa-telegram"></i>
+                                    <span>{{ __('frontend.telegram') }}</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-linkedin-o linkedin"
+                                    href="https://www.linkedin.com/shareArticle?mini=true&url={{ url()->current() }}&title={{ $news->title }}"
+                                    target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>{{ __('frontend.linkedin') }}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="has-drop-cap-fluid">{!! $news->content !!}</p>
+                </div>
                    <p class="excert">
-                      MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                      should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                      fraction of the camp price. However, who has the willpower
-                   </p>
-                   <p>
-                      MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                      should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                      fraction of the camp price. However, who has the willpower to actually sit through a
-                      self-imposed MCSE training. who has the willpower to actually
-                   </p>
-                   <div class="quote-wrapper">
-                      <div class="quotes">
-                         MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                         should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                         a fraction of the camp price. However, who has the willpower to actually sit through a
-                         self-imposed MCSE training.
-                      </div>
-                   </div>
-                   <p>
-                      MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                      should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                      fraction of the camp price. However, who has the willpower
-                   </p>
-                   <p>
-                      MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                      should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                      fraction of the camp price. However, who has the willpower to actually sit through a
-                      self-imposed MCSE training. who has the willpower to actually
+                    {!! $news->content !!}
                    </p>
                 </div>
              </div>
