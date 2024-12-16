@@ -47,7 +47,7 @@
                                 aria-labelledby="v-pills-{{ $brand->slug }}-tab">
                                 <div class="service_details_info">
                                     <h3>{{ $brand->name }}</h3>
-                                    @if ($brand->news->isEmpty())
+                                    @if (empty($brand->news) || $brand->news->isEmpty())
                                         <div class="col-12">
                                             <p class="text-center">Product Not Found.</p>
                                         </div>

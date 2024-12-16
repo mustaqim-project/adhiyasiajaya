@@ -27,10 +27,11 @@ class Brand extends Model
         'meta_description',
     ];
 
-    // Relasi ke model News
-    public function news()
+
+        public function news()
     {
         return $this->hasMany(News::class);
     }
+
 
 }
