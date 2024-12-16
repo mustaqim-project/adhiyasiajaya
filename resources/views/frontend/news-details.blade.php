@@ -127,7 +127,7 @@
                                         <a class="btn btn-social-o facebook"
                                             href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"
                                             target="_blank">
-                                            <i class="fa fa-facebook-f"></i>
+                                            <i class="fab fa-facebook-f"></i>
                                             <span>{{ __('frontend.facebook') }}</span>
                                         </a>
                                     </li>
@@ -135,7 +135,7 @@
                                         <a class="btn btn-social-o twitter"
                                             href="https://twitter.com/intent/tweet?text={{ $news->title }}&url={{ url()->current() }}"
                                             target="_blank">
-                                            <i class="fa fa-twitter"></i>
+                                            <i class="fab fa-twitter"></i>
                                             <span>{{ __('frontend.twitter') }}</span>
                                         </a>
                                     </li>
@@ -143,15 +143,16 @@
                                         <a class="btn btn-social-o whatsapp"
                                             href="https://wa.me/?text={{ $news->title }}%20{{ url()->current() }}"
                                             target="_blank">
-                                            <i class="fa fa-whatsapp"></i>
+                                            <i class="fab fa-whatsapp"></i>
                                             <span>{{ __('frontend.whatsapp') }}</span>
                                         </a>
                                     </li>
+
                                     <li class="list-inline-item">
                                         <a class="btn btn-social-o telegram"
                                             href="https://t.me/share/url?url={{ url()->current() }}&text={{ $news->title }}"
                                             target="_blank">
-                                            <i class="fa fa-telegram"></i>
+                                            <i class="fab fa-telegram"></i>
                                             <span>{{ __('frontend.telegram') }}</span>
                                         </a>
                                     </li>
@@ -159,7 +160,7 @@
                                         <a class="btn btn-linkedin-o linkedin"
                                             href="https://www.linkedin.com/shareArticle?mini=true&url={{ url()->current() }}&title={{ $news->title }}"
                                             target="_blank">
-                                            <i class="fa fa-linkedin"></i>
+                                            <i class="fab fa-linkedin"></i>
                                             <span>{{ __('frontend.linkedin') }}</span>
                                         </a>
                                     </li>
