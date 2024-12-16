@@ -31,6 +31,12 @@
                         <span>{{ __('admin.Category Product') }}</span></a></li>
             @endif
 
+            @if (canAccess(['category index', 'category create', 'category udpate', 'category delete']))
+                <li class="{{ setSidebarActive(['admin.brand.*']) }}"><a class="nav-link"
+                        href="{{ route('admin.brand.index') }}"><i class="fas fa-list"></i>
+                        <span>{{ __('admin.Brand Product') }}</span></a></li>
+            @endif
+
            @if (canAccess(['news index', 'image index']))
                 <li class="dropdown {{ setSidebarActive(['admin.news.*', 'admin.pending.news', 'admin.images.*']) }}">
                     <a href="#" class="nav-link has-dropdown"><i class="fas fa-newspaper"></i>
