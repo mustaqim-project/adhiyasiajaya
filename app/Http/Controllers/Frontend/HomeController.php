@@ -364,38 +364,46 @@ class HomeController extends Controller
 
     public function brand(Request $request)
     {
-        $brands = Brand::query();
+        $news = News::query();
 
-
-
-        $brands->when($request->has('category') && !empty($request->category), function ($query) use ($request) {
-            $query->whereHas('category', function ($query) use ($request) {
-                $query->where('slug', $request->category);
+        $news->when($request->has('tag'), function ($query) use ($request) {
+            $query->whereHas('tags', function ($query) use ($request) {
+                $query->where('name', $request->tag);
             });
         });
 
-        $brands->when($request->has('search'), function ($query) use ($request) {
+        $news->when($request->has('brand') && !empty($request->brand), function ($query) use ($request) {
+            $query->whereHas('brand', function ($query) use ($request) {
+                $query->where('slug', $request->brand);
+            });
+        });
+
+        $news->when($request->has('search'), function ($query) use ($request) {
             $query->where(function ($query) use ($request) {
                 $query->where('title', 'like', '%' . $request->search . '%')
                     ->orWhere('content', 'like', '%' . $request->search . '%');
-            })->orWhereHas('category', function ($query) use ($request) {
+            })->orWhereHas('brand', function ($query) use ($request) {
                 $query->where('name', 'like', '%' . $request->search . '%');
             });
         });
 
-        // $brands = $brands->activeEntries()->withLocalize()->paginate(20);
+        $news = $news->activeEntries()->withLocalize()->paginate(20);
 
+        $recentNews = News::with(['brand', 'auther'])
+            ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
+        $mostCommonTags = $this->mostCommonTags();
 
-        $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
+        $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
 
-        $category = null;
-        if ($request->has('category') && !empty($request->category)) {
-            $category = Category::where('slug', $request->category)->first();
+        $ad = Ad::first();
+
+        $brand = null;
+        if ($request->has('brand') && !empty($request->brand)) {
+            $brand = Category::where('slug', $request->brand)->first();
         }
 
-dd($brands);
 
-        return view('frontend.brand', compact('brands', 'category'));
+        return view('frontend.brand', compact('news', 'brands'));
     }
 
 
