@@ -23,7 +23,7 @@
                         <div class="service_info">
                             <h3>
                                 <a href="{{ route('product', ['category' => $category->slug]) }}"
-                                    class="nav-link {{ request('category') === $category->slug ? 'active' : '' }}">
+                                    class="{{ request('category') === $category->slug ? 'active' : '' }}">
                                     {{ $category->name }}
                                 </a>
                             </h3>
