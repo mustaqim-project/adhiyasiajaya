@@ -2839,7 +2839,7 @@ h3 {
 
 /* line 101, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
 .chose_area {
-    padding: 120px 0 72px 0;
+    padding: 50px 0 50px 0;
 }
 
 @media (max-width: 767px) {
@@ -5732,7 +5732,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_service.scss */
 .service_area {
     background: #F5FBFF;
-    padding: 120px 0 90px 0;
+    padding: 50px 0 50px 0;
 }
 
 @media (max-width: 767px) {
