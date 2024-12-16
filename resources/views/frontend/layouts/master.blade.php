@@ -200,10 +200,10 @@
 
     <!-- WhatsApp Floating Icon -->
     @if (!empty($contact->phone))
-        <a href="https://wa.me/{{ $contact->phone }}" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-            <img src="https://www.dayaesa.com/whatsapp.svg" alt="WhatsApp Icon">
-        </a>
-    @endif
+    <a href="https://wa.me/{{ $contact->phone }}?text=Halo%20Admin,%20nama%20saya%20[Nama%20Anda],%20dari%20perusahaan%20[Nama%20Perusahaan].%20Saya%20ingin%20membahas%20tentang%20[Kebutuhan%20Anda]." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <img src="https://www.dayaesa.com/whatsapp.svg" alt="WhatsApp Icon">
+    </a>
+@endif
 
 
 

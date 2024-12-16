@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\OurCustomer;
 use Illuminate\Http\Request;
@@ -8,13 +8,11 @@ use App\Traits\FileUploadTrait;
 
 class OurCustomerController extends Controller
 {
-
     use FileUploadTrait;
 
     // Method untuk menampilkan semua pelanggan
     public function index()
     {
-        // Mengambil semua data pelanggan
         $customers = OurCustomer::all();
         return view('admin.customers.index', compact('customers'));
     }
@@ -28,17 +26,17 @@ class OurCustomerController extends Controller
     // Method untuk menyimpan pelanggan baru
     public function store(Request $request)
     {
-        $imagePath = $this->handleFileUpload($request, 'image');
-
+        // Validasi input
         $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'url' => 'required|url',
         ]);
 
-        // Menyimpan data pelanggan baru
-        $imagePath = $request->file('image')->store('public/images');
+        // Upload gambar menggunakan trait
+        $imagePath = $this->handleFileUpload($request, 'image');
 
+        // Menyimpan data pelanggan baru
         OurCustomer::create([
             'name' => $request->name,
             'image' => $imagePath,
@@ -58,22 +56,21 @@ class OurCustomerController extends Controller
     // Method untuk mengupdate data pelanggan
     public function update(Request $request, $id)
     {
-        $imagePath = $this->handleFileUpload($request, 'image');
+        $customer = OurCustomer::findOrFail($id);
 
+        // Validasi input
         $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'url' => 'required|url',
         ]);
 
-        $customer = OurCustomer::findOrFail($id);
 
-        // Menyimpan data yang sudah diperbarui
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/images');
-            $customer->image = $imagePath;
-        }
-
+        $imagePath = $this->handleFileUpload($request, 'image');
+        $customer->update([
+            'image' => $imagePath ?? $customer->image,
+        ]);
+        // Update data pelanggan
         $customer->name = $request->name;
         $customer->url = $request->url;
         $customer->save();
@@ -85,6 +82,11 @@ class OurCustomerController extends Controller
     public function destroy($id)
     {
         $customer = OurCustomer::findOrFail($id);
+
+        // Hapus file gambar terkait, jika ada
+        $this->deleteOldFile($customer->image);
+
+        // Hapus data pelanggan
         $customer->delete();
 
         return redirect()->route('customers.index')->with('success', 'Customer deleted successfully!');
