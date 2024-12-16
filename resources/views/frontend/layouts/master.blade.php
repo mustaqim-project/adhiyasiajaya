@@ -109,7 +109,7 @@
         }
 
         .section-title {
-
+            position: relative;
             display: inline-block;
         }
 
