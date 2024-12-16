@@ -21,12 +21,12 @@
                                 style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
                         </div>
                         <div class="service_info">
-                            <h3>
+                            <p style="font-size: 2em; font-weight:600;">
                                 <a href="{{ route('product', ['category' => $category->slug]) }}"
                                     class="nav-link {{ request('category') === $category->slug ? 'active' : '' }}">{{ $category->name }}
                                  </a>
 
-                            </h3>
+                            </p>
                             <p>{{ $category->deskripsi }}</p>
                         </div>
                     </div>
