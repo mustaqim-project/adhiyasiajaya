@@ -18,9 +18,9 @@
                         <div class="thumb">
                             <a href="{{ route('brand', ['category' => $category->slug]) }}"
                                 class="{{ request('category') === $category->slug ? 'active' : '' }}">{{ $category->name }}
-                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
-                                alt="{{ $category->name }}" class="img-fluid"
-                                style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
+                                <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
+                                    alt="{{ $category->name }}" class="img-fluid"
+                                    style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
                             </a>
                         </div>
                     </div>
