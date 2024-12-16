@@ -60,8 +60,8 @@
                                             data-target="#exampleModal-{{ $message->id }}"><i
                                                 class="fas fa-envelope"></i></a>
 
-                                        <a href="{{ route('admin.social-link.destroy', $message->id) }}"
-                                            class="btn btn-danger delete-item"><i class="fas fa-trash-alt"></i></a>
+                                        {{-- <a href="{{ route('admin.social-link.destroy', $message->id) }}"
+                                            class="btn btn-danger delete-item"><i class="fas fa-trash-alt"></i></a> --}}
 
                                     </td>
 
