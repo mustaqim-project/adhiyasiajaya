@@ -75,12 +75,11 @@
                         </div>
 
                         <!-- Main Navigation -->
-                        <div class="col-xl-6 col-lg-6">
+                        <div class="col-xl-7 col-lg-7">
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation" class="d-flex align-items-center"
                                         style="text-transform: uppercase; font-weight: bold; justify-content: flex-end; margin: 0; padding: 0;">
-
                                         <li><a href="{{ url('/') }}" class="menu-link">HOME</a></li>
                                         <li><a href="{{ route('about') }}" class="menu-link">ABOUT US</a></li>
                                         <li><a href="{{ route('product') }}" class="menu-link">PRODUCTS</a></li>
@@ -92,7 +91,7 @@
                         </div>
 
                         <!-- Search Button -->
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                             <div class="search_btn text-right">
                                 <a data-toggle="modal" data-target="#searchModal" href="#">
                                     <i class="ti-search"></i>
