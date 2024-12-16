@@ -15,7 +15,7 @@
     </div>
     <!--/ bradcam_area -->
     <div class="blog_page_search">
-        <form action="{{ route('news') }}" method="GET">
+        <form action="{{ route('product') }}" method="GET">
             <div class="row">
                 <div class="col-lg-5">
                     <input type="text" placeholder="Type here" value="{{ request()->search }}" name="search">
@@ -43,12 +43,12 @@
         @endif
 
         <div class="row">
-            @foreach ($news as $post)
+            @foreach ($product as $post)
                 <div class="col-lg-6">
                     <!-- Post Article -->
                     <div class="article__entry">
                         <div class="article__image">
-                            <a href="{{ route('news-details', $post->slug) }}">
+                            <a href="{{ route('product-details', $post->slug) }}">
                                 <img src="{{ asset($post->image) }}" alt="" class="img-fluid">
                             </a>
                         </div>
@@ -70,22 +70,22 @@
 
                             </ul>
                             <h5>
-                                <a href="{{ route('news-details', $post->slug) }}">
+                                <a href="{{ route('product-details', $post->slug) }}">
                                     {!! truncate($post->title) !!}
                                 </a>
                             </h5>
                             <p>
                                 {!! truncate($post->content, 100) !!}
                             </p>
-                            <a href="{{ route('news-details', $post->slug) }}"
+                            <a href="{{ route('product-details', $post->slug) }}"
                                 class="btn btn-outline-primary mb-4 text-capitalize"> {{ __('frontend.read more') }}</a>
                         </div>
                     </div>
                 </div>
             @endforeach
-            @if (count($news) === 0)
+            @if (count($product) === 0)
                 <div class="text-center w-100">
-                    <h4>{{ __('frontend.No News Found') }} :(</h4>
+                    <h4>{{ __('frontend.No Product Found') }} :(</h4>
                 </div>
             @endif
         </div>
