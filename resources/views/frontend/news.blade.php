@@ -117,4 +117,31 @@
         </div>
     </div>
     <!-- service_details_end -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sliders = document.querySelectorAll('.swiper-container');
+
+            sliders.forEach(slider => {
+                new Swiper(slider, {
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                });
+            });
+        });
+    </script>
 @endsection
