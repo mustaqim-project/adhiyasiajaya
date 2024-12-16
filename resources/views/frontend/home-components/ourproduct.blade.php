@@ -24,8 +24,9 @@
                             <h3>
                                 <a href="{{ route('product', ['category' => $category->slug]) }}"
                                     class="nav-link {{ request('category') === $category->slug ? 'active' : '' }}">
-                                    {{ $category->name }}
-                                </a>
+                                     {{ $category->name }}
+                                 </a>
+
                             </h3>
                             <p>{{ $category->deskripsi }}</p>
                         </div>
