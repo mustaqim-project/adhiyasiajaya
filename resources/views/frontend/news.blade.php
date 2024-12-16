@@ -83,7 +83,7 @@
                     </div>
                 </div>
             @endforeach
-            @if (count($product) === 0)
+            @if (count($news) === 0)
                 <div class="text-center w-100">
                     <h4>{{ __('frontend.No Product Found') }} :(</h4>
                 </div>
