@@ -177,34 +177,37 @@
         .slider_area {
             position: relative;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
+            height: 100%;
+            /* Ensure it fits within its container */
             overflow: hidden;
+            /* Hide any area outside the image */
         }
 
         .swiper-container {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
 
         .swiper-wrapper {
             display: flex;
+            align-items: center;
         }
 
-        .swiper-slide {
+        .single_slider {
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
         }
 
-        .swiper-slide img {
-            width: 100%;
+        .single_slider img {
             max-width: 100%;
             height: auto;
             object-fit: cover;
-            border-radius: 8px;
+            /* Ensures the image fills the container without distorting */
         }
+
 
         /* Swiper Navigation Styling */
         .swiper-button-next,
