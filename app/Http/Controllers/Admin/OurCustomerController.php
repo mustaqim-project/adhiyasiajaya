@@ -28,6 +28,8 @@ class OurCustomerController extends Controller
     // Method untuk menyimpan pelanggan baru
     public function store(Request $request)
     {
+        $imagePath = $this->handleFileUpload($request, 'image');
+
         $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -56,6 +58,8 @@ class OurCustomerController extends Controller
     // Method untuk mengupdate data pelanggan
     public function update(Request $request, $id)
     {
+        $imagePath = $this->handleFileUpload($request, 'image');
+
         $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',

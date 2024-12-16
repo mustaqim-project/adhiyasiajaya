@@ -4,9 +4,9 @@
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-5">
                 <div class="Estimate_info">
-                    <h3>Get Request</h3>
-                    <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
-                        placing.</p>
+                    <h3>Let's Connect and Collaborate!</h3>
+
+                    <p>Have questions, inquiries, or specific requests? Reach out to us today, and let's explore how we can help you. Your needs are our priority!</p>
                     <a href="tel:{{ @$contact->phone }}" class="boxed-btn3">
                         {{ @$contact->phone ?? '00-0000-0000-0000' }}
                     </a>
