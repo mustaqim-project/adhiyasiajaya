@@ -58,7 +58,7 @@
                                     @else
                                         @if (isset($katalog[$category->id]) && !$katalog[$category->id]->isEmpty())
                                             <!-- Slider Section -->
-                                            <p class="text-center" style="font-size: 1.5em; font-weight:600;">Product Catalog.</p>
+                                            <p class="text-center" style="font-size: 1.5em; font-weight:600;">Product Catalog</p>
                                             <div class="slider_area">
                                                 <div class="swiper-container">
                                                     <div class="swiper-wrapper">
