@@ -47,6 +47,41 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        @foreach ($categories as $category)
+                            <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}"
+                                id="v-pills-{{ $category->slug }}" role="tabpanel"
+                                aria-labelledby="v-pills-{{ $category->slug }}-tab">
+                                <div class="service_details_info">
+                                    <h3>{{ $category->name }}</h3>
+                                    @foreach ($category->news as $news)
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <div class="single_service">
+                                                <div class="thumb">
+                                                    <img src="{{ $news->image ? asset($news->image) : asset('default-image.jpg') }}"
+                                                        alt="{{ $news->title }}" class="img-fluid" />
+                                                </div>
+                                                <div class="service_info">
+                                                    <p style="font-weight: 500"><a
+                                                            href="{{ route('product-details', $news->slug) }}">{{ $news->title }}</a>
+                                                    </p>
+                                                    <p>{!! Str::limit($news->content, 200, '...') !!}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+                                    @if ($category->news->isEmpty())
+                                        <div class="col-12">
+                                            <p class="text-center">Product Not Found.</p>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
                 <div class="col-md-8">
                     <div class="wrap__article-detail">
                         <div class="wrap__article-detail-title">

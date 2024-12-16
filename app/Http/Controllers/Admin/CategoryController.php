@@ -87,9 +87,7 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        // Jika ada file baru, hapus file lama
         if ($request->hasFile('image')) {
-            $this->deleteOldFile($category->image);
             $category->image = $this->handleFileUpload($request, 'image');
         }
 
