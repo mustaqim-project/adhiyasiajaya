@@ -371,7 +371,6 @@ class HomeController extends Controller
             ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
         $mostCommonTags = $this->mostCommonTags();
 
-        $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
 
         $ad = Ad::first();
 
@@ -391,7 +390,7 @@ class HomeController extends Controller
             ->groupBy('category_id'); // Kelompokkan berdasarkan category_id
 
 
-        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category', 'categories', 'katalog'));
+        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category', 'katalog'));
     }
 
     public function brand(Request $request)
