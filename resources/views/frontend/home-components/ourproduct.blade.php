@@ -16,18 +16,12 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
+                            <a href="{{ route('brand', ['category' => $category->slug]) }}"
+                                class="{{ request('category') === $category->slug ? 'active' : '' }}">{{ $category->name }}
                             <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
                                 alt="{{ $category->name }}" class="img-fluid"
                                 style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
-                        </div>
-                        <div class="service_info">
-                            <p style="font-size: 1em; font-weight:600;">
-                                <a href="{{ route('brand', ['category' => $category->slug]) }}"
-                                    class="{{ request('category') === $category->slug ? 'active' : '' }}">{{ $category->name }}
-                                 </a>
-
-                            </p>
-                            <p>{{ $category->deskripsi }}</p>
+                            </a>
                         </div>
                     </div>
                 </div>
