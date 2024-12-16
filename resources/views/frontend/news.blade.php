@@ -127,9 +127,14 @@
                                                         @foreach ($katalog[$category->id] as $item)
                                                             <div class="swiper-slide">
                                                                 <div class="single_slider d-flex align-items-center">
-                                                                    <img src="{{ $item->image ? asset($item->image) : asset('default-image.jpg') }}"
-                                                                        alt="{{ $category->name }}" class="img-fluid"
-                                                                        style="max-width: 100%; height: auto; object-fit: cover;" />
+                                                                    <!-- Fancybox Preview -->
+                                                                    <a href="{{ $item->image ? asset($item->image) : asset('default-image.jpg') }}"
+                                                                        data-fancybox="gallery-{{ $category->id }}"
+                                                                        data-caption="{{ $category->name }}">
+                                                                        <img src="{{ $item->image ? asset($item->image) : asset('default-image.jpg') }}"
+                                                                            alt="{{ $category->name }}" class="img-fluid"
+                                                                            style="max-width: 100%; height: auto; object-fit: cover;" />
+                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         @endforeach
@@ -141,6 +146,7 @@
                                                     <div class="swiper-button-prev"></div>
                                                 </div>
                                             </div>
+
                                             <!-- End Slider Section -->
                                         @endif
                                         <div class="row mt-4">
@@ -177,6 +183,19 @@
         </div>
     </div>
     <!-- service_details_end -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Optional: Fancybox customization
+            Fancybox.bind("[data-fancybox]", {
+                Thumbs: {
+                    autoStart: true, // Show thumbnails
+                },
+                Toolbar: {
+                    display: ["zoom", "close"], // Show zoom and close buttons
+                },
+            });
+        });
+    </script>
 
 
     <script>
