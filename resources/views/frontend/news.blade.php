@@ -43,46 +43,6 @@
         @endif
 
         <div class="row">
-            @foreach ($news as $post)
-                <div class="col-lg-6">
-                    <!-- Post Article -->
-                    <div class="article__entry">
-                        <div class="article__image">
-                            <a href="{{ route('product-details', $post->slug) }}">
-                                <img src="{{ asset($post->image) }}" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__category">
-                                {{ $post->category->name }}
-                            </div>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <span class="text-primary">
-                                        {{ __('frontend.by') }} {{ $post->auther->name }}
-                                    </span>
-                                </li>
-                                <li class="list-inline-item">
-                                    <span class="text-dark text-capitalize">
-                                        {{ date('M d, Y', strtotime($post->created_at)) }}
-                                    </span>
-                                </li>
-
-                            </ul>
-                            <h5>
-                                <a href="{{ route('product-details', $post->slug) }}">
-                                    {!! truncate($post->title) !!}
-                                </a>
-                            </h5>
-                            <p>
-                                {!! truncate($post->content, 100) !!}
-                            </p>
-                            <a href="{{ route('product-details', $post->slug) }}"
-                                class="btn btn-outline-primary mb-4 text-capitalize"> {{ __('frontend.read more') }}</a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
             @if (count($news) === 0)
                 <div class="text-center w-100">
                     <h4>{{ __('frontend.No Product Found') }} :(</h4>
