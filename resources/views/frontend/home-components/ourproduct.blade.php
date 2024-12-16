@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             {{-- Loop hanya untuk 5 kategori --}}
-            @foreach ($categories->take(5) as $category)
+            @foreach ($categories->take(6) as $category)
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
@@ -22,7 +22,6 @@
                         </div>
                         <div class="service_info">
                             <h3>
-                                {{-- Link ke route produk dan aktifkan tab berdasarkan slug --}}
                                 <a href="{{ route('product', ['category' => $category->slug]) }}"
                                     class="nav-link {{ request('category') === $category->slug ? 'active' : '' }}">
                                     {{ $category->name }}
