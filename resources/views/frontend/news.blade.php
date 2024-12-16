@@ -53,9 +53,9 @@
                                 aria-labelledby="v-pills-{{ $category->slug }}-tab">
                                 <div class="service_details_info">
                                     <h3>{{ $category->name }}</h3>
-                                    @if (!isset($katalog[$category->id]) || $katalog[$category->id]->isEmpty())
+                                    @if ($category->news->isEmpty())
                                         <div class="col-12">
-                                            <p class="text-center">No Products Found.</p>
+                                            <p class="text-center">Product Not Found.</p>
                                         </div>
                                     @else
                                         <div class="row">
