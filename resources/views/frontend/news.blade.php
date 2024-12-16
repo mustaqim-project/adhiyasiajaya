@@ -14,43 +14,7 @@
         </div>
     </div>
     <!--/ bradcam_area -->
-    <div class="blog_page_search">
-        <form action="{{ route('product') }}" method="GET">
-            <div class="row">
-                <div class="col-lg-5">
-                    <input type="text" placeholder="Type here" value="{{ request()->search }}" name="search">
-                </div>
-                <div class="col-lg-4">
-                    <select name="category">
-                        <option value="">{{ __('frontend.All') }}</option>
-                        @foreach ($categories as $category)
-                            <option {{ $category->slug === request()->category ? 'selected' : '' }}
-                                value="{{ $category->slug }}">{{ $category->name }}</option>
-                        @endforeach
 
-                    </select>
-                </div>
-                <div class="col-lg-3">
-                    <button type="submit">{{ __('frontend.search') }}</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <aside class="wrapper__list__article ">
-        @if (request()->has('category'))
-            <h4 class="border_section">{{ __('frontend.Category') }}: {{ request()->category }}</h4>
-        @endif
-
-        <div class="row">
-            @if (count($news) === 0)
-                <div class="text-center w-100">
-                    <h4>{{ __('frontend.No Product Found') }} :(</h4>
-                </div>
-            @endif
-        </div>
-
-    </aside>
     <!-- service_details_start -->
     <div class="service_details_area">
         <div class="container">
@@ -87,6 +51,11 @@
                                             <p class="text-center">Product Not Found.</p>
                                         </div>
                                     @else
+                                    @if (count($news) === 0)
+                                        <div class="text-center w-100">
+                                            <h4>{{ __('frontend.No Product Found') }} :(</h4>
+                                        </div>
+                                    @endif
                                         <div class="row">
                                             @foreach ($category->news as $news)
                                                 <div class="col-md-6 col-lg-4 mb-4">
