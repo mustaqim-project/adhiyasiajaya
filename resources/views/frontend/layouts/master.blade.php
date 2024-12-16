@@ -173,63 +173,64 @@
             }
         }
     </style>
-<style>
-    .slider_area {
-        position: relative;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
+    <style>
+        .slider_area {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
 
-    .swiper-container {
-        width: 100%;
-        height: auto;
-    }
-
-    .swiper-wrapper {
-        display: flex;
-    }
-
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .swiper-slide img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    /* Swiper Navigation Styling */
-    .swiper-button-next,
-    .swiper-button-prev {
-        color: #333;
-        font-size: 20px;
-    }
-
-    .swiper-pagination {
-        bottom: 10px !important;
-    }
-
-    /* Responsive Styling */
-    @media (max-width: 768px) {
-        .swiper-slide img {
-            max-width: 100%;
+        .swiper-container {
+            width: 100%;
             height: auto;
         }
 
+        .swiper-wrapper {
+            display: flex;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Swiper Navigation Styling */
         .swiper-button-next,
         .swiper-button-prev {
-            display: none; /* Hide navigation for smaller screens */
+            color: #333;
+            font-size: 20px;
         }
-    }
-</style>
+
+        .swiper-pagination {
+            bottom: 10px !important;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .swiper-slide img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+                /* Hide navigation for smaller screens */
+            }
+        }
+    </style>
 
 
     <!-- CSS here -->
