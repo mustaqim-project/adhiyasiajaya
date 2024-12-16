@@ -208,15 +208,13 @@
             /* Secara default, sembunyikan semua item */
         }
 
-        .brand-item:nth-child(-n+5) {
+        .brand-item:nth-child(-n+6) {
             display: block;
-            /* Tampilkan hanya 5 item pertama */
         }
 
         @media (min-width: 768px) {
             .brand-item {
                 display: block;
-                /* Tampilkan semua item di layar lebih besar dari mobile */
             }
         }
     </style>
