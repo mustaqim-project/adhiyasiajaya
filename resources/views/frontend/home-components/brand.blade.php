@@ -15,7 +15,7 @@
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="single_service">
                     <div class="thumb">
-                        <a href="{{ route('product', ['brand' => $brand->slug]) }}"
+                        <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
                             class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
                              <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
                                   alt="{{ $brand->name }}"
