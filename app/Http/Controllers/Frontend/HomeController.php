@@ -349,6 +349,7 @@ class HomeController extends Controller
         // });
 
         $news->when($request->has('search'), function ($query) use ($request) {
+            $searchTerm = '%' . $request->search . '%';
 
             $query->where(function ($query) use ($searchTerm) {
                 $query->where('title', 'like', $searchTerm)
