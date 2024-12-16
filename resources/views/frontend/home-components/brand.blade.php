@@ -1,5 +1,5 @@
 {{-- Our Product --}}
-<div class="service_area" style="padding: 40px 0 40px 0">
+<div class="service_area" style="padding: 40px 0 40px 0;" style="background-color: #c6d9fc" >
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
