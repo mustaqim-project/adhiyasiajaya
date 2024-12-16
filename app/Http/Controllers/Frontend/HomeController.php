@@ -492,7 +492,7 @@ class HomeController extends Controller
             $toMail = Contact::where('language', 'en')->first();
 
 
-dd($toMail);
+
 
             Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
 
@@ -508,7 +508,7 @@ dd($toMail);
         } catch (\Exception $e) {
             toast(__($e->getMessage()));
         }
-
+        dd($mail);
         toast(__('frontend.Message sent successfully!'), 'success');
 
         return redirect()->back();
