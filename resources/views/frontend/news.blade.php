@@ -43,7 +43,7 @@
         @endif
 
         <div class="row">
-            @foreach ($product as $post)
+            @foreach ($news as $post)
                 <div class="col-lg-6">
                     <!-- Post Article -->
                     <div class="article__entry">
