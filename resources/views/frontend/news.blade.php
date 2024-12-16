@@ -40,15 +40,14 @@
                         </div>
                     </div>
                 </div>
-                @if (count($news) === 0)
-                    <div class="text-center w-100">
-                        <h4>{{ __('frontend.No Product Found') }} :(</h4>
-                    </div>
-                @endif
                 <!-- Tab Content -->
                 <div class="col-lg-8 col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
-
+                        @if (count($news) === 0)
+                            <div class="text-center w-100">
+                                <h4>{{ __('frontend.No Product Found') }} :(</h4>
+                            </div>
+                        @endif
                         @foreach ($categories as $category)
                             <div class="tab-pane fade {{ request('category') === $category->slug ? 'show active' : '' }}"
                                 id="v-pills-{{ $category->slug }}" role="tabpanel"
