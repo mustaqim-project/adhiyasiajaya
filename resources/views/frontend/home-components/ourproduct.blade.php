@@ -23,7 +23,7 @@
                         <div class="service_info">
                             <h3>
                                 {{-- Link ke route produk dan aktifkan tab berdasarkan slug --}}
-                                <a href="{{ route('product') }}"
+                                <a href="{{ route('product.index', ['category' => $category->slug]) }}"
                                     class="nav-link {{ request('category') === $category->slug ? 'active' : '' }}">
                                     {{ $category->name }}
                                 </a>
