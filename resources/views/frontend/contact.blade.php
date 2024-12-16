@@ -24,8 +24,7 @@
                     <h2 class="contact-title">Get in Touch</h2>
                 </div>
                 <div class="col-lg-8">
-                    <form class="form-contact contact_form" action="{{ route('contact.submit') }}" method="post" id="contactForm"
-                        novalidate="novalidate">
+                    <form action="{{ route('contact.submit') }}" method="POST">
                         @csrf
                         <div class="row">
 
