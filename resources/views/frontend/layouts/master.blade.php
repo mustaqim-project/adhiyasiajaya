@@ -233,7 +233,6 @@
     <script src="{{ asset('depan/js/mail-script.js') }}"></script>
     <script src="{{ asset('depan/js/main.js') }}"></script>
     {{-- <script src="{{ asset('frontend/assets/js/index.bundle.js') }}"></script> --}}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @include('sweetalert::alert')
 
