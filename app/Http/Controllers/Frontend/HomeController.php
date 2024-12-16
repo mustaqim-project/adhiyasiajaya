@@ -489,7 +489,7 @@ class HomeController extends Controller
             $subscriber->save();
         }
 
-        try {
+        // try {
             Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
 
             // Mencatat status pengiriman email di log
@@ -502,13 +502,12 @@ class HomeController extends Controller
             $mail->message = $request->message;
             $mail->save();
 
-            // Mencatat bahwa data telah disimpan dengan sukses
             Log::info('Received mail saved successfully for email: ' . $request->email);
-
+dd($mail);
             $mail->save();
-        } catch (\Exception $e) {
-            toast(__($e->getMessage()));
-        }
+        // } catch (\Exception $e) {
+        //     toast(__($e->getMessage()));
+        // }
 
         toast(__('frontend.Message sent successfully!'), 'success');
 
