@@ -12,7 +12,7 @@
 
             </div>
             <div class="card-body">
-                <form action="{{ route('admin.brand.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.category.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <!-- Language Field -->
                     <div class="form-group">
@@ -38,7 +38,7 @@
                             type="text"
                             class="form-control"
                             id="name"
-                            placeholder="{{ __('admin.Enter brand name') }}"
+                            placeholder="{{ __('admin.Enter category name') }}"
                             value="{{ old('name') }}"
                             required
                         >

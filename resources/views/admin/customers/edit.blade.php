@@ -12,7 +12,7 @@
 
             </div>
             <div class="card-body">
-                <form action="{{ route('admin.brand.update', $brand->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.category.update', $category->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -24,7 +24,7 @@
                             @foreach ($languages as $lang)
                                 <option
                                     value="{{ $lang->lang }}"
-                                    {{ old('language', $brand->language) === $lang->lang ? 'selected' : '' }}>
+                                    {{ old('language', $category->language) === $lang->lang ? 'selected' : '' }}>
                                     {{ $lang->name }}
                                 </option>
                             @endforeach
@@ -42,8 +42,8 @@
                             type="text"
                             class="form-control"
                             id="name"
-                            placeholder="{{ __('admin.Enter brand name') }}"
-                            value="{{ old('name', $brand->name) }}"
+                            placeholder="{{ __('admin.Enter category name') }}"
+                            value="{{ old('name', $category->name) }}"
                             required
                         >
                         @error('name')
@@ -55,10 +55,10 @@
                     <div class="form-group">
                         <label for="show_at_nav">{{ __('admin.Show at Nav') }}</label>
                         <select name="show_at_nav" id="show_at_nav" class="form-control" required>
-                            <option value="0" {{ old('show_at_nav', $brand->show_at_nav) == 0 ? 'selected' : '' }}>
+                            <option value="0" {{ old('show_at_nav', $category->show_at_nav) == 0 ? 'selected' : '' }}>
                                 {{ __('admin.No') }}
                             </option>
-                            <option value="1" {{ old('show_at_nav', $brand->show_at_nav) == 1 ? 'selected' : '' }}>
+                            <option value="1" {{ old('show_at_nav', $category->show_at_nav) == 1 ? 'selected' : '' }}>
                                 {{ __('admin.Yes') }}
                             </option>
                         </select>
@@ -71,10 +71,10 @@
                     <div class="form-group">
                         <label for="status">{{ __('admin.Status') }}</label>
                         <select name="status" id="status" class="form-control" required>
-                            <option value="1" {{ old('status', $brand->status) == 1 ? 'selected' : '' }}>
+                            <option value="1" {{ old('status', $category->status) == 1 ? 'selected' : '' }}>
                                 {{ __('admin.Active') }}
                             </option>
-                            <option value="0" {{ old('status', $brand->status) == 0 ? 'selected' : '' }}>
+                            <option value="0" {{ old('status', $category->status) == 0 ? 'selected' : '' }}>
                                 {{ __('admin.Inactive') }}
                             </option>
                         </select>
@@ -93,10 +93,10 @@
                             class="form-control"
                             accept="image/*"
                         >
-                        @if ($brand->image)
+                        @if ($category->image)
                             <small class="form-text text-muted">
                                 {{ __('admin.Current Image') }}:
-                                <img src="{{ asset($brand->image) }}" alt="{{ $brand->name }}" width="100">
+                                <img src="{{ asset($category->image) }}" alt="{{ $category->name }}" width="100">
                             </small>
                         @endif
                         @error('image')
