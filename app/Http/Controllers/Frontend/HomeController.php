@@ -490,19 +490,23 @@ class HomeController extends Controller
         }
 
         // try {
-            Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
 
-            // Mencatat status pengiriman email di log
+
+            $toMail = Contact::where('language', 'en')->first();
+
             Log::info('Email sent successfully to: ' . $toMail->email);
 
-            // Menyimpan data ke database
+
+
+            Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
+
             $mail = new RecivedMail();
             $mail->email = $request->email;
             $mail->subject = $request->subject;
             $mail->message = $request->message;
-            $mail->save();
 
             Log::info('Received mail saved successfully for email: ' . $request->email);
+
 dd($mail);
             $mail->save();
         // } catch (\Exception $e) {
