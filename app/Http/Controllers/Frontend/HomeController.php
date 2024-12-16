@@ -353,7 +353,6 @@ class HomeController extends Controller
 
         $ad = Ad::first();
 
-        // Fetch the category if the 'category' parameter exists in the request
         $category = null;
         if ($request->has('category') && !empty($request->category)) {
             $category = Category::where('slug', $request->category)->first();

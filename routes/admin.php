@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\kebijakanController;
 use App\Http\Controllers\Admin\AdController;
 use App\Http\Controllers\Admin\AdminAuthenticationController;
 use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ContactMessageController;
@@ -57,6 +58,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin']],
 
     /** Category Route */
     Route::resource('category', CategoryController::class);
+    Route::resource('brand', BrandController::class);
 
     /** News Route */
     Route::get('fetch-news-category', [NewsController::class, 'fetchCategory'])->name('fetch-news-category');

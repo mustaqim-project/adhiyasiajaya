@@ -37,6 +37,7 @@ Route::get('product-details/{slug}', [HomeController::class, 'ShowNews'])->name(
 
 /** News Details Routes */
 Route::get('product', [HomeController::class, 'news'])->name('product');
+Route::get('brand', [HomeController::class, 'brand'])->name('brand');
 
 /** News Comment Routes */
 Route::post('product-comment', [HomeController::class, 'handleComment'])->name('product-comment');
