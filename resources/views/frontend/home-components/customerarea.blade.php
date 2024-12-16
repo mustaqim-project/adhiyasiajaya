@@ -1,4 +1,4 @@
-<div class="service_area" style="background-color: #F5FBFF">
+<div class="service_area" style="padding: 40px 0; background-color: #cedbf3 !important;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
