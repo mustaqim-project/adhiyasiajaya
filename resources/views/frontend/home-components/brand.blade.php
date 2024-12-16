@@ -13,24 +13,18 @@
         <div class="row">
             {{-- Loop hanya untuk 5 kategori --}}
             @foreach ($brands->take(30) as $brand)
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="single_service">
-                        <div class="thumb">
-                            <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
-                                alt="{{ $brand->name }}" class="img-fluid"
-                                style="height: auto; object-fit: cover;" width="150px" />
-                        </div>
-                        <div class="service_info">
-                            <p style="font-size: 1em; font-weight:600;">
-                                <a href="{{ route('product', ['brand' => $brand->slug]) }}"
-                                    class="{{ request('brand') === $brand->slug ? 'active' : '' }}">{{ $brand->name }}
-                                 </a>
-
-                            </p>
-                            <p>{{ $brand->deskripsi }}</p>
-                        </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="single_service">
+                    <div class="thumb">
+                        <a href="{{ route('brand', ['category' => $category->slug]) }}"
+                            class="{{ request('category') === $category->slug ? 'active' : '' }}">
+                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
+                                alt="{{ $category->name }}" class="img-fluid"
+                                style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
+                        </a>
                     </div>
                 </div>
+            </div>
             @endforeach
 
 

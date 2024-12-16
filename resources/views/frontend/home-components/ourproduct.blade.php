@@ -16,12 +16,18 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="single_service">
                         <div class="thumb">
-                            <a href="{{ route('brand', ['category' => $category->slug]) }}"
-                                class="{{ request('category') === $category->slug ? 'active' : '' }}">{{ $category->name }}
-                                <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
-                                    alt="{{ $category->name }}" class="img-fluid"
-                                    style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
-                            </a>
+                            <img src="{{ $category->image ? asset($category->image) : asset('default-image.jpg') }}"
+                                alt="{{ $category->name }}" class="img-fluid"
+                                style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
+                        </div>
+                        <div class="service_info">
+                            <h3>
+                                <a href="{{ route('product', ['category' => $category->slug]) }}"
+                                    class="nav-link {{ request('category') === $category->slug ? 'active' : '' }}">
+                                    {{ $category->name }}
+                                </a>
+                            </h3>
+                            <p>{{ $category->deskripsi }}</p>
                         </div>
                     </div>
                 </div>
