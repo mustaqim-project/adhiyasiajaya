@@ -402,7 +402,7 @@ class HomeController extends Controller
             $category = Category::where('slug', $request->category)->first();
         }
 
-dd($brands);
+
 
         return view('frontend.brand', compact('brands', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category'));
     }
