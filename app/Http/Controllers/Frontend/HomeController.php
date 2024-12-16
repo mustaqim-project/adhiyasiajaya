@@ -23,6 +23,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -353,14 +354,14 @@ class HomeController extends Controller
 
             $query->where(function ($query) use ($searchTerm) {
                 $query->where('title', 'like', $searchTerm)
-                      ->orWhere('content', 'like', $searchTerm);
+                    ->orWhere('content', 'like', $searchTerm);
             })
-            ->orWhereHas('category', function ($query) use ($searchTerm) {
-                $query->where('name', 'like', $searchTerm);
-            })
-            ->orWhereHas('brand', function ($query) use ($searchTerm) {
-                $query->where('name', 'like', $searchTerm);
-            });
+                ->orWhereHas('category', function ($query) use ($searchTerm) {
+                    $query->where('name', 'like', $searchTerm);
+                })
+                ->orWhereHas('brand', function ($query) use ($searchTerm) {
+                    $query->where('name', 'like', $searchTerm);
+                });
         });
 
 
@@ -379,7 +380,18 @@ class HomeController extends Controller
             $category = Category::where('slug', $request->category)->first();
         }
 
-        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category'));
+        $categories = DB::table('categories')
+            ->where('status', '=', 'active') // Atur status sesuai kebutuhan
+            ->get();
+
+        // Ambil data katalog berdasarkan kategori aktif
+        $katalog = DB::table('katalog')
+            ->whereIn('category_id', $categories->pluck('id')) // Cocokkan dengan ID kategori aktif
+            ->get()
+            ->groupBy('category_id'); // Kelompokkan berdasarkan category_id
+
+
+        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category', 'categories', 'katalog'));
     }
 
     public function brand(Request $request)
@@ -553,29 +565,28 @@ class HomeController extends Controller
             $subscriber->save();
         }
 
-        // try {
+        try {
 
 
-            $toMail = Contact::where('language', 'en')->first();
+        $toMail = Contact::where('language', 'en')->first();
 
-            Log::info('Email sent successfully to: ' . $toMail->email);
+        Log::info('Email sent successfully to: ' . $toMail->email);
 
 
 
-            Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
+        Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
 
-            $mail = new RecivedMail();
-            $mail->email = $request->email;
-            $mail->subject = $request->subject;
-            $mail->message = $request->message;
+        $mail = new RecivedMail();
+        $mail->email = $request->email;
+        $mail->subject = $request->subject;
+        $mail->message = $request->message;
 
-            Log::info('Received mail saved successfully for email: ' . $request->email);
+        Log::info('Received mail saved successfully for email: ' . $request->email);
 
-dd($mail);
-            $mail->save();
-        // } catch (\Exception $e) {
-        //     toast(__($e->getMessage()));
-        // }
+        $mail->save();
+        } catch (\Exception $e) {
+            toast(__($e->getMessage()));
+        }
 
         toast(__('frontend.Message sent successfully!'), 'success');
 

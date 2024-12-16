@@ -19,10 +19,10 @@
 
     <div class="service_details_area">
         @if (count($news) === 0)
-        <div class="text-center w-100">
-            <h4>{{ __('frontend.No Product Found') }} :(</h4>
-        </div>
-    @endif
+            <div class="text-center w-100">
+                <h4>{{ __('frontend.No Product Found') }} :(</h4>
+            </div>
+        @endif
         <div class="container">
             <div class="row">
                 <!-- Category Navigation -->
@@ -46,17 +46,43 @@
                 <div class="col-lg-8 col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
 
+
                         @foreach ($categories as $category)
                             <div class="tab-pane fade {{ request('category') === $category->slug ? 'show active' : '' }}"
                                 id="v-pills-{{ $category->slug }}" role="tabpanel"
                                 aria-labelledby="v-pills-{{ $category->slug }}-tab">
                                 <div class="service_details_info">
                                     <h3>{{ $category->name }}</h3>
-                                    @if ($category->news->isEmpty())
+                                    @if (!isset($katalog[$category->id]) || $katalog[$category->id]->isEmpty())
                                         <div class="col-12">
-                                            <p class="text-center">Product Not Found.</p>
+                                            <p class="text-center">No Products Found.</p>
                                         </div>
                                     @else
+                                        <div class="row">
+
+                                            <!-- Slider Section -->
+                                            <div class="slider_area">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        @foreach ($katalog[$category->id] as $item)
+                                                            <div class="swiper-slide">
+                                                                <div class="single_slider d-flex align-items-center">
+                                                                    <img src="{{ $item->image ? asset($item->image) : asset('default-image.jpg') }}"
+                                                                        alt="{{ $category->name }}" class="img-fluid"
+                                                                        style="max-width: 100%; height: auto; object-fit: cover;" />
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                    <!-- Swiper Pagination -->
+                                                    <div class="swiper-pagination"></div>
+                                                    <!-- Swiper Navigation -->
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                </div>
+                                            </div>
+                                            <!-- End Slider Section -->
+                                        </div>
                                         <div class="row">
                                             @foreach ($category->news as $news)
                                                 <div class="col-md-6 col-lg-4 mb-4">
@@ -82,6 +108,9 @@
                                 </div>
                             </div>
                         @endforeach
+
+
+
                     </div>
                 </div>
             </div>
