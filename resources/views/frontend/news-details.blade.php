@@ -294,7 +294,7 @@
                                 <div
                                     class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                                     @if ($previousPost)
-                                        <a href="{{ route('news-details', $previousPost->slug) }}">
+                                        <a href="{{ route('product-details', $previousPost->slug) }}">
                                             <span>{{ __('frontend.previous post') }}</span>
                                             {!! truncate($previousPost->title) !!}
                                         </a>
@@ -305,7 +305,7 @@
                                 <div
                                     class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
                                     @if ($nextPost)
-                                        <a href="{{ route('news-details', $nextPost->slug) }}">
+                                        <a href="{{ route('product-details', $nextPost->slug) }}">
                                             <span>{{ __('frontend.next post') }}</span>
                                             {!! truncate($nextPost->title) !!}
                                         </a>
