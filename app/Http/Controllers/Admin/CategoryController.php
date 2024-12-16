@@ -87,9 +87,12 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        if ($request->hasFile('image')) {
-            $category->image = $this->handleFileUpload($request, 'image');
-        }
+
+
+        $imagePath = $this->handleFileUpload($request, 'image');
+        $category->update([
+            'image' => $imagePath ?? $category->image,
+        ]);
 
         $category->fill($request->only(['name', 'language', 'show_at_nav', 'status']));
         $category->slug = \Str::slug($request->name);
