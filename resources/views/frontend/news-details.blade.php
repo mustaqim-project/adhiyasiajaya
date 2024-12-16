@@ -202,15 +202,27 @@
           <div class="col-lg-8 posts-list">
              <div class="single-post">
                 <div class="feature-img">
-                   <img class="img-fluid" src="img/blog/single_blog_1.png" alt="">
+                   <img class="img-fluid" src="{{ asset($news->image) }}" alt="">
                 </div>
                 <div class="blog_details">
-                   <h2>Second divided from form fish beast made every of seas
-                      all gathered us saying he our
+                   <h2>{!! $news->title !!}
                    </h2>
                    <ul class="blog-info-link mt-3 mb-4">
-                      <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                      <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                    <li class="list-inline-item">
+                        {{ __('frontend.By') }}
+                        <a href="#">{{ $news->auther->name }}</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <span class="text-dark text-capitalize ml-1">
+                            {{ date('M D, Y', strtotime($news->created_at)) }}
+                        </span>
+                    </li>
+                    <li class="list-inline-item">
+                        <span class="text-dark text-capitalize">
+                            {{ __('frontend.in') }}
+                        </span>
+                        <a href="#">{{ $news->category->name }}</a>
+                    </li>
                    </ul>
                    <p class="excert">
                       MCSE boot camps have its supporters and its detractors. Some people do not understand why you
