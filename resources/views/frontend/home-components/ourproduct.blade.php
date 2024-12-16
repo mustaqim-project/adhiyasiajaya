@@ -39,8 +39,7 @@
 
         </div>
         <a href="{{ route('product') }}" class="boxed-btn3" width="100%" style="display: block;">
-            Our Product
-        </a>
+View More        </a>
     </div>
 </div>
 {{-- End Our Product --}}
