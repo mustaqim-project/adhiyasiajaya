@@ -499,13 +499,13 @@ class HomeController extends Controller
             $mail->message = $request->message;
 
             // Cetak data $mail menggunakan dd()
-            dd($mail);
+
 
             $mail->save();
         } catch (\Exception $e) {
             toast(__($e->getMessage()));
         }
-
+        dd($mail);
         toast(__('frontend.Message sent successfully!'), 'success');
 
         return redirect()->back();
