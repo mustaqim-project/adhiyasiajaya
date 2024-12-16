@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             @foreach ($brands->take(24) as $brand)
-                <div class="col-md-6 col-lg-4 mb-4 brand-item">
+                {{-- <div class="col-md-6 col-lg-4 mb-4 brand-item"> --}}
                     <div class="single_service">
                         <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
                             class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
@@ -25,7 +25,7 @@
                          </a>
 
                     </div>
-                </div>
+                {{-- </div> --}}
             @endforeach
             @if ($categories->isEmpty())
                 <div class="col-12">
