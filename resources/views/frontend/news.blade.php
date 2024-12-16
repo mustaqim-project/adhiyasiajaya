@@ -14,7 +14,11 @@
         </div>
     </div>
     <!--/ bradcam_area -->
+    <aside class="wrapper__list__article ">
+        <div class="row">
 
+        </div>
+    </aside>
     <!-- service_details_start -->
     <div class="service_details_area">
         <div class="container">
@@ -40,6 +44,11 @@
                 <!-- Tab Content -->
                 <div class="col-lg-8 col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
+                        @if (count($news) === 0)
+                            <div class="text-center w-100">
+                                <h4>{{ __('frontend.No Product Found') }} :(</h4>
+                            </div>
+                        @endif
                         @foreach ($categories as $category)
                             <div class="tab-pane fade {{ request('category') === $category->slug ? 'show active' : '' }}"
                                 id="v-pills-{{ $category->slug }}" role="tabpanel"
@@ -51,11 +60,6 @@
                                             <p class="text-center">Product Not Found.</p>
                                         </div>
                                     @else
-                                    @if (count($news) === 0)
-                                        <div class="text-center w-100">
-                                            <h4>{{ __('frontend.No Product Found') }} :(</h4>
-                                        </div>
-                                    @endif
                                         <div class="row">
                                             @foreach ($category->news as $news)
                                                 <div class="col-md-6 col-lg-4 mb-4">
