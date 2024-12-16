@@ -220,9 +220,9 @@
                         {{-- <div class="feature-img">
                             <img class="img-fluid" src="{{ asset($news->image) }}" alt="">
                         </div> --}}
-                        <figure>
-                            <img src="{{ asset($news->image) }}" alt="" class="img-fluid">
-                        </figure>
+
+                            <img src="{{ asset($news->image) }}" alt="" class="img-fluid" style="width:100%;">
+
                         <div class="blog_details">
                             <h2>{!! $news->title !!}
                             </h2>
