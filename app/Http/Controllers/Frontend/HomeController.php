@@ -371,6 +371,7 @@ class HomeController extends Controller
             ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
         $mostCommonTags = $this->mostCommonTags();
 
+        $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
 
         $ad = Ad::first();
 
@@ -379,18 +380,15 @@ class HomeController extends Controller
             $category = Category::where('slug', $request->category)->first();
         }
 
-        $categories = DB::table('categories')
-            ->where('status', '=', 'active') // Atur status sesuai kebutuhan
-            ->get();
 
-        // Ambil data katalog berdasarkan kategori aktif
+
         $katalog = DB::table('katalog')
             ->whereIn('category_id', $categories->pluck('id')) // Cocokkan dengan ID kategori aktif
             ->get()
             ->groupBy('category_id'); // Kelompokkan berdasarkan category_id
 
 
-        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category', 'katalog'));
+        return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'ad', 'category', 'categories', 'katalog'));
     }
 
     public function brand(Request $request)

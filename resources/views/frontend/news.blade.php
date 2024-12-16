@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-    </div>categories
+    </div>
     <!--/ bradcam_area -->
 
     <!-- service_details_start -->
