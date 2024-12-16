@@ -497,7 +497,7 @@ class HomeController extends Controller
 
             /** Kirim email */
             Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
-
+dd($mail);
             /** Simpan pesan email yang diterima */
             $mail = new RecivedMail();
             $mail->email = $request->email;
