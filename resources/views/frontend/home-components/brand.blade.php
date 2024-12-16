@@ -17,10 +17,12 @@
                     <div class="thumb">
                         <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
                             class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
-                            <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
-                                alt="{{ $brand->name }}" class="img-fluid"
-                                style="max-width: 100%; height: auto; object-fit: cover;" width="150px" />
-                        </a>
+                             <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
+                                  alt="{{ $brand->name }}"
+                                  class="img-fluid"
+                                  style="max-width: 100%; height: auto; object-fit: cover;"
+                                  width="150" />
+                         </a>
                     </div>
                 </div>
             </div>
