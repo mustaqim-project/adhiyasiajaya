@@ -450,7 +450,7 @@
              </div> --}}
              <div class="comment-form">
                 <h4>Leave a Reply</h4>
-                <form action="{{ route('news-comment') }}" method="POST" class="comment-form">
+                <form action="{{ route('product-comment') }}" method="POST" class="comment-form">
                     @csrf
                     <p class="comment-notes">
 
