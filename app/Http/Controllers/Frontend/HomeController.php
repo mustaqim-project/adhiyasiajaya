@@ -383,7 +383,7 @@ class HomeController extends Controller
             });
         });
 
-        $brands = $brands->activeEntries()->withLocalize()->paginate(20);
+        // $brands = $brands->activeEntries()->withLocalize()->paginate(20);
 
 
         $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
