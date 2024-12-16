@@ -3,14 +3,14 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>{{ __('admin.Customers') }}</h1>
+            <h1>{{ __('admin.Categories') }}</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>{{ __('admin.All Customers') }}</h4>
+                <h4>{{ __('admin.All Categories') }}</h4>
                 <div class="card-header-action">
-                    <a href="{{ route('admin.brand.create') }}" class="btn btn-primary">
+                    <a href="{{ route('admin.category.create') }}" class="btn btn-primary">
                         <i class="fas fa-plus"></i> {{ __('admin.Create new') }}
                     </a>
                 </div>
@@ -28,8 +28,9 @@
 
                 </ul>
                 <div class="tab-content tab-bordered" id="myTab3Content">
+                    @foreach ($languages as $language)
                         @php
-                            $Customers = \App\Models\OurCustomer::orderByDesc('id')->get();
+                            $categories = \App\Models\Category::where('language', $language->lang)->orderByDesc('id')->get();
                         @endphp
                         <div class="tab-pane fade show {{ $loop->index === 0 ? 'active' : '' }}"
                             id="home-{{ $language->lang }}" role="tabpanel" aria-labelledby="home-tab2">
@@ -49,13 +50,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($Customers as $brand)
+                                            @foreach ($categories as $category)
                                                 <tr>
-                                                    <td>{{ $brand->id }}</td>
-                                                    <td>{{ $brand->name }}</td>
-                                                    <td>{{ $brand->language }}</td>
+                                                    <td>{{ $category->id }}</td>
+                                                    <td>{{ $category->name }}</td>
+                                                    <td>{{ $category->language }}</td>
                                                     <td>
-                                                        @if ($brand->show_at_nav == 1)
+                                                        @if ($category->show_at_nav == 1)
                                                             <span class="badge badge-primary">{{ __('admin.Yes') }}</span>
                                                         @else
                                                             <span class="badge badge-danger">{{ __('admin.No') }}</span>
@@ -63,7 +64,7 @@
 
                                                     </td>
                                                     <td>
-                                                        @if ($brand->status == 1)
+                                                        @if ($category->status == 1)
                                                             <span class="badge badge-success">{{ __('admin.Yes') }}</span>
                                                         @else
                                                             <span class="badge badge-danger">{{ __('admin.No') }}</span>
@@ -73,9 +74,9 @@
 
 
                                                     <td>
-                                                        <a href="{{ route('admin.brand.edit', $brand->id) }}" class="btn btn-primary"><i
+                                                        <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-primary"><i
                                                                 class="fas fa-edit"></i></a>
-                                                        <a href="{{ route('admin.brand.destroy', $brand->id) }}" class="btn btn-danger delete-item"><i
+                                                        <a href="{{ route('admin.category.destroy', $category->id) }}" class="btn btn-danger delete-item"><i
                                                                 class="fas fa-trash-alt"></i></a>
                                                     </td>
                                                 </tr>
@@ -87,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-
+                    @endforeach
 
                 </div>
             </div>
