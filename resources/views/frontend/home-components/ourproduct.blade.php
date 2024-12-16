@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="section_title mb-50 text-center">
+                <div class="section_title mb-50 text-center section-title">
                     <a href="{{ route('product') }}">
                         <h3>Market Sector</h3>
                     </a>

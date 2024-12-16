@@ -107,7 +107,73 @@
             /* Efek saat tombol ditekan */
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h3 {
+            font-size: 2rem;
+            /* Ukuran font modern */
+            font-weight: 600;
+            /* Tebal yang menarik */
+            color: #333;
+            /* Warna utama */
+            margin: 0;
+            /* Menghapus margin default */
+            padding: 0;
+            transition: color 0.3s ease;
+            /* Animasi warna saat hover */
+        }
+
+        .section-title h3:hover {
+            color: #007bff;
+            /* Warna teks berubah saat hover */
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            /* Posisi garis di bawah judul */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            /* Panjang garis */
+            height: 4px;
+            /* Ketebalan garis */
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            /* Warna gradient */
+            border-radius: 2px;
+            /* Ujung garis melengkung */
+            transition: width 0.4s ease, opacity 0.4s ease;
+            /* Animasi saat hover */
+            opacity: 0.8;
+        }
+
+        .section-title:hover::after {
+            width: 100%;
+            /* Memperpanjang garis saat hover */
+            opacity: 1;
+            /* Meningkatkan opacity */
+        }
+
+        @media (max-width: 768px) {
+            .section-title h3 {
+                font-size: 1.5rem;
+                /* Ukuran font lebih kecil untuk layar mobile */
+            }
+
+            .section-title::after {
+                bottom: -8px;
+                /* Penyesuaian jarak untuk layar kecil */
+                height: 3px;
+                /* Garis lebih tipis */
+            }
+        }
     </style>
+
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('depan/css/bootstrap.min.css') }}">
@@ -138,16 +204,19 @@
 
     <style>
         .brand-item {
-            display: none; /* Secara default, sembunyikan semua item */
+            display: none;
+            /* Secara default, sembunyikan semua item */
         }
 
         .brand-item:nth-child(-n+5) {
-            display: block; /* Tampilkan hanya 5 item pertama */
+            display: block;
+            /* Tampilkan hanya 5 item pertama */
         }
 
         @media (min-width: 768px) {
             .brand-item {
-                display: block; /* Tampilkan semua item di layar lebih besar dari mobile */
+                display: block;
+                /* Tampilkan semua item di layar lebih besar dari mobile */
             }
         }
     </style>
@@ -215,10 +284,11 @@
 
     <!-- WhatsApp Floating Icon -->
     @if (!empty($contact->phone))
-    <a href="https://wa.me/{{ $contact->phone }}?text=Halo%20Admin,%20nama%20saya%20[Nama%20Anda],%20dari%20perusahaan%20[Nama%20Perusahaan].%20Saya%20ingin%20membahas%20tentang%20[Kebutuhan%20Anda]." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-        <img src="https://www.dayaesa.com/whatsapp.svg" alt="WhatsApp Icon">
-    </a>
-@endif
+        <a href="https://wa.me/{{ $contact->phone }}?text=Halo%20Admin,%20nama%20saya%20[Nama%20Anda],%20dari%20perusahaan%20[Nama%20Perusahaan].%20Saya%20ingin%20membahas%20tentang%20[Kebutuhan%20Anda]."
+            target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+            <img src="https://www.dayaesa.com/whatsapp.svg" alt="WhatsApp Icon">
+        </a>
+    @endif
 
 
 
