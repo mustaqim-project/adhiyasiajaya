@@ -12,12 +12,11 @@
         </div>
         <div class="row">
             @foreach ($brands->take(10) as $brand)
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4 brand-item">
                     <div class="single_service">
                         <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
                             class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
                             <div class="thumb">
-
                                 <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
                                     alt="{{ $brand->name }}" class="img-fluid"
                                     style="max-width: 100%; height: auto; object-fit: cover;" width="150" />
@@ -32,6 +31,7 @@
                 </div>
             @endif
         </div>
+
         <a href="{{ route('brand') }}" class="boxed-btn3" width="100%" style="display: block;">
             View More </a>
     </div>

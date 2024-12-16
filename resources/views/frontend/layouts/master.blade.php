@@ -136,6 +136,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <style>
+        .brand-item {
+            display: none; /* Secara default, sembunyikan semua item */
+        }
+
+        .brand-item:nth-child(-n+5) {
+            display: block; /* Tampilkan hanya 5 item pertama */
+        }
+
+        @media (min-width: 768px) {
+            .brand-item {
+                display: block; /* Tampilkan semua item di layar lebih besar dari mobile */
+            }
+        }
+    </style>
 
 
 </head>
