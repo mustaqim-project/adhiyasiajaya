@@ -366,11 +366,7 @@ class HomeController extends Controller
     {
         $brands = News::query();
 
-        $brands->when($request->has('tag'), function ($query) use ($request) {
-            $query->whereHas('tags', function ($query) use ($request) {
-                $query->where('name', $request->tag);
-            });
-        });
+
 
         $brands->when($request->has('category') && !empty($request->category), function ($query) use ($request) {
             $query->whereHas('category', function ($query) use ($request) {
@@ -389,13 +385,8 @@ class HomeController extends Controller
 
         $brands = $brands->activeEntries()->withLocalize()->paginate(20);
 
-        $recentNews = News::with(['category', 'auther'])
-            ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
-        $mostCommonTags = $this->mostCommonTags();
 
         $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
-
-        $ad = Ad::first();
 
         $category = null;
         if ($request->has('category') && !empty($request->category)) {
@@ -404,7 +395,7 @@ class HomeController extends Controller
 
 
 
-        return view('frontend.brand', compact('brands', 'recentNews', 'mostCommonTags', 'categories', 'ad', 'category'));
+        return view('frontend.brand', compact('brands', 'category'));
     }
 
 
