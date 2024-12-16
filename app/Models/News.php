@@ -15,6 +15,7 @@ class News extends Model
     protected $fillable = [
         'language',
         'category_id',
+        'brand_id',
         'auther_id',
         'image',
         'title',
@@ -58,6 +59,11 @@ class News extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
     }
 
     public function tags()

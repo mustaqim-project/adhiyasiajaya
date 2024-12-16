@@ -31,8 +31,8 @@ class NewsController extends Controller
     /**
      * Display a listing of the resource.
      */
-     
-     
+
+
     public function index()
     {
         $languages = Language::where('status', 1)->get();
@@ -82,6 +82,7 @@ class NewsController extends Controller
         $news = News::create([
             'language' => $request->language,
             'category_id' => $request->category,
+            'brand_id' => $request->brand,
             'auther_id' => Auth::guard('admin')->user()->id,
             'image' => $imagePath,
             'title' => $request->title,
@@ -152,6 +153,7 @@ class NewsController extends Controller
         $news->update([
             'language' => $request->language,
             'category_id' => $request->category,
+            'brand_id' => $request->brand,
             'image' => $imagePath ?? $news->image,
             'title' => $request->title,
             'slug' => \Str::slug($request->title),
@@ -183,16 +185,16 @@ class NewsController extends Controller
 
         return response(['status' => 'success', 'message' => __('admin.Deleted Successfully!')]);
     }
-    
-    
+
+
     public function show(string $id)
         {
             $news = News::findOrFail($id);
                 $this->deleteFile($news->image);
                 $news->tags()->delete();
                 $news->delete();
-        
-            
+
+
             return redirect()->route('admin.news.index')->with('status', 'Deleted successfully!');
         }
 

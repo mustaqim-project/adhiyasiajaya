@@ -24,6 +24,7 @@ class AdminNewsCreateRequest extends FormRequest
         return [
             'language' => ['required'],
             'category' => ['required'],
+            'brand' => ['required'],
             'image' => ['required', 'max:3000', 'image'],
             'title' => ['required', 'max:255', 'unique:news,title'],
             'content' => ['required'],
