@@ -217,9 +217,12 @@
             <div class="row">
                 <div class="col-lg-8 posts-list">
                     <div class="single-post">
-                        <div class="feature-img">
+                        {{-- <div class="feature-img">
                             <img class="img-fluid" src="{{ asset($news->image) }}" alt="">
-                        </div>
+                        </div> --}}
+                        <figure>
+                            <img src="{{ asset($news->image) }}" alt="" class="img-fluid">
+                        </figure>
                         <div class="blog_details">
                             <h2>{!! $news->title !!}
                             </h2>
