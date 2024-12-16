@@ -13,7 +13,7 @@
         <div class="row">
             @foreach ($brands->take(24) as $brand)
                 {{-- <div class="col-md-6 col-lg-4 mb-4 brand-item"> --}}
-                    <div class="single_service">
+                    <div class="single_service brand-item">
                         <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
                             class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
                              <div class="thumb" style="display: inline-block; margin: 20px;">
