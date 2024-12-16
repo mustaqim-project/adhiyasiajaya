@@ -51,7 +51,7 @@ class BrandController extends Controller
      {
          $imagePath = $this->handleFileUpload($request, 'image');
 
-         $brand = new Brand($request->only(['name', 'language', 'show_at_nav', 'status']));
+         $brand = new Brand($request->only(['name', 'language','status']));
          $brand->slug = \Str::slug($request->name);
          $brand->image = $imagePath; // Simpan path gambar
          $brand->save();
@@ -94,7 +94,7 @@ class BrandController extends Controller
             'image' => $imagePath ?? $brand->image,
         ]);
 
-        $brand->fill($request->only(['name', 'language', 'show_at_nav', 'status']));
+        $brand->fill($request->only(['name', 'language', 'status']));
         $brand->slug = \Str::slug($request->name);
         $brand->save();
 
