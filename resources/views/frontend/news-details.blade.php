@@ -292,7 +292,6 @@
                             </li>
                         </ul>
                     </div>
-                    <p class="has-drop-cap-fluid">{!! $news->content !!}</p>
                 </div>
                    <p class="excert">
                     {!! $news->content !!}
@@ -368,7 +367,7 @@
                    </div>
                 </div>
              </div>
-             <div class="comments-area">
+             {{-- <div class="comments-area">
                 <h4>05 Comments</h4>
                 <div class="comment-list">
                    <div class="single-comment justify-content-between d-flex">
@@ -448,36 +447,29 @@
                       </div>
                    </div>
                 </div>
-             </div>
+             </div> --}}
              <div class="comment-form">
                 <h4>Leave a Reply</h4>
-                <form class="form-contact comment_form" action="#" id="commentForm">
-                   <div class="row">
-                      <div class="col-12">
-                         <div class="form-group">
-                            <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                               placeholder="Write Comment"></textarea>
-                         </div>
-                      </div>
-                      <div class="col-sm-6">
-                         <div class="form-group">
-                            <input class="form-control" name="name" id="name" type="text" placeholder="Name">
-                         </div>
-                      </div>
-                      <div class="col-sm-6">
-                         <div class="form-group">
-                            <input class="form-control" name="email" id="email" type="email" placeholder="Email">
-                         </div>
-                      </div>
-                      <div class="col-12">
-                         <div class="form-group">
-                            <input class="form-control" name="website" id="website" type="text" placeholder="Website">
-                         </div>
-                      </div>
-                   </div>
-                   <div class="form-group">
-                      <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
-                   </div>
+                <form action="{{ route('news-comment') }}" method="POST" class="comment-form">
+                    @csrf
+                    <p class="comment-notes">
+
+                    </p>
+                    <p class="comment-form-comment">
+                        <label for="comment">{{ __('frontend.Comment') }}</label>
+                        <textarea name="comment" id="comment" cols="45" rows="5" maxlength="65525"
+                            required="required"></textarea>
+                        <input type="hidden" name="news_id" value="{{ $news->id }}">
+                        <input type="hidden" name="parent_id" value="">
+
+                        @error('comment')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </p>
+
+                    <p class="form-submit mb-0">
+                        <input type="submit" name="submit" id="submit" class="submit" value="Post Comment">
+                    </p>
                 </form>
              </div>
           </div>
