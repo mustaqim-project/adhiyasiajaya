@@ -225,8 +225,8 @@
                    </h2>
                    <ul class="blog-info-link mt-3 mb-4">
                     <li class="list-inline-item">
-                        {{ __('frontend.By') }}
-                        <a href="#">{{ $news->auther->name }}</a>
+                        {{ __('frontend.View :') }}
+                        {{ convertToKFormat($news->views) }}
                     </li>
                     <li class="list-inline-item">
                         <span class="text-dark text-capitalize ml-1">
@@ -242,11 +242,6 @@
                    </ul>
                    <div class="wrap__article-detail-content">
                     <div class="total-views">
-                        <div class="total-views-read">
-                            {{ convertToKFormat($news->views) }}
-                            <span>{{ __('frontend.views') }}</span>
-                        </div>
-
                         <ul class="list-inline">
                             <span class="share">{{ __('frontend.share on:') }}</span>
                             <li class="list-inline-item">
@@ -294,19 +289,6 @@
                 </div>
              </div>
              <div class="navigation-top">
-                <div class="d-sm-flex justify-content-between text-center">
-                   <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
-                      people like this</p>
-                   <div class="col-sm-4 text-center my-2 my-sm-0">
-                      <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
-                   </div>
-                   <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                   </ul>
-                </div>
                 <div class="navigation-area">
                    <div class="row">
                       <div
