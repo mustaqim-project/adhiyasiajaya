@@ -337,16 +337,31 @@ class HomeController extends Controller
             });
         });
 
+        // $news->when($request->has('search'), function ($query) use ($request) {
+        //     $query->where(function ($query) use ($request) {
+        //         $query->where('title', 'like', '%' . $request->search . '%')
+        //             ->orWhere('content', 'like', '%' . $request->search . '%');
+        //     })->orWhereHas('category', function ($query) use ($request) {
+        //         $query->where('name', 'like', '%' . $request->search . '%');
+        //     })->orWhereHas('brand', function ($query) use ($request) {
+        //         $query->where('name', 'like', '%' . $request->search . '%');
+        //     });
+        // });
+
         $news->when($request->has('search'), function ($query) use ($request) {
-            $query->where(function ($query) use ($request) {
-                $query->where('title', 'like', '%' . $request->search . '%')
-                    ->orWhere('content', 'like', '%' . $request->search . '%');
-            })->orWhereHas('category', function ($query) use ($request) {
-                $query->where('name', 'like', '%' . $request->search . '%');
-            })->orWhereHas('brand', function ($query) use ($request) {
-                $query->where('name', 'like', '%' . $request->search . '%');
+
+            $query->where(function ($query) use ($searchTerm) {
+                $query->where('title', 'like', $searchTerm)
+                      ->orWhere('content', 'like', $searchTerm);
+            })
+            ->orWhereHas('category', function ($query) use ($searchTerm) {
+                $query->where('name', 'like', $searchTerm);
+            })
+            ->orWhereHas('brand', function ($query) use ($searchTerm) {
+                $query->where('name', 'like', $searchTerm);
             });
         });
+
 
         $news = $news->activeEntries()->withLocalize()->paginate(20);
 
