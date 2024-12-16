@@ -84,6 +84,7 @@
                                         <li><a href="{{ url('/') }}" class="menu-link">HOME</a></li>
                                         <li><a href="{{ route('about') }}" class="menu-link">ABOUT US</a></li>
                                         <li><a href="{{ route('product') }}" class="menu-link">PRODUCTS</a></li>
+                                        <li><a href="{{ route('brand') }}" class="menu-link">BRAND</a></li>
                                         <li><a href="{{ route('contact') }}" class="menu-link">CONTACT</a></li>
                                     </ul>
                                 </nav>
