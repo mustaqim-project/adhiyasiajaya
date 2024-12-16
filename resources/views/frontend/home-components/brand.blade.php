@@ -16,11 +16,11 @@
                     <div class="single_service">
                         <a href="{{ route('brand', ['brand' => $brand->slug]) }}"
                             class="{{ request('brand') === $brand->slug ? 'active' : '' }}">
-                             <div class="thumb" style="display: inline-block; margin: 5px;">
+                             <div class="thumb" style="display: inline-block; margin: 20px;">
                                  <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
                                       alt="{{ $brand->name }}"
                                       class="img-fluid"
-                                      style="width: 50px; object-fit: contain;" />
+                                      style="width: 100px; object-fit: contain;" />
                              </div>
                          </a>
 
