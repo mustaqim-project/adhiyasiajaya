@@ -474,38 +474,35 @@ class HomeController extends Controller
 
     public function handleContactFrom(Request $request)
     {
-        // Validasi input untuk email, subject, dan message
         $request->validate([
             'email' => ['required', 'email', 'max:255'],
             'subject' => ['required', 'max:255'],
             'message' => ['required', 'max:500']
         ]);
 
-        // Cek apakah email sudah ada di tabel subscribers
         $emailExists = Subscriber::where('email', $request->email)->exists();
 
         if (!$emailExists) {
-            // Simpan email baru jika belum ada
             $subscriber = new Subscriber();
             $subscriber->email = $request->email;
             $subscriber->save();
         }
 
         try {
-            // Cari kontak email dengan bahasa Inggris
             $toMail = Contact::where('language', 'en')->first();
 
-            /** Kirim email */
             Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
-dd($mail);
-            /** Simpan pesan email yang diterima */
+
             $mail = new RecivedMail();
             $mail->email = $request->email;
             $mail->subject = $request->subject;
             $mail->message = $request->message;
+
+            // Cetak data $mail menggunakan dd()
+            dd($mail);
+
             $mail->save();
         } catch (\Exception $e) {
-            // Tangani error pengiriman email
             toast(__($e->getMessage()));
         }
 
