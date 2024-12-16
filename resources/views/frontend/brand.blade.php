@@ -18,11 +18,6 @@
     <!-- service_details_start -->
 
     <div class="service_details_area">
-        @if (count($news) === 0)
-        <div class="text-center w-100">
-            <h4>{{ __('frontend.No Product Found') }} :(</h4>
-        </div>
-    @endif
         <div class="container">
             <div class="row">
                 <!-- Category Navigation -->
