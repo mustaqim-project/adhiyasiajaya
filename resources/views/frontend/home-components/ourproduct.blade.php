@@ -21,8 +21,10 @@
                                 style="max-width: 100%; height: auto; object-fit: cover;" width="150px"/>
                         </div>
                         <div class="service_info">
-                            <h3><a href="#">{{ $category->name }}</a></h3>
+                            <h3><a href="{{ $category->slug }}">{{ $category->name }}</a></h3>
                             <p>{{ $category->deskripsi }}</p>
+
+
                         </div>
                     </div>
                 </div>
