@@ -32,6 +32,9 @@ class Category extends Model
     {
         return $this->hasMany(News::class);
     }
-
+    public function katalog()
+    {
+        return $this->hasMany(Katalog::class);
+    }
 
 }

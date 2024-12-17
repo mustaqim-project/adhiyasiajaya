@@ -9,12 +9,17 @@ class Katalog extends Model
 {
     use HasFactory;
 
-    // Tentukan tabel yang digunakan (optional, jika nama tabel tidak mengikuti konvensi)
-    protected $table = 'our_customer';
+    // Nama tabel
+    protected $table = 'katalog';
 
-    // Tentukan kolom yang bisa diisi secara massal (optional)
-    protected $fillable = ['name', 'image', 'url'];
+    // Kolom yang boleh diisi (Mass Assignment)
+    protected $fillable = ['category_id', 'image'];
 
-    // Jika ingin menggunakan timestamps
-    public $timestamps = false; // Setel ini jika tabel Anda tidak memiliki kolom `created_at` dan `updated_at`
+    /**
+     * Relasi dengan model Category
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }

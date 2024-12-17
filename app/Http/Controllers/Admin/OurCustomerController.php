@@ -26,6 +26,8 @@ class OurCustomerController extends Controller
     // Method untuk menyimpan pelanggan baru
     public function store(Request $request)
     {
+
+
         // Validasi input
         $request->validate([
             'name' => 'required|string|max:255',
