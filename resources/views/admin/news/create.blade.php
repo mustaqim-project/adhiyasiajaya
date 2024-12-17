@@ -230,30 +230,58 @@
         });
     </script>
 
-    <script>
-        $(document).ready(function() {
+<script>
+    $(document).ready(function() {
 
-            $('#language-select').on('change', function() {
-                let lang = $(this).val();
-                $.ajax({
-                    method: 'GET',
-                    url: "{{ route('admin.fetch-news-category') }}",
-                    data: {
-                        lang: lang
-                    },
-                    success: function(data) {
-                        $('#category').html(
-                            `<option value="">---{{ __('admin.Select') }}---</option>`);
-                        $.each(data, function(index, data) {
-                            $('#category').append(
-                                `<option value="${data.id}">${data.name}</option>`);
-                        });
-                    },
-                    error: function(error) {
-                        console.log('Error fetching categories:', error);
-                    }
-                });
+        $('#language-select').on('change', function() {
+            let lang = $(this).val();
+
+            // Fetch news category
+            $.ajax({
+                method: 'GET',
+                url: "{{ route('admin.fetch-news-category') }}",
+                data: {
+                    lang: lang
+                },
+                success: function(data) {
+                    $('#category').html(
+                        `<option value="">---{{ __('admin.Select') }}---</option>`
+                    );
+                    $.each(data, function(index, data) {
+                        $('#category').append(
+                            `<option value="${data.id}">${data.name}</option>`
+                        );
+                    });
+                },
+                error: function(error) {
+                    console.log('Error fetching categories:', error);
+                }
+            });
+
+            // Fetch news brand
+            $.ajax({
+                method: 'GET',
+                url: "{{ route('admin.fetch-news-brand') }}",
+                data: {
+                    lang: lang
+                },
+                success: function(data) {
+                    $('#brand').html(
+                        `<option value="">---{{ __('admin.Select') }}---</option>`
+                    );
+                    $.each(data, function(index, data) {
+                        $('#brand').append(
+                            `<option value="${data.id}">${data.name}</option>`
+                        );
+                    });
+                },
+                error: function(error) {
+                    console.log('Error fetching brands:', error);
+                }
             });
         });
-    </script>
+
+    });
+</script>
+
 @endpush

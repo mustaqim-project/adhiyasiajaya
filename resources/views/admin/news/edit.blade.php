@@ -242,38 +242,54 @@
         });
     </script>
 
-    <script>
-        $(document).ready(function() {
-            $('.image-preview').css({
-                "background-image": "url({{ asset($news->image) }})",
-                "background-size": "cover",
-                "background-position": "center center"
+<script>
+    $(document).ready(function() {
+        // Set background image for the image preview
+        $('.image-preview').css({
+            "background-image": "url({{ asset($news->image) }})",
+            "background-size": "cover",
+            "background-position": "center center"
+        });
+
+        // Handle language selection change
+        $('#language-select').on('change', function() {
+            let lang = $(this).val();
+
+            // Fetch news category
+            $.ajax({
+                method: 'GET',
+                url: "{{ route('admin.fetch-news-category') }}",
+                data: { lang: lang },
+                success: function(data) {
+                    $('#category').html("");
+                    $('#category').append(`<option value="">---{{ __('admin.Select') }}---</option>`);
+                    $.each(data, function(index, data) {
+                        $('#category').append(`<option value="${data.id}">${data.name}</option>`);
+                    });
+                },
+                error: function(error) {
+                    console.log(error);
+                }
             });
 
-            $('#language-select').on('change', function() {
-                let lang = $(this).val();
-                $.ajax({
-                    method: 'GET',
-                    url: "{{ route('admin.fetch-news-category') }}",
-                    data: {
-                        lang: lang
-                    },
-                    success: function(data) {
-                        $('#category').html("");
-                        $('#category').html(
-                            `<option value="">---{{ __('admin.Select') }}---</option>`);
+            // Fetch news brand
+            $.ajax({
+                method: 'GET',
+                url: "{{ route('admin.fetch-news-brand') }}",
+                data: { lang: lang },
+                success: function(data) {
+                    $('#brand').html("");
+                    $('#brand').append(`<option value="">---{{ __('admin.Select') }}---</option>`);
+                    $.each(data, function(index, data) {
+                        $('#brand').append(`<option value="${data.id}">${data.name}</option>`);
+                    });
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>
 
-                        $.each(data, function(index, data) {
-                            $('#category').append(
-                                `<option value="${data.id}">${data.name}</option>`)
-                        })
-
-                    },
-                    error: function(error) {
-                        console.log(error);
-                    }
-                })
-            })
-        })
-    </script>
 @endpush

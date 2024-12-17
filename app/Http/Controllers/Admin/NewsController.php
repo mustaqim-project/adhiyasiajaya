@@ -54,6 +54,11 @@ class NewsController extends Controller
         $categories = Category::where('language', $request->lang)->get();
         return $categories;
     }
+    public function fetchBrand(Request $request)
+    {
+        $brands = Brand::where('status', 1)->get();
+        return $brands;
+    }
 
     public function approveNews(Request $request): Response
     {
@@ -70,9 +75,8 @@ class NewsController extends Controller
     public function create()
     {
         $languages = Language::where('status', 1)->get();
-        $brands = Brand::where('status', 1)->get();
 
-        return view('admin.news.create', compact('languages','brands'));
+        return view('admin.news.create', compact('languages'));
     }
 
     /**
