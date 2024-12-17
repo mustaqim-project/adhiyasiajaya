@@ -70,7 +70,9 @@ class NewsController extends Controller
     public function create()
     {
         $languages = Language::where('status', 1)->get();
-        return view('admin.news.create', compact('languages'));
+        $brands = Brand::where('status', 1)->get();
+
+        return view('admin.news.create', compact('languages','brands'));
     }
 
     /**
@@ -135,7 +137,7 @@ class NewsController extends Controller
         }
 
         $categories = Category::where('language', $news->language)->get();
-        $brands = Brand::where('language', $news->language)->get();
+        $brands = Brand::where('status', 1)->get();
 
         return view('admin.news.edit', compact('languages', 'news', 'categories', 'brands'));
     }
