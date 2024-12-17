@@ -58,7 +58,6 @@
                         brand: brandSlug
                     },
                     success: function(response) {
-                        console.log(response);
                         let newsContainer = $('#news-container');
                         newsContainer.empty();
 
