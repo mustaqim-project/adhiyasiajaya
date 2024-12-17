@@ -63,27 +63,35 @@
 
                         if (response.data.length > 0) {
                             $.each(response.data, function(index, news) {
-                                // Use JavaScript to build the URL dynamically
-                                let productDetailsUrl = '{{ route('product-details', ':slug') }}'.replace(':slug', news.slug);
+                                // Gunakan JavaScript untuk membangun URL secara dinamis
+                                let productDetailsUrl =
+                                    '{{ route('product-details', ':slug') }}'.replace(
+                                        ':slug', news.slug);
 
                                 newsContainer.append(`
-                                    <div class="col-md-6 col-lg-4 mb-4">
-                                        <div class="single_service">
-                                            <div class="thumb">
-                                                <img src="${news.image}" alt="${news.title}" class="img-fluid" style="max-width: 100%; height: auto; object-fit: cover;" />
-                                            </div>
-                                            <div class="service_info">
-                                                <p style="font-weight: 500">
-                                                    <a href="${productDetailsUrl}">${news.title}</a>
-                                                </p>
-                                                <p>${news.content}</p>
-                                            </div>
-                                        </div>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="single_service">
+                                    <div class="thumb">
+                                        <img src="${news.image}" alt="${news.title}" class="img-fluid" style="max-width: 100%; height: auto; object-fit: cover;" />
                                     </div>
-                                `);
+                                    <div class="service_info">
+                                        <p style="font-weight: 500">
+                                            <a href="${productDetailsUrl}">${news.title}</a>
+                                        </p>
+                                        <p>${news.content}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `);
                             });
+
+                            // Scroll halaman ke #news-container setelah konten dimuat
+                            $('html, body').animate({
+                                scrollTop: newsContainer.offset().top
+                            }, 1000); // 1000ms (1 detik) untuk animasi scroll
                         } else {
-                            newsContainer.html('<p class="text-center">No news found for this brand.</p>');
+                            newsContainer.html(
+                                '<p class="text-center">No news found for this brand.</p>');
                         }
                     },
                     error: function() {
@@ -93,6 +101,4 @@
             });
         });
     </script>
-
 @endsection
-

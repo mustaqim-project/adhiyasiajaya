@@ -16,7 +16,6 @@
     <!--/ bradcam_area -->
 
     <!-- service_details_start -->
-
     <div class="service_details_area">
         @if (count($news) === 0)
             <div class="text-center w-100">
@@ -49,8 +48,7 @@
                             <div class="tab-pane fade {{ request('category') === $category->slug ? 'show active' : '' }}"
                                 id="v-pills-{{ $category->slug }}" role="tabpanel"
                                 aria-labelledby="v-pills-{{ $category->slug }}-tab">
-                                <div class="service_details_info">
-                                    <h3>{{ $category->name }}</h3>
+                                <div class="service_details_info" id="news-{{ $category->slug }}">
                                     @if ($category->news->isEmpty())
                                         <div class="col-12">
                                             <p class="text-center">Product Not Found.</p>
@@ -84,7 +82,6 @@
                                                     <div class="swiper-button-prev"></div>
                                                 </div>
                                             </div>
-
                                             <!-- End Slider Section -->
                                         @endif
                                         <div class="row mt-4">
@@ -112,15 +109,13 @@
                                 </div>
                             </div>
                         @endforeach
-
-
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- service_details_end -->
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Optional: Fancybox customization
@@ -132,9 +127,20 @@
                     display: ["zoom", "close"], // Show zoom and close buttons
                 },
             });
+
+            // Event listener for category click to focus on the news section
+            const categoryLinks = document.querySelectorAll('.nav-link');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const categorySlug = link.getAttribute('href').split('-')[2]; // Get category slug from href
+                    const newsSection = document.getElementById('news-' + categorySlug);
+                    if (newsSection) {
+                        newsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
         });
     </script>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
