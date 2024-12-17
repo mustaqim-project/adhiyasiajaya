@@ -474,16 +474,21 @@ class HomeController extends Controller
             });
         });
 
-        // Debug hasil query untuk memastikan data yang dihasilkan
+        // Ambil data berita berdasarkan brand
         $newsData = $news->activeEntries()->withLocalize()->get();
+
+        // Cek apakah hasil kosong, jika kosong kembalikan error
         if ($newsData->isEmpty()) {
-            dd('No News Found for Brand: ' . $request->brand);
+            return response()->json(['error' => 'No news found for the brand: ' . $request->brand], 404);
         }
 
-        $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
-
-        return view('frontend.brand', compact('newsData', 'brands'));
+        // Kembalikan respons JSON untuk permintaan AJAX
+        return response()->json([
+            'status' => 'success',
+            'data' => $newsData,
+        ]);
     }
+
 
 
     public function countView($news)
