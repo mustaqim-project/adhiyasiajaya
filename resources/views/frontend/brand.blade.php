@@ -48,23 +48,19 @@
     </div>
     <script>
         $(document).ready(function() {
-            // Handle click event on brand links
             $('.brand-link').on('click', function() {
-                let brandSlug = $(this).data('slug'); // Ambil slug dari atribut data
+                let brandSlug = $(this).data('slug');
 
-                // Request data menggunakan AJAX
                 $.ajax({
-                    url: '{{ route('brand') }}', // Route yang sama
+                    url: '{{ route('brand') }}',
                     type: 'GET',
                     data: {
                         brand: brandSlug
-                    }, // Kirim slug ke controller
+                    },
                     success: function(response) {
-                        console.log(response.data);
                         let newsContainer = $('#news-container');
-                        newsContainer.empty(); // Kosongkan container sebelum menambahkan data
+                        newsContainer.empty();
 
-                        // Loop melalui data dan append ke container
                         if (response.data.length > 0) {
                             $.each(response.data, function(index, news) {
                                 newsContainer.append(`
