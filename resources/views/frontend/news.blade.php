@@ -85,6 +85,7 @@
                                             <!-- End Slider Section -->
                                         @endif
                                         <div class="row mt-4">
+                                            <p class="text-center" style="font-size: 1.5em; font-weight:600;">Product List</p>
                                             @foreach ($category->news as $news)
                                                 <div class="col-md-6 col-lg-4 mb-4">
                                                     <div class="single_service">
