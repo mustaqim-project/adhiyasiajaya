@@ -32,8 +32,8 @@
                         <a href="javascript:void(0)" class="brand-link" data-slug="{{ $brand->slug }}">
                             <div class="thumb" style="display: inline-block; margin: 20px;">
                                 <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"
-                                     alt="{{ $brand->name }}" class="img-fluid"
-                                     style="width: 100px; object-fit: contain;" />
+                                    alt="{{ $brand->name }}" class="img-fluid"
+                                    style="width: 100px; object-fit: contain;" />
                             </div>
                         </a>
                     </div>
@@ -50,23 +50,25 @@
 
 @section('scripts')
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Handle click event on brand links
-            $('.brand-link').on('click', function () {
+            $('.brand-link').on('click', function() {
                 let brandSlug = $(this).data('slug'); // Ambil slug dari atribut data
 
                 // Request data menggunakan AJAX
                 $.ajax({
                     url: '{{ route('brand') }}', // Route yang sama
                     type: 'GET',
-                    data: { brand: brandSlug }, // Kirim slug ke controller
-                    success: function (response) {
+                    data: {
+                        brand: brandSlug
+                    }, // Kirim slug ke controller
+                    success: function(response) {
                         let newsContainer = $('#news-container');
                         newsContainer.empty(); // Kosongkan container sebelum menambahkan data
 
                         // Loop melalui data dan append ke container
                         if (response.data.length > 0) {
-                            $.each(response.data, function (index, news) {
+                            $.each(response.data, function(index, news) {
                                 newsContainer.append(`
                                     <div class="col-md-6 col-lg-4 mb-4">
                                         <div class="single_service">
@@ -84,10 +86,11 @@
                                 `);
                             });
                         } else {
-                            newsContainer.html('<p class="text-center">No news found for this brand.</p>');
+                            newsContainer.html(
+                                '<p class="text-center">No news found for this brand.</p>');
                         }
                     },
-                    error: function () {
+                    error: function() {
                         alert('Failed to fetch data. Please try again.');
                     }
                 });
