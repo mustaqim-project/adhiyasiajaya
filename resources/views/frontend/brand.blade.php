@@ -28,7 +28,7 @@
             <!-- Brand List -->
             <div class="row" id="brand-list">
                 @foreach ($brands as $brand)
-                    <div class="single_service brand-item">
+                    <div class="single_service brand-product">
                         <a href="javascript:void(0)" class="brand-link" data-slug="{{ $brand->slug }}">
                             <div class="thumb" style="display: inline-block; margin: 20px;">
                                 <img src="{{ $brand->image ? asset($brand->image) : asset('default-image.jpg') }}"

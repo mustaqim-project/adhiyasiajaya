@@ -270,6 +270,10 @@
             display: none;
             /* Secara default, sembunyikan semua item */
         }
+        .brand-product {
+            display: none;
+            /* Secara default, sembunyikan semua item */
+        }
 
         .brand-item:nth-child(-n+6) {
             display: block;
@@ -277,6 +281,9 @@
 
         @media (min-width: 768px) {
             .brand-item {
+                display: block;
+            }
+            .brand-product {
                 display: block;
             }
         }
