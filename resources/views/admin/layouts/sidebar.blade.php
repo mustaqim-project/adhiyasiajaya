@@ -69,11 +69,7 @@
                             <li class="{{ setSidebarActive(['admin.about.*']) }}"><a class="nav-link"
                                     href="{{ route('admin.about.index') }}">{{ __('admin.About Page') }}</a></li>
                         @endif
-                        @if (canAccess(['kebijakan index']))
-                            <li class="{{ setSidebarActive(['admin.kebijakan.*']) }}"><a class="nav-link"
-                                    href="{{ route('admin.kebijakan.index') }}">Kebijakan</a></li>
-                        @endif
-                        @if (canAccess(['conatact index']))
+                        @if (canAccess(['contact index']))
                             <li class="{{ setSidebarActive(['admin.contact.*']) }}"><a class="nav-link"
                                     href="{{ route('admin.contact.index') }}">{{ __('admin.Contact Page') }}</a></li>
                         @endif
