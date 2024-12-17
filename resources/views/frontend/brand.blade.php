@@ -46,11 +46,7 @@
                             </div>
                         {{-- </div> --}}
                     @endforeach
-                    @if ($categories->isEmpty())
-                        <div class="col-12">
-                            <p class="text-center">No Brands found.</p>
-                        </div>
-                    @endif
+
                 </div>
             </div>
         </div>
