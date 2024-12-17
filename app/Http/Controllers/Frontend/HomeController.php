@@ -9,10 +9,12 @@ use App\Models\Brand;
 use App\Models\kebijakan;
 use App\Models\Ad;
 use App\Models\Category;
+use App\Models\OurCustomer;
 use App\Models\Comment;
 use App\Models\Contact;
 use App\Models\HomeSectionSetting;
 use App\Models\News;
+use App\Models\OurCustomer;
 use App\Models\RecivedMail;
 use App\Models\SocialCount;
 use App\Models\SocialLink;
@@ -92,7 +94,7 @@ class HomeController extends Controller
         $brands = Brand::where('status', 1)->get();
         $ad = Ad::first();
         $contact = Contact::where('language', getLangauge())->first();
-
+        $customers = OurCustomer::all();
         return view('frontend.home', compact(
             'breakingNews',
             'heroSlider',
@@ -110,6 +112,7 @@ class HomeController extends Controller
             'about',
             'brands',
             'categories',
+            'customers',
             'settingpage'
 
         ));
