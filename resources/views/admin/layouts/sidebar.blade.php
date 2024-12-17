@@ -76,12 +76,12 @@
                     </ul>
                 </li>
             @endif
-
+{{--
             @if (canAccess(['social count index']))
                 <li class="{{ setSidebarActive(['admin.social-count.*']) }}"><a class="nav-link"
                         href="{{ route('admin.social-count.index') }}"><i class="fas fa-hashtag"></i>
                         <span>{{ __('admin.Social Count') }}</span></a></li>
-            @endif
+            @endif --}}
 
             @if (canAccess(['contact message index']))
                 <li class="{{ setSidebarActive(['admin.contact-message.*']) }}"><a class="nav-link"
@@ -132,11 +132,11 @@
                                 href="{{ route('admin.footer-info.index') }}">{{ __('admin.Footer Info') }}</a></li>
                         <li class="{{ setSidebarActive(['admin.footer-grid-one.*']) }}"><a class="nav-link"
                                 href="{{ route('admin.footer-grid-one.index') }}">{{ __('admin.Footer Grid One') }}</a></li>
-                        <li class="{{ setSidebarActive(['admin.footer-grid-two.*']) }}"><a class="nav-link"
+                        {{-- <li class="{{ setSidebarActive(['admin.footer-grid-two.*']) }}"><a class="nav-link"
                                 href="{{ route('admin.footer-grid-two.index') }}">{{ __('admin.Footer Grid Two') }}</a></li>
                         <li class="{{ setSidebarActive(['admin.footer-grid-three.*']) }}"><a class="nav-link"
                                 href="{{ route('admin.footer-grid-three.index') }}">{{ __('admin.Footer Grid Three') }}</a>
-                        </li>
+                        </li> --}}
 
                     </ul>
                 </li>
