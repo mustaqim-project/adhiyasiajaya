@@ -283,9 +283,7 @@
             .brand-item {
                 display: block;
             }
-            .brand-product {
-                display: block;
-            }
+
         }
     </style>
 
