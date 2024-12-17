@@ -25,6 +25,7 @@ class AdminNewsUpdateRequest extends FormRequest
         return [
             'language' => ['required'],
             'category' => ['required'],
+            'brand' => ['required'],
             'title' => ['required', 'max:255', 'unique:news,title,'.$newsId],
             'content' => ['required'],
             'meta_title' => ['max:255'],

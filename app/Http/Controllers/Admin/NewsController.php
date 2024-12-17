@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminNewsCreateRequest;
 use App\Http\Requests\AdminNewsUpdateRequest;
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Language;
 use App\Models\News;
@@ -134,8 +135,9 @@ class NewsController extends Controller
         }
 
         $categories = Category::where('language', $news->language)->get();
+        $brands = Brand::where('language', $news->language)->get();
 
-        return view('admin.news.edit', compact('languages', 'news', 'categories'));
+        return view('admin.news.edit', compact('languages', 'news', 'categories', 'brands'));
     }
 
     /**

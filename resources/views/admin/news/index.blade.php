@@ -34,16 +34,16 @@
                                 ->where('language', $language->lang)
                                 ->where('is_approved', 1)
                                 ->orderBy('id', 'DESC');
-                            
+
                             // Check access and apply additional condition if needed
                             if (!canAccess(['news all-access'])) {
                                 $query->where('auther_id', auth()->guard('admin')->user()->id);
                             }
-                    
+
                             // Execute the query
                             $news = $query->get();
                         @endphp
-                    
+
 
                         <div class="tab-pane fade show {{ $loop->index === 0 ? 'active' : '' }}"
                             id="home-{{ $language->lang }}" role="tabpanel" aria-labelledby="home-tab2">
@@ -58,6 +58,7 @@
                                                 <th>{{ __('admin.Image') }}</th>
                                                 <th>{{ __('admin.Title') }}</th>
                                                 <th>{{ __('admin.Category') }}</th>
+                                                <th>{{ __('admin.Brand') }}</th>
                                                 @if (canAccess(['news status', 'news all-access']))
                                                 <th>{{ __('admin.In Breaking') }}</th>
                                                 <th>{{ __('admin.In Slider') }}</th>
@@ -77,6 +78,7 @@
 
                                                     <td>{{ $item->title }}</td>
                                                     <td>{{ $item->category->name }}</td>
+                                                    <td>{{ $item->brand->name }}</td>
                                                     @if (canAccess(['news status', 'news all-access']))
                                                         <td>
                                                             <label class="custom-switch mt-2">

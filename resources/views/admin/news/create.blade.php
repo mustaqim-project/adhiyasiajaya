@@ -37,6 +37,16 @@
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
                     </div>
+                    <div class="form-group">
+                        <label for="">{{ __('admin.Brand') }}</label>
+                        <select name="brand" id="brand" class="form-control select2">
+                            <option value="">--{{ __('admin.Select') }}---</option>
+
+                        </select>
+                        @error('brand')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
 
 
                     <div class="form-group">

@@ -43,6 +43,20 @@
                         @enderror
                     </div>
 
+                    <div class="form-group">
+                        <label for="">{{ __('admin.Brand') }}</label>
+                        <select name="brand" id="brand" class="form-control select2">
+                            <option value="">--{{ __('admin.Select') }}---</option>
+                            @foreach ($brands as $brand)
+                                <option {{ $brand->id === $news->brand_id ? 'selected' : '' }}
+                                    value="{{ $brand->id }}">{{ $brand->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('brand')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
 
                     <div class="form-group">
                         <label for="">{{ __('admin.Image') }}</label>

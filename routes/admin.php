@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\LocalizationController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\ImageController;
+use App\Http\Controllers\Admin\OurCustomerController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RolePermisionController;
 use App\Http\Controllers\Admin\RoleUserController;
@@ -28,6 +29,7 @@ use App\Http\Controllers\Admin\SocialLinkController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\SettingLandingPageController;
 use App\Models\FooterGridOne;
+use App\Models\Katalog;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
 
@@ -59,6 +61,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin']],
     /** Category Route */
     Route::resource('category', CategoryController::class);
     Route::resource('brand', BrandController::class);
+    Route::resource('customer', OurCustomerController::class);
+    Route::resource('katalog', KatalogController::class);
 
     /** News Route */
     Route::get('fetch-news-category', [NewsController::class, 'fetchCategory'])->name('fetch-news-category');
