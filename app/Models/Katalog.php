@@ -15,6 +15,9 @@ class Katalog extends Model
     // Kolom yang boleh diisi (Mass Assignment)
     protected $fillable = ['category_id', 'image'];
 
+    // Properti untuk menonaktifkan kolom timestamps
+    public $timestamps = false;
+
     /**
      * Relasi dengan model Category
      */
