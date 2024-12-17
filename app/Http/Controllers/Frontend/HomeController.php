@@ -466,19 +466,23 @@ class HomeController extends Controller
     // }
     public function brand(Request $request)
     {
-        // Debug input
-        dd($request->all()); // Untuk memastikan parameter dikirim dengan benar
-
         $news = News::query();
 
-        // Debug query yang akan dijalankan
         $news->when($request->has('brand') && !empty($request->brand), function ($query) use ($request) {
             $query->whereHas('brand', function ($query) use ($request) {
                 $query->where('slug', $request->brand);
             });
         });
 
-        dd($news->toSql()); // Debug query SQL
+        // Debug hasil query untuk memastikan data yang dihasilkan
+        $newsData = $news->activeEntries()->withLocalize()->get();
+        if ($newsData->isEmpty()) {
+            dd('No News Found for Brand: ' . $request->brand);
+        }
+
+        $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
+
+        return view('frontend.brand', compact('newsData', 'brands'));
     }
 
 
