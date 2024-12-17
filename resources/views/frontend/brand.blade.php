@@ -60,6 +60,7 @@
                         brand: brandSlug
                     }, // Kirim slug ke controller
                     success: function(response) {
+                        console.log(response);
                         let newsContainer = $('#news-container');
                         newsContainer.empty(); // Kosongkan container sebelum menambahkan data
 
