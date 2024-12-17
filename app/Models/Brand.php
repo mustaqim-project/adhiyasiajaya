@@ -28,10 +28,8 @@ class Brand extends Model
     ];
 
 
-        public function news()
+    public function news()
     {
         return $this->hasMany(News::class);
     }
-
-
 }

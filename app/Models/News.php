@@ -66,6 +66,7 @@ class News extends Model
         return $this->belongsTo(Brand::class);
     }
 
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'news_tags');
