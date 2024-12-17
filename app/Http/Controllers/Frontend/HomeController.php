@@ -9,7 +9,6 @@ use App\Models\Brand;
 use App\Models\kebijakan;
 use App\Models\Ad;
 use App\Models\Category;
-use App\Models\OurCustomer;
 use App\Models\Comment;
 use App\Models\Contact;
 use App\Models\HomeSectionSetting;
