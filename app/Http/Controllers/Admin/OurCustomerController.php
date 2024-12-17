@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\OurCustomer;
 use Illuminate\Http\Request;
 use App\Traits\FileUploadTrait;
+use App\Http\Controllers\Controller;
 
 class OurCustomerController extends Controller
 {
