@@ -16,26 +16,9 @@
                     @csrf
                     @method('PUT')
 
-                    <!-- Category Field -->
-                    <div class="form-group">
-                        <label for="category_id">{{ __('admin.Category') }}</label>
-                        <select name="category_id" id="category_id" class="form-control select2" required>
-                            <option value="" disabled>--{{ __('admin.Select Category') }}--</option>
-                            @foreach ($categories as $category)
-                                <option
-                                    value="{{ $category->id }}"
-                                    {{ old('category_id', $katalog->category_id) == $category->id ? 'selected' : '' }}>
-                                    {{ $category->name }}
-                                </option>
-                            @endforeach
-                        </select>
-                        @error('category_id')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div>
 
-                    <!-- Image Upload (Optional) -->
-                    <div class="form-group">
+                      <!-- Image Upload (Optional) -->
+                      <div class="form-group">
                         <label for="image">{{ __('admin.Image') }}</label>
                         <input
                             type="file"
@@ -54,6 +37,26 @@
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
                     </div>
+
+                    <!-- Category Field -->
+                    <div class="form-group">
+                        <label for="category_id">{{ __('admin.Category') }}</label>
+                        <select name="category_id" id="category_id" class="form-control select2" required>
+                            <option value="" disabled>--{{ __('admin.Select Category') }}--</option>
+                            @foreach ($categories as $category)
+                                <option
+                                    value="{{ $category->id }}"
+                                    {{ old('category_id', $katalog->category_id) == $category->id ? 'selected' : '' }}>
+                                    {{ $category->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('category_id')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+
 
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">{{ __('admin.Update') }}</button>

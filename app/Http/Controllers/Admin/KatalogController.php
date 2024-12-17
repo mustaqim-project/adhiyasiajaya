@@ -13,11 +13,22 @@ class KatalogController extends Controller
     use FileUploadTrait;
 
     // Method untuk menampilkan semua katalog
-    public function index()
+    public function index(Request $request)
     {
-        $katalogs = Katalog::all();  // Mengubah nama variabel menjadi katalogs
-        return view('admin.katalog.index', compact('katalogs'));  // Pastikan view disesuaikan dengan nama folder dan file
+        // Ambil kategori yang dipilih dari request, jika ada
+        $categoryId = $request->get('category_id');
+
+        // Ambil semua katalog atau filter berdasarkan kategori yang dipilih
+        $katalogs = Katalog::when($categoryId, function ($query) use ($categoryId) {
+            return $query->where('category_id', $categoryId); // Misal, filter berdasarkan category_id
+        })->get();
+
+        // Ambil semua kategori untuk dropdown
+        $categories = Category::all();
+
+        return view('admin.katalog.index', compact('katalogs', 'categories'));
     }
+
 
     // Method untuk menampilkan form tambah katalog
     public function create()

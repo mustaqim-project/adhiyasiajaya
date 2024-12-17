@@ -14,6 +14,25 @@
             <div class="card-body">
                 <form action="{{ route('katalog.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+
+
+                     <!-- Image Upload Field -->
+                     <div class="form-group">
+                        <label for="image">{{ __('admin.Image') }}</label>
+                        <input
+                            type="file"
+                            name="image"
+                            id="image"
+                            class="form-control"
+                            accept="image/*"
+                            required
+                        >
+                        @error('image')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+
                     <!-- Category Field -->
                     <div class="form-group">
                         <label for="category_id">{{ __('admin.Category') }}</label>
@@ -30,21 +49,7 @@
                         @enderror
                     </div>
 
-                    <!-- Image Upload Field -->
-                    <div class="form-group">
-                        <label for="image">{{ __('admin.Image') }}</label>
-                        <input
-                            type="file"
-                            name="image"
-                            id="image"
-                            class="form-control"
-                            accept="image/*"
-                            required
-                        >
-                        @error('image')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div>
+
 
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">{{ __('admin.Create') }}</button>
