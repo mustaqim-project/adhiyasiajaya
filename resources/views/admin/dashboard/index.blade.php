@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>{{ __('admin.Total News') }}</h4>
+                        <h4>{{ __('admin.Total Product') }}</h4>
                     </div>
                     <div class="card-body">
                         {{ $publishedNews }}
@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        {{-- <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
                 <div class="card-icon bg-danger">
                     <i class="far fa-newspaper"></i>
@@ -35,6 +35,21 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+                <div class="card-icon bg-warning">
+                    <i class="far fa-file"></i>
+                </div>
+                <div class="card-wrap">
+                    <div class="card-header">
+                        <h4>{{ __('admin.Total Brands') }}</h4>
+                    </div>
+                    <div class="card-body">
+                        {{ $brands }}
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
@@ -43,7 +58,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>{{ __('admin.Total Categories') }}</h4>
+                        <h4>{{ __('admin.Total Market Sectors') }}</h4>
                     </div>
                     <div class="card-body">
                         {{ $Categories }}
@@ -51,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        {{-- <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
                 <div class="card-icon bg-success">
                     <i class="fas fa-language"></i>
@@ -65,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Language;
 use App\Models\News;
@@ -25,7 +26,8 @@ class DashboardController extends Controller
         $permissions = Permission::count();
         $socials = SocialLink::count();
         $subscribers = Subscriber::count();
+        $brands = Brand::count();
 
-        return view('admin.dashboard.index', compact('publishedNews', 'pendingNews', 'Categories', 'languages', 'roles', 'permissions', 'socials', 'subscribers'));
+        return view('admin.dashboard.index', compact('publishedNews', 'pendingNews', 'Categories', 'languages', 'roles', 'permissions', 'brands','socials', 'subscribers'));
     }
 }
