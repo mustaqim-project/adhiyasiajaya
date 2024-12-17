@@ -46,9 +46,6 @@
             </div>
         </div>
     </div>
-@endsection
-
-@section('scripts')
     <script>
         $(document).ready(function() {
             // Handle click event on brand links
@@ -98,3 +95,4 @@
         });
     </script>
 @endsection
+
