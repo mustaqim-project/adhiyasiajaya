@@ -391,48 +391,79 @@ class HomeController extends Controller
         return view('frontend.news', compact('news', 'recentNews', 'mostCommonTags', 'ad', 'category', 'categories', 'katalog'));
     }
 
+    // public function brand(Request $request)
+    // {
+    //     $news = News::query();
+
+    //     $news->when($request->has('tag'), function ($query) use ($request) {
+    //         $query->whereHas('tags', function ($query) use ($request) {
+    //             $query->where('name', $request->tag);
+    //         });
+    //     });
+
+    //     $news->when($request->has('brand') && !empty($request->brand), function ($query) use ($request) {
+    //         $query->whereHas('brand', function ($query) use ($request) {
+    //             $query->where('slug', $request->brand);
+    //         });
+    //     });
+
+    //     $news->when($request->has('search'), function ($query) use ($request) {
+    //         $query->where(function ($query) use ($request) {
+    //             $query->where('title', 'like', '%' . $request->search . '%')
+    //                 ->orWhere('content', 'like', '%' . $request->search . '%');
+    //         })->orWhereHas('brand', function ($query) use ($request) {
+    //             $query->where('name', 'like', '%' . $request->search . '%');
+    //         });
+    //     });
+
+    //     $news = $news->activeEntries()->withLocalize()->paginate(20);
+
+    //     $recentNews = News::with(['brand', 'auther'])
+    //         ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
+    //     $mostCommonTags = $this->mostCommonTags();
+
+    //     $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
+
+    //     $ad = Ad::first();
+
+    //     $brand = null;
+    //     if ($request->has('brand') && !empty($request->brand)) {
+    //         $brand = Category::where('slug', $request->brand)->first();
+    //     }
+
+
+    //     return view('frontend.brand', compact('news', 'brands'));
+    // }
     public function brand(Request $request)
     {
-        $news = News::query();
+        // Query berita (news) berdasarkan brand jika ada request 'brand'
+        $newsQuery = News::query()->activeEntries()->withLocalize();
 
-        $news->when($request->has('tag'), function ($query) use ($request) {
-            $query->whereHas('tags', function ($query) use ($request) {
-                $query->where('name', $request->tag);
+        if ($request->ajax()) {
+            $newsQuery->when($request->filled('brand'), function ($query) use ($request) {
+                $query->whereHas('brand', function ($brandQuery) use ($request) {
+                    $brandQuery->where('slug', $request->brand);
+                });
             });
-        });
 
-        $news->when($request->has('brand') && !empty($request->brand), function ($query) use ($request) {
-            $query->whereHas('brand', function ($query) use ($request) {
-                $query->where('slug', $request->brand);
+            $news = $newsQuery->get(['title', 'content', 'image', 'slug']);
+
+            // Format response data untuk AJAX
+            $newsData = $news->map(function ($item) {
+                return [
+                    'title' => $item->title,
+                    'content' => Str::limit($item->content, 200, '...'),
+                    'image' => $item->image ? asset($item->image) : asset('default-image.jpg'),
+                    'url' => route('product-details', $item->slug),
+                ];
             });
-        });
 
-        $news->when($request->has('search'), function ($query) use ($request) {
-            $query->where(function ($query) use ($request) {
-                $query->where('title', 'like', '%' . $request->search . '%')
-                    ->orWhere('content', 'like', '%' . $request->search . '%');
-            })->orWhereHas('brand', function ($query) use ($request) {
-                $query->where('name', 'like', '%' . $request->search . '%');
-            });
-        });
-
-        $news = $news->activeEntries()->withLocalize()->paginate(20);
-
-        $recentNews = News::with(['brand', 'auther'])
-            ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
-        $mostCommonTags = $this->mostCommonTags();
-
-        $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
-
-        $ad = Ad::first();
-
-        $brand = null;
-        if ($request->has('brand') && !empty($request->brand)) {
-            $brand = Category::where('slug', $request->brand)->first();
+            return response()->json(['data' => $newsData]);
         }
 
-
-        return view('frontend.brand', compact('news', 'brands'));
+        // Data untuk view normal
+        $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
+        return view('frontend.brand', compact('brands'));
     }
 
 
@@ -565,22 +596,22 @@ class HomeController extends Controller
         try {
 
 
-        $toMail = Contact::where('language', 'en')->first();
+            $toMail = Contact::where('language', 'en')->first();
 
-        Log::info('Email sent successfully to: ' . $toMail->email);
+            Log::info('Email sent successfully to: ' . $toMail->email);
 
 
 
-        Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
+            Mail::to($toMail->email)->send(new ContactMail($request->subject, $request->message, $request->email));
 
-        $mail = new RecivedMail();
-        $mail->email = $request->email;
-        $mail->subject = $request->subject;
-        $mail->message = $request->message;
+            $mail = new RecivedMail();
+            $mail->email = $request->email;
+            $mail->subject = $request->subject;
+            $mail->message = $request->message;
 
-        Log::info('Received mail saved successfully for email: ' . $request->email);
+            Log::info('Received mail saved successfully for email: ' . $request->email);
 
-        $mail->save();
+            $mail->save();
         } catch (\Exception $e) {
             toast(__($e->getMessage()));
         }
