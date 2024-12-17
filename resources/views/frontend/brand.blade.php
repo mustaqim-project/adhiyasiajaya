@@ -58,12 +58,15 @@
                         brand: brandSlug
                     },
                     success: function(response) {
-                      console.log(response);
+                        console.log(response);
                         let newsContainer = $('#news-container');
                         newsContainer.empty();
 
                         if (response.data.length > 0) {
                             $.each(response.data, function(index, news) {
+                                // Use JavaScript to build the URL dynamically
+                                let productDetailsUrl = '{{ route('product-details', ':slug') }}'.replace(':slug', news.slug);
+
                                 newsContainer.append(`
                                     <div class="col-md-6 col-lg-4 mb-4">
                                         <div class="single_service">
@@ -72,7 +75,7 @@
                                             </div>
                                             <div class="service_info">
                                                 <p style="font-weight: 500">
-                                                    <a href="${news.slug}">${news.title}</a>
+                                                    <a href="${productDetailsUrl}">${news.title}</a>
                                                 </p>
                                                 <p>${news.content}</p>
                                             </div>
@@ -81,8 +84,7 @@
                                 `);
                             });
                         } else {
-                            newsContainer.html(
-                                '<p class="text-center">No news found for this brand.</p>');
+                            newsContainer.html('<p class="text-center">No news found for this brand.</p>');
                         }
                     },
                     error: function() {
@@ -92,5 +94,6 @@
             });
         });
     </script>
+
 @endsection
 
