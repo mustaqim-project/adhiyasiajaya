@@ -6,6 +6,7 @@ use App\Models\Katalog;
 use App\Models\Category; // Pastikan Anda mengimpor model Category
 use Illuminate\Http\Request;
 use App\Traits\FileUploadTrait;
+use App\Http\Controllers\Controller;
 
 class KatalogController extends Controller
 {
