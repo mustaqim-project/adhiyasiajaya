@@ -72,7 +72,7 @@
                                             </div>
                                             <div class="service_info">
                                                 <p style="font-weight: 500">
-                                                    <a href="${news.url}">${news.title}</a>
+                                                    <a href="${news.slug}">${news.title}</a>
                                                 </p>
                                                 <p>${news.content}</p>
                                             </div>
