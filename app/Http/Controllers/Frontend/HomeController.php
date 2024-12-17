@@ -434,59 +434,34 @@ class HomeController extends Controller
 
     //     return view('frontend.brand', compact('news', 'brands'));
     // }
-    // public function brand(Request $request)
-    // {
-    //     // Query berita (news) berdasarkan brand jika ada request 'brand'
-    //     $newsQuery = News::query()->activeEntries()->withLocalize();
 
-    //     if ($request->ajax()) {
-    //         $newsQuery->when($request->filled('brand'), function ($query) use ($request) {
-    //             $query->whereHas('brand', function ($brandQuery) use ($request) {
-    //                 $brandQuery->where('slug', $request->brand);
-    //             });
-    //         });
-
-    //         $news = $newsQuery->get(['title', 'content', 'image', 'slug']);
-
-    //         // Format response data untuk AJAX
-    //         $newsData = $news->map(function ($item) {
-    //             return [
-    //                 'title' => $item->title,
-    //                 'content' => Str::limit($item->content, 200, '...'),
-    //                 'image' => $item->image ? asset($item->image) : asset('default-image.jpg'),
-    //                 'url' => route('product-details', $item->slug),
-    //             ];
-    //         });
-
-    //         return response()->json(['data' => $newsData]);
-    //     }
-
-    //     $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
-    //     return view('frontend.brand', compact('brands'));
-    // }
     public function brand(Request $request)
     {
         $news = News::query();
 
-        $news->when($request->has('brand') && !empty($request->brand), function ($query) use ($request) {
-            $query->whereHas('brand', function ($query) use ($request) {
-                $query->where('slug', $request->brand);
+        if ($request->ajax()) {
+            $news->when($request->has('brand') && !empty($request->brand), function ($query) use ($request) {
+                $query->whereHas('brand', function ($query) use ($request) {
+                    $query->where('slug', $request->brand);
+                });
             });
-        });
 
-        // Ambil data berita berdasarkan brand
-        $newsData = $news->activeEntries()->withLocalize()->get();
+            // Ambil data berita berdasarkan brand
+            $newsData = $news->activeEntries()->withLocalize()->get();
 
-        // Cek apakah hasil kosong, jika kosong kembalikan error
-        if ($newsData->isEmpty()) {
-            return response()->json(['error' => 'No news found for the brand: ' . $request->brand], 404);
+            // Cek apakah hasil kosong, jika kosong kembalikan error
+            if ($newsData->isEmpty()) {
+                return response()->json(['error' => 'No news found for the brand: ' . $request->brand], 404);
+            }
+
+            // Kembalikan respons JSON untuk permintaan AJAX
+            return response()->json([
+                'status' => 'success',
+                'data' => $newsData,
+            ]);
         }
-
-        // Kembalikan respons JSON untuk permintaan AJAX
-        return response()->json([
-            'status' => 'success',
-            'data' => $newsData,
-        ]);
+        $brands = Brand::where(['status' => 1, 'language' => getLangauge()])->get();
+        return view('frontend.brand', compact('brands'));
     }
 
 
