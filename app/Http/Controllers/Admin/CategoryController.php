@@ -117,9 +117,10 @@ class CategoryController extends Controller
                 $item->tags()->delete();
             }
             $category->delete();
-            return response(['status' => 'success', 'message' => __('admin.Deleted Successfully!')]);
+            return redirect()->route('admin.category.index')->with('status', 'Deleted successfully!');
         } catch (\Throwable $th) {
-            return response(['status' => 'error', 'message' => __('admin.Someting went wrong!')]);
+            return redirect()->route('admin.category.index')->with('status', 'Something went wrong!');
+
         }
     }
 }

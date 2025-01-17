@@ -141,9 +141,10 @@ class BrandController extends Controller
                 $item->tags()->delete();
             }
             $brand->delete();
-            return response(['status' => 'success', 'message' => __('admin.Deleted Successfully!')]);
+            return redirect()->route('admin.brand.index')->with('status', 'Deleted successfully!');
         } catch (\Throwable $th) {
-            return response(['status' => 'error', 'message' => __('admin.Someting went wrong!')]);
+            return redirect()->route('admin.brand.index')->with('status', 'Something went wrong!');
         }
+
     }
 }
