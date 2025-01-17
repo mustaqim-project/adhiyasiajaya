@@ -86,12 +86,11 @@ class OurCustomerController extends Controller
     {
         $customer = OurCustomer::findOrFail($id);
 
-        // Hapus file gambar terkait, jika ada
         $this->deleteOldFile($customer->image);
 
         // Hapus data pelanggan
         $customer->delete();
 
-        return redirect()->route('customers.index')->with('success', 'Customer deleted successfully!');
+        return redirect()->route('admin.customers.index')->with('success', 'Customer deleted successfully!');
     }
 }
