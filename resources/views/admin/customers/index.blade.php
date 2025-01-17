@@ -35,7 +35,7 @@
                                     <td>{{ $customer->name }}</td>
                                     <td>
                                         @if ($customer->image)
-                                            <img src="{{ asset('storage/'.$customer->image) }}" alt="{{ $customer->name }}" width="50">
+                                            <img src="{{ asset($customer->image) }}" width="100" alt="">
                                         @else
                                             {{ __('admin.No Image') }}
                                         @endif
