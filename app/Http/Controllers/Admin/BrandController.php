@@ -135,16 +135,31 @@ class BrandController extends Controller
     {
 
         try {
+            // Find the brand
             $brand = Brand::findOrFail($id);
+            dd("Brand found:", $brand);  // Debugging output
+
+            // Get related news for this brand
             $news = News::where('brand_id', $brand->id)->get();
+            dd("Found news items:", $news);  // Debugging output
+
+            // Delete tags related to news
             foreach ($news as $item) {
+                dd("Deleting tags for news item with ID:", $item->id);  // Debugging output
                 $item->tags()->delete();
             }
+
+            // Delete the brand
+            dd("Deleting brand with ID:", $brand->id);  // Debugging output
             $brand->delete();
+
+            // Success message
             return redirect()->route('admin.brand.index')->with('status', 'Deleted successfully!');
         } catch (\Throwable $th) {
+            dd("Error during deletion:", $th->getMessage());  // Debugging output
             return redirect()->route('admin.brand.index')->with('status', 'Something went wrong!');
         }
+
 
     }
 }
