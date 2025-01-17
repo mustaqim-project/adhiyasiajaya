@@ -11,7 +11,9 @@ class Brand extends Model
 
     // Nama tabel
     protected $table = 'brand';
-
+    protected $attributes = [
+        'show_at_nav' => 0,
+    ];
     // Kolom yang dapat diisi secara mass assignment
     protected $fillable = [
         'language',

@@ -48,7 +48,7 @@
                     </div>
 
                     <!-- Show at Nav Field -->
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="show_at_nav">{{ __('admin.Show at Nav') }}</label>
                         <select name="show_at_nav" id="show_at_nav" class="form-control" required>
                             <option value="0" {{ old('show_at_nav') == '0' ? 'selected' : '' }}>{{ __('admin.No') }}</option>
@@ -57,7 +57,7 @@
                         @error('show_at_nav')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
-                    </div>
+                    </div> --}}
 
                     <!-- Status Field -->
                     <div class="form-group">
