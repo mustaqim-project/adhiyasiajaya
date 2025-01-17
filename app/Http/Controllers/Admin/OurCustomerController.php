@@ -46,7 +46,7 @@ class OurCustomerController extends Controller
             'url' => $request->url,
         ]);
 
-        return redirect()->route('customers.index')->with('success', 'Customer added successfully!');
+        return redirect()->route('admin.customer.index')->with('success', 'Customer added successfully!');
     }
 
     // Method untuk menampilkan form edit pelanggan
