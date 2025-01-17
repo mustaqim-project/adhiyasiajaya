@@ -47,7 +47,7 @@ class BrandController extends Controller
 
     use FileUploadTrait;
 
-    public function store($request)
+    public function store(Request $request)
     {
         // Validate the request data first
         $request->validate([
@@ -96,7 +96,7 @@ class BrandController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update($request, string $id)
+    public function update(Request $request, string $id)
     {
         // Find the brand or fail if not found
         $brand = Brand::findOrFail($id);
