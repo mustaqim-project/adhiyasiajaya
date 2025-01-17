@@ -82,10 +82,19 @@ class OurCustomerController extends Controller
     }
 
     // Method untuk menghapus data pelanggan
+    private function deleteOldFile($filePath)
+    {
+        $fullPath = public_path($filePath);
+
+        if ($filePath && file_exists($fullPath)) {
+            unlink($fullPath); // Hapus file jika ada
+        }
+    }
     public function destroy($id)
     {
         $customer = OurCustomer::findOrFail($id);
 
+        // Hapus file lama
         $this->deleteOldFile($customer->image);
 
         // Hapus data pelanggan
