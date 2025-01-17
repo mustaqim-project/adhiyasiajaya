@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-            $languages = Language::where('status', 1)->get();
+        $languages = Language::where('status', 1)->get();
         return view('admin.category.index', compact('languages'));
     }
 
@@ -37,7 +37,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-            $languages = Language::where('status', 1)->get();
+        $languages = Language::where('status', 1)->get();
         return view('admin.category.create', compact('languages'));
     }
 
@@ -45,21 +45,23 @@ class CategoryController extends Controller
      * Store a newly created resource in storage.
      */
 
-     use FileUploadTrait;
+    use FileUploadTrait;
 
-     public function store(AdminCategoryCreateRequest $request)
-     {
-         $imagePath = $this->handleFileUpload($request, 'image');
+    public function store(AdminCategoryCreateRequest $request)
+    {
+        $imagePath = $this->handleFileUpload($request, 'image');
 
-         $category = new Category($request->only(['name', 'language', 'show_at_nav', 'status']));
-         $category->slug = \Str::slug($request->name);
-         $category->image = $imagePath; // Simpan path gambar
-         $category->save();
+        $category = new Category($request->only(['name', 'language', 'status']));
+        $category->slug = \Str::slug($request->name);
+        $category->image = $imagePath;
+        $category->show_at_nav = $request->input('show_at_nav', 0); // Default 0 jika tidak ada input
+        $category->save();
 
-         toast(__('admin.Created Successfully'), 'success')->width('350');
+        toast(__('admin.Created Successfully'), 'success')->width('350');
 
-         return redirect()->route('admin.category.index');
-     }
+        return redirect()->route('admin.category.index');
+    }
+
 
 
     /**
@@ -75,7 +77,7 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-            $languages = Language::where('status', 1)->get();
+        $languages = Language::where('status', 1)->get();
         $category = Category::findOrFail($id);
         return view('admin.category.edit', compact('languages', 'category'));
     }
@@ -87,14 +89,13 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
 
-
-
         $imagePath = $this->handleFileUpload($request, 'image');
         $category->update([
             'image' => $imagePath ?? $category->image,
         ]);
 
-        $category->fill($request->only(['name', 'language', 'show_at_nav', 'status']));
+        $category->fill($request->only(['name', 'language', 'status']));
+        $category->show_at_nav = $request->input('show_at_nav', 0); // Default 0 jika tidak ada input
         $category->slug = \Str::slug($request->name);
         $category->save();
 
@@ -109,16 +110,16 @@ class CategoryController extends Controller
     public function destroy(string $id)
     {
 
-       try {
+        try {
             $category = Category::findOrFail($id);
             $news = News::where('category_id', $category->id)->get();
-            foreach($news as $item){
+            foreach ($news as $item) {
                 $item->tags()->delete();
             }
             $category->delete();
             return response(['status' => 'success', 'message' => __('admin.Deleted Successfully!')]);
-       } catch (\Throwable $th) {
+        } catch (\Throwable $th) {
             return response(['status' => 'error', 'message' => __('admin.Someting went wrong!')]);
-       }
+        }
     }
 }

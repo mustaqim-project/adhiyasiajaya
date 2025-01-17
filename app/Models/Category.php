@@ -11,8 +11,9 @@ class Category extends Model
 
     // Nama tabel
     protected $table = 'categories';
-
-    // Kolom yang dapat diisi secara mass assignment
+    protected $attributes = [
+        'show_at_nav' => 0,
+    ];
     protected $fillable = [
         'language',
         'name',
