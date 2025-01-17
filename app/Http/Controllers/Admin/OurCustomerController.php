@@ -99,7 +99,6 @@ class OurCustomerController extends Controller
 
         // Hapus data pelanggan
         $customer->delete();
-
-        return redirect()->route('admin.customers.index')->with('success', 'Customer deleted successfully!');
+        return redirect()->route('admin.customer.index')->with('success', 'Customer added successfully!');
     }
 }
