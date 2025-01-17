@@ -3,12 +3,12 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>{{ __('admin.Categories') }}</h1>
+            <h1>{{ __('admin.Brands') }}</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>{{ __('admin.All Categories') }}</h4>
+                <h4>{{ __('admin.All Brands') }}</h4>
                 <div class="card-header-action">
                     <a href="{{ route('admin.brand.create') }}" class="btn btn-primary">
                         <i class="fas fa-plus"></i> {{ __('admin.Create new') }}

@@ -3,12 +3,12 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>{{ __('admin.Category') }}</h1>
+            <h1>{{ __('admin.Brand') }}</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>{{ __('admin.Create Category') }}</h4>
+                <h4>{{ __('admin.Create Brand') }}</h4>
 
             </div>
             <div class="card-body">
