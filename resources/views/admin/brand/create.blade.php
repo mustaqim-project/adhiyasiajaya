@@ -47,18 +47,6 @@
                         @enderror
                     </div>
 
-                    <!-- Show at Nav Field -->
-                    {{-- <div class="form-group">
-                        <label for="show_at_nav">{{ __('admin.Show at Nav') }}</label>
-                        <select name="show_at_nav" id="show_at_nav" class="form-control" required>
-                            <option value="0" {{ old('show_at_nav') == '0' ? 'selected' : '' }}>{{ __('admin.No') }}</option>
-                            <option value="1" {{ old('show_at_nav') == '1' ? 'selected' : '' }}>{{ __('admin.Yes') }}</option>
-                        </select>
-                        @error('show_at_nav')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div> --}}
-
                     <!-- Status Field -->
                     <div class="form-group">
                         <label for="status">{{ __('admin.Status') }}</label>
@@ -73,14 +61,11 @@
 
                     <!-- Image Upload Field (Optional) -->
                     <div class="form-group">
-                        <label for="image">{{ __('admin.Image') }}</label>
-                        <input
-                            type="file"
-                            name="image"
-                            id="image"
-                            class="form-control"
-                            accept="image/*"
-                        >
+                        <label for="">{{ __('admin.Image') }}</label>
+                        <div id="image-preview" class="image-preview">
+                            <label for="image-upload" id="image-label">{{ __('admin.Choose File') }}</label>
+                            <input type="file" name="image" id="image-upload">
+                        </div>
                         @error('image')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
