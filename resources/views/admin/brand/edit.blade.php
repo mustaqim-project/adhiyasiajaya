@@ -67,38 +67,25 @@
                         @enderror
                     </div>
 
-                    <!-- Image Upload (Optional) -->
-                    {{-- <div class="form-group">
-                        <label for="image">{{ __('admin.Image') }}</label>
-                        <input
-                            type="file"
-                            name="image"
-                            id="image"
-                            class="form-control"
-                            accept="image/*"
-                        >
-                        @if ($brand->image)
+                    <div class="form-group">
+                        <label for="image-upload">{{ __('admin.Image') }}</label>
+                        <div id="image-preview" class="image-preview">
+                            <label for="image-upload" id="image-label" class="btn btn-primary">
+                                {{ __('admin.Choose File') }}
+                            </label>
+                            <input type="file" name="image" id="image-upload" class="form-control-file" accept="image/*">
+                        </div>
+                        @if (!empty($brand->image))
                             <small class="form-text text-muted">
                                 {{ __('admin.Current Image') }}:
-                                <img src="{{ asset($brand->image) }}" alt="{{ $brand->name }}" width="100">
+                                <img src="{{ asset($brand->image) }}" alt="{{ $brand->name }}" width="100" class="img-thumbnail mt-2">
                             </small>
                         @endif
                         @error('image')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div> --}}
-
-
-                    <div class="form-group">
-                        <label for="">{{ __('admin.Image') }}</label>
-                        <div id="image-preview" class="image-preview">
-                            <label for="image-upload" id="image-label">{{ __('admin.Choose File') }}</label>
-                            <input type="file" name="image" id="image-upload">
-                        </div>
-                        @error('image')
-                            <p class="text-danger">{{ $message }}</p>
+                            <p class="text-danger mt-2">{{ $message }}</p>
                         @enderror
                     </div>
+
 
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">{{ __('admin.Update') }}</button>

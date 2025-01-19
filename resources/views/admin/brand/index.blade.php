@@ -25,12 +25,13 @@
                                 aria-selected="true">{{ $language->name }}</a>
                         </li>
                     @endforeach
-
                 </ul>
                 <div class="tab-content tab-bordered" id="myTab3Content">
                     @foreach ($languages as $language)
                         @php
-                            $brand = \App\Models\Brand::where('language', $language->lang)->orderByDesc('id')->get();
+                            $brand = \App\Models\Brand::where('language', $language->lang)
+                                ->orderByDesc('id')
+                                ->get();
                         @endphp
                         <div class="tab-pane fade show {{ $loop->index === 0 ? 'active' : '' }}"
                             id="home-{{ $language->lang }}" role="tabpanel" aria-labelledby="home-tab2">
@@ -63,29 +64,23 @@
                                                         @endif
 
                                                     </td>
-
-
                                                     <td>
-                                                        <a href="{{ route('admin.brand.edit', $category->id) }}" class="btn btn-primary"><i
-                                                                class="fas fa-edit"></i></a>
-                                                        <a href="{{ route('admin.brand.destroy', $category->id) }}" class="btn btn-danger delete-item"><i
+                                                        <a href="{{ route('admin.brand.edit', $category->id) }}"
+                                                            class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                        <a href="{{ route('admin.brand.destroy', $category->id) }}"
+                                                            class="btn btn-danger delete-item"><i
                                                                 class="fas fa-trash-alt"></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach
-
-
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
                 </div>
             </div>
-
-
         </div>
     </section>
 @endsection

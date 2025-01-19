@@ -33,15 +33,8 @@
                     <!-- Name Field -->
                     <div class="form-group">
                         <label for="name">{{ __('admin.Name') }}</label>
-                        <input
-                            name="name"
-                            type="text"
-                            class="form-control"
-                            id="name"
-                            placeholder="{{ __('admin.Enter brand name') }}"
-                            value="{{ old('name') }}"
-                            required
-                        >
+                        <input name="name" type="text" class="form-control" id="name"
+                            placeholder="{{ __('admin.Enter brand name') }}" value="{{ old('name') }}" required>
                         @error('name')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
@@ -51,8 +44,10 @@
                     <div class="form-group">
                         <label for="status">{{ __('admin.Status') }}</label>
                         <select name="status" id="status" class="form-control" required>
-                            <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>{{ __('admin.Active') }}</option>
-                            <option value="0" {{ old('status') == '0' ? 'selected' : '' }}>{{ __('admin.Inactive') }}</option>
+                            <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>{{ __('admin.Active') }}
+                            </option>
+                            <option value="0" {{ old('status') == '0' ? 'selected' : '' }}>{{ __('admin.Inactive') }}
+                            </option>
                         </select>
                         @error('status')
                             <p class="text-danger">{{ $message }}</p>

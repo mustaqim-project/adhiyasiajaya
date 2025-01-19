@@ -12,7 +12,8 @@
 
             </div>
             <div class="card-body">
-                <form action="{{ route('admin.category.update', $category->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.category.update', $category->id) }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -22,8 +23,7 @@
                         <select name="language" id="language-select" class="form-control select2" required>
                             <option value="" disabled>--{{ __('admin.Select') }}--</option>
                             @foreach ($languages as $lang)
-                                <option
-                                    value="{{ $lang->lang }}"
+                                <option value="{{ $lang->lang }}"
                                     {{ old('language', $category->language) === $lang->lang ? 'selected' : '' }}>
                                     {{ $lang->name }}
                                 </option>
@@ -37,15 +37,9 @@
                     <!-- Name Field -->
                     <div class="form-group">
                         <label for="name">{{ __('admin.Name') }}</label>
-                        <input
-                            name="name"
-                            type="text"
-                            class="form-control"
-                            id="name"
-                            placeholder="{{ __('admin.Enter category name') }}"
-                            value="{{ old('name', $category->name) }}"
-                            required
-                        >
+                        <input name="name" type="text" class="form-control" id="name"
+                            placeholder="{{ __('admin.Enter category name') }}" value="{{ old('name', $category->name) }}"
+                            required>
                         @error('name')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
@@ -86,13 +80,7 @@
                     <!-- Image Upload (Optional) -->
                     <div class="form-group">
                         <label for="image">{{ __('admin.Image') }}</label>
-                        <input
-                            type="file"
-                            name="image"
-                            id="image"
-                            class="form-control"
-                            accept="image/*"
-                        >
+                        <input type="file" name="image" id="image" class="form-control" accept="image/*">
                         @if ($category->image)
                             <small class="form-text text-muted">
                                 {{ __('admin.Current Image') }}:
