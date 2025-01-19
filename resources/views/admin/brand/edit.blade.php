@@ -22,8 +22,7 @@
                         <select name="language" id="language-select" class="form-control select2" required>
                             <option value="" disabled>--{{ __('admin.Select') }}--</option>
                             @foreach ($languages as $lang)
-                                <option
-                                    value="{{ $lang->lang }}"
+                                <option value="{{ $lang->lang }}"
                                     {{ old('language', $brand->language) === $lang->lang ? 'selected' : '' }}>
                                     {{ $lang->name }}
                                 </option>
@@ -37,15 +36,9 @@
                     <!-- Name Field -->
                     <div class="form-group">
                         <label for="name">{{ __('admin.Name') }}</label>
-                        <input
-                            name="name"
-                            type="text"
-                            class="form-control"
-                            id="name"
-                            placeholder="{{ __('admin.Enter brand name') }}"
-                            value="{{ old('name', $brand->name) }}"
-                            required
-                        >
+                        <input name="name" type="text" class="form-control" id="name"
+                            placeholder="{{ __('admin.Enter brand name') }}" value="{{ old('name', $brand->name) }}"
+                            required>
                         @error('name')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
@@ -69,18 +62,21 @@
 
                     <div class="form-group">
                         <label for="image-upload">{{ __('admin.Image') }}</label>
+                        @if (!empty($brand->image))
+                            <small class="form-text text-muted">
+                                {{ __('admin.Current Image') }}:
+                                <img src="{{ asset($brand->image) }}" alt="{{ $brand->name }}" width="100"
+                                    class="img-thumbnail mt-2">
+                            </small>
+                        @endif
                         <div id="image-preview" class="image-preview">
                             <label for="image-upload" id="image-label" class="btn btn-primary">
                                 {{ __('admin.Choose File') }}
                             </label>
-                            <input type="file" name="image" id="image-upload" class="form-control-file" accept="image/*">
+                            <input type="file" name="image" id="image-upload" class="form-control-file"
+                                accept="image/*">
                         </div>
-                        @if (!empty($brand->image))
-                            <small class="form-text text-muted">
-                                {{ __('admin.Current Image') }}:
-                                <img src="{{ asset($brand->image) }}" alt="{{ $brand->name }}" width="100" class="img-thumbnail mt-2">
-                            </small>
-                        @endif
+
                         @error('image')
                             <p class="text-danger mt-2">{{ $message }}</p>
                         @enderror
