@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-
     <title>
         @hasSection('title')
             @yield('title')
@@ -13,35 +11,32 @@
             {{ $settings['site_seo_title'] }}
         @endif
     </title>
-
     <meta name="description"
-        content="
-        @hasSection('meta_description')
-@yield('meta_description')
-@else
-{{ $settings['site_seo_description'] }}
-@endif" />
-    <meta name="keywords" content="{{ $settings['site_seo_keywords'] }}" />
+                content="
+                @hasSection('meta_description')
+        @yield('meta_description')
+        @else
+        {{ $settings['site_seo_description'] }}
+        @endif" />
+            <meta name="keywords" content="{{ $settings['site_seo_keywords'] }}" />
 
-    <meta name="og:title" content="@yield('meta_og_title')" />
-    <meta name="og:description" content="@yield('meta_og_description')" />
-    <meta name="og:image"
-        content="
-        @hasSection('meta_og_image')
-@yield('meta_og_image')
-@else
-{{ asset($settings['site_logo']) }}
-@endif" />
+            <meta name="og:title" content="@yield('meta_og_title')" />
+            <meta name="og:description" content="@yield('meta_og_description')" />
+            <meta name="og:image"
+                content="
+                @hasSection('meta_og_image')
+        @yield('meta_og_image')
+        @else
+        {{ asset($settings['site_logo']) }}
+        @endif" />
     @php
         $settingpage = \App\Models\SettingLandingPage::first();
     @endphp
     <meta name="twitter:title" content="@yield('meta_tw_title')" />
     <meta name="twitter:description" content="@yield('meta_tw_description')" />
     <meta name="twitter:image" content="@yield('meta_tw_image')" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
-
     <style>
         :root {
             --colorPrimary: {{ $settings['site_color'] }};
@@ -78,9 +73,7 @@
         .btn-our-product {
             display: inline-block;
             background-color: var(--color-primary);
-            /* Menggunakan variabel warna */
             color: #fff;
-            /* Warna teks */
             padding: 10px 20px;
             font-size: 16px;
             font-weight: bold;
@@ -89,23 +82,17 @@
             cursor: pointer;
             transition: all 0.3s ease-in-out;
             text-transform: uppercase;
-            /* Membuat teks huruf besar */
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            /* Tambahkan efek bayangan */
         }
 
         .btn-our-product:hover {
             background-color: var(--color-primary-hover);
-            /* Warna saat hover */
             transform: translateY(-5px);
-            /* Efek hover naik */
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-            /* Tambahkan bayangan lebih besar */
         }
 
         .btn-our-product:active {
             transform: translateY(0);
-            /* Efek saat tombol ditekan */
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -116,72 +103,52 @@
 
         .section-title h3 {
             font-size: 2rem;
-            /* Ukuran font modern */
             font-weight: 600;
-            /* Tebal yang menarik */
             color: #333;
-            /* Warna utama */
             margin: 0;
-            /* Menghapus margin default */
             padding: 0;
             transition: color 0.3s ease;
-            /* Animasi warna saat hover */
         }
 
         .section-title h3:hover {
             color: #007bff;
-            /* Warna teks berubah saat hover */
         }
 
         .section-title::after {
             content: '';
             position: absolute;
             bottom: -10px;
-            /* Posisi garis di bawah judul */
             left: 50%;
             transform: translateX(-50%);
             width: 50%;
-            /* Panjang garis */
             height: 4px;
-            /* Ketebalan garis */
             background: linear-gradient(90deg, #007bff, #00c6ff);
-            /* Warna gradient */
             border-radius: 2px;
-            /* Ujung garis melengkung */
             transition: width 0.4s ease, opacity 0.4s ease;
-            /* Animasi saat hover */
             opacity: 0.8;
         }
 
         .section-title:hover::after {
             width: 100%;
-            /* Memperpanjang garis saat hover */
             opacity: 1;
-            /* Meningkatkan opacity */
         }
 
         @media (max-width: 768px) {
             .section-title h3 {
                 font-size: 1.5rem;
-                /* Ukuran font lebih kecil untuk layar mobile */
             }
 
             .section-title::after {
                 bottom: -8px;
-                /* Penyesuaian jarak untuk layar kecil */
                 height: 3px;
-                /* Garis lebih tipis */
             }
         }
-    </style>
-    <style>
+
         .slider_area {
             position: relative;
             width: 100%;
             height: 100%;
-            /* Ensure it fits within its container */
             overflow: hidden;
-            /* Hide any area outside the image */
         }
 
         .swiper-container {
@@ -206,11 +173,9 @@
             max-width: 100%;
             height: auto;
             object-fit: cover;
-            /* Ensures the image fills the container without distorting */
         }
 
 
-        /* Swiper Navigation Styling */
         .swiper-button-next,
         .swiper-button-prev {
             color: #333;
@@ -221,7 +186,6 @@
             bottom: 10px !important;
         }
 
-        /* Responsive Styling */
         @media (max-width: 768px) {
             .swiper-slide img {
                 max-width: 100%;
@@ -231,45 +195,11 @@
             .swiper-button-next,
             .swiper-button-prev {
                 display: none;
-                /* Hide navigation for smaller screens */
             }
         }
-    </style>
 
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{{ asset('depan/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/magnific-popup.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('depan/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/gijgo.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('depan/css/slicknav.css') }}">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="{{ asset('depan/css/style.css') }}">
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <style>
         .brand-item {
             display: none;
-            /* Secara default, sembunyikan semua item */
         }
 
 
@@ -284,8 +214,27 @@
 
         }
     </style>
-
-
+    <link rel="stylesheet" href="{{ asset('depan/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/magnific-popup.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('depan/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/gijgo.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('depan/css/slicknav.css') }}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="{{ asset('depan/css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 
 <body>
@@ -311,17 +260,12 @@
         $about = \App\Models\About::where('language', getLangauge())->first();
     @endphp
 
-    <!-- Header -->
     @include('frontend.layouts.header')
 
-    <!-- Content -->
     @yield('content')
 
-    <!-- Footer -->
     @include('frontend.layouts.footer')
 
-    <!-- Modal -->
-    <!-- Search Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -344,19 +288,12 @@
             </div>
         </div>
     </div>
-
-
-    <!-- WhatsApp Floating Icon -->
     @if (!empty($contact->phone))
         <a href="https://wa.me/{{ $contact->phone }}?text=Halo%20Admin,%20nama%20saya%20[Nama%20Anda],%20dari%20perusahaan%20[Nama%20Perusahaan].%20Saya%20ingin%20membahas%20tentang%20[Kebutuhan%20Anda]."
             target="_blank" class="whatsapp-float" aria-label="WhatsApp">
             <img src="https://www.dayaesa.com/whatsapp.svg" alt="WhatsApp Icon">
         </a>
     @endif
-
-
-
-    <!-- JS here -->
     <script src="{{ asset('depan/js/vendor/modernizr-3.5.0.min.js') }}"></script>
     <script src="{{ asset('depan/js/vendor/jquery-1.12.4.min.js') }}"></script>
     <script src="{{ asset('depan/js/popper.min.js') }}"></script>
@@ -382,10 +319,7 @@
     <script src="{{ asset('depan/js/mail-script.js') }}"></script>
     <script src="{{ asset('depan/js/main.js') }}"></script>
     {{-- <script src="{{ asset('frontend/assets/js/index.bundle.js') }}"></script> --}}
-
     @include('sweetalert::alert')
-
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
@@ -402,7 +336,6 @@
         })
 
 
-        // Add csrf token in ajax request
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -410,7 +343,6 @@
         });
 
         $(document).ready(function() {
-            /** change language **/
             $('#site-language').on('change', function() {
                 let languageCode = $(this).val();
                 $.ajax({
@@ -430,7 +362,6 @@
                 })
             })
 
-            /** Subscribe Newsletter**/
             $('.newsletter_form').on('submit', function(e) {
                 e.preventDefault();
 
@@ -479,8 +410,6 @@
             })
         })
     </script>
-
-
 
     @stack('content')
 
