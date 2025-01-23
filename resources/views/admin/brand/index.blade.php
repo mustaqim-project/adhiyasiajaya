@@ -50,14 +50,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($brand as $category)
+                                            @foreach ($brand as $brands)
                                                 <tr>
-                                                    <td>{{ $category->id }}</td>
-                                                    <td>{{ $category->name }}</td>
-                                                    <td>{{ $category->language }}</td>
+                                                    <td>{{ $brands->id }}</td>
+                                                    <td>{{ $brands->name }}</td>
+                                                    <td>{{ $brands->language }}</td>
 
                                                     <td>
-                                                        @if ($category->status == 1)
+                                                        @if ($brands->status == 1)
                                                             <span class="badge badge-success">{{ __('admin.Yes') }}</span>
                                                         @else
                                                             <span class="badge badge-danger">{{ __('admin.No') }}</span>
@@ -65,9 +65,9 @@
 
                                                     </td>
                                                     <td>
-                                                        <a href="{{ route('admin.brand.edit', $category->id) }}"
+                                                        <a href="{{ route('admin.brand.edit', $brands->id) }}"
                                                             class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                                        <a href="{{ route('admin.brand.destroy', $category->id) }}"
+                                                        <a href="{{ route('admin.brand.destroy', $brands->id) }}"
                                                             class="btn btn-danger delete-item"><i
                                                                 class="fas fa-trash-alt"></i></a>
                                                     </td>

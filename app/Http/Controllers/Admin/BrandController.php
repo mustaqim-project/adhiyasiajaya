@@ -134,32 +134,32 @@ class BrandController extends Controller
     public function destroy(string $id)
     {
 
-        dd("Deleting brand with ID:", $id);
-        // try {
 
-        //     $brand = Brand::findOrFail($id);
-        //     dd("Brand found:", $brand);
+        try {
 
-
-        //     $news = News::where('brand_id', $brand->id)->get();
-        //     dd("Found news items:", $news);
+            $brand = Brand::findOrFail($id);
+            dd("Brand found:", $brand);
 
 
-        //     foreach ($news as $item) {
-        //         dd("Deleting tags for news item with ID:", $item->id);
-        //         $item->tags()->delete();
-        //     }
+            $news = News::where('brand_id', $brand->id)->get();
+            dd("Found news items:", $news);
 
 
-        //     dd("Deleting brand with ID:", $brand->id);
-        //     $brand->delete();
+            foreach ($news as $item) {
+                dd("Deleting tags for news item with ID:", $item->id);
+                $item->tags()->delete();
+            }
 
 
-        //     return redirect()->route('admin.brand.index')->with('status', 'Deleted successfully!');
-        // } catch (\Throwable $th) {
-        //     dd("Error during deletion:", $th->getMessage());
-        //     return redirect()->route('admin.brand.index')->with('status', 'Something went wrong!');
-        // }
+            dd("Deleting brand with ID:", $brand->id);
+            $brand->delete();
+
+
+            return redirect()->route('admin.brand.index')->with('status', 'Deleted successfully!');
+        } catch (\Throwable $th) {
+            dd("Error during deletion:", $th->getMessage());
+            return redirect()->route('admin.brand.index')->with('status', 'Something went wrong!');
+        }
 
 
     }
