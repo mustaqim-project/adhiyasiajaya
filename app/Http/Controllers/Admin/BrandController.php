@@ -11,6 +11,7 @@ use App\Models\News;
 use Faker\Provider\ar_EG\Company;
 use Illuminate\Http\Request;
 use App\Traits\FileUploadTrait;
+use Illuminate\Support\Facades\Log;
 
 class BrandController extends Controller
 {
