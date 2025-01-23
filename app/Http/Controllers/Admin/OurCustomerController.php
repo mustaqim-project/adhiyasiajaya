@@ -11,35 +11,35 @@ class OurCustomerController extends Controller
 {
     use FileUploadTrait;
 
-    // Method untuk menampilkan semua pelanggan
+
     public function index()
     {
         $customers = OurCustomer::all();
         return view('admin.customers.index', compact('customers'));
     }
 
-    // Method untuk menampilkan form tambah pelanggan
+
     public function create()
     {
         return view('admin.customers.create');
     }
 
-    // Method untuk menyimpan pelanggan baru
+
     public function store(Request $request)
     {
 
 
-        // Validasi input
+
         $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'url' => 'required|url',
         ]);
 
-        // Upload gambar menggunakan trait
+
         $imagePath = $this->handleFileUpload($request, 'image');
 
-        // Menyimpan data pelanggan baru
+
         OurCustomer::create([
             'name' => $request->name,
             'image' => $imagePath,
@@ -49,19 +49,19 @@ class OurCustomerController extends Controller
         return redirect()->route('admin.customer.index')->with('success', 'Customer added successfully!');
     }
 
-    // Method untuk menampilkan form edit pelanggan
+
     public function edit($id)
     {
         $customer = OurCustomer::findOrFail($id);
         return view('admin.customers.edit', compact('customer'));
     }
 
-    // Method untuk mengupdate data pelanggan
+
     public function update(Request $request, $id)
     {
         $customer = OurCustomer::findOrFail($id);
 
-        // Validasi input
+
         $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -73,7 +73,7 @@ class OurCustomerController extends Controller
         $customer->update([
             'image' => $imagePath ?? $customer->image,
         ]);
-        // Update data pelanggan
+
         $customer->name = $request->name;
         $customer->url = $request->url;
         $customer->save();
@@ -81,24 +81,41 @@ class OurCustomerController extends Controller
         return redirect()->route('customers.index')->with('success', 'Customer updated successfully!');
     }
 
-    // Method untuk menghapus data pelanggan
+
     private function deleteOldFile($filePath)
     {
         $fullPath = public_path($filePath);
 
         if ($filePath && file_exists($fullPath)) {
-            unlink($fullPath); // Hapus file jika ada
+            unlink($fullPath);
         }
     }
     public function destroy($id)
     {
-        $customer = OurCustomer::findOrFail($id);
+        try {
 
-        // Hapus file lama
-        $this->deleteOldFile($customer->image);
+            $customer = OurCustomer::findOrFail($id);
 
-        // Hapus data pelanggan
-        $customer->delete();
-        return redirect()->route('admin.customer.index')->with('success', 'Customer added successfully!');
+
+            if ($customer->image) {
+                $this->deleteOldFile($customer->image);
+            }
+
+
+            $customer->delete();
+
+
+            return redirect()->route('admin.customer.index')->with('success', 'Customer deleted successfully!');
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+
+            return redirect()->route('admin.customer.index')->with('error', 'Customer not found!');
+        } catch (\Exception $e) {
+
+            \Log::error("Failed to delete customer: " . $e->getMessage());
+
+
+            return redirect()->route('admin.customer.index')->with('error', 'An error occurred while deleting the customer.');
+        }
     }
+
 }

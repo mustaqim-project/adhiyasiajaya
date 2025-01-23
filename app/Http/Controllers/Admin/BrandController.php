@@ -78,10 +78,7 @@ class BrandController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-
-    }
+    public function show(string $id) {}
 
     /**
      * Show the form for editing the specified resource.
@@ -133,34 +130,25 @@ class BrandController extends Controller
      */
     public function destroy(string $id)
     {
-
-
         try {
 
             $brand = Brand::findOrFail($id);
-            dd("Brand found:", $brand);
 
 
-            $news = News::where('brand_id', $brand->id)->get();
-            dd("Found news items:", $news);
-
-
-            foreach ($news as $item) {
-                dd("Deleting tags for news item with ID:", $item->id);
-                $item->tags()->delete();
-            }
-
-
-            dd("Deleting brand with ID:", $brand->id);
             $brand->delete();
 
 
-            return redirect()->route('admin.brand.index')->with('status', 'Deleted successfully!');
-        } catch (\Throwable $th) {
-            dd("Error during deletion:", $th->getMessage());
-            return redirect()->route('admin.brand.index')->with('status', 'Something went wrong!');
+            return redirect()->route('admin.brand.index')->with('status', 'Brand deleted successfully!');
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+
+            return redirect()->route('admin.brand.index')->with('error', 'Brand not found!');
+        } catch (\Exception $e) {
+
+            \Log::error("Failed to delete brand: " . $e->getMessage());
+
+
+            return redirect()->route('admin.brand.index')->with('error', 'Something went wrong while deleting the brand.');
         }
-
-
     }
+
 }
