@@ -67,9 +67,14 @@
                                                     <td>
                                                         <a href="{{ route('admin.brand.edit', $brands->id) }}"
                                                             class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                                        <a href="{{ route('admin.brand.destroy', $brands->id) }}"
-                                                            class="btn btn-danger delete-item"><i
-                                                                class="fas fa-trash-alt"></i></a>
+                                                            <form action="{{ route('admin.brand.destroy', $brands->id) }}" method="POST" style="display:inline;">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="btn btn-danger delete-item">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </button>
+                                                            </form>
+
                                                     </td>
                                                 </tr>
                                             @endforeach
