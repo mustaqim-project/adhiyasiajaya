@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('kebijakan', function (Blueprint $table) {
             $table->id();
             $table->text('content');
-            $table->string('language');
 
             $table->timestamps();
         });

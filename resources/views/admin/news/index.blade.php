@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>{{ __('admin.News') }}</h1>
+            <h1>{{ __('admin.Product') }}</h1>
         </div>
 
         <div class="card card-primary">
