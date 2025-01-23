@@ -30,21 +30,27 @@
 
             @if (canAccess(['category index', 'category create', 'category udpate', 'category delete']))
                 <li class="{{ setSidebarActive(['admin.category.*']) }}"><a class="nav-link"
-                        href="{{ route('admin.category.index') }}"><i class="fas fa-list"></i>
+                        href="{{ route('admin.category.index') }}"><i class="fas fa-layer-group"></i>
+
                         <span>{{ __('admin.Category Product') }}</span></a></li>
             @endif
 
             @if (canAccess(['category index', 'category create', 'category udpate', 'category delete']))
                 <li class="{{ setSidebarActive(['admin.brand.*']) }}"><a class="nav-link"
-                        href="{{ route('admin.brand.index') }}"><i class="fas fa-list"></i>
+                        href="{{ route('admin.brand.index') }}"><i class="fas fa-trademark"></i>
+
                         <span>{{ __('admin.Brand Product') }}</span></a></li>
             @endif
 
             @if (canAccess(['category index', 'category create', 'category udpate', 'category delete']))
-                <li class="{{ setSidebarActive(['admin.customer.*']) }}"><a class="nav-link"
-                        href="{{ route('admin.customer.index') }}"><i class="fas fa-list"></i>
-                        <span>{{ __('admin.Our Customer') }}</span></a></li>
+                <li class="{{ setSidebarActive(['admin.customer.*']) }}">
+                    <a class="nav-link" href="{{ route('admin.customer.index') }}">
+                        <i class="fas fa-user-friends"></i>
+                        <span>{{ __('admin.Our Customer') }}</span>
+                    </a>
+                </li>
             @endif
+
 
             @if (canAccess(['news index', 'image index']))
                 <li class="dropdown {{ setSidebarActive(['admin.news.*', 'admin.pending.news', 'admin.images.*']) }}">
