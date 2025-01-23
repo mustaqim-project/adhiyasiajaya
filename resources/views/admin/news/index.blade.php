@@ -8,7 +8,7 @@
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>{{ __('admin.All News') }}</h4>
+                <h4>{{ __('admin.All Product') }}</h4>
                 <div class="card-header-action">
                     <a href="{{ route('admin.news.create') }}" class="btn btn-primary">
                         <i class="fas fa-plus"></i> {{ __('admin.Create new') }}
