@@ -129,12 +129,21 @@ class BrandController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
     public function destroy(string $id)
     {
+        // Coba untuk menemukan data
+        $brand = Brand::findOrFail($id);
 
-        dd($id);
-        $brand = brand::findOrFail($id);
+        // Log sebelum data dihapus
+        Log::info("Menghapus brand dengan ID: {$id}, Nama: {$brand->name}");
+
+        // Hapus data
         $brand->delete();
+
+        // Log setelah penghapusan berhasil
+        Log::info("Brand dengan ID: {$id} berhasil dihapus.");
+
         toast(__('admin.Delete Successfully'), 'success')->width('350');
 
         return redirect()->route('admin.brand.index');
