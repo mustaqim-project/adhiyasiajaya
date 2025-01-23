@@ -3,12 +3,12 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>{{ __('admin.News') }}</h1>
+            <h1>{{ __('admin.Product') }}</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>{{ __('admin.Create News') }}</h4>
+                <h4>{{ __('admin.Create Product') }}</h4>
 
             </div>
             <div class="card-body">
@@ -116,7 +116,7 @@
                         {{-- @if (canAccess(['news status', 'news all-access']))
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <div class="control-label">{{ __('admin.Is Breaking News') }}</div>
+                                    <div class="control-label">{{ __('admin.Is Breaking Product') }}</div>
                                     <label class="custom-switch mt-2">
                                         <input value="1" type="checkbox" name="is_breaking_news"
                                             class="custom-switch-input">
