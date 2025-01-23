@@ -108,7 +108,7 @@
                         @endif
                     </a></li>
             @endif
-            @if (canAccess(['home section index']))
+            {{-- @if (canAccess(['home section index']))
                 <li class="{{ setSidebarActive(['admin.home-section-setting.*']) }}"><a class="nav-link"
                         href="{{ route('admin.home-section-setting.index') }}"><i class="fas fa-wrench"></i>
                         <span>{{ __('admin.Home Section Setting') }}</span></a></li>
@@ -118,7 +118,7 @@
                 <li class="{{ setSidebarActive(['admin.ad.*']) }}"><a class="nav-link"
                         href="{{ route('admin.ad.index') }}"><i class="fas fa-ad"></i>
                         <span>{{ __('admin.Advertisement') }}</span></a></li>
-            @endif
+            @endif --}}
 
 
             @if (canAccess(['subscribers index']))
