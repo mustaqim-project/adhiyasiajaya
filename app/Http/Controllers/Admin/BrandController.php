@@ -133,20 +133,22 @@ class BrandController extends Controller
 
     public function destroy(string $id)
     {
-        // Coba untuk menemukan data
-        $brand = Brand::findOrFail($id);
+        Log::debug("Metode destroy dipanggil dengan ID: {$id}");
 
-        // Log sebelum data dihapus
-        Log::info("Menghapus brand dengan ID: {$id}, Nama: {$brand->name}");
+        // // Coba untuk menemukan data
+        // $brand = Brand::findOrFail($id);
 
-        // Hapus data
-        $brand->delete();
+        // // Log sebelum data dihapus
+        // Log::info("Menghapus brand dengan ID: {$id}, Nama: {$brand->name}");
 
-        // Log setelah penghapusan berhasil
-        Log::info("Brand dengan ID: {$id} berhasil dihapus.");
+        // // Hapus data
+        // $brand->delete();
 
-        toast(__('admin.Delete Successfully'), 'success')->width('350');
+        // // Log setelah penghapusan berhasil
+        // Log::info("Brand dengan ID: {$id} berhasil dihapus.");
 
-        return redirect()->route('admin.brand.index');
+        // toast(__('admin.Delete Successfully'), 'success')->width('350');
+
+        // return redirect()->route('admin.brand.index');
     }
 }
