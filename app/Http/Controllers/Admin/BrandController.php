@@ -125,30 +125,25 @@ class BrandController extends Controller
     }
 
 
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
         try {
-
             $brand = Brand::findOrFail($id);
-
-
+            if ($brand->image) {
+                $this->deleteOldFile($brand->image);
+            }
             $brand->delete();
-
-
-            return redirect()->route('admin.brand.index')->with('status', 'Brand deleted successfully!');
+            return redirect()->route('admin.brand.index')->with('success', 'Customer deleted successfully!');
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
 
-            return redirect()->route('admin.brand.index')->with('error', 'Brand not found!');
+            return redirect()->route('admin.brand.index')->with('error', 'Customer not found!');
         } catch (\Exception $e) {
-
             \Log::error("Failed to delete brand: " . $e->getMessage());
-
-
-            return redirect()->route('admin.brand.index')->with('error', 'Something went wrong while deleting the brand.');
+            return redirect()->route('admin.brand.index')->with('error', 'An error occurred while deleting the customer.');
         }
     }
-
 }
