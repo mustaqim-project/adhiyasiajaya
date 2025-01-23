@@ -132,8 +132,9 @@ class BrandController extends Controller
     public function destroy(string $id)
     {
         $brand = brand::findOrFail($id);
-        $news->delete();
+        $brand->delete();
+        toast(__('admin.Delete Successfully'), 'success')->width('350');
 
-        return response(['status' => 'success', 'message' => __('admin.Deleted Successfully!')]);
+        return redirect()->route('admin.brand.index');
     }
 }
