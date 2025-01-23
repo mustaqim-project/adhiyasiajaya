@@ -49,27 +49,27 @@ class BrandController extends Controller
 
     public function store(Request $request)
     {
-        // Validate the request data first
+
         $request->validate([
             'name' => 'required|string|max:255',
-            'language' => 'required|string|size:2', // Assuming language is a 2-character code like 'en'
-            'status' => 'required|boolean', // Assuming status is a boolean (0 or 1)
-            'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048', // Validate image type and size
+            'language' => 'required|string|size:2',
+            'status' => 'required|boolean',
+            'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
-        // Handle the image upload and get the file path
+
         $imagePath = $this->handleFileUpload($request, 'image');
 
-        // Create a new brand record
+
         $brand = new Brand($request->only(['name', 'language', 'status']));
-        $brand->slug = \Str::slug($request->name); // Generate the slug from the brand name
-        $brand->image = $imagePath; // Store the image path
+        $brand->slug = \Str::slug($request->name);
+        $brand->image = $imagePath;
         $brand->save();
 
-        // Show a success message
+
         toast(__('admin.Created Successfully'), 'success')->width('350');
 
-        // Redirect to the brand index page
+
         return redirect()->route('admin.brand.index');
     }
 
@@ -80,7 +80,7 @@ class BrandController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -98,32 +98,32 @@ class BrandController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // Find the brand or fail if not found
+
         $brand = Brand::findOrFail($id);
 
-        // Validate the incoming request
+
         $request->validate([
             'name' => 'required|string|max:255',
-            'language' => 'required|string|size:2', // Assuming language is a 2-character code like 'en'
-            'status' => 'required|boolean', // Assuming status is a boolean (0 or 1)
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048', // Image is now optional on update
+            'language' => 'required|string|size:2',
+            'status' => 'required|boolean',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
-        // If an image is uploaded, handle the file upload and get the file path
+
         if ($request->hasFile('image')) {
             $imagePath = $this->handleFileUpload($request, 'image');
-            $brand->image = $imagePath; // Update the image path
+            $brand->image = $imagePath;
         }
 
-        // Update the brand's other fields
+
         $brand->fill($request->only(['name', 'language', 'status']));
-        $brand->slug = \Str::slug($request->name); // Generate the slug from the name
+        $brand->slug = \Str::slug($request->name);
         $brand->save();
 
-        // Show a success message
+
         toast(__('admin.Update Successfully'), 'success')->width('350');
 
-        // Redirect to the brand index page
+
         return redirect()->route('admin.brand.index');
     }
 
@@ -134,31 +134,32 @@ class BrandController extends Controller
     public function destroy(string $id)
     {
 
-        try {
-            // Find the brand
-            $brand = Brand::findOrFail($id);
-            dd("Brand found:", $brand);  // Debugging output
+        dd("Deleting brand with ID:", $id);
+        // try {
 
-            // Get related news for this brand
-            $news = News::where('brand_id', $brand->id)->get();
-            dd("Found news items:", $news);  // Debugging output
+        //     $brand = Brand::findOrFail($id);
+        //     dd("Brand found:", $brand);
 
-            // Delete tags related to news
-            foreach ($news as $item) {
-                dd("Deleting tags for news item with ID:", $item->id);  // Debugging output
-                $item->tags()->delete();
-            }
 
-            // Delete the brand
-            dd("Deleting brand with ID:", $brand->id);  // Debugging output
-            $brand->delete();
+        //     $news = News::where('brand_id', $brand->id)->get();
+        //     dd("Found news items:", $news);
 
-            // Success message
-            return redirect()->route('admin.brand.index')->with('status', 'Deleted successfully!');
-        } catch (\Throwable $th) {
-            dd("Error during deletion:", $th->getMessage());  // Debugging output
-            return redirect()->route('admin.brand.index')->with('status', 'Something went wrong!');
-        }
+
+        //     foreach ($news as $item) {
+        //         dd("Deleting tags for news item with ID:", $item->id);
+        //         $item->tags()->delete();
+        //     }
+
+
+        //     dd("Deleting brand with ID:", $brand->id);
+        //     $brand->delete();
+
+
+        //     return redirect()->route('admin.brand.index')->with('status', 'Deleted successfully!');
+        // } catch (\Throwable $th) {
+        //     dd("Error during deletion:", $th->getMessage());
+        //     return redirect()->route('admin.brand.index')->with('status', 'Something went wrong!');
+        // }
 
 
     }
