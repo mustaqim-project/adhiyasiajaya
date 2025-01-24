@@ -61,7 +61,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin']],
 
     /** Category Route */
     Route::resource('category', CategoryController::class);
-    Route::resource('brand', BrandController::class);
+    Route::get('brand', [BrandController::class, 'index'])->name('brand.index');
+    Route::get('brand/create', [BrandController::class, 'create'])->name('brand.create');
+    Route::post('brand', [BrandController::class, 'store'])->name('brand.store');
+    Route::get('brand/{id}/edit', [BrandController::class, 'edit'])->name('brand.edit');
+    Route::put('brand/{id}', [BrandController::class, 'update'])->name('brand.update');
+    Route::delete('brand/{id}', [BrandController::class, 'destroy'])->name('brand.destroy');
+    Route::get('brand/{id}', [BrandController::class, 'show'])->name('brand.show');
     Route::resource('customer', OurCustomerController::class);
     Route::resource('katalog', KatalogController::class);
 
