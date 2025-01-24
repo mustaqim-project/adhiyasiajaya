@@ -94,29 +94,61 @@ class BrandController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    /**
- * Remove the specified resource from storage.
- */
-public function destroy(string $id)
-{
-    try {
+    public function update(Request $request, string $id)
+    {
+
         $brand = Brand::findOrFail($id);
 
 
-        $brand->delete();
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'language' => 'required|string|size:2',
+            'status' => 'required|boolean',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
+        ]);
 
-        toast(__('admin.Deleted Successfully'), 'success')->width('350');
-    } catch (\Exception $e) {
-        // Jika ada kesalahan, log error dan tampilkan pesan gagal
-        Log::error('Brand deletion failed: ' . $e->getMessage());
-        toast(__('admin.Failed to Delete'), 'error')->width('350');
+
+        if ($request->hasFile('image')) {
+            $imagePath = $this->handleFileUpload($request, 'image');
+            $brand->image = $imagePath;
+        }
+
+
+        $brand->fill($request->only(['name', 'language', 'status']));
+        $brand->slug = \Str::slug($request->name);
+        $brand->save();
+
+
+        toast(__('admin.Update Successfully'), 'success')->width('350');
+
+
+        return redirect()->route('admin.brand.index');
     }
 
-    // Redirect kembali ke halaman index
-    return redirect()->route('admin.brand.index');
-}
 
 
+    /**
+     * Remove the specified resource from storage.
+     */
+
+     public function destroy(string $id)
+     {
+         try {
+             $brand = Brand::findOrFail($id);
+
+
+             $brand->delete();
+
+             toast(__('admin.Deleted Successfully'), 'success')->width('350');
+         } catch (\Exception $e) {
+             // Jika ada kesalahan, log error dan tampilkan pesan gagal
+             Log::error('Brand deletion failed: ' . $e->getMessage());
+             toast(__('admin.Failed to Delete'), 'error')->width('350');
+         }
+
+         // Redirect kembali ke halaman index
+         return redirect()->route('admin.brand.index');
+     }
 
 
 }
