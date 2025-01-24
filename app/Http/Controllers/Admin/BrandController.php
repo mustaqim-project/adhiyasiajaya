@@ -100,18 +100,11 @@ class BrandController extends Controller
 public function destroy(string $id)
 {
     try {
-        // Cari brand berdasarkan ID
         $brand = Brand::findOrFail($id);
 
-        // Hapus file gambar jika ada
-        if ($brand->image && file_exists(public_path('upload/' . $brand->image))) {
-            unlink(public_path('upload/' . $brand->image));
-        }
 
-        // Hapus brand dari database
         $brand->delete();
 
-        // Tampilkan pesan sukses
         toast(__('admin.Deleted Successfully'), 'success')->width('350');
     } catch (\Exception $e) {
         // Jika ada kesalahan, log error dan tampilkan pesan gagal
