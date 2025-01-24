@@ -61,10 +61,10 @@
                             <a class="nav-link"
                                 href="{{ route('admin.news.index') }}">{{ __('admin.All Product') }}</a>
                         </li>
-                        <li class="{{ setSidebarActive(['admin.news.create']) }}">
+                        {{-- <li class="{{ setSidebarActive(['admin.news.create']) }}">
                             <a class="nav-link"
                                 href="{{ route('admin.news.create') }}">{{ __('admin.Create Product') }}</a>
-                        </li>
+                        </li> --}}
                         <li class="{{ setSidebarActive(['admin.katalog.index']) }}">
                             <a class="nav-link"
                                 href="{{ route('admin.katalog.index') }}">{{ __('admin.All Catalog') }}</a>
