@@ -94,61 +94,36 @@ class BrandController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-
+    /**
+ * Remove the specified resource from storage.
+ */
+public function destroy(string $id)
+{
+    try {
+        // Cari brand berdasarkan ID
         $brand = Brand::findOrFail($id);
 
-
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'language' => 'required|string|size:2',
-            'status' => 'required|boolean',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
-        ]);
-
-
-        if ($request->hasFile('image')) {
-            $imagePath = $this->handleFileUpload($request, 'image');
-            $brand->image = $imagePath;
+        // Hapus file gambar jika ada
+        if ($brand->image && file_exists(public_path('upload/' . $brand->image))) {
+            unlink(public_path('upload/' . $brand->image));
         }
 
+        // Hapus brand dari database
+        $brand->delete();
 
-        $brand->fill($request->only(['name', 'language', 'status']));
-        $brand->slug = \Str::slug($request->name);
-        $brand->save();
-
-
-        toast(__('admin.Update Successfully'), 'success')->width('350');
-
-
-        return redirect()->route('admin.brand.index');
+        // Tampilkan pesan sukses
+        toast(__('admin.Deleted Successfully'), 'success')->width('350');
+    } catch (\Exception $e) {
+        // Jika ada kesalahan, log error dan tampilkan pesan gagal
+        Log::error('Brand deletion failed: ' . $e->getMessage());
+        toast(__('admin.Failed to Delete'), 'error')->width('350');
     }
 
+    // Redirect kembali ke halaman index
+    return redirect()->route('admin.brand.index');
+}
 
 
-    /**
-     * Remove the specified resource from storage.
-     */
 
-    public function destroy(string $id)
-    {
-        Log::debug("Metode destroy dipanggil dengan ID: {$id}");
 
-        // // Coba untuk menemukan data
-        // $brand = Brand::findOrFail($id);
-
-        // // Log sebelum data dihapus
-        // Log::info("Menghapus brand dengan ID: {$id}, Nama: {$brand->name}");
-
-        // // Hapus data
-        // $brand->delete();
-
-        // // Log setelah penghapusan berhasil
-        // Log::info("Brand dengan ID: {$id} berhasil dihapus.");
-
-        // toast(__('admin.Delete Successfully'), 'success')->width('350');
-
-        // return redirect()->route('admin.brand.index');
-    }
 }
