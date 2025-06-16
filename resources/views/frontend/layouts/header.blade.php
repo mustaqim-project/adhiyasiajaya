@@ -2,15 +2,17 @@
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-xl">AAJ</span>
+                <a href="/">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">AAJ</span>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold primary-blue" style="margin-bottom: 0;">PT ADHYA ASIA JAYA</h1>
+                            <p class="text-sm text-gray-600" style="margin: 0;">We Serve You Better</p>
+                        </div>
                     </div>
-                    <div>
-                        <h1 class="text-xl font-bold primary-blue" style="margin-bottom: 0;">PT ADHYA ASIA JAYA</h1>
-                        <p class="text-sm text-gray-600" style="margin: 0;">We Serve You Better</p>
-                    </div>
-                </div>
+                </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="desktop-menu">
@@ -33,7 +35,7 @@
         </div>
     </header>
 
-     <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu lg:hidden" id="mobile-menu">
         <div class="p-4">
             <button class="absolute top-4 right-4 text-gray-700" id="close-mobile-menu">
