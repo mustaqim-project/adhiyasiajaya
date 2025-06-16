@@ -66,7 +66,7 @@
             </div>
 
             <!-- Floating Statistics -->
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto floating-animation">
+            {{-- <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto floating-animation">
                 <div class="text-center">
                     <div class="text-3xl md:text-4xl font-bold text-accent">18+</div>
                     <div class="text-sm md:text-base opacity-80">Years Experience</div>
@@ -83,7 +83,7 @@
                     <div class="text-3xl md:text-4xl font-bold text-accent">3</div>
                     <div class="text-sm md:text-base opacity-80">Cities Coverage</div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
