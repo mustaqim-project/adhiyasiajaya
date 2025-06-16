@@ -136,17 +136,18 @@
             </div>
 
             <!-- Category Tabs -->
-            <div class="flex justify-center mb-12 fade-in">
-                <div class="bg-gray-100 rounded-full p-2 inline-flex">
-                    @foreach ($categories as $index => $category)
-                        <button
-                            class="tab-btn px-6 py-3 rounded-full font-semibold transition-all duration-300 {{ $index == 0 ? 'bg-primary text-white tab-active' : 'text-gray-700 tab-inactive' }}"
-                            data-tab="tab-{{ $category->id }}">
-                            {{ $category->name }}
-                        </button>
-                    @endforeach
-                </div>
-            </div>
+           <div class="flex justify-center mb-12 fade-in">
+    <div class="bg-gray-100 rounded-full p-2 inline-flex flex-wrap justify-center gap-2">
+        @foreach ($categories as $index => $category)
+            <button
+                class="tab-btn px-4 py-2 text-sm sm:px-5 sm:py-2.5 sm:text-base lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition-all duration-300 {{ $index == 0 ? 'bg-primary text-white tab-active' : 'text-gray-700 tab-inactive' }}"
+                data-tab="tab-{{ $category->id }}">
+                {{ $category->name }}
+            </button>
+        @endforeach
+    </div>
+</div>
+
 
 
 
