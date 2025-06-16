@@ -464,65 +464,48 @@
 
                 <!-- Contact Form -->
                 <div class="fade-in">
-                   <form id="contact-form" action="{{ route('contact.submit') }}" method="POST" class="contact-form">
-    @csrf
+                    <form id="contact-form" action="{{ route('contact.submit') }}" method="POST" class="contact-form">
+                        @csrf
 
-    <h3 class="text-2xl font-bold text-primary mb-6">Submit Your Inquiry</h3>
+                        <h3 class="text-2xl font-bold text-primary mb-6">Submit Your Inquiry</h3>
 
-    <div class="mb-4">
-        <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">
-            Full Name *
-        </label>
-        <input
-            type="text"
-            id="name"
-            name="name"
-            class="input-field"
-            placeholder="Enter your full name"
-            value="{{ old('name') }}"
-            required>
-        @error('name')
-            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-        @enderror
-    </div>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">
+                                Full Name *
+                            </label>
+                            <input type="text" id="name" name="name" class="input-field"
+                                placeholder="Enter your full name" value="{{ old('name') }}" required>
+                            @error('name')
+                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
 
-    <div class="mb-4">
-        <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">
-            Email Address *
-        </label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            class="input-field"
-            placeholder="Enter your email address"
-            value="{{ old('email') }}"
-            required>
-        @error('email')
-            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-        @enderror
-    </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">
+                                Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" class="input-field"
+                                placeholder="Enter your email address" value="{{ old('email') }}" required>
+                            @error('email')
+                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
 
-    <div class="mb-6">
-        <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">
-            Message *
-        </label>
-        <textarea
-            id="message"
-            name="message"
-            rows="4"
-            class="input-field"
-            placeholder="Tell us about your equipment needs, specifications, and any specific requirements"
-            required>{{ old('message') }}</textarea>
-        @error('message')
-            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-        @enderror
-    </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">
+                                Message *
+                            </label>
+                            <textarea id="message" name="message" rows="4" class="input-field"
+                                placeholder="Tell us about your equipment needs, specifications, and any specific requirements" required>{{ old('message') }}</textarea>
+                            @error('message')
+                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
 
-    <button type="submit" class="w-full btn-primary text-lg py-4">
-        <i class="fas fa-paper-plane mr-2"></i>Submit Inquiry
-    </button>
-</form>
+                        <button type="submit" class="w-full btn-primary text-lg py-4">
+                            <i class="fas fa-paper-plane mr-2"></i>Submit Inquiry
+                        </button>
+                    </form>
 
                 </div>
             </div>
