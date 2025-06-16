@@ -20,7 +20,7 @@
                         <li><a href="/product" class="nav-link">Products</a></li>
                         {{-- <li><a href="/customer" class="nav-link">Customers</a></li> --}}
                         {{-- <li><a href="blog.html" class="nav-link">Blog</a></li> --}}
-                        {{-- <li><a href="contact.html" class="nav-link">Contact</a></li> --}}
+                        <li><a href="/contact" class="nav-link">Contact</a></li>
                         <li><a href="/contact" class="btn-primary">Get a Quote</a></li>
                     </ul>
                 </nav>
@@ -40,12 +40,11 @@
                 <i class="fas fa-times text-xl"></i>
             </button>
             <div class="mt-12 space-y-2">
-                <a href="#home" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Home</a>
-                <a href="#about" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">About Us</a>
-                <a href="#products" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Products</a>
-                <a href="#customers" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Customers</a>
-                <a href="#contact" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Contact</a>
-                <a href="#quote" class="block px-4 py-3 text-lg bg-accent-orange text-white rounded-md mt-4">Get a
+                <a href="/" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Home</a>
+                <a href="/about" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">About Us</a>
+                <a href="/product" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Products</a>
+                <a href="/contact" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Contact</a>
+                <a href="/contact" class="block px-4 py-3 text-lg bg-accent-orange text-white rounded-md mt-4">Get a
                     Quote</a>
             </div>
         </div>
