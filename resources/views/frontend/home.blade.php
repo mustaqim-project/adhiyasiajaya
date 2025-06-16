@@ -474,15 +474,6 @@
                             <input class="input-field" id="name" type="text" placeholder="Enter your full name"
                                 required>
                         </div>
-
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="company">
-                                Company Name *
-                            </label>
-                            <input class="input-field" id="company" type="text"
-                                placeholder="Enter your company name" required>
-                        </div>
-
                         <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">
                                 Email Address *
