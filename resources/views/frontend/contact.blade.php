@@ -1330,9 +1330,8 @@
                     <div class="info-item">
                         <div class="info-icon"><i class="fas fa-phone"></i></div>
                         <div class="info-content">
-                            <h3>Phone & WhatsApp</h3>
+                            <h3>Phone</h3>
                             <p>Phone: <a href="tel:{{ @$contact->phone ?? '+62218901234' }}">{{ @$contact->phone ?? '+62 21 8901 234' }}</a><br>
-                               WhatsApp: <a href="https://wa.me/{{ @$contact->whatsapp ?? '6281234567890' }}" target="_blank">{{ @$contact->whatsapp ?? '+62 812 3456 7890' }}</a>
                             </p>
                         </div>
                     </div>
