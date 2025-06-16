@@ -1,78 +1,66 @@
-
-<footer class="footer" style="color: black;">
-    <div class="footer_top">
-        <div class="container">
-            <div class="row">
-                <!-- Column 1: Logo and Description -->
-                <div class="col-xl-6 col-md-12 col-lg-6">
-                    <div class="footer_widget">
-                        <figure class="mb-3">
-                            <img src="{{ asset(@$footerInfo->logo ?? 'default-logo.png') }}" alt="Logo Footer"
-                                class="img-fluid logo-footer" width="500px">
-                        </figure>
-                        <p style="font-size:1em;">{{ @$footerInfo->description ?? 'Default footer description.' }}</p>
-                        <div class="social__media mt-4">
-                            <ul>
-                                @foreach ($socialLinks as $link)
-                                    <li>
-                                        <a href="{{ $link->url }}" class="social__link">
-                                            <i class="{{ $link->icon }}"></i>
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
+ <!-- Footer -->
+    <footer class="footer-section no-print">
+        <div class="container mx-auto px-4">
+            <div class="footer-content">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">AAJ</span>
+                        </div>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 0;">PT ADHYA ASIA JAYA</h4>
+                            <p class="text-sm text-gray-300">We Serve You Better</p>
                         </div>
                     </div>
+                    <p class="text-gray-300 mb-4">Professional supplier of oilfield equipment and pulp & paper
+                        machinery
+                        with 18+ years of experience and API certification.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="social-btn social-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn social-twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
 
-                <!-- Column 2: Grid One Links -->
-                <div class="col-xl-2 col-md-5 col-lg-2">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">{{ @$footerGridOneTitle->value ?? 'Useful Links' }}</h3>
-                        <ul>
-                            @foreach ($footerGridOne as $gridOne)
-                                <li>
-                                    <a href="{{ $gridOne->url }}" class="text-decoration-none">
-                                        {{ $gridOne->name }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Certifications</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
                 </div>
-                <!-- Column 3: Contact Info -->
-                <div class="col-xl-4 col-md-6 col-lg-4">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">Contact Us</h3>
-                        <ul>
-                            <li class="mb-2">
-                                <span class="me-2"><i class="fa fa-home"></i></span>
-                                {{ @$contact->address ?? 'Default address' }}
-                            </li>
-                            <li class="mb-2">
-                                <span class="me-2"><i class="fa fa-phone"></i></span>
-                                <a href="tel:{{ @$contact->phone }}" class="text-decoration-none">
-                                    {{ @$contact->phone ?? 'Default phone number' }}
-                                </a>
-                            </li>
-                            <li>
-                                <span class="me-2"><i class="fa fa-envelope"></i></span>
-                                <a href="mailto:{{ @$contact->email }}" class="text-decoration-none">
-                                    {{ @$contact->email ?? 'default@email.com' }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+
+                <div>
+                    <h4>Popular Products</h4>
+                    <ul>
+                        <li><a href="#">Blowout Preventers</a></li>
+                        <li><a href="#">Mud Pumps</a></li>
+                        <li><a href="#">Choke Manifolds</a></li>
+                        <li><a href="#">Paper Mill Equipment</a></li>
+                        <li><a href="#">Pulp Processing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Bekasi, West Java, Indonesia</li>
+                        <li><i class="fas fa-phone mr-2"></i>+62 21 8888 9999</li>
+                        <li><i class="fas fa-envelope mr-2"></i><a href="/cdn-cgi/l/email-protection"
+                                class="__cf_email__"
+                                data-cfemail="a8c1c6cec7e8c9ccc0d1c9c9dbc1c9c2c9d1c986cbc7c5">[email&#160;protected]</a>
+                        </li>
+                        <li><i class="fas fa-globe mr-2"></i>www.adhyaasiajaya.com</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Copyright Section -->
-    <div class="copy-right_text">
-        <div class="container">
-            <div class="footer_border"></div>
-            <p>{{ @$footerInfo->copyright ?? 'Default copyright text.' }}</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PT Adhya Asia Jaya. All rights reserved. | Professional Oilfield & Pulp Paper Equipment
+                    Supplier</p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
