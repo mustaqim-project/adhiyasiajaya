@@ -136,23 +136,17 @@
             </div>
 
             <!-- Category Tabs -->
-            <button
-                class="tab-btn px-2 py-1 text-xs text-center leading-tight whitespace-normal sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-2.5 md:text-base rounded-full font-medium transition-all duration-300 {{ $index == 0 ? 'bg-primary text-white tab-active' : 'text-gray-700 tab-inactive' }}"
-                data-tab="tab-{{ $category->id }}">
-                {{ $category->name }}
-            </button>
-            <div class="flex justify-center mb-8 fade-in overflow-x-auto">
-                <div class="bg-gray-100 rounded-full p-1 inline-flex flex-nowrap gap-1">
+            <div class="flex justify-center mb-12 fade-in">
+                <div class="bg-gray-100 rounded-full p-2 inline-flex">
                     @foreach ($categories as $index => $category)
                         <button
-                            class="tab-btn px-2 py-1 text-xs text-center leading-tight whitespace-normal sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-2.5 md:text-base rounded-full font-medium transition-all duration-300 {{ $index == 0 ? 'bg-primary text-white tab-active' : 'text-gray-700 tab-inactive' }}"
+                            class="tab-btn px-6 py-3 rounded-full font-semibold transition-all duration-300 {{ $index == 0 ? 'bg-primary text-white tab-active' : 'text-gray-700 tab-inactive' }}"
                             data-tab="tab-{{ $category->id }}">
                             {{ $category->name }}
                         </button>
                     @endforeach
                 </div>
             </div>
-
 
 
 
@@ -470,48 +464,65 @@
 
                 <!-- Contact Form -->
                 <div class="fade-in">
-                    <form id="contact-form" action="{{ route('contact.submit') }}" method="POST" class="contact-form">
-                        @csrf
+                   <form id="contact-form" action="{{ route('contact.submit') }}" method="POST" class="contact-form">
+    @csrf
 
-                        <h3 class="text-2xl font-bold text-primary mb-6">Submit Your Inquiry</h3>
+    <h3 class="text-2xl font-bold text-primary mb-6">Submit Your Inquiry</h3>
 
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">
-                                Full Name *
-                            </label>
-                            <input type="text" id="name" name="name" class="input-field"
-                                placeholder="Enter your full name" value="{{ old('name') }}" required>
-                            @error('name')
-                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-                            @enderror
-                        </div>
+    <div class="mb-4">
+        <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">
+            Full Name *
+        </label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            class="input-field"
+            placeholder="Enter your full name"
+            value="{{ old('name') }}"
+            required>
+        @error('name')
+            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+        @enderror
+    </div>
 
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">
-                                Email Address *
-                            </label>
-                            <input type="email" id="email" name="email" class="input-field"
-                                placeholder="Enter your email address" value="{{ old('email') }}" required>
-                            @error('email')
-                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-                            @enderror
-                        </div>
+    <div class="mb-4">
+        <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">
+            Email Address *
+        </label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            class="input-field"
+            placeholder="Enter your email address"
+            value="{{ old('email') }}"
+            required>
+        @error('email')
+            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+        @enderror
+    </div>
 
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">
-                                Message *
-                            </label>
-                            <textarea id="message" name="message" rows="4" class="input-field"
-                                placeholder="Tell us about your equipment needs, specifications, and any specific requirements" required>{{ old('message') }}</textarea>
-                            @error('message')
-                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-                            @enderror
-                        </div>
+    <div class="mb-6">
+        <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">
+            Message *
+        </label>
+        <textarea
+            id="message"
+            name="message"
+            rows="4"
+            class="input-field"
+            placeholder="Tell us about your equipment needs, specifications, and any specific requirements"
+            required>{{ old('message') }}</textarea>
+        @error('message')
+            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+        @enderror
+    </div>
 
-                        <button type="submit" class="w-full btn-primary text-lg py-4">
-                            <i class="fas fa-paper-plane mr-2"></i>Submit Inquiry
-                        </button>
-                    </form>
+    <button type="submit" class="w-full btn-primary text-lg py-4">
+        <i class="fas fa-paper-plane mr-2"></i>Submit Inquiry
+    </button>
+</form>
 
                 </div>
             </div>
@@ -528,11 +539,16 @@
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
 
-
+            // Debug: Check if elements are found
+            console.log('Tab buttons found:', tabButtons.length);
+            console.log('Tab contents found:', tabContents.length);
 
             tabButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const targetTabId = this.getAttribute('data-tab') + '-content';
+
+                    console.log('Clicked tab:', this.getAttribute('data-tab'));
+                    console.log('Target content ID:', targetTabId);
 
                     // Remove active class from all buttons
                     tabButtons.forEach(btn => {
@@ -559,10 +575,13 @@
                     if (targetContent) {
                         targetContent.classList.remove('hidden');
                         targetContent.style.display = 'block';
+                        console.log('Showing content:', targetTabId);
 
                         // Force repaint
                         targetContent.offsetHeight;
-                    } else {}
+                    } else {
+                        console.error('Target content not found:', targetTabId);
+                    }
                 });
             });
 
@@ -587,7 +606,29 @@
 
 
     <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
 
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
 
         // Fade in animation on scroll
         const observerOptions = {
