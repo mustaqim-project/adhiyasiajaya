@@ -93,13 +93,13 @@
                 </div>
 
                 <!-- Tags -->
-                @if($news->tags)
+                {{-- @if($news->tags)
                 <div class="flex flex-wrap gap-2 my-8">
                     @foreach(explode(',', $news->tags) as $tag)
                     <span class="bg-gray-200 px-3 py-1 rounded-full text-sm text-gray-700">#{{ trim($tag) }}</span>
                     @endforeach
                 </div>
-                @endif
+                @endif --}}
 
                 <!-- Navigation -->
                 <div class="flex justify-between items-center my-8 border-t border-b py-4">
