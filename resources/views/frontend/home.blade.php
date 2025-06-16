@@ -464,36 +464,49 @@
 
                 <!-- Contact Form -->
                 <div class="fade-in">
-                    <form class="contact-form" id="contact-form">
+                    <form id="contact-form" action="{{ route('contact.submit') }}" method="POST" class="contact-form">
+                        @csrf
+
                         <h3 class="text-2xl font-bold text-primary mb-6">Submit Your Inquiry</h3>
 
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="name">
+                            <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">
                                 Full Name *
                             </label>
-                            <input class="input-field" id="name" type="text" placeholder="Enter your full name"
-                                required>
+                            <input type="text" id="name" name="name" class="input-field"
+                                placeholder="Enter your full name" value="{{ old('name') }}" required>
+                            @error('name')
+                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
+
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">
+                            <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">
                                 Email Address *
                             </label>
-                            <input class="input-field" id="email" type="email"
-                                placeholder="Enter your email address" required>
+                            <input type="email" id="email" name="email" class="input-field"
+                                placeholder="Enter your email address" value="{{ old('email') }}" required>
+                            @error('email')
+                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
-                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="message">
+                            <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">
                                 Message *
                             </label>
-                            <textarea class="input-field" id="message" rows="4"
-                                placeholder="Tell us about your equipment needs, specifications, and any specific requirements" required></textarea>
+                            <textarea id="message" name="message" rows="4" class="input-field"
+                                placeholder="Tell us about your equipment needs, specifications, and any specific requirements" required>{{ old('message') }}</textarea>
+                            @error('message')
+                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <button type="submit" class="w-full btn-primary text-lg py-4">
                             <i class="fas fa-paper-plane mr-2"></i>Submit Inquiry
                         </button>
                     </form>
+
                 </div>
             </div>
         </div>
