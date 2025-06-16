@@ -15,13 +15,13 @@
                 <!-- Desktop Navigation -->
                 <nav class="desktop-menu">
                     <ul class="flex items-center space-x-8">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li><a href="product.html" class="nav-link">Products</a></li>
-                        <li><a href="customer.html" class="nav-link">Customers</a></li>
-                        <li><a href="blog.html" class="nav-link">Blog</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
-                        <li><a href="get-quote.html" class="btn-primary">Get a Quote</a></li>
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="/about" class="nav-link">About Us</a></li>
+                        <li><a href="/product" class="nav-link">Products</a></li>
+                        <li><a href="/customer" class="nav-link">Customers</a></li>
+                        {{-- <li><a href="blog.html" class="nav-link">Blog</a></li> --}}
+                        {{-- <li><a href="contact.html" class="nav-link">Contact</a></li> --}}
+                        <li><a href="/contact" class="btn-primary">Get a Quote</a></li>
                     </ul>
                 </nav>
 
