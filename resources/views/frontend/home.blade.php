@@ -56,10 +56,10 @@
                     Professional, Efficient, Customer Focus, Win-win Cooperation
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#products" class="btn-primary text-lg px-8 py-4">
+                    <a href="/product" class="btn-primary text-lg px-8 py-4">
                         <i class="fas fa-search mr-2"></i>Explore Products
                     </a>
-                    <a href="#contact" class="text-lg px-8 py-4 text-orange-600">
+                    <a href="/contact" class="text-lg px-8 py-4 text-orange-600">
                         <i class="fas fa-envelope mr-2"></i>Contact Us
                     </a>
                 </div>
