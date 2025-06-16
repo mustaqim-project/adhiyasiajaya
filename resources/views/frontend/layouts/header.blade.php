@@ -41,7 +41,7 @@
             <button class="absolute top-4 right-4 text-gray-700" id="close-mobile-menu">
                 <i class="fas fa-times text-xl"></i>
             </button>
-            <div class="mt-5 space-y-2">
+            <div class="space-y-2">
                  <a href="/">
                     <div class="flex items-center space-x-3">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
