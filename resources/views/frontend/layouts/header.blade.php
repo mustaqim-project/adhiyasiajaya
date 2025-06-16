@@ -41,7 +41,18 @@
             <button class="absolute top-4 right-4 text-gray-700" id="close-mobile-menu">
                 <i class="fas fa-times text-xl"></i>
             </button>
-            <div class="mt-12 space-y-2">
+            <div class="mt-5 space-y-2">
+                 <a href="/">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">AAJ</span>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold primary-blue" style="margin-bottom: 0;">PT ADHYA ASIA JAYA</h1>
+                            <p class="text-sm text-gray-600" style="margin: 0;">We Serve You Better</p>
+                        </div>
+                    </div>
+                </a>
                 <a href="/" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Home</a>
                 <a href="/about" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">About Us</a>
                 <a href="/product" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Products</a>
