@@ -347,6 +347,13 @@
         .mobile-menu.active {
             transform: translateX(0);
         }
+        .mobile-menu.active {
+            display: block;
+        }
+        #mobile-menu-overlay.active {
+            display: block;
+        }
+
 
         .mobile-menu a {
             display: block;
