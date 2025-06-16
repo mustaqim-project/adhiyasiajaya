@@ -1,6 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+@php $socialLinks = \App\Models\SocialLink::where('status', 1)->get(); @endphp
     <style>
         /* ===== FORM STYLES ===== */
         .contact-grid {
