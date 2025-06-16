@@ -36,33 +36,45 @@
     </header>
 
     <!-- Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <!-- Menu -->
-        <div class="mobile-menu bg-white w-4/5 h-full lg:hidden" id="mobile-menu">
-            <div class="p-4 relative">
-                <button class="absolute top-4 right-4 text-gray-700" id="close-mobile-menu">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-                <div class="space-y-2">
-                    <a href="/">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                                <span class="text-white font-bold text-xl">AAJ</span>
-                            </div>
-                            <div>
-                                <h1 class="text-xl font-bold primary-blue" style="margin-bottom: 0;">PT ADHYA ASIA JAYA
-                                </h1>
-                                <p class="text-sm text-gray-600" style="margin: 0;">We Serve You Better</p>
-                            </div>
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <!-- Menu -->
+    <div class="mobile-menu bg-white w-4/5 h-full lg:hidden" id="mobile-menu">
+        <div class="p-4 relative">
+            <button class="absolute top-4 right-4 text-gray-700" id="close-mobile-menu">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="space-y-2">
+                <!-- Your links -->
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu lg:hidden" id="mobile-menu">
+        <div class="p-4">
+            <button class="absolute top-4 right-4 text-gray-700" id="close-mobile-menu">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="space-y-2">
+                 <a href="/">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">AAJ</span>
                         </div>
-                    </a>
-                    <a href="/" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Home</a>
-                    <a href="/about" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">About Us</a>
-                    <a href="/product" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Products</a>
-                    <a href="/contact" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Contact</a>
-                    <a href="/contact" class="block px-4 py-3 text-lg bg-accent-orange text-white rounded-md mt-4">Get a
-                        Quote</a>
-                </div>
+                        <div>
+                            <h1 class="text-xl font-bold primary-blue" style="margin-bottom: 0;">PT ADHYA ASIA JAYA</h1>
+                            <p class="text-sm text-gray-600" style="margin: 0;">We Serve You Better</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Home</a>
+                <a href="/about" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">About Us</a>
+                <a href="/product" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Products</a>
+                <a href="/contact" class="block px-4 py-3 text-lg text-gray-700 hover:bg-gray-100">Contact</a>
+                <a href="/contact" class="block px-4 py-3 text-lg bg-accent-orange text-white rounded-md mt-4">Get a
+                    Quote</a>
             </div>
         </div>
     </div>

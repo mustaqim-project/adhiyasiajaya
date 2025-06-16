@@ -1386,38 +1386,29 @@ PT ADHYA ASIA JAYA Media Social">
     </section>
 
     <script>
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
 
-// Open menu
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
 
-// Close via X button
-closeMobileMenu.addEventListener('click', () => {
-    mobileMenuOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-});
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
 
-// Close when link is clicked
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-});
-
-// Close when clicking outside the menu
-mobileMenuOverlay.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target)) {
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-});
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
 
         // Fade in animation on scroll
         const observerOptions = {
