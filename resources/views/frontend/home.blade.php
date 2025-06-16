@@ -522,16 +522,11 @@
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
 
-            // Debug: Check if elements are found
-            console.log('Tab buttons found:', tabButtons.length);
-            console.log('Tab contents found:', tabContents.length);
+
 
             tabButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const targetTabId = this.getAttribute('data-tab') + '-content';
-
-                    console.log('Clicked tab:', this.getAttribute('data-tab'));
-                    console.log('Target content ID:', targetTabId);
 
                     // Remove active class from all buttons
                     tabButtons.forEach(btn => {
@@ -558,12 +553,10 @@
                     if (targetContent) {
                         targetContent.classList.remove('hidden');
                         targetContent.style.display = 'block';
-                        console.log('Showing content:', targetTabId);
 
                         // Force repaint
                         targetContent.offsetHeight;
                     } else {
-                        console.error('Target content not found:', targetTabId);
                     }
                 });
             });
