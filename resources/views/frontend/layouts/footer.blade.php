@@ -48,10 +48,10 @@
                     <h4>Contact Info</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt mr-2"></i>Bekasi, West Java, Indonesia</li>
-                        <li><i class="fas fa-phone mr-2"></i>+62 812-7621-589</li>
+                        <li><i class="fas fa-phone mr-2"></i>{{ @$contact->phone }}</li>
                         <li><i class="fas fa-envelope mr-2"></i><a href="/cdn-cgi/l/email-protection"
                                 class="__cf_email__"
-                                data-cfemail="a8c1c6cec7e8c9ccc0d1c9c9dbc1c9c2c9d1c986cbc7c5">[email&#160;protected]</a>
+                                data-cfemail="a8c1c6cec7e8c9ccc0d1c9c9dbc1c9c2c9d1c986cbc7c5">{{ @$contact->email }}</a>
                         </li>
                         <li><i class="fas fa-globe mr-2"></i>www.adhyaasia.com</li>
                     </ul>
