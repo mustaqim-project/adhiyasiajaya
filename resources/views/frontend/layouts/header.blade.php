@@ -35,22 +35,6 @@
         </div>
     </header>
 
-    <!-- Overlay -->
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-    <!-- Menu -->
-    <div class="mobile-menu bg-white w-4/5 h-full lg:hidden" id="mobile-menu">
-        <div class="p-4 relative">
-            <button class="absolute top-4 right-4 text-gray-700" id="close-mobile-menu">
-                <i class="fas fa-times text-xl"></i>
-            </button>
-            <div class="space-y-2">
-                <!-- Your links -->
-                ...
-            </div>
-        </div>
-    </div>
-</div>
-
     <!-- Mobile Menu -->
     <div class="mobile-menu lg:hidden" id="mobile-menu">
         <div class="p-4">
