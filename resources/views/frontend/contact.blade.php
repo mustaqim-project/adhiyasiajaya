@@ -1,9 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('content')
-
     <style>
-
         /* ===== FORM STYLES ===== */
         .contact-grid {
             display: grid;
@@ -1288,7 +1286,8 @@
 
                         <div class="form-group">
                             <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
-                            <input type="text" id="fullName" name="fullName" class="form-input" value="{{ old('fullName') }}" required>
+                            <input type="text" id="fullName" name="fullName" class="form-input"
+                                value="{{ old('fullName') }}" required>
                             @error('fullName')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -1296,14 +1295,16 @@
 
                         <div class="form-group">
                             <label for="email" class="form-label">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" class="form-input" value="{{ old('email') }}" required>
+                            <input type="email" id="email" name="email" class="form-input"
+                                value="{{ old('email') }}" required>
                             @error('email')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label">Message <span class="required">*</span></label>
-                            <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Please describe your inquiry in detail..." required>{{ old('message') }}</textarea>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="5"
+                                placeholder="Please describe your inquiry in detail..." required>{{ old('message') }}</textarea>
                             @error('message')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -1323,7 +1324,8 @@
                         <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="info-content">
                             <h3>Head Office</h3>
-                            <p>{{ @$contact->address ?? 'Jl. Industri Raya No. 123, Bekasi Industrial Area, Bekasi 17530, Indonesia' }}</p>
+                            <p>{{ @$contact->address ?? 'Jl. Industri Raya No. 123, Bekasi Industrial Area, Bekasi 17530, Indonesia' }}
+                            </p>
                         </div>
                     </div>
 
@@ -1331,7 +1333,8 @@
                         <div class="info-icon"><i class="fas fa-phone"></i></div>
                         <div class="info-content">
                             <h3>Phone</h3>
-                            <p>Phone: <a href="tel:{{ @$contact->phone ?? '+62218901234' }}">{{ @$contact->phone ?? '+62 21 8901 234' }}</a><br>
+                            <p>Phone: <a
+                                    href="tel:{{ @$contact->phone ?? '+62218901234' }}">{{ @$contact->phone ?? '+62 21 8901 234' }}</a><br>
                             </p>
                         </div>
                     </div>
@@ -1341,17 +1344,22 @@
                         <div class="info-content">
                             <h3>Email</h3>
                             <p>
-                                <a href="mailto:{{ @$contact->email ?? 'info@example.com' }}">{{ @$contact->email ?? 'info@example.com' }}</a>
+                                <a
+                                    href="mailto:{{ @$contact->email ?? 'info@example.com' }}">{{ @$contact->email ?? 'info@example.com' }}</a>
                             </p>
                         </div>
                     </div>
 
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+
+                        @foreach ($socialLinks as $link)
+                            <a href="{{ $link->url }}" class="social-link {{ $link->class ?? '' }}"
+                                aria-label="Go to
+PT ADHYA ASIA JAYA" alt="
+PT ADHYA ASIA JAYA Media Social">
+                                <i class="{{ $link->icon }}"></i>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -1366,7 +1374,7 @@
             <h2 class="accent-orange">Need Immediate Assistance?</h2>
             <p>Our team is ready to help you with your industrial equipment needs</p>
             <div class="quick-buttons">
-                <a href="https://wa.me/{{ @$contact->phone}}" class="quick-btn" target="_blank">
+                <a href="https://wa.me/{{ @$contact->phone }}" class="quick-btn" target="_blank">
                     <i class="fab fa-whatsapp"></i> WhatsApp Us
                 </a>
                 <a href="mailto:{{ @$contact->email }}" class="quick-btn">
@@ -1376,7 +1384,7 @@
         </div>
     </section>
 
-      <script>
+    <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
